@@ -1,0 +1,201 @@
+/* Все и сразу */
+* {
+    margin: 0 auto;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Ширина и длина страницы для текста и таблицы стилей (css) */
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+/* Базовые настройки для всей страницы */
+body {
+    overflow-x: hidden;
+    font-family: Cony-Light, monospace;
+}
+
+/* Импорт шрифта Cony-light */
+@font-face {
+    font-family: Cony-light; /* Гарнитура шрифта */
+    src: url(fonts/Cony-Light.otf); /* Путь к файлу со шрифтом */
+}
+
+/* Импорт шрифта Cony-Regular */
+@font-face {
+    font-family: Cony-Regular; /* Гарнитура шрифта */
+    src: url(fonts/Cony-Regular.otf); /* Путь к файлу со шрифтом */
+}
+
+/* Импорт шрифта ApexMK3 */
+@font-face {
+    font-family: ApexMK3; /* Гарнитура шрифта */
+    src: url(fonts/ApexMK3.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* Импорт шрифта Elisabethische */
+@font-face {
+    font-family: Elisabethische; /* Гарнитура шрифта */
+    src: url(fonts/Elisabethische.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* Импорт шрифта Philosopher */
+@font-face {
+    font-family: Philosopher; /* Гарнитура шрифта */
+    src: url(fonts/Philosopher.otf); /* Путь к файлу со шрифтом */
+}
+
+/* Шапка */
+header {
+    height: 10%;
+    width: 100%;
+
+    background-color: white;
+}
+
+/* Заголовки1 Шапки */
+header h1 {    
+    font-family: Cony-Regular, monospace;
+    text-align: center;
+}
+
+/* Заголовок страницы */
+header #title {
+    position: absolute;
+    top: 3%;
+    left: 3.5%;
+
+    font-size: 200%;
+}
+
+/* Подпись школы */
+header #caption {
+    position: absolute;
+    top: 2.5%;
+    right: 3.5%;
+
+    font-size: 135%;
+}
+
+/* Контейнер */
+.container {
+    width: 90%;
+}
+
+/* Основа страницы */
+#main {
+    min-height: 80%;
+    width: 100%;
+
+    
+}
+
+#base {
+    position: absolute;
+    right: 0;
+
+    height: 80%;
+    width: 85%;
+
+    background:
+        linear-gradient(to right, rgba(92, 41, 68, 0.25) 100%, rgba(0, 0, 0, 0) 0%),
+        /* При смене картинки достаточно заменить фото в папке с таким же именем */
+        url(../img/index/bg-main.jpg) no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+#menu {
+    position: absolute;
+    left: 0;
+
+    height: 80%;
+    width: 15%;
+
+    background-color: cornflowerblue;
+}
+
+#menu #upper {
+    position: absolute;
+    left: 0;
+
+    height: 50%;
+    width: 100%;
+
+    background-color: #EADBDB;
+}
+
+.widget ul {
+  list-style: none;
+}
+
+#upper li {
+  border-bottom: 1px solid #5C2944;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+#lower li {
+    border-bottom: 1px solid #EADBDB;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+.widget li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#upper a {
+  text-decoration: none;
+  color:  #5C2944;
+  display: inline-block;
+  font-size: 125%;
+}
+
+#upper li:hover {
+    background: rgba(92, 41, 68, 0.5);
+}
+
+#lower  a {
+    text-decoration: none;
+    color:  #EADBDB;
+    display: inline-block;
+    font-size: 100%;
+  }
+
+.widget li:before {
+  font-family: FontAwesome;
+  font-size: 20px;
+  vertical-align:bottom;
+  color: #dd3333; 
+  margin-right: 14px;
+}
+
+.widget li:nth-child(1):before {content:"\f1fc";}
+.widget li:nth-child(2):before {content:"\f0d0";}
+.widget li:nth-child(3):before {content:"\f0cd";}
+.widget li:nth-child(4):before {content:"\f028";}
+.widget li:nth-child(5):before {content:"\f03d";}
+
+#menu #lower {
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    height: 50%;
+    width: 100%;
+
+    background-color: #5C2944;
+}
+
+/* Подвал */
+footer {
+    height: 10%;
+    width: 100%;
+
+    background-color: white;
+}
