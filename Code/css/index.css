@@ -15,12 +15,12 @@ body, html {
 /* Базовые настройки для всей страницы */
 body {
     overflow-x: hidden;
-    font-family: Cony-Light, monospace;
+    font-family: Cony-Regular, monospace;
 }
 
 /* Импорт шрифта Cony-light */
 @font-face {
-    font-family: Cony-light; /* Гарнитура шрифта */
+    font-family: Cony-Light; /* Гарнитура шрифта */
     src: url(fonts/Cony-Light.otf); /* Путь к файлу со шрифтом */
 }
 
@@ -66,7 +66,7 @@ header h1 {
 header #title {
     position: absolute;
     top: 3%;
-    left: 3.5%;
+    left: 3.25%;
 
     font-size: 200%;
 }
@@ -75,7 +75,7 @@ header #title {
 header #caption {
     position: absolute;
     top: 2.5%;
-    right: 3.5%;
+    right: 3.25%;
 
     font-size: 135%;
 }
@@ -85,14 +85,13 @@ header #caption {
     width: 90%;
 }
 
-/* Основа страницы */
+/* Основная секция страницы */
 #main {
     min-height: 80%;
     width: 100%;
-
-    
 }
 
+/* Фото и инфа */
 #base {
     position: absolute;
     right: 0;
@@ -108,17 +107,28 @@ header #caption {
     background-size: cover;
 }
 
+#base #mustitle {
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+
+    font-family: Philosopher, sans-serif;
+    font-size: 1100%;
+    font-weight: 100;
+    color: white;
+}
+
+/* Меню в целом */
 #menu {
     position: absolute;
     left: 0;
 
     height: 80%;
     width: 15%;
-
-    background-color: cornflowerblue;
 }
 
-#menu #upper {
+/* Верхнее меню */
+#upper {
     position: absolute;
     left: 0;
 
@@ -128,60 +138,21 @@ header #caption {
     background-color: #EADBDB;
 }
 
-.widget ul {
-  list-style: none;
+/* Ссылки верхнего меню */
+#upper a {
+    text-decoration: none;
+    color:  #5C2944;
+    display: inline-block;
+    font-size: 130%;
 }
 
+/* Каждый пункт верхнего меню */
 #upper li {
-  border-bottom: 1px solid #5C2944;
-  padding-bottom: 15px;
-  padding-top: 15px;
-}
-
-#lower li {
-    border-bottom: 1px solid #EADBDB;
     padding-bottom: 15px;
     padding-top: 15px;
-  }
-.widget li:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 
-#upper a {
-  text-decoration: none;
-  color:  #5C2944;
-  display: inline-block;
-  font-size: 125%;
-}
-
-#upper li:hover {
-    background: rgba(92, 41, 68, 0.5);
-}
-
-#lower  a {
-    text-decoration: none;
-    color:  #EADBDB;
-    display: inline-block;
-    font-size: 100%;
-  }
-
-.widget li:before {
-  font-family: FontAwesome;
-  font-size: 20px;
-  vertical-align:bottom;
-  color: #dd3333; 
-  margin-right: 14px;
-}
-
-.widget li:nth-child(1):before {content:"\f1fc";}
-.widget li:nth-child(2):before {content:"\f0d0";}
-.widget li:nth-child(3):before {content:"\f0cd";}
-.widget li:nth-child(4):before {content:"\f028";}
-.widget li:nth-child(5):before {content:"\f03d";}
-
-#menu #lower {
+#lower {
     position: absolute;
     left: 0;
     top: 50%;
@@ -192,10 +163,146 @@ header #caption {
     background-color: #5C2944;
 }
 
+/* Ссылки нижнего меню */
+#lower a {
+    text-decoration: none;
+    color:  #EADBDB;
+    display: inline-block;
+    font-size: 100%;
+    letter-spacing: 1.5px;
+}
+
+/* Каждый пункт нижнего меню */
+#lower li {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+/* Ссылки-пункты меню */
+.widget a {
+    width: 100%;
+}
+
+/* Линии текста Меню */
+.widget li {
+    padding-left: 10px;
+}
+
+/* Декорированные линии Меню */
+.widget .line {
+    position: absolute;
+    width: 85%;
+    height: 1px;
+    background: linear-gradient(to right, rgb(189, 124, 133) 0%,rgb(189, 124, 133, 0) 100%);
+}
+
+/* Последний элемент линии */
+.widget li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Наведение на ссылки меню */
+.widget li:hover {
+    background: #BD7C85;
+    transition-duration: 0.35s;
+}
+
+/* Уведение с ссылки меню */
+.widget li:not(:hover) {
+    transition-duration: 0.25s;
+}
+
 /* Подвал */
 footer {
     height: 10%;
     width: 100%;
 
     background-color: white;
+}
+
+/* Левые ссылки футера */
+#left {
+    left: 2%;
+}
+
+/* Правые ссылки футера */
+#right {
+    right: 2%;
+}
+
+/* Меню футера */
+nav {
+    position: absolute;
+}
+
+/* Ссылки меню футера */
+nav a {
+    font-family: Cony-Light, monospace;
+    text-decoration:none;
+    color: black;
+    margin: 1% 15px;
+    font-size: 120%;
+    letter-spacing: 1.5px;
+    position:relative;
+    display:inline-block;
+}
+
+/* Зачеркивающая линия */
+nav a:before {
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 65%;
+
+  background: #16151b;
+
+  animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+/* Наведение */
+nav a:hover:before {
+  animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+/* Анимация зачеркивания вперед */
+@keyframes in{
+  0%{
+    width: 0;
+    left:0;
+    right:auto;
+  }
+  100%{
+    left:0;
+    right:auto;
+    width: 100%;
+  }
+}
+
+/* Анимация зачеркивания назад */
+@keyframes out{
+  0%{
+    width:100%;
+    left: auto;
+    right: 0;
+  }
+  100%{
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+
+/* Анимация зачеркивания доп. */
+@keyframes show{
+  0%{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
