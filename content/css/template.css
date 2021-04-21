@@ -1,3 +1,8 @@
+
+
+/* ---- ГЕНЕРАЛЬНЫЕ НАСТРОЙКИ | НАЧАЛО КОДА ---- */
+
+
 /* Все и сразу */
 * {
     margin: 0 auto;
@@ -18,6 +23,21 @@ body {
     font-family: Cony-Regular, monospace;
 }
 
+/* Контейнер */
+.container {
+    width: 65%;
+}
+
+
+
+/* ---- ГЕНЕРАЛЬНЫЕ НАСТРОЙКИ | КОНЕЦ КОДА ---- */
+
+
+
+/* ---- ШРИФТЫ | НАЧАЛО КОДА ---- */
+
+
+
 /* Импорт шрифта Cony-light */
 @font-face {
     font-family: Cony-Light; /* Гарнитура шрифта */
@@ -30,31 +50,19 @@ body {
     src: url(fonts/Cony-Regular.otf); /* Путь к файлу со шрифтом */
 }
 
-/* Импорт шрифта ApexMK3 */
+/* Импорт шрифта TedescaLamont */
 @font-face {
-    font-family: ApexMK3; /* Гарнитура шрифта */
-    src: url(fonts/ApexMK3.ttf); /* Путь к файлу со шрифтом */
+    font-family: TedescaLamont; /* Гарнитура шрифта */
+    src: url(fonts/TedescaLamont.ttf); /* Путь к файлу со шрифтом */
 }
 
-/* Импорт шрифта Elisabethische */
-@font-face {
-    font-family: Elisabethische; /* Гарнитура шрифта */
-    src: url(fonts/Elisabethische.ttf); /* Путь к файлу со шрифтом */
-}
 
-/* Импорт шрифта Philosopher */
-@font-face {
-    font-family: Philosopher; /* Гарнитура шрифта */
-    src: url(fonts/Philosopher.otf); /* Путь к файлу со шрифтом */
-}
 
-/* Шапка */
-header {
-    height: 10%;
-    width: 100%;
+/* ---- ШРИФТЫ | КОНЕЦ КОДА ---- */
 
-    background-color: white;
-}
+
+
+
 
 /* ---- ШАПКА | НАЧАЛО КОДА ---- */
 
@@ -99,47 +107,21 @@ header #caption {
 
 /* ---- ШРИФТЫ | КОНЕЦ КОДА ---- */
 
-/* Контейнер */
-.container {
-    width: 90%;
-}
+
 
 /* Основная секция страницы */
 #main {
-    min-height: 80%;
+    min-height: 84%;
     width: 100%;
 }
 
 /* Фото и инфа */
 #base {
-    position: absolute;
-    right: 0;
+    align-items: center;
 
     height: 80%;
-    width: 100%;
-
-    background:
-        linear-gradient(to right, rgba(92, 41, 68, 0.25) 100%, rgba(0, 0, 0, 0) 0%),
-        /* При смене картинки достаточно заменить фото в папке с таким же именем */
-        url(../img/index/bg-main.jpg) no-repeat;
-    background-position: right;
-    background-size: cover;
+    width: 85%;
 }
-
-#base #mustitle {
-    position: absolute;
-    bottom: 0;
-    left: 20%;
-    right: 1%;
-
-    text-align: right;
-
-    font-family: Philosopher, sans-serif;
-    font-size: 1100%;
-    font-weight: 100;
-    color: white;
-}
-
 
 
 /* ---- МЕНЮ | НАЧАЛО КОДА ---- */
@@ -322,6 +304,148 @@ header #caption {
 
 
 
+/* ---- ЗАГОЛОВОК | НАЧАЛО КОДА ---- */
+
+
+
+/* Основная часть страницы | Область контента */
+#head {
+    position: absolute;
+    z-index: 0;
+    padding: 1.5% 1% 0 1%;
+
+    width: 100%;
+    height: 40%;
+    
+    left: 0;
+
+    background: #16151b;
+}
+
+/* Заголовоок контента */
+#head h1 {
+    margin-left: 2vw;
+
+    color: #EADBDB;
+
+    font-family: TedescaLamont;
+    font-weight: 100;
+    font-size: 3vw;
+}
+
+#down {
+    margin-left: 4.2vw;
+}
+
+#head #cap-line {
+    position: absolute;
+    width: 17%;
+    height: 4px;
+
+    bottom: 63%;
+
+    background: #5C2944;
+    background-position: center;
+    background-size: cover;
+}
+
+#head #des-line {
+    position: absolute;
+    width: 7.5%;
+    height: 4px;
+
+    margin-left: 19%;
+    bottom: 63%;
+
+    background: #EADBDB;
+    background-position: center;
+    background-size: cover;
+}
+
+#head #capture {
+    position: absolute;
+    width: 17%;
+    height: 60%;
+
+    bottom: 0;
+
+    background: url(../img/template/head.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#head #description {
+    position: absolute;
+    width: 7.5%;
+    height: 30%;
+
+    margin-left: 19%;
+    bottom: 30%;
+
+    border: 1px #EADBDB solid;
+}
+
+#description p {
+    color: #EADBDB;
+
+    font-family: Cony-Light;
+    font-weight: 100;
+    font-size: 1.3vw;
+}
+
+#description p:first-child {
+    position: absolute;
+    
+    top: 2%;
+    left: 5%;
+
+    text-align: left;
+}
+
+#description p:last-child {
+    position: absolute;
+
+    right: 5%;
+    bottom: 2%;
+
+    text-align: right;
+}
+
+
+
+/* ---- ЗАГОЛОВОК | КОНЕЦ КОДА ---- */
+
+
+
+
+
+/* ---- СОДЕРЖАНИЕ | НАЧАЛО КОДА ---- */
+
+
+
+#text {
+    padding-top: 26%;    
+
+    width: 100%;
+}
+
+#text .container {
+    width: 70%;
+}
+
+#text p {
+    font-size: 1.5vw;
+    text-align: justify;
+
+    text-indent: 2vw;
+}
+
+
+
+/* ---- СОДЕРЖАНИЕ | КОНЕЦ КОДА ---- */
+
+
+
 
 
 /* ---- ПОДВАЛ | НАЧАЛО КОДА ---- */
@@ -331,7 +455,6 @@ header #caption {
 
 /* Подвал */
 footer {
-    position: absolute;
     margin-top: 1vw;
     
     height: 3.5%;

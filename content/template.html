@@ -11,34 +11,32 @@
     <meta name="geo.placename" content="Astrakhan">
 
     <meta name="author" content="Mark Roas | Максим Болотин">
-    <meta name="description" content="Домашняя страница школьного музея">
-    <meta name="keywords" content="Домашняя, Школьный музей, Виртуальный музей, Музей, История появления">
+    <meta name="description" content="Страница шаблона">
+    <meta name="keywords" content="Школьный музей, Виртуальный музей, Музей, История появления">
 
     <meta property="og:url" content=" "> <!-- URL данной страницы -->
     <meta property="og:type" content="website"> <!-- Тип контента (для страниц используйте тип website) -->
-    <meta property="og:title" content="Домашняя">
-    <meta property="og:description" content="Домашняя страница школьного музея">
+    <meta property="og:title" content="ШАБЛОН">
+    <meta property="og:description" content="Страница шаблона">
     <meta property="og:image" content=" "> <!-- Превью -->
     <meta property="og:image:alt" content=" ">
     <meta property="og:site_name" content="Музей СОШ №52">
     <meta property="og:locale" content="ru_RU"> <!-- Язык контента на странице -->
 
-    <link rel="stylesheet" href="content/css/index.css">
-    <title>Домашняя</title>
+    <link type="text/css" rel="stylesheet" href="css/template.css">
+    <title>ШАБЛОН</title>
 </head>
 <body>
     <header> <!-- Шапка -->
-        <div class="container">
-            <h1 id="title">ДОМАШНЯЯ</h1>
+            <h1 id="title">ШАБЛОН</h1>
             <h1 id="caption">МБОУ Г.АСТРАХАНИ<br>"СОШ №52"</h1>
-        </div>
     </header>
 
     <section id="main"> <!-- Основная часть -->
         <div id="menu"> <!-- Меню -->
             <div id="upper" class="widget"> <!-- Меню | Верхнее -->
                 <ul>
-                    <a href="content/museum-history.html"><li>ШКОЛЬНЫЙ МУЗЕЙ</li></a>   <div class="line"></div>
+                    <a href="../index.html"><li>ДОМАШНЯЯ</li></a>   <div class="line"></div>
                     <a href=""><li>КОЛЕЕКЦИИ</li></a>   <div class="line"></div>
                     <a href=""><li>ШКОЛА И ДВОР</li></a>   <div class="line"></div>
                     <a href=""><li>НОВОСТИ И СОБЫТИЯ</li></a>
@@ -55,22 +53,39 @@
             </div>
         </div>
         <div id="base"> <!-- Основа | Место для контента -->
-            <h1 id="mustitle">МУЗЕЙ 52 ШКОЛЫ</h1>
+            <div id="head"> <!-- Заголовок -->
+                <div class="container">
+                    <h1>Заголовок</h1>
+                    <div id="down"> <!-- Линии | Даты -->
+                        <div id="cap-line"></div>
+                        <div id="des-line"></div>
+                        <div id="capture"></div>
+                        <div id="description">
+                            <p>Октябрь<br>1936</p>
+                            <p>Апрель<br>2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="text"> <!-- Контент -->
+                <div  class="container">
+                    <p>Далее идет текст рыбы, не пугайтесь, он тут пока не будет собрана подходящая информация. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis nobis deserunt, debitis ea inventore, molestias aperiam error nemo recusandae illo velit alias autem id ab deleniti, officia cumque? Animi, omnis!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis nobis deserunt, debitis ea inventore, molestias aperiam error nemo recusandae illo velit alias autem id ab deleniti, officia cumque? Animi, omnis!</p>    
+                </div>
+            </div>
         </div>
     </section>
 
     <footer> <!-- Подвал -->
-        <div class="container">
-            <nav id="left">
-                <a href="#">полезные ссылки</a>
-                <a href="#">авторство</a>
-                <a href="#">политика конфиденциальности</a>
-            </nav>
-            <nav id="right">
-                <a href="#">доступность</a>
-                <a href="#">карта сайта</a>
-            </nav>
-        </div>
+        <nav id="left">
+            <a href="#">полезные ссылки</a>
+            <a href="#">авторство</a>
+            <a href="#">политика конфиденциальности</a>
+        </nav>
+        <nav id="right">
+            <a href="#">доступность</a>
+            <a href="#">карта сайта</a>
+        </nav>
     </footer>
 </body>
 </html>
