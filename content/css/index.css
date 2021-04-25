@@ -192,6 +192,7 @@ header #caption {
 #upper {
     position: absolute;
     left: -90%;
+    z-index: 2;
 
     height: 50%;
     width: 100%;
@@ -238,6 +239,7 @@ header #caption {
 
     height: 50%;
     width: 100%;
+    z-index: 1;
 
     
     border-bottom-right-radius: 1vw;
