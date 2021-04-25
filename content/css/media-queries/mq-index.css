@@ -1,0 +1,61 @@
+/* ============ Desktop First ============ */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    /*  */
+    footer {
+        /* position: absolute; */
+    }
+    #upper {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 1vw;
+        left: -90%;
+        z-index: 2;
+    }
+    #lower {
+        top: 20%;
+        
+        left: -90%;
+        z-index: 1;
+    }
+    .shortcut {
+        position: absolute;
+        width: 5vw;
+        height: 5vw;
+        right: -5vw;
+        top: 0;
+        border-radius: 0 0.5vw 0.5vw 0;
+        z-index: 999;
+    }
+    /* Нижний ярлык */
+    #low-shortcut {
+
+        background-color: #5C2944;
+    }
+    .shortcut p {
+        font-size: 3.5vw;
+        color: #16151b;
+        cursor: default;
+    
+        padding: 0 0 0 35%;
+    }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    /*  */
+
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+    /*  */
+
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    /*  */
+
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+    /*  */
+
+}
