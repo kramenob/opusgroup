@@ -3,7 +3,10 @@
 @media only screen and (max-width: 1200px) {
     /*  */
     footer {
-        /* position: absolute; */
+        position: relative;
+    }
+    #base #mustitle {
+        font-size: 500%;
     }
     #upper {
         border-top-right-radius: 0;
