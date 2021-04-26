@@ -80,17 +80,40 @@
         right: 3.25%;
         font-size: 2vw;
     }
-
+    #upper {
+        height: 35%;
+        width: 200%;
+        
+        left: -200%;
+    }
+    #upper a {
+        font-size: 3vw;
+    }
+    #lower {
+        height: 35%;
+        width: 200%;
+        
+        left: -200%;
+    }
+    #lower a {
+        font-size: 3vw;
+    }
+    #base #mustitle {
+        font-size: 17vw;
+    }
     .shortcut {
-        width: 7vw;
-        height: 7vw;
-        right: -7vw;
+        width: 10vw;
+        height: 10vw;
+        right: -10vw;
         top: 0;
     }
     .shortcut p {
         font-size: 5vw;
     
         padding: 0 0 0  35%;
+    }
+    #lower {
+        top: 17vw;
     }
 
     footer {
@@ -99,7 +122,16 @@
         height: 10%;
     }
     footer a {
-        font-size: 2vw;
+        font-size: 4vw;
+    }
+    footer nav { 
+        width: 40%;
+    }
+    #right {
+        /* right: 2%; */
+        top: 175%;
+        left: -54%;
+        padding-bottom: 40px;
     }
 }
 /* Small Devices, Tablets */
@@ -193,7 +225,6 @@
     }
     #right {
         /* right: 2%; */
-        top: 140%;
         left: -44%;
         padding-bottom: 40px;
     }
