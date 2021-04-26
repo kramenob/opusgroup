@@ -1,15 +1,42 @@
 /* ============ Desktop First ============ */
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+    
+    header #title {
+        position: absolute;
+        top: 3%;
+        left: 2%;
+        width: 15%;
+        text-align: center;
+        font-size: 3vw;
+    }
+    header #caption {
+        position: absolute;
+        top: 2.5%;
+        right: 3.25%;
+        font-size: 2vw;
+    }
     #upper {
+        height: 35%;
+        width: 150%;
+        
         border-top-right-radius: 0;
         border-bottom-right-radius: 1vw;
-        left: -100%;
+        left: -150%;
+    }
+    #upper a {
+        font-size: 2vw;
     }
     #lower {
+        height: 35%;
+        width: 150%;
+
         top: 10vw;
         
-        left: -100%;
+        left: -150%;
+    }
+    #lower a {
+        font-size: 2vw;
     }
     .shortcut {
         width: 5vw;
@@ -24,6 +51,13 @@
     }
     footer {
         position: relative;
+    }
+    footer a {
+        font-size: 1.5vw;
+        margin-top: 3%;
+    }
+    footer nav:last-child {
+        margin-top: 1%;
     }
 }
 /* Medium Devices, Desktops */
@@ -47,26 +81,16 @@
         font-size: 2vw;
     }
 
-    #upper {
-        height: 35%;
-        width: 150%;
-
-        left: -150%;
+    .shortcut {
+        width: 7vw;
+        height: 7vw;
+        right: -7vw;
+        top: 0;
     }
-    #upper a {
-        font-size: 2vw;
-    }
-
-    #lower {
-        height: 35%;
-        width: 150%;
-
-        left: -150%;
-    }
+    .shortcut p {
+        font-size: 5vw;
     
-    /* Ссылки нижнего меню */
-    #lower a {
-        font-size: 1.5vw;
+        padding: 0 0 0  35%;
     }
 
     footer {
@@ -74,16 +98,108 @@
         bottom: 0;
         height: 10%;
     }
+    footer a {
+        font-size: 2vw;
+    }
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-    /*  */
+    header #title {
+        top: 3%;
+        left: 4%;
+        width: 15%;
+        font-size: 5vw;
+    }
+    header #caption {
+        position: absolute;
+        top: 2.5%;
+        right: 5.25%;
+        font-size: 4vw;
+    }
 
+    #base #mustitle {
+        font-size: 17vw;
+    }
+
+    #upper {
+        height: 50%;
+        width: 300%;
+        
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 2vw;
+        left: -300%;
+    }
+    #upper a {
+        font-size: 4vw;
+    }
+    #lower {
+        height: 50%;
+        width: 300%;
+
+        top: 15vw;
+        
+        left: -300%;
+    }
+    #lower a {
+        font-size: 4vw;
+    }
+
+    .shortcut {
+        width: 12vw;
+        height: 12vw;
+        right: -12vw;
+        top: 0;
+        
+        border-radius: 0 1vw 1vw 0;
+    }
+    .shortcut p {
+        font-size: 7vw;
+    
+        padding: 0 0 0  35%;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        height: 10%;
+        padding-top: 10px;
+    }
+    footer nav { 
+        width: 50%;
+    }
+    #right {
+        /* right: 2%; */
+        top: 175%;
+        left: -44%;
+        padding-bottom: 40px;
+    }
+    footer a {
+        font-size: 4vw;
+    }
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-    /*  */
+    #upper {
+        height: 40%;
+        width: 350%;
 
+        left: -350%;
+    }
+    #lower {
+        height: 40%;
+        width: 350%;
+
+        left: -350%;
+    }
+    #right {
+        /* right: 2%; */
+        top: 140%;
+        left: -44%;
+        padding-bottom: 40px;
+    }
+    footer a {
+        font-size: 5vw;
+    }
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
