@@ -1,0 +1,38 @@
+/* Все и сразу */
+* {
+    margin: 0 auto;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Ширина и длина страницы для текста и таблицы стилей (css) */
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+/* Базовые настройки для всей страницы */
+body {
+    overflow-x: hidden;
+    font-family: Cony-Light, monospace;
+    background: url(../img/background.png) no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+/* Импорт шрифта Cony-Regular */
+@font-face {
+    font-family: Cony-Light; /* Гарнитура шрифта */
+    src: url(fonts/Cony-Light.otf); /* Путь к файлу со шрифтом */
+}
+
+h1 {
+    color: aliceblue;
+    font-size: 150%;
+
+    width: 15%;
+    position: relative;
+    top: 10%;
+    left: -25%;
+}
