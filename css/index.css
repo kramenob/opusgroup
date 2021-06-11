@@ -15,24 +15,187 @@ body, html {
 /* Базовые настройки для всей страницы */
 body {
     overflow-x: hidden;
-    font-family: Cony-Light, monospace;
-    background: url(../img/background.png) no-repeat;
-    background-position: right;
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+    background-position: center;
     background-size: cover;
 }
 
-/* Импорт шрифта Cony-Regular */
-@font-face {
-    font-family: Cony-Light; /* Гарнитура шрифта */
-    src: url(fonts/Cony-Light.otf); /* Путь к файлу со шрифтом */
+/*убираем подчеркивание текста ссылок*/
+a {
+    text-decoration: none;
 }
 
-h1 {
-    color: aliceblue;
-    font-size: 150%;
+/* Шапка сайта */
+header {
+    width: 100%;
+    height: 15%;
 
-    width: 15%;
-    position: relative;
-    top: 10%;
-    left: -25%;
+    position: fixed;
+
+    background: #393943;
+}
+
+/* ШАПКА: Блоки */
+header .block {
+    width: 30%;
+    height: 100%;
+}
+
+/* ? ШАПКА ? ------ -> | КОНЕЦ | -> | НАЧАЛО | -> ------ ? МЕНЮ ? */
+
+/* ШАПКА: Левый блок */
+header .left {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    margin-left: 1%;
+
+    height: 50%;
+
+    border-top: orange 1px solid;
+    border-left: orange 1px solid;
+    border-bottom: orange 1px solid;
+}
+
+    .left .menu{
+        height: 100%;
+        position: absolute;
+    }
+
+        .region {
+            top: 0;
+            left: 0;
+
+            width: 30%;
+        }
+
+
+            .region ul {
+                list-style: none; 
+                margin: 0 auto;
+            }
+    
+            .region ul li {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+            }
+
+            .region ul li img {
+                position: relative;
+                width: 25px;
+                height: 15px;
+                background: url(../img/HEADER/langs/rus.jpg) no-repeat;
+                background-size: 100% 100%;
+                left: 60%;
+                top: 35%;
+            }
+    
+            .region ul li p {
+                position: relative;
+                font-family: Georgia, serif;
+                font-size: 1vw;
+                color: whitesmoke;
+                left: 100%;
+                top: 30%;
+            }
+
+        .about-contact {
+            top: 0;
+            right: 0;
+
+            width: 70%;
+        }
+        
+            .about-contact ul {
+                list-style: none; 
+                margin: 0 auto;
+            }
+
+            .about-contact ul li {
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                text-align: center;
+            }
+
+            .about-contact ul li:nth-child(2) {
+                right: 0;
+            }
+
+            .about-contact ul li a {
+                font-family: Georgia, serif;
+                font-size: 1vw;
+                color: whitesmoke;
+                position: relative;
+                top: 30%;
+            }
+
+/* ? МЕНЮ ? ------ -> | КОНЕЦ | -> | НАЧАЛО | -> ------ ? ЛОГО ? */
+
+/* ШАПКА: Средний блок | Лого */
+header .center {
+    width: 10%;
+    
+    background: url(../img/HEADER/logo.jpg) no-repeat;
+    background-size: 120% 150%;
+    background-position: 50% 60%;
+}
+
+/* ? ЛОГО ? ------ -> | КОНЕЦ | -> | НАЧАЛО | -> ------ ? НАВИГАЦИЯ ? */
+
+/* ШАПКА: Правый блок */
+header .right {
+    position: absolute;
+    top: 25%;
+    right: 0;
+    margin-right: 1%;
+
+    height: 50%;
+}
+
+.right .navigation{
+    height: 100%;
+    position: absolute;
+}
+
+    .search {
+        top: 0;
+        left: 0;
+
+        width: 70%;
+        
+        background: pink;
+    }
+
+    .calculator {
+        top: 0;
+        right: 0;
+
+        width: 30%;
+        
+        background: hotpink;
+    }
+
+/* ? НАВИГАЦИЯ ? ------ -> | КОНЕЦ | -> | НАЧАЛО | -> ------ ? СЕКЦИЯ ? */
+
+/* ОПИСАНИЕ */
+section {
+    min-height: 100%;
+}
+
+#a {
+    width: 100%;
+    height: 500px;
+    background: darkred;
+}
+
+/* ОПИСАНИЕ */
+footer {
+    width: 100%;
+    height: 15%;
+
+    background: cornflowerblue;
+    opacity: 60%;
 }
