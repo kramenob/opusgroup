@@ -1,4 +1,15 @@
-/* Все и сразу */
+/* 
+
+НАВИГАЦИЯ:
+1. Основное
+2. Шапка
+    > 2.1. Лого
+    > 2.2. Меню
+3. 
+
+/* ⬆ НАВИГАЦИЯ ⬆ 〰 ⬇ ОСНОВНОЕ ⬇ */
+
+/* для чистоты */
 * {
     margin: 0 auto;
     padding: 0;
@@ -6,196 +17,362 @@
     box-sizing: border-box;
 }
 
-/* Ширина и длина страницы для текста и таблицы стилей (css) */
+/* выделение элементов */
+*::selection {
+    color: #fff; /* Цвет текста */
+    background: #000; /* Цвет фона */
+}
+
+/* размеры */
 body, html {
     width: 100%;
     height: 100%;
+    scroll-behavior: smooth;
 }
 
-/* Базовые настройки для всей страницы */
+/* тело страницы */
 body {
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
-    background: black;
+    background: whitesmoke;
     background-position: center;
     background-size: cover;
+}
+
+/* ⬆ ОСНОВНОЕ ⬆ 〰 ⬇ ИМПОРТ ШРИФТОВ ⬇ */
+
+/* Импорт шрифта LobsterTwo-B */
+@font-face {
+    font-family: 'LobsterTwo-B'; /* Гарнитура шрифта */
+    src: url(fonts/LobsterTwo-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* Импорт шрифта LobsterTwo-R */
+@font-face {
+    font-family: 'LobsterTwo-R'; /* Гарнитура шрифта */
+    src: url(fonts/LobsterTwo-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* Импорт шрифта Roboto-Thin */
+@font-face {
+    font-family: 'Roboto-Thin'; /* Гарнитура шрифта */
+    src: url(fonts/Roboto-Thin.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* Импорт шрифта Roboto-Regular */
+@font-face {
+    font-family: 'Roboto-Regular'; /* Гарнитура шрифта */
+    src: url(fonts/Roboto-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* Импорт шрифта Forum */
+@font-face {
+    font-family: 'Forum'; /* Гарнитура шрифта */
+    src: url(fonts/Forum.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* Импорт шрифта Philosopher */
+@font-face {
+    font-family: 'Philosopher'; /* Гарнитура шрифта */
+    src: url(fonts/Philosopher.otf); /* Путь к файлу со шрифтом */
+}
+
+/* Импорт шрифта Hina */
+@font-face {
+    font-family: 'Hina'; /* Гарнитура шрифта */
+    src: url(fonts/Hina-Mincho-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* ⬆ ИМПОРТ ШРИФТОВ ⬆ 〰 ⬇ ШАБЛОНЫ ⬇ */
+
+.container {
+    width: 66%;
+}
+
+.child {
+    display: inline-block;
 }
 
 /*убираем подчеркивание текста ссылок*/
 a {
     text-decoration: none;
+    
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+
+    font-family: 'Forum', sans-serif;
+    font-size: 1.5em;
+    
+    letter-spacing: 1.5px;
 }
+
+section h1 {
+    margin-top: 2.5%;
+    margin-left: 1%;
+
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2.5em;
+
+    letter-spacing: 2px;
+}
+
+section p {
+    margin-top: 1%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+
+    font-family: 'Forum', sans-serif;
+    font-size: 1.5em;
+    
+    letter-spacing: 1.5px;
+}
+
+
+section {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/* ⬆ ШАБЛОНЫ ⬆ 〰 ⬇ ШАПКА ⬇ */
 
 /* Шапка сайта */
 header {
     width: 100%;
-    height: 15%;
+    height: 10%;
 
     position: fixed;
+    background: white;
 
-    background: #393943;
+    border-bottom: 1px solid #3A3A44;
+    z-index: 2;
 }
 
-/* ШАПКА: Блоки */
-header .block {
-    width: 30%;
-    height: 100%;
+header #title {
+    position: fixed;
+    font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5em;
+    top: 2.5%;
+    margin-left: .5%;
 }
 
-/* ? ШАПКА ? ------ -> | КОНЕЦ | -> | НАЧАЛО | -> ------ ? МЕНЮ ? */
+/* ⬆ ШАПКА ⬆ 〰 ⬇ МЕНЮ ⬇ */
 
-/* ШАПКА: Левый блок */
-header .left {
+/* скрываем чекбокс */
+#menu__toggle {
+    opacity: 0;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+    top: 3%;
+    right: 17%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    z-index: 1;
+    margin-right: .5%;
+}
+
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
     position: absolute;
-    top: 25%;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -13px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 13px;
+}
+
+/* анимация при наведении на кнопку */
+.menu__btn:hover > span::before {
+    top: -10px;
+}
+.menu__btn:hover > span::after {
+    top: 10px;
+}
+
+/* контейнер меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: left;
+    background-color: whitesmoke;
+    box-shadow: 2.5px 0px 10px rgba(0, 0, 0, .75);
+}
+/* элементы меню */
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+}
+/* наведение на текст */
+.menu__item:hover {
+    color: #d49e4b;
+}
+
+/* затемнение */
+#background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
     left: 0;
-    margin-left: 1%;
 
-    height: 50%;
-
-    border-top: orange 1px solid;
-    border-left: orange 1px solid;
-    border-bottom: orange 1px solid;
+    background: hsla(0, 0%, 0%, 0.25);
+    visibility: hidden;
+    opacity: 0;
 }
-
-    .left .menu{
-        height: 100%;
-        position: absolute;
-    }
-
-        .region {
-            top: 0;
-            left: 0;
-
-            width: 30%;
-        }
-
-
-            .region ul {
-                list-style: none; 
-                margin: 0 auto;
-            }
-    
-            .region ul li {
-                position: absolute;
-                width: 50%;
-                height: 100%;
-            }
-
-            .region ul li img {
-                position: relative;
-                width: 25px;
-                height: 15px;
-                background: url(../img/HEADER/langs/rus.jpg) no-repeat;
-                background-size: 100% 100%;
-                left: 60%;
-                top: 35%;
-            }
-    
-            .region ul li p {
-                position: relative;
-                font-family: Georgia, serif;
-                font-size: 1vw;
-                color: whitesmoke;
-                left: 100%;
-                top: 30%;
-            }
-
-        .about-contact {
-            top: 0;
-            right: 0;
-
-            width: 70%;
-        }
-        
-            .about-contact ul {
-                list-style: none; 
-                margin: 0 auto;
-            }
-
-            .about-contact ul li {
-                position: absolute;
-                width: 50%;
-                height: 100%;
-                text-align: center;
-            }
-
-            .about-contact ul li:nth-child(2) {
-                right: 0;
-            }
-
-            .about-contact ul li a {
-                font-family: Georgia, serif;
-                font-size: 1vw;
-                color: whitesmoke;
-                position: relative;
-                top: 30%;
-            }
-
-/* ? МЕНЮ ? ------ -> | КОНЕЦ | -> | НАЧАЛО | -> ------ ? ЛОГО ? */
-
-/* ШАПКА: Средний блок | Лого */
-header .center {
-    width: 10%;
-    
-    background: url(../img/HEADER/logo.jpg) no-repeat;
-    background-size: 120% 150%;
-    background-position: 50% 60%;
+/* поворот элемента "гамбургера" */
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
 }
-
-/* ? ЛОГО ? ------ -> | КОНЕЦ | -> | НАЧАЛО | -> ------ ? НАВИГАЦИЯ ? */
-
-/* ШАПКА: Правый блок */
-header .right {
-    position: absolute;
-    top: 25%;
+/* поворот элемента "гамбургера" */
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+/* затемнение */
+#menu__toggle:checked ~ #background {
+    visibility: visible;
+    opacity: 1;
+}
+/* поворот элемента "гамбургера" */
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+/* появление меню */
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
     right: 0;
-    margin-right: 1%;
-
-    height: 50%;
 }
 
-.right .navigation{
-    height: 100%;
+/* время анимации */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    transition-duration: .3s;
+}
+.menu__box {
+    transition-duration: .3s;
+}
+.menu__item {
+    transition-duration: .3s;
+}
+#background {
+    transition-duration: .3s;
+}
+
+/* ⬆ МЕНЮ ⬆ 〰 ⬇ ДОМ ⬇ */
+
+/* инфа */
+section .info {
+    padding-top: 5%;
+}
+/* кнопка */
+a.button {
+    float: left;
+
+    padding: .7em 3em;
+    
+    border: 1px #F59552 solid;
+    border-radius: 2.5px;
+
+    color: whitesmoke;
+    background: #F59552;
+    font-size: 1.5em;
+    font-weight: 600;
+
+    user-select: none;
+    outline: none;
+} 
+/* при наведении курсора мышки */
+a.button:hover {
+    background: #f5965200;
+    color: black;
+}
+/* нажатие */
+a.button:active {
+    background: #DDB170;
+} /* при нажатии */
+/* скорость анимации */
+a.button {
+    transition-duration: .3s;
+}
+
+/*  */
+
+.gallery {
+    display: flex;
+    padding: 2px;
+    transition: 0.3s;
+}
+.gallery:hover .gallery__image {
+    filter: grayscale(1);
+}
+.gallery__column {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.gallery__link {
+    margin: 3%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.gallery__link:hover .gallery__image {
+    filter: grayscale(0);
+}
+.gallery__link:hover .gallery__caption {
+    opacity: 1;
+}
+.gallery__thumb {
+    position: relative;
+}
+.gallery__image {
+    display: block;
+    width: 100%;
+    transition: 0.3s;
+}
+.gallery__image:hover {
+    transform: scale(1.1);
+}
+.gallery__caption {
     position: absolute;
-}
-
-    .search {
-        top: 0;
-        left: 0;
-
-        width: 70%;
-        
-        background: pink;
-    }
-
-    .calculator {
-        top: 0;
-        right: 0;
-
-        width: 30%;
-        
-        background: hotpink;
-    }
-
-/* ? НАВИГАЦИЯ ? ------ -> | КОНЕЦ | -> | НАЧАЛО | -> ------ ? СЕКЦИЯ ? */
-
-/* ОПИСАНИЕ */
-section {
-    min-height: 100%;
-}
-
-#a {
+    bottom: 0;
+    left: 0;
+    padding: 25px 15px 15px;
     width: 100%;
-    height: 500px;
-    background: darkred;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: white;
+    opacity: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: 0.3s;
 }
 
-/* ОПИСАНИЕ */
-footer {
-    width: 100%;
-    height: 15%;
-
-    background: cornflowerblue;
-    opacity: 60%;
-}
