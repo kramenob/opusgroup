@@ -65,6 +65,24 @@ body {
     src: url(fonts/Roboto-Regular.ttf); /* Путь к файлу со шрифтом */
 }
 
+/* импорт шрифта MA-Regular */
+@font-face {
+    font-family: 'MA-Regular'; /* Гарнитура шрифта */
+    src: url(fonts/MA-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* импорт шрифта SourceCodePro-Light */
+@font-face {
+    font-family: 'SourceCodePro-Light'; /* Гарнитура шрифта */
+    src: url(fonts/SourceCodePro-Light.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* импорт шрифта SourceCodePro-Medium */
+@font-face {
+    font-family: 'SourceCodePro-Medium'; /* Гарнитура шрифта */
+    src: url(fonts/SourceCodePro-Medium.ttf); /* Путь к файлу со шрифтом */
+}
+
 /* импорт шрифта Forum */
 @font-face {
     font-family: 'Forum'; /* Гарнитура шрифта */
@@ -75,12 +93,6 @@ body {
 @font-face {
     font-family: 'Philosopher'; /* Гарнитура шрифта */
     src: url(fonts/Philosopher.otf); /* Путь к файлу со шрифтом */
-}
-
-/* импорт шрифта Hina */
-@font-face {
-    font-family: 'Hina'; /* Гарнитура шрифта */
-    src: url(fonts/Hina-Mincho-Regular.ttf); /* Путь к файлу со шрифтом */
 }
 
 /* ⬆ ИМПОРТ ШРИФТОВ ⬆ 〰 ⬇ ШАБЛОНЫ ⬇ */
@@ -103,18 +115,43 @@ a {
     margin-left: 1%;
     margin-bottom: 1%;
 
-    font-family: 'Forum', sans-serif;
-    font-size: 1.5em;
+    font-family: 'SourceCodePro-Light', 'Courier New', Courier, monospace;
+    font-size: 1.15em;
+    color: black;
     
     letter-spacing: 1.5px;
+    transition-duration: .3s;
+}
+
+/* наведение на ссылку */
+a:hover {
+    color: whitesmoke;
+}
+
+/* заголовки */
+h1:not(#title), h2, h3, h4, h5 {
+    font-family: 'MA-Regular', Arial, sans-serif;
+    margin-top: 2.5%;
+    margin-left: 1%;
+}
+
+/* текст */
+p {
+    font-family: 'SourceCodePro-Light', 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+}
+
+/* даты */
+time {
+    font-family: 'SourceCodePro-Light', 'Courier New', Courier, monospace;
+    color: gray;
+    font-size: 1em;
+    margin-left: 1%;
 }
 
 /* заголовки1 секций */
 section h1 {
-    margin-top: 2.5%;
-    margin-left: 1%;
-
-    font-family: 'Philosopher', sans-serif;
+    font-weight: 600;
     font-size: 2.5em;
 
     letter-spacing: 2px;
@@ -122,24 +159,26 @@ section h1 {
 
 /* заголовки2 секций */
 h2 {
-    margin-top: 2.5%;
-    margin-left: 1%;
-
-    font-family: 'Philosopher', sans-serif;
+    font-weight: 600;
     font-size: 2.25em;
 
     letter-spacing: 1.5px;
 }
 
-/* заголовки2 секций */
+/* заголовки3 секций */
 h3 {
-    margin-top: 2.5%;
-    margin-left: 1%;
-
-    font-family: 'Philosopher', sans-serif;
     font-size: 1.5em;
+}
 
-    letter-spacing: 1.25px;
+/* заголовки4 секций */
+h4 {
+    font-size: 1.25em;
+}
+
+/* заголовки5 секций */
+h5 {
+    margin-left: .01%;
+    font-size: 1.1em;
 }
 
 /* параграфы секций */
@@ -147,37 +186,35 @@ section p {
     margin-top: 1%;
     margin-left: 1%;
     margin-bottom: 1%;
-
-    font-family: 'Forum', sans-serif;
-    font-size: 1.5em;
-    
-    letter-spacing: 1.5px;
 }
 
 /* секции */
 section {
     padding-top: 5%;
-    padding-bottom: 5%;
+    margin-bottom: 5%;
+}
+
+/* чтобы заголовок был во всю ширину */
+.sec-title {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1%;
 }
 
 /* заголовки2 секций */
 .sec-title h2 {
+    margin: 0 auto;
     text-align: center;
 
-    font-family: 'Philosopher', sans-serif;
-    font-size: 2.25em;
-
     letter-spacing: 1.5px;
+    line-height: 1.5;
 }
 
 /* параграфы секций */
 .sec-title p {
+    margin: 0 auto;
     text-align: center;
-
-    font-family: 'Forum', sans-serif;
-    font-size: 1.5em;
-    
-    letter-spacing: 1.5px;
+    width: 45%;
 }
 
 /* ⬆ ШАБЛОНЫ ⬆ 〰 ⬇ ШАПКА ⬇ */
@@ -341,9 +378,18 @@ header #title {
 
 /* ⬆ МЕНЮ ⬆ 〰 ⬇ ДОМ ⬇ */
 
+/* отступы для первого раздела */
+section#home {
+    padding-top: 5%;
+}
+
 /* инфа */
 section .info {
     padding-top: 5%;
+}
+
+section#home p {
+    font-size: 1.5em;
 }
 
 /* ⬇ ДОМ - КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
@@ -442,8 +488,7 @@ a.button {
     left: 0;
     padding: 25px 15px 15px;
     width: 100%;
-    font-family: 'Raleway', sans-serif;
-    font-size: 16px;
+    font-size: .75em;
     color: white;
     opacity: 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
@@ -622,6 +667,166 @@ a.button {
  
 /* ⬆ УСЛУГИ ⬆ 〰 ⬇ КОМПАНИЯ ⬇ */
 
-section#about .sec-title h2, .sec-title p {
+/* расположение текста слева  */
+section#about .sec-title h2, section#about .sec-title p {
+    margin: 0;
     text-align: left;
 }
+
+/* обертка колонн */
+.colomn-twice-wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-top: 75px;
+}
+
+/* колонны */
+.colomn-twice-item {
+    width: 600px;
+    height: auto;
+    margin-top: 2%;
+
+}
+
+/* фото автора */
+#author img {
+    width: 500px;
+    height: 600px;
+}
+
+/* подпись фото */
+#caption {
+    position: absolute;
+    margin-top: -300px;
+    margin-left: 200px;
+
+    width: 350px;
+    height: auto;
+
+    padding: .5% 0% 1% 1%;
+
+    background: orange;
+}
+
+#caption h3 {
+    font-family: 'SourceCodePro-Light', 'Courier New', Courier, monospace;
+    font-weight: normal;
+    margin-left: 10px;
+    margin-bottom: 10px;
+
+    letter-spacing: 1;
+}
+
+#caption p {
+    font-family: 'SourceCodePro-Light', 'Courier New', Courier, monospace;
+    font-weight: normal;
+}
+
+/* строки списка */
+#caption li {
+    list-style-type: none; /* Убираем маркеры у списка */
+}
+
+/* изменение маркера списка */
+#caption li:before {
+    content: "🠖 "; /* Добавляем в качестве маркера символ */
+}
+
+.experience-in {
+    float: left;
+    display: flex;
+
+    margin-right: 30px;
+    margin-bottom: 25px;
+}
+
+.experience-in .item-icon {
+    float: left;
+
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+/* иконка */
+.experience-in .item-icon:before {
+    font-size: 25px;
+    color: rgba(128, 128, 128, 0.5);
+    transition-duration: .3s;
+}
+
+ /* анимация иконки */
+.experience-in:hover .item-icon:before {
+    color: orange;
+ }
+
+/* цветной круг под иконкой */
+/* .experience-in .color-circle {
+    width: 24px;
+    height: 24px;
+
+    margin-top: -65px;
+    margin-left: 17px;
+
+    background: orange;
+    border-radius: 50%;
+} */
+ 
+/* ⬆ БЛОКИ ⬆ 〰 ⬇ УСЛУГИ - ИКОНКИ ⬇ с сайта https://fontawesome.com/v5.15/icons/  */
+
+ /* иконка блока 1 */
+.experience-in  .item-icon.photo:before {
+    content: "\f030";
+}
+
+ /* иконка блока 2 */
+.experience-in  .item-icon.video:before {
+    content: "\f03d";
+}
+
+ /* иконка блока 3 */
+.experience-in  .item-icon.gift:before {
+    content: "\f06b";
+}
+
+ /* иконка блока 4 */
+.experience-in  .item-icon.group:before {
+    content: "\f0c0";
+}
+
+ /* иконка блока 5 */
+.experience-in  .item-icon.tree:before {
+    content: "\f1bb";
+}
+
+ /* иконка блока 6 */
+.experience-in  .item-icon.anchor:before {
+    content: "\f13d";
+}
+
+/* ⬆ УСЛУГИ - ИКОНКИ ⬆ 〰 ⬇ БЛОКИ ⬇ */
+
+/* отступ заголовков истории */
+#exp h4 {
+    margin-top: 75px;
+    margin-bottom: 20px;
+}
+
+.text h5 {
+    margin-top: 12.5px;
+}
+
+.text p {
+    margin-top: 5px;
+    width: 100%;
+}
+
+/* история автора */
+#auth-history p:not(.experience-in p) {
+    margin-top: 25px;
+}
+
