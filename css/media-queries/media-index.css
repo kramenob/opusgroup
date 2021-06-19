@@ -1,0 +1,23 @@
+/* 
+
+НАВИГАЦИЯ:
+1. Основное
+2. Шапка
+    > 2.1. Лого
+    > 2.2. Меню
+3. 
+
+/* ⬆ НАВИГАЦИЯ ⬆ 〰 ⬇ БЛОКИ УСЛУГ ⬇ */
+
+@media (min-width: 768px) {
+    .post-item {
+        flex-basis: 50%;
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: 960px) {
+    .post-item {
+        flex-basis: 33.333333333%;
+    }
+}

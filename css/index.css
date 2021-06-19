@@ -19,8 +19,8 @@
 
 /* выделение элементов */
 *::selection {
-    color: #fff; /* Цвет текста */
-    background: #000; /* Цвет фона */
+    color: black; /* Цвет текста */
+    background: orange; /* Цвет фона */
 }
 
 /* размеры */
@@ -41,43 +41,43 @@ body {
 
 /* ⬆ ОСНОВНОЕ ⬆ 〰 ⬇ ИМПОРТ ШРИФТОВ ⬇ */
 
-/* Импорт шрифта LobsterTwo-B */
+/* импорт шрифта LobsterTwo-B */
 @font-face {
     font-family: 'LobsterTwo-B'; /* Гарнитура шрифта */
     src: url(fonts/LobsterTwo-Bold.ttf); /* Путь к файлу со шрифтом */
 }
 
-/* Импорт шрифта LobsterTwo-R */
+/* импорт шрифта LobsterTwo-R */
 @font-face {
     font-family: 'LobsterTwo-R'; /* Гарнитура шрифта */
     src: url(fonts/LobsterTwo-Regular.ttf); /* Путь к файлу со шрифтом */
 }
 
-/* Импорт шрифта Roboto-Thin */
+/* импорт шрифта Roboto-Thin */
 @font-face {
     font-family: 'Roboto-Thin'; /* Гарнитура шрифта */
     src: url(fonts/Roboto-Thin.ttf); /* Путь к файлу со шрифтом */
 }
 
-/* Импорт шрифта Roboto-Regular */
+/* импорт шрифта Roboto-Regular */
 @font-face {
     font-family: 'Roboto-Regular'; /* Гарнитура шрифта */
     src: url(fonts/Roboto-Regular.ttf); /* Путь к файлу со шрифтом */
 }
 
-/* Импорт шрифта Forum */
+/* импорт шрифта Forum */
 @font-face {
     font-family: 'Forum'; /* Гарнитура шрифта */
     src: url(fonts/Forum.ttf); /* Путь к файлу со шрифтом */
 }
 
-/* Импорт шрифта Philosopher */
+/* импорт шрифта Philosopher */
 @font-face {
     font-family: 'Philosopher'; /* Гарнитура шрифта */
     src: url(fonts/Philosopher.otf); /* Путь к файлу со шрифтом */
 }
 
-/* Импорт шрифта Hina */
+/* импорт шрифта Hina */
 @font-face {
     font-family: 'Hina'; /* Гарнитура шрифта */
     src: url(fonts/Hina-Mincho-Regular.ttf); /* Путь к файлу со шрифтом */
@@ -85,10 +85,12 @@ body {
 
 /* ⬆ ИМПОРТ ШРИФТОВ ⬆ 〰 ⬇ ШАБЛОНЫ ⬇ */
 
+/* контейнер страницы */
 .container {
     width: 66%;
 }
 
+/* дочерний элемент */
 .child {
     display: inline-block;
 }
@@ -107,6 +109,7 @@ a {
     letter-spacing: 1.5px;
 }
 
+/* заголовки1 секций */
 section h1 {
     margin-top: 2.5%;
     margin-left: 1%;
@@ -117,6 +120,29 @@ section h1 {
     letter-spacing: 2px;
 }
 
+/* заголовки2 секций */
+h2 {
+    margin-top: 2.5%;
+    margin-left: 1%;
+
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2.25em;
+
+    letter-spacing: 1.5px;
+}
+
+/* заголовки2 секций */
+h3 {
+    margin-top: 2.5%;
+    margin-left: 1%;
+
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.5em;
+
+    letter-spacing: 1.25px;
+}
+
+/* параграфы секций */
 section p {
     margin-top: 1%;
     margin-left: 1%;
@@ -128,15 +154,35 @@ section p {
     letter-spacing: 1.5px;
 }
 
-
+/* секции */
 section {
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
+/* заголовки2 секций */
+.sec-title h2 {
+    text-align: center;
+
+    font-family: 'Philosopher', sans-serif;
+    font-size: 2.25em;
+
+    letter-spacing: 1.5px;
+}
+
+/* параграфы секций */
+.sec-title p {
+    text-align: center;
+
+    font-family: 'Forum', sans-serif;
+    font-size: 1.5em;
+    
+    letter-spacing: 1.5px;
+}
+
 /* ⬆ ШАБЛОНЫ ⬆ 〰 ⬇ ШАПКА ⬇ */
 
-/* Шапка сайта */
+/* шапка */
 header {
     width: 100%;
     height: 10%;
@@ -148,6 +194,7 @@ header {
     z-index: 2;
 }
 
+/* заголовок страницы */
 header #title {
     position: fixed;
     font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -163,7 +210,7 @@ header #title {
     opacity: 0;
 }
 
-/* стилизуем кнопку */
+/* стиль кнопки */
 .menu__btn {
     display: flex; /* используем flex для центрирования содержимого */
     align-items: center;  /* центрируем содержимое кнопки */
@@ -177,7 +224,7 @@ header #title {
     margin-right: .5%;
 }
 
-/* добавляем "гамбургер" */
+/* добавление "гамбургера" */
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -220,6 +267,7 @@ header #title {
     background-color: whitesmoke;
     box-shadow: 2.5px 0px 10px rgba(0, 0, 0, .75);
 }
+
 /* элементы меню */
 .menu__item {
     display: block;
@@ -229,6 +277,7 @@ header #title {
     font-size: 15px;
     text-decoration: none;
 }
+
 /* наведение на текст */
 .menu__item:hover {
     color: #d49e4b;
@@ -246,32 +295,35 @@ header #title {
     visibility: hidden;
     opacity: 0;
 }
+
 /* поворот элемента "гамбургера" */
 #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
 }
-/* поворот элемента "гамбургера" */
 #menu__toggle:checked ~ .menu__btn > span::before {
     top: 0;
     transform: rotate(0);
 }
-/* затемнение */
+
+/* затемнение страницы */
 #menu__toggle:checked ~ #background {
     visibility: visible;
     opacity: 1;
 }
-/* поворот элемента "гамбургера" */
+
+/* поворот элемента "гамбургера" обратно */
 #menu__toggle:checked ~ .menu__btn > span::after {
     top: 0;
     transform: rotate(90deg);
 }
+
 /* появление меню */
 #menu__toggle:checked ~ .menu__box {
     visibility: visible;
     right: 0;
 }
 
-/* время анимации */
+/* скорость анимации */
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -293,6 +345,9 @@ header #title {
 section .info {
     padding-top: 5%;
 }
+
+/* ⬇ ДОМ - КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
+
 /* кнопка */
 a.button {
     float: left;
@@ -310,58 +365,77 @@ a.button {
     user-select: none;
     outline: none;
 } 
-/* при наведении курсора мышки */
+
+/* наведение на кнопку */
 a.button:hover {
     background: #f5965200;
     color: black;
 }
+
 /* нажатие */
 a.button:active {
     background: #DDB170;
-} /* при нажатии */
+}
+
 /* скорость анимации */
 a.button {
     transition-duration: .3s;
 }
 
-/*  */
+/* ⬆ ДОМ - КНОПКА "ХОЧУ РЕМОНТ!" ⬆ 〰 ⬇ ПОРТФОЛИО - ГАЛЕРЕЯ ⬇ */
 
+/* галерея */
 .gallery {
     display: flex;
     padding: 2px;
     transition: 0.3s;
 }
+
+/* анимация наведениея на пикчу */
 .gallery:hover .gallery__image {
     filter: grayscale(1);
 }
+
+/* колонны галереи */
 .gallery__column {
     display: flex;
     flex-direction: column;
     width: 25%;
 }
 
+/* бокс пикчи */
 .gallery__link {
     margin: 3%;
     overflow: hidden;
     border-radius: 5px;
 }
+
+/* наведение на пикчу */
 .gallery__link:hover .gallery__image {
     filter: grayscale(0);
 }
 .gallery__link:hover .gallery__caption {
     opacity: 1;
 }
+
+/* блок пикчи */
 .gallery__thumb {
     position: relative;
 }
+
+/* пикча блока */
 .gallery__image {
     display: block;
     width: 100%;
     transition: 0.3s;
 }
+
+/* анимация пикчи */
 .gallery__image:hover {
     transform: scale(1.1);
 }
+
+/* подпись */
 .gallery__caption {
     position: absolute;
     bottom: 0;
@@ -376,3 +450,178 @@ a.button {
     transition: 0.3s;
 }
 
+/* ⬆ ПОРТФОЛИО - ГАЛЕРЕЯ ⬆ 〰 ⬇ УСЛУГИ ⬇ */
+
+/* обертка блоков услуг */
+.post-wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+
+ /* блок */
+ .post-item {
+    padding: 15px;
+    cursor: pointer;
+ }
+
+ /* скорость анимации всех элементов блока */
+ .post-item * {
+    transition: .25s linear;
+ }
+
+ /* контент блока */
+ .item-content {
+    padding: 40px;
+ }
+
+ /* наведеине на блок */
+ .post-item:hover .color-circle {
+    margin-top: -63px;
+ }
+
+ /* параметры иконки */
+ .item-icon {
+    margin-bottom: 20px;
+ }
+
+ /* иконка */
+ .item-icon:before {
+    content: "";
+    font-family: FontAwesome;
+    color: #3A3A44;
+    font-size: 50px;
+    line-height: 1;
+ }
+
+/* ⬆ БЛОКИ ⬆ 〰 ⬇ УСЛУГИ - ИКОНКИ ⬇ с сайта https://fontawesome.com/v5.15/icons/  */
+
+ /* иконка блока 1 */
+ .item-icon.photo:before {
+    content: "\f030";
+ }
+
+ /* иконка блока 2 */
+ .item-icon.video:before {
+    content: "\f03d";
+ }
+
+ /* иконка блока 3 */
+ .item-icon.gift:before {
+    content: "\f06b";
+ }
+
+ /* иконка блока 4 */
+ .item-icon.group:before {
+    content: "\f0c0";
+ }
+
+ /* иконка блока 5 */
+ .item-icon.tree:before {
+    content: "\f1bb";
+ }
+
+ /* иконка блока 6 */
+ .item-icon.anchor:before {
+    content: "\f13d";
+ }
+
+/* ⬆ УСЛУГИ - ИКОНКИ ⬆ 〰 ⬇ БЛОКИ ⬇ */
+
+ /* анимация поднятия элементов */
+ .post-item:hover .item-icon, .post-item:hover .item-body h3, .post-item:hover .item-body p {
+    transform: translateY(-8px);
+ }
+
+ /* цветной круг под иконкой */
+ .color-circle {
+    width: 45px;
+    height: 45px;
+
+    margin-top: -55px;
+    margin-left: 11px;
+
+    background: orange;
+    border-radius: 50%;
+ }
+
+ /* текст */
+ .item-body {
+    color: gray;
+    font-size: 14px;
+ }
+
+ /* заголовок3 */
+ .item-body h3 {
+    color: black;
+    font-weight: 500;
+    margin-bottom: 15px;
+    transition-delay: .05s;
+ }
+
+ /* параграф */
+ .item-body p {
+    transition-delay: .1s;
+ }
+
+ /* подвал блока */
+ .item-footer {
+    padding-top: 15px;
+ }
+
+ /* ссылка блока */
+ .link {
+    text-decoration: none;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    padding-right: 30px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: black;
+ }
+
+ /* полоска */
+ .link:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: .125rem;
+    margin: auto;
+    background: orange;
+    transform: scaleX(.2);
+    transform-origin: left center;
+    z-index: 0;
+    transition: .6s cubic-bezier(.6, .01, 0, 1);
+ }
+
+ /* ссылка */
+ .link span {
+    display: inline-block;
+    position: relative;
+    transform: translateX(-200%);
+    transition: .6s cubic-bezier(.6, .01, 0, 1);
+ }
+
+ /* анимация ссылки */
+ .post-item:hover .link span {
+    transform: translateX(0%);
+ }
+
+ /* наведение на ссылку */
+ .post-item:hover .link:before {
+    transform-origin: right center;
+ }
+
+ 
+/* ⬆ УСЛУГИ ⬆ 〰 ⬇ КОМПАНИЯ ⬇ */
+
+section#about .sec-title h2, .sec-title p {
+    text-align: left;
+}
