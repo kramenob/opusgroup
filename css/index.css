@@ -20,7 +20,7 @@
 /* выделение элементов */
 *::selection {
     color: black; /* Цвет текста */
-    background: orange; /* Цвет фона */
+    background: #F59552; /* Цвет фона */
 }
 
 /* размеры */
@@ -34,9 +34,10 @@ body, html {
 body {
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
-    background: whitesmoke;
     background-position: center;
     background-size: cover;
+    
+    background: whitesmoke;
 }
 
 /* ⬆ ОСНОВНОЕ ⬆ 〰 ⬇ ИМПОРТ ШРИФТОВ ⬇ */
@@ -136,7 +137,7 @@ h1:not(#title), h2, h3, h4, h5 {
 }
 
 /* текст */
-p, span, time {
+p, span, time, input, select, textarea {
     font-family: 'SourceCodePro-Light', 'Courier New', Courier, monospace;
     font-size: 1.1em;
 }
@@ -179,6 +180,11 @@ h4 {
 h5 {
     margin-left: .01%;
     font-size: 1.1em;
+}
+
+/* строки списка */
+li {
+    list-style-type: none; /* Убираем маркеры у списка */
 }
 
 /* параграфы секций */
@@ -225,7 +231,7 @@ header {
     height: 10%;
 
     position: fixed;
-    background: white;
+    background: whitesmoke;
 
     border-bottom: 1px solid #3A3A44;
     z-index: 2;
@@ -395,13 +401,13 @@ section#home p {
 /* ⬇ ДОМ - КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
 
 /* кнопка */
-a.button {
+.button {
     float: left;
 
     padding: .7em 3em;
     
     border: 1px #F59552 solid;
-    border-radius: 2.5px;
+    border-radius: 0;
 
     color: whitesmoke;
     background: #F59552;
@@ -410,21 +416,22 @@ a.button {
 
     user-select: none;
     outline: none;
+    cursor: pointer;
 } 
 
 /* наведение на кнопку */
-a.button:hover {
+.button:hover {
     background: #f5965200;
     color: black;
 }
 
 /* нажатие */
-a.button:active {
+.button:active {
     background: #DDB170;
 }
 
 /* скорость анимации */
-a.button {
+.button {
     transition-duration: .3s;
 }
 
@@ -588,7 +595,7 @@ a.button {
     margin-top: -55px;
     margin-left: 11px;
 
-    background: orange;
+    background: #F59552;
     border-radius: 50%;
 }
 
@@ -639,7 +646,7 @@ a.button {
     bottom: 0;
     height: .125rem;
     margin: auto;
-    background: orange;
+    background: #F59552;
     transform: scaleX(.2);
     transform-origin: left center;
     z-index: 0;
@@ -679,16 +686,21 @@ section#about .sec-title h2, section#about .sec-title p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
-    margin-top: 75px;
 }
 
 /* колонны */
 .colomn-twice-item {
-    width: 600px;
+    width: 47.5%;
     height: auto;
     margin-top: 2%;
+}
 
+.first {
+    float: left;
+}
+
+.last {
+    float: right;
 }
 
 /* фото автора */
@@ -709,7 +721,7 @@ section#about .sec-title h2, section#about .sec-title p {
 
     padding: .5% 0% 1% 1%;
 
-    background: orange;
+    background: #F59552;
 }
 
 /* заголовок подписи */
@@ -727,12 +739,6 @@ section#about .sec-title h2, section#about .sec-title p {
     font-family: 'SourceCodePro-Light', 'Courier New', Courier, monospace;
     font-size: 1em;
 }
-
-/* строки списка */
-#caption li {
-    list-style-type: none; /* Убираем маркеры у списка */
-}
-
 
 /* изменение маркера списка */
 #caption li:before {
@@ -775,7 +781,7 @@ section#about .sec-title h2, section#about .sec-title p {
 
  /* анимация иконки */
 .experience-in:hover .item-icon:before {
-    color: orange;
+    color: #F59552;
 }
 
 /* цветной круг под иконкой */
@@ -786,7 +792,7 @@ section#about .sec-title h2, section#about .sec-title p {
     margin-top: -65px;
     margin-left: 17px;
 
-    background: orange;
+    background: #F59552;
     border-radius: 50%;
 } */
  
@@ -846,8 +852,6 @@ section#about .sec-title h2, section#about .sec-title p {
 
 /* ⬆ КОМПАНИЯ ⬆ 〰 ⬇ КОМАНДА ⬇ */
 
-/* ⬆ КОМАНДА ⬆ 〰 ⬇ КОМАНДА - ГАЛЕРЕЯ ⬇ */
-
 /* галерея */
 section#team .gallery {
     display: flex;
@@ -857,6 +861,7 @@ section#team .gallery {
     margin-top: 50px;
 }
 
+/* шоб текст не пропадал при наведении */
 section#team .gallery a:hover {
     color: black;
 }
@@ -885,17 +890,20 @@ section#team .gallery__link {
 }
 
 section#team .gallery__link:hover {
-    border: 1px solid orange;
+    border: 1px solid #F59552;
 }
 
+/* отсутствие рамки слева */
 section#team .gallery__column:first-child .gallery__link {
     border-left: 0;
 }
 
+/* отсутствие рамки справа */
 section#team .gallery__column:last-child .gallery__link {
     border-right: 0;
 }
 
+/* аватар */
 section#team .avatar {
     display: block;
     width: 100px;
@@ -913,24 +921,190 @@ section#team .gallery__thumb {
     position: relative;
 }
 
-/* подпись */
+/* расположение текста */
 section#team .caption {
     text-align: center;
 }
 
+/* имя */
 section#team .caption h5 {
     font-size: .9em;
     margin-bottom: 10px;
 }
 
+/* текст для должности */
 section#team .caption p:nth-child(2) {
     padding-bottom: 20px;
 
 }
 
+/* текст */
 section#team .caption p {
     font-size: .8em;
     width: 90%;
 }
 
-/* ⬆ КОМАНДА - ГАЛЕРЕЯ ⬆ 〰 ⬇ КОМАНДА ⬇ */
+/* ⬆ КОМАНДА ⬆ 〰 ⬇ КОНТАКТЫ ⬇ */
+
+/* текстовые поля */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 0;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    background-color: whitesmoke;
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* поле имени и фамилии */
+input.name {
+    width: 47.5%;
+}
+
+/* поле фамилии */
+input#lname {
+    float: right;
+}
+
+/* шрифт кнопки */
+#sendform .button {
+    padding: 2.5%;
+    font-size: 1em;
+}
+
+/* карта */
+#map iframe {
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 500px;
+}
+
+/* ⬆ КОНТАКТЫ ⬆ 〰 ⬇ ПОДВАЛ ⬇ */
+
+/* общее */
+footer {
+    width: 100%;
+    height: 600px;
+
+    background-color: #222222;
+}
+
+/* обертка колонн */
+.colomn-four-wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* колонны */
+.colomn-four-item {
+    width: 24%;
+    height: 400px;
+    margin-top: 2%;
+
+    padding: 2%;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    margin-top: 0 auto;
+
+}
+
+.content h4 {
+    font-size: 1em;
+    color: whitesmoke;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 2;
+    letter-spacing: 2px;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #777777;
+    
+    font-family: 'SourceCodePro-Medium', 'Courier New', Courier, monospace;
+    font-size: 1em;
+    
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    transition-duration: .3s;
+}
+
+footer a:hover {
+    color: #F59552;
+}
+
+ /* параметры иконки */
+ footer .item-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #F59552;
+
+    text-align: center;
+    border-radius: 50%;
+
+    padding-top: 5px;
+}
+
+ /* иконка */
+ footer .item-icon:before {
+    content: "";
+    font-family: FontAwesome;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+/* ⬆ БЛОКИ ⬆ 〰 ⬇ УСЛУГИ - ИКОНКИ ⬇ с сайта https://fontawesome.com/v5.15/icons/  */
+
+ /* иконка instagram */
+ footer .item-icon.instagram:before {
+    content: "\f16d";
+}
+
+ /* иконка whatsapp */
+ footer .item-icon.whatsapp:before {
+    content: "\f232";
+}
+
+ /* иконка youtube */
+ footer .item-icon.youtube:before {
+    content: "\f167";
+}
+
+ /* иконка vkontacte */
+ footer .item-icon.vkontacte:before {
+    content: "\f189";
+}
+
+
+.copyright {
+    width: 100%;
+    margin-top: 5em;
+
+    text-align: center;
+    font-weight: 600;
+}
+
+.copyright p {
+    color: #AAAAAA;
+    line-height: 2.2;
+
+    
+    font-family: 'SourceCodePro-Medium', 'Courier New', Courier, monospace;
+    font-size: 1em;
+    
+    letter-spacing: 1.5px;
+    transition-duration: .3s;
+}

@@ -28,6 +28,8 @@
     <link rel="stylesheet" type="text/css" href="css/media-queries/media-index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
+    <script type="text/javascript" src="js/"></script>
+
     <title>Opus.Group | Главная</title>    
 </head>
 <body>
@@ -42,11 +44,10 @@
                     <span></span>
                 </label>
                 <ul class="menu__box">
-                    <li><a class="menu__item" href="#home">Дом</a></li>
+                    <li><a class="menu__item" href="#home">Главная</a></li>
                     <li><a class="menu__item" href="#porfolio">Проекты</a></li>
                     <li><a class="menu__item" href="#service">Услуги</a></li>
                     <li><a class="menu__item" href="#about">Компания</a></li>
-                    <li><a class="menu__item" href="#team">Команда</a></li>
                     <li><a class="menu__item" href="#contact">Контакты</a></li>
                 </ul>
               </div>
@@ -403,6 +404,7 @@
                 <p>
                     Работать вместе есть успех.
                 </p>
+            </div> <!-- .sec-title --> 
                 <div class="gallery">
                     <!-- Колонна 1 -->
                     <div class="gallery__column">
@@ -473,22 +475,119 @@
                             </figure>
                         </a>
                     </div>
-                </div>
-            </div> <!-- .sec-title -->            
+                </div>           
         </div> <!-- .container -->
     </section>
 
     <section id="contact">
-        <form action="send.php" method="POST">
-            <input type="text" name="name" placeholder="Ваше имя">
-            <input type="text" name="phone" placeholder="Ваш телефон">
-            <input type="submit" class="btn" >
-        </form>
+        <div class="container">
+            <div class="sec-title">
+                <h2>Контакты</h2>
+                <p>
+                    Доступны к работе. Ждем вашего клика.
+                </p>
+            </div> <!-- .sec-title --> 
+            
+            <div class="colomn-twice-wrap">
+                <div class="colomn-twice-item first" id="sendform">
+                    <form action="/action_page.php">
+                        <input class="name" type="text" id="fname" name="firstname" placeholder="Ваше имя.." maxlength="20" minlength="1">
+        
+                        <input class="name" type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." maxlength="30" minlength="1">
+        
+                        <input type="text" id="mail" name="lastname" placeholder="Ваш E-Mail адрес..">
+
+                        <textarea id="subject" name="subject" placeholder="Введите Ваше сообщение.." style="height:200px"></textarea>
+        
+                        <input class="button" type="submit" value="Отправить">
+                    </form>
+                </div> <!-- .sendform --> 
+                <div class="colomn-twice-item last" id="map">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88102.22538200315!2d47.96174752666017!3d46.36552807848672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a90584a786c9ed%3A0x5a2144fabe5dcac2!2z0JDRgdGC0YDQsNGF0LDQvdGMLCDQkNGB0YLRgNCw0YXQsNC90YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1624199001484!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    
+                </div> <!-- .map --> 
+            </div>  <!-- .colomn-twice-wrap --> 
+
+        </div>
     </section>
 
     <!-- ПОДВАЛ -->
     <footer>
+        <div class="container">
+            <div class="colomn-four-wrap">
+                <div class="colomn-four-item">
+                    <div class="content">
+                        <h4>
+                            Главная
+                        </h4>
+                        <ul>
+                            <li><a href="#">Opus.Group</a></li>
+                            <li><a href="#">Проекты</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Компания</a></li>
+                            <li><a href="#">Команда</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Условия</a></li>
+                            <li><a href="#">Приватность</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="colomn-four-item">
+                    <div class="content">
+                        <h4>
+                            Проекты
+                        </h4>
+                        <ul>
+                            <li><a href="#">Минимализм</a></li>
+                            <li><a href="#">Золотой унитаз</a></li>
+                            <li><a href="#">Красная комната</a></li>
+                        </ul>
+                    </div>
 
+                </div>
+                <div class="colomn-four-item">
+                    <div class="content">
+                        <h4>
+                            Услуги
+                        </h4>
+                        <ul>
+                            <li><a href="#">Работы с полами</a></li>
+                            <li><a href="#">Работы со стенами</a></li>
+                            <li><a href="#">Работа с потолками</a></li>
+                            <li><a href="#">Работа с дверями</a></li>
+                            <li><a href="#">Сантехнические работы</a></li>
+                            <li><a href="#">Электромонтажные работы</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="colomn-four-item">
+                    <div class="content">
+                        <h4>
+                            Контакты
+                        </h4>
+                        <ul>
+                            <li><h4>Пос. Советский, Астрахань 414019</h4></li>
+                            <li><a href="tel:+79123456789">+7 (912) 345-67-89</a></li>
+                            <li><a href="tel:+79987654321">+7 (998) 765-43-21</a></li>
+                            <li><a href="mailto:opus.group@bussy.com">opus.group@bussy.com</a></li>
+                            <li><h4>Медиа</h4></li>
+                            <li>
+                                <a href="#"><div class="item-icon instagram child"></div></a>
+                                <a href="#"><div class="item-icon whatsapp child"></div></a>
+                                <a href="#"><div class="item-icon youtube child"></div></a>
+                                <a href="#"><div class="item-icon vkontacte child"></div></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>Copyright ©2021 Все права защищены | Сайт сверстал<a href="#">Mark Roas</a> по заказу Opus.Group</p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
