@@ -136,14 +136,14 @@ h1:not(#title), h2, h3, h4, h5 {
 }
 
 /* текст */
-p {
+p, span, time {
     font-family: 'SourceCodePro-Light', 'Courier New', Courier, monospace;
     font-size: 1.1em;
 }
 
+
 /* даты */
-time {
-    font-family: 'SourceCodePro-Light', 'Courier New', Courier, monospace;
+span {
     color: gray;
     font-size: 1em;
     margin-left: 1%;
@@ -190,7 +190,7 @@ section p {
 
 /* секции */
 section {
-    padding-top: 5%;
+    padding-top: 6%;
     margin-bottom: 5%;
 }
 
@@ -504,84 +504,84 @@ a.button {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
- }
+}
 
  /* блок */
- .post-item {
+.post-item {
     padding: 15px;
     cursor: pointer;
- }
+}
 
  /* скорость анимации всех элементов блока */
- .post-item * {
+.post-item * {
     transition: .25s linear;
- }
+}
 
  /* контент блока */
- .item-content {
+.item-content {
     padding: 40px;
- }
+}
 
  /* наведеине на блок */
- .post-item:hover .color-circle {
+.post-item:hover .color-circle {
     margin-top: -63px;
- }
+}
 
  /* параметры иконки */
- .item-icon {
+.item-icon {
     margin-bottom: 20px;
- }
+}
 
  /* иконка */
- .item-icon:before {
+.item-icon:before {
     content: "";
     font-family: FontAwesome;
     color: #3A3A44;
     font-size: 50px;
     line-height: 1;
- }
+}
 
 /* ⬆ БЛОКИ ⬆ 〰 ⬇ УСЛУГИ - ИКОНКИ ⬇ с сайта https://fontawesome.com/v5.15/icons/  */
 
  /* иконка блока 1 */
- .item-icon.photo:before {
+.item-icon.photo:before {
     content: "\f030";
- }
+}
 
  /* иконка блока 2 */
- .item-icon.video:before {
+.item-icon.video:before {
     content: "\f03d";
- }
+}
 
  /* иконка блока 3 */
- .item-icon.gift:before {
+.item-icon.gift:before {
     content: "\f06b";
- }
+}
 
  /* иконка блока 4 */
- .item-icon.group:before {
+.item-icon.group:before {
     content: "\f0c0";
- }
+}
 
  /* иконка блока 5 */
- .item-icon.tree:before {
+.item-icon.tree:before {
     content: "\f1bb";
- }
+}
 
  /* иконка блока 6 */
- .item-icon.anchor:before {
+.item-icon.anchor:before {
     content: "\f13d";
- }
+}
 
 /* ⬆ УСЛУГИ - ИКОНКИ ⬆ 〰 ⬇ БЛОКИ ⬇ */
 
  /* анимация поднятия элементов */
- .post-item:hover .item-icon, .post-item:hover .item-body h3, .post-item:hover .item-body p {
+.post-item:hover .item-icon, .post-item:hover .item-body h3, .post-item:hover .item-body p {
     transform: translateY(-8px);
- }
+}
 
  /* цветной круг под иконкой */
- .color-circle {
+.color-circle {
     width: 45px;
     height: 45px;
 
@@ -590,34 +590,34 @@ a.button {
 
     background: orange;
     border-radius: 50%;
- }
+}
 
  /* текст */
- .item-body {
+.item-body {
     color: gray;
     font-size: 14px;
- }
+}
 
  /* заголовок3 */
- .item-body h3 {
+.item-body h3 {
     color: black;
     font-weight: 500;
     margin-bottom: 15px;
     transition-delay: .05s;
- }
+}
 
  /* параграф */
- .item-body p {
+.item-body p {
     transition-delay: .1s;
- }
+}
 
  /* подвал блока */
- .item-footer {
+.item-footer {
     padding-top: 15px;
- }
+}
 
  /* ссылка блока */
- .link {
+.link {
     text-decoration: none;
     display: inline-block;
     overflow: hidden;
@@ -627,10 +627,10 @@ a.button {
     text-transform: uppercase;
     font-weight: 600;
     color: black;
- }
+}
 
  /* полоска */
- .link:before {
+.link:before {
     content: "";
     position: absolute;
     top: 0;
@@ -644,27 +644,26 @@ a.button {
     transform-origin: left center;
     z-index: 0;
     transition: .6s cubic-bezier(.6, .01, 0, 1);
- }
+}
 
  /* ссылка */
- .link span {
+.link span {
     display: inline-block;
     position: relative;
     transform: translateX(-200%);
     transition: .6s cubic-bezier(.6, .01, 0, 1);
- }
+}
 
  /* анимация ссылки */
- .post-item:hover .link span {
+.post-item:hover .link span {
     transform: translateX(0%);
- }
+}
 
  /* наведение на ссылку */
- .post-item:hover .link:before {
+.post-item:hover .link:before {
     transform-origin: right center;
- }
+} 
 
- 
 /* ⬆ УСЛУГИ ⬆ 〰 ⬇ КОМПАНИЯ ⬇ */
 
 /* расположение текста слева  */
@@ -694,8 +693,9 @@ section#about .sec-title h2, section#about .sec-title p {
 
 /* фото автора */
 #author img {
-    width: 500px;
-    height: 600px;
+    width: auto;
+    max-height: 600px;
+    filter: grayscale(100%);
 }
 
 /* подпись фото */
@@ -712,18 +712,20 @@ section#about .sec-title h2, section#about .sec-title p {
     background: orange;
 }
 
+/* заголовок подписи */
 #caption h3 {
     font-family: 'SourceCodePro-Light', 'Courier New', Courier, monospace;
     font-weight: normal;
     margin-left: 10px;
     margin-bottom: 10px;
+    font-size: 1em;
 
     letter-spacing: 1;
 }
 
-#caption p {
+#caption a {
     font-family: 'SourceCodePro-Light', 'Courier New', Courier, monospace;
-    font-weight: normal;
+    font-size: 1em;
 }
 
 /* строки списка */
@@ -731,19 +733,31 @@ section#about .sec-title h2, section#about .sec-title p {
     list-style-type: none; /* Убираем маркеры у списка */
 }
 
+
 /* изменение маркера списка */
 #caption li:before {
     content: "🠖 "; /* Добавляем в качестве маркера символ */
 }
 
+/* заголовок био */
+#bio h4 {
+    margin-top: 2px;
+}
+
+/* отступы истории автора */
+#auth-history p:not(.experience-in p) {
+    margin-top: 15px;
+}
+
+/* блок опыта */
 .experience-in {
     float: left;
     display: flex;
-
-    margin-right: 30px;
-    margin-bottom: 25px;
+    margin-right: 50px;
+    margin-bottom: 10px;
 }
 
+/* иконка опыта */
 .experience-in .item-icon {
     float: left;
 
@@ -762,7 +776,7 @@ section#about .sec-title h2, section#about .sec-title p {
  /* анимация иконки */
 .experience-in:hover .item-icon:before {
     color: orange;
- }
+}
 
 /* цветной круг под иконкой */
 /* .experience-in .color-circle {
@@ -776,7 +790,7 @@ section#about .sec-title h2, section#about .sec-title p {
     border-radius: 50%;
 } */
  
-/* ⬆ БЛОКИ ⬆ 〰 ⬇ УСЛУГИ - ИКОНКИ ⬇ с сайта https://fontawesome.com/v5.15/icons/  */
+/* ⬆ КОМПАНИЯ ⬆ 〰 ⬇ КОМПАНИЯ - ИКОНКИ ⬇ с сайта https://fontawesome.com/v5.15/icons/  */
 
  /* иконка блока 1 */
 .experience-in  .item-icon.photo:before {
@@ -795,7 +809,7 @@ section#about .sec-title h2, section#about .sec-title p {
 
  /* иконка блока 4 */
 .experience-in  .item-icon.group:before {
-    content: "\f0c0";
+    content: "\f0b1";
 }
 
  /* иконка блока 5 */
@@ -808,25 +822,115 @@ section#about .sec-title h2, section#about .sec-title p {
     content: "\f13d";
 }
 
-/* ⬆ УСЛУГИ - ИКОНКИ ⬆ 〰 ⬇ БЛОКИ ⬇ */
+/* ⬆ КОМПАНИЯ - ИКОНКИ ⬆ 〰 ⬇ КОМПАНИЯ ⬇ */
 
-/* отступ заголовков истории */
+/* отступ заголовка опыта */
 #exp h4 {
-    margin-top: 75px;
+    margin-top: 66px;
     margin-bottom: 20px;
 }
 
+/* заголово опыта */
 .text h5 {
+    font-size: 1em;
     margin-top: 12.5px;
 }
 
+/* текст опыта */
 .text p {
+    font-size: 1em;
     margin-top: 5px;
     width: 100%;
 }
 
-/* история автора */
-#auth-history p:not(.experience-in p) {
-    margin-top: 25px;
+
+/* ⬆ КОМПАНИЯ ⬆ 〰 ⬇ КОМАНДА ⬇ */
+
+/* ⬆ КОМАНДА ⬆ 〰 ⬇ КОМАНДА - ГАЛЕРЕЯ ⬇ */
+
+/* галерея */
+section#team .gallery {
+    display: flex;
+    padding: 2px;
+    transition: 0.3s;
+
+    margin-top: 50px;
 }
 
+section#team .gallery a:hover {
+    color: black;
+}
+
+/* анимация наведениея на пикчу */
+section#team .gallery:hover .gallery__image {
+    filter: none;
+}
+
+/* колонны галереи */
+section#team .gallery__column {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+/* бокс пикчи */
+section#team .gallery__link {
+    margin: 3%;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 400px;
+
+    border: .5px solid rgba(128, 128, 128, 0.15);
+    border-radius: 1px;
+}
+
+section#team .gallery__link:hover {
+    border: 1px solid orange;
+}
+
+section#team .gallery__column:first-child .gallery__link {
+    border-left: 0;
+}
+
+section#team .gallery__column:last-child .gallery__link {
+    border-right: 0;
+}
+
+section#team .avatar {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    border-radius: 50%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+/* блок пикчи */
+section#team .gallery__thumb {
+    position: relative;
+}
+
+/* подпись */
+section#team .caption {
+    text-align: center;
+}
+
+section#team .caption h5 {
+    font-size: .9em;
+    margin-bottom: 10px;
+}
+
+section#team .caption p:nth-child(2) {
+    padding-bottom: 20px;
+
+}
+
+section#team .caption p {
+    font-size: .8em;
+    width: 90%;
+}
+
+/* ⬆ КОМАНДА - ГАЛЕРЕЯ ⬆ 〰 ⬇ КОМАНДА ⬇ */
