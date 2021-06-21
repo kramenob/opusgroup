@@ -16,6 +16,23 @@
     }
 }
 
+@media screen and (max-width: 800px){
+    body{
+        margin: 0;
+    }
+    .accordion {
+        flex-direction: column;
+        height: 700px;
+        box-shadow: none;
+    }
+    .box {
+        box-shadow: none;
+    }
+    .box:hover {
+        flex: 7;
+    }
+}
+
 @media (min-width: 960px) {
     .post-item {
         flex-basis: 33.333333333%;
