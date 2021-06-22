@@ -1,0 +1,55 @@
+/* 
+
+НАВИГАЦИЯ:
+1. 
+
+
+
+/* ========== Desktop First ========== */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    .post-item {
+        flex-basis: 33.333333333%;
+    }
+    body{
+        margin: 0;
+    }
+    .accordion {
+        flex-direction: column;
+        height: 700px;
+        box-shadow: none;
+    }
+    .box {
+        box-shadow: none;
+    }
+    .box:hover {
+        flex: 7;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+    .post-item {
+        flex-basis: 50%;
+        flex-shrink: 0;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+    
+}
+
+
+

@@ -1,22 +1,84 @@
 /* 
 
 НАВИГАЦИЯ:
-1. Основное
-2. Шапка
-    > 2.1. Лого
-    > 2.2. Меню
-3. 
+1. 
 
-/* ⬆ НАВИГАЦИЯ ⬆ 〰 ⬇ БЛОКИ УСЛУГ ⬇ */
 
-@media (min-width: 768px) {
+
+/* ========== Desktop First ========== */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    /* секции */
+    section {
+        padding-top: 11%;
+    }
+
+    section#porfolio {
+        padding-top: 11%;
+    }
+
+    .menu__btn {
+        left: 5%; /* left - кнопка слевой стороны | right - справой стороны | + появление меню + контейнер меню */
+    }
+
+    /* элементы меню */
+    .menu__item {
+        padding: 12px 14%;
+    }
+
+    /* звонок */
+    header .mobile-call {
+        right: 5%;
+    }
+
+    /* инфа */
+    section#home .info {
+        padding-top: 10%;
+    }
+
+    section#home h1 {
+        margin-left: 0%;
+    }
+
+    section#home p {
+        font-size: 1.9em;
+        text-align: center;
+        margin-top: 5%;
+        margin-left: 0%;
+    }
+
+    /* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
+    section#home .button {
+        margin-left: 0%;
+    }
+
     .post-item {
-        flex-basis: 50%;
-        flex-shrink: 0;
+        height: 425px;
+    }
+
+     /* параграф */
+    .item-body p {
+        margin-left: 0%;
+        font-size: 1.5em;
+
+    }
+
+    .item-body h3 {
+        margin-left: 0%;
+        font-size: 1.6em;
     }
 }
 
-@media screen and (max-width: 800px){
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    .post-item {
+        flex-basis: 33.333333333%;
+    }
     body{
         margin: 0;
     }
@@ -33,8 +95,23 @@
     }
 }
 
-@media (min-width: 960px) {
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
     .post-item {
-        flex-basis: 33.333333333%;
+        flex-basis: 50%;
+        flex-shrink: 0;
     }
 }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+    
+}
+
+
+
