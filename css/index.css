@@ -539,7 +539,14 @@ section#home .info {
 section#home p {
     font-size: 1.5em;
     text-align: center;
+
+    width: 70%;
+    margin: 0 auto;
     margin-top: 3%;
+}
+
+.symb:nth-child(3) {
+    display: none;
 }
 
 /* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
@@ -696,6 +703,10 @@ section#porfolio {
     cursor: pointer;
 }
 
+.post-item:hover, .post-item a:hover {    
+    cursor: default;
+}
+
  /* скорость анимации всех элементов блока */
 .post-item * {
     transition: .25s linear;
@@ -778,6 +789,7 @@ section#porfolio {
     text-transform: uppercase;
     font-weight: 600;
     color: black;
+    cursor: default;
 }
 
  /* полоска */
@@ -839,6 +851,9 @@ section#howwework .sec-title {
     display: flex;
     flex-direction: row;
     cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
 }
 .box {
     position: relative;
@@ -848,17 +863,19 @@ section#howwework .sec-title {
     background-size: cover;
     transition: .7s;
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
-    overflow-x:hidden
+    overflow-x:hidden;
+    cursor: default;
 }
 .box:hover{
     flex: 7;
     height: 400px;
 }
+
 .a1 {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(../img/main/howwework/01.jpg);
+        url(https://i.ibb.co/0YVxHbh/01.webp);
     color: #fff;
 
 }
@@ -866,7 +883,7 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(../img/main/howwework/02.jpg);
+        url(https://i.ibb.co/3NxVnT1/02.webp);
     color: #fff;
 
 }
@@ -874,7 +891,7 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(../img/main/howwework/03.jpeg);
+        url(https://i.ibb.co/nzwQMwX/03.webp);
     color: #fff;
 
 }
@@ -882,7 +899,7 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(../img/main/howwework/04.jpg);
+        url(https://i.ibb.co/XphvJS6/04.webp);
     color: #fff;
 
 }
@@ -890,7 +907,7 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(../img/main/howwework/05.jpg);
+        url(https://i.ibb.co/4ddhQ9Z/05.webp);
     color: #fff;
     
 }
@@ -898,7 +915,7 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(../img/main/howwework/06.jpg);
+        url(https://i.ibb.co/WPmLZBM/06.webp);
     color: #fff;
     
 }
@@ -906,7 +923,7 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(../img/main/howwework/07.jpg);
+        url(https://i.ibb.co/Rgy2CNt/07.webp);
     color: #fff;
     
 }
@@ -914,7 +931,7 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(../img/main/howwework/08.jpeg);
+        url(https://i.ibb.co/SrmnW12/08.webp);
     color: #fff;
     
 }
@@ -926,6 +943,9 @@ section#howwework .sec-title {
 .preview img {
     width: auto;
     height: 40px;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
 }
 
 .text {
@@ -987,14 +1007,18 @@ section#about .sec-title h2, section#about .sec-title p {
 }
 
 /* фото автора */
-#author img {
+#logo img {
+    -webkit-user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
     width: auto;
     max-height: 600px;
-    filter: grayscale(100%);
 }
 
 /* подпись фото */
 #caption {
+    display: none;
+
     position: absolute;
     margin-top: -300px;
     margin-left: 200px;
@@ -1025,6 +1049,10 @@ section#about .sec-title h2, section#about .sec-title p {
     content: "🠖 "; /* Добавляем в качестве маркера символ */
 }
 
+#caption p {
+    width: 50px;
+}
+
 /* заголовок био */
 #bio h4 {
     margin-top: 2px;
@@ -1033,6 +1061,10 @@ section#about .sec-title h2, section#about .sec-title p {
 /* отступы истории автора */
 #auth-history p:not(.experience-in p) {
     margin-top: 15px;
+}
+
+#exp {
+    display: none;
 }
 
 /* блок опыта */
@@ -1196,7 +1228,9 @@ section#team .caption p:nth-child(2) {
 /* текст */
 section#team .caption p {
     font-size: .8em;
-    width: 90%;
+    width: 85%;
+
+    margin: 0 auto;
 }
 
 /* ⬆ КОМАНДА ⬆
