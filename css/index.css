@@ -47,6 +47,8 @@
     padding: 0;
     outline: none;
     box-sizing: border-box;
+    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Отсутствие синего выделения при клике */
 }
 
 /* выделение элементов */
@@ -217,6 +219,10 @@ spanС {
     color: #F59552;
 }
 
+.symb {
+    margin: 0;
+}
+
 /* заголовки1 секций */
 section h1 {
     font-weight: 600;
@@ -292,7 +298,6 @@ footer {
 .sec-title p, .sec-title p a  {
     margin: 0 auto;
     text-align: center;
-    width: 45%;
 }
 
 /* ⬆ 1. ОСНОВНОЕ ⬆ 〰 ⬇ 2. ШАПКА ⬇ */
@@ -537,16 +542,11 @@ section#home .info {
 }
 
 section#home p {
-    font-size: 1.5em;
+    font-size: 1.7em;
     text-align: center;
 
-    width: 70%;
     margin: 0 auto;
     margin-top: 3%;
-}
-
-.symb:nth-child(3) {
-    display: none;
 }
 
 /* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
@@ -555,7 +555,7 @@ section#home .button {
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 5%;
-    margin-left: .5%;
+    margin-left: 0%;
 }
 
 /* кнопка */
@@ -845,7 +845,6 @@ section#howwework .sec-title {
 
 .hww-block {
     max-width: 990px;
-    background: rgba(0, 0, 0, 0.10);
     height: 300px;
     margin: 0 auto;
     display: flex;
@@ -1296,6 +1295,7 @@ section#team .caption p {
     display: flex;
     align-items: center;
     margin-left: 0;
+    outline: none;
     
     width: 90%;
 }

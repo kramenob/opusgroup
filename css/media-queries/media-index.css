@@ -37,23 +37,16 @@
 
     /* инфа */
     section#home .info {
-        padding-top: 10%;
+        padding-top: 5%;
     }
 
     section#home h1 {
         margin-left: 0%;
     }
 
-    section#home p {
-        font-size: 1.9em;
-        text-align: center;
-        margin-top: 5%;
-        margin-left: 0%;
-    }
-
     /* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
     section#home .button {
-        margin-left: 0%;
+        margin-top: 7.5%;
     }
 
     .post-item {
@@ -70,12 +63,67 @@
     .item-body h3 {
         margin-left: 0%;
         font-size: 1.6em;
+        height: 50px;
+    }
+
+    
+    #faq .container {
+        width: 75%;
     }
 }
 
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+
+     /* контент блока */
+    .item-content {
+        padding: 20px;
+    }
+
+    .item-body p {
+        font-size: 16px;    
+    }
+
+     /* блок */
+    .post-item {
+        height: 50%;
+    }
+
+    footer a, footer .content h4, footer .copyright p {
+        font-size: 14px;
+    }
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+
+    .hww-block {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+    .text {
+        width: 95%;    
+    }
+
+    section#about {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+    /* колонны */
+    .colomn-twice-item {
+        width: 47.5%;
+        height: auto;
+        margin-top: 2%;
+    }
+
     .post-item {
         flex-basis: 33.333333333%;
     }
