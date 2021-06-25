@@ -358,7 +358,7 @@ header .mobile-call:hover {
 }
 
 /* отсутствие иконки телефона на пк версии */
-header .mobile-call img {
+header .mobile-call.icon {
     display: none;
 } 
 
@@ -975,9 +975,8 @@ section#howwework .sec-title {
 
     ⬇ 6. КОМПАНИЯ ⬇ */
 
-/* расположение текста слева  */
-section#about .sec-title h2, section#about .sec-title p {
-    margin: 0;
+
+section#about h2 {
     text-align: left;
 }
 
@@ -1007,7 +1006,6 @@ section#about .sec-title h2, section#about .sec-title p {
 
 /* фото автора */
 #logo img {
-    -webkit-user-drag: none;
     -webkit-user-drag: none;
     user-select: none;
     width: auto;
@@ -1137,6 +1135,10 @@ section#about .sec-title h2, section#about .sec-title p {
 
 
     ⬇ 7. КОМАНДА ⬇ */
+
+section#team {
+    display: none;
+}
 
 /* галерея */
 section#team .gallery {

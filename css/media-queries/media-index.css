@@ -97,25 +97,41 @@
     }
 }
 
-/* Medium Devices, Desktops */
-@media only screen and (max-width: 992px) {
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
     .container {
         width: 100%;
     }
 
-    .hww-block {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
+    /* секции */
+    section {
+        padding-top: 15%;
+    }
+    
+    section#home {
+        padding-top: 5%;
+        margin-bottom: 0;
     }
 
-    .text {
-        width: 95%;    
+    section#home h1 {
+        font-size: 4em;
+
+        padding-top: 8%;
+        padding-bottom: 8%;
+        
+        background-size: 170% auto;
+    }
+    
+    section#home p {
+        font-size: 1.3em;
+        margin-top: 0;
     }
 
-    section#about {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
+    section#home .button {
+        margin-top: 10%;
+        padding: .5em 2em;
     }
+
 
     /* колонны */
     .colomn-twice-item {
@@ -125,8 +141,14 @@
     }
 
     .post-item {
-        flex-basis: 33.333333333%;
+        flex-basis: 50%;
+        flex-shrink: 0;
     }
+
+    .item-body h3 {
+        font-size: 1.5em;
+    }
+
     body{
         margin: 0;
     }
@@ -141,19 +163,226 @@
     .box:hover {
         flex: 7;
     }
-}
+    .hww-block {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
 
-/* Small Devices, Tablets */
-@media only screen and (max-width: 768px) {
-    .post-item {
-        flex-basis: 50%;
-        flex-shrink: 0;
+    .text {
+        width: 95%;    
+    }
+
+    section#about {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+
+    section#about p {
+        font-size: 1em;
+    }
+
+    .sec-title h2 {
+        font-size: 2em;
+    }
+    .sec-title p {
+        font-size: 1em;
+    }
+
+    #faq .container {
+        width: 100%;
+    }
+
+    section#contact .colomn-twice-item {
+        width: 100%;
+        padding: 0 2.5%;
+        height: auto;
+        margin-top: 2%;
+    }
+    .content h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    input.button {
+        position: relative;
+        left: 85%;
+        transform: translate(-50%, -50%);
+        margin-top: 5%;
+        margin-left: 0%;
+
+        width: 200px;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    footer .container {
+        padding: 25px 2.5%;
+    }
+    /* колонны */
+    .colomn-four-item {
+        width: 50%;
+        height: 350px;
+        margin-top: 0;
+
+        padding: 0 10%;
+    }
+
+    .copyright {
+        margin-top: 0;
+        padding: 5% 0;
     }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+    section {
+        padding-top: 25%;
+    }
 
+    header .mobile-call.numbers {
+        display: none;
+    } 
+
+    header .mobile-call.icon {
+        display: block;
+
+        
+        align-items: center;  /* центрируем содержимое кнопки */
+        position: fixed;
+        top: 2.25%;
+        right: 5%;
+        width: 35px;
+        height: auto;
+        margin-right: .5%;
+    } 
+
+    section#home {
+        padding-top: 15%;
+        margin-bottom: 0;
+    }
+
+    section#home h1 {
+        font-size: 3em;
+
+        padding-top: 8%;
+        padding-bottom: 8%;
+        
+        background-size: 200% auto;
+    }
+    
+    section#home p {
+        font-size: 1.3em;
+        margin-top: 0;
+    }
+
+    section#home .button {
+        margin-top: 10%;
+        padding: .5em 2em;
+    }
+
+
+    /* колонны */
+    .colomn-twice-item {
+        width: 47.5%;
+        height: auto;
+        margin-top: 2%;
+    }
+
+    .post-item {
+        flex-basis: 50%;
+        flex-shrink: 0;
+    }
+
+    .item-body h3 {
+        font-size: 1.5em;
+    }
+
+    body{
+        margin: 0;
+    }
+    .accordion {
+        flex-direction: column;
+        height: 700px;
+        box-shadow: none;
+    }
+    .box {
+        box-shadow: none;
+    }
+    .box:hover {
+        flex: 7;
+    }
+    .hww-block {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+    .text {
+        width: 95%;    
+    }
+
+    section#about {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+
+    section#about p {
+        font-size: 1em;
+    }
+
+    .sec-title h2 {
+        font-size: 2em;
+    }
+    .sec-title p {
+        font-size: 1em;
+    }
+
+    #faq .container {
+        width: 100%;
+    }
+
+    section#contact .colomn-twice-item {
+        width: 100%;
+        padding: 0 2.5%;
+        height: auto;
+        margin-top: 2%;
+    }
+    .content h4 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    input.button {
+        position: relative;
+        left: 85%;
+        transform: translate(-50%, -50%);
+        margin-top: 5%;
+        margin-left: 0%;
+
+        width: 200px;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    footer .container {
+        padding: 25px 2.5%;
+    }
+    /* колонны */
+    .colomn-four-item {
+        width: 50%;
+        height: 350px;
+        margin-top: 0;
+
+        padding: 0 10%;
+    }
+
+    .copyright {
+        margin-top: 0;
+        padding: 5% 0;
+    }
 }
 
 /* Custom, iPhone Retina */
