@@ -57,12 +57,7 @@
     background: #F59552; /* Цвет фона */
 }
 
-section#home h1::selection {
-    color: #F59552; /* Цвет текста */
-    background: black; /* Цвет фона */
-}
-
-/* размеры */
+/* размеры страницы */
 body, html {
     max-width: 100%;
     height: 100%;
@@ -123,6 +118,7 @@ body::-webkit-scrollbar-thumb {
 @font-face {
     font-family: 'Roboto Mono'; /* Гарнитура шрифта */
     src: url(fonts/Roboto-Thin.ttf); /* Путь к файлу со шрифтом */
+    src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
 }
 
 /* импорт шрифта Roboto Mono */
@@ -163,7 +159,7 @@ body::-webkit-scrollbar-thumb {
 
 /* контейнер страницы */
 .container {
-    width: 66%;
+    width: 1200px;
 }
 
 /* дочерний элемент */
@@ -174,13 +170,9 @@ body::-webkit-scrollbar-thumb {
 /*убираем подчеркивание текста ссылок*/
 a {
     text-decoration: none;
-    
-    margin-top: 1%;
-    margin-left: 1%;
-    margin-bottom: 1%;
 
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.15em;
+    font-size: 1.1em;
     color: black;
     
     letter-spacing: 1.5px;
@@ -195,9 +187,8 @@ a:hover {
 /* заголовки */
 h1:not(#title), h2, h3, h4, h5 {
     font-family: 'MA-Regular', Arial, sans-serif;
-    margin-top: 2.5%;
-    margin-left: 1%;
 }
+
 
 /* текст */
 p, span, time, input, select, textarea {
@@ -271,7 +262,7 @@ section p {
 
 /* секции */
 section {
-    padding-top: 8%;
+    padding-top: 150px;
 }
 
 footer {
@@ -300,7 +291,18 @@ footer {
     text-align: center;
 }
 
-/* ⬆ 1. ОСНОВНОЕ ⬆ 〰 ⬇ 2. ШАПКА ⬇ */
+/* ⬆ 1. ОСНОВНОЕ ⬆
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+    
+⬇ 2. ШАПКА ⬇ */
 
 /* шапка */
 header {
@@ -340,13 +342,12 @@ header a:hover {
 header .mobile-call {
     display: flex; /* используем flex для центрирования содержимого */
     align-items: center;  /* центрируем содержимое кнопки */
-    position: fixed;
-    top: 3%;
-    right: 20%;
-    height: 35px;
+    float: right;
+    margin-right: 10px;
+
+    height: 50px;
     cursor: pointer;
     z-index: 1;
-    margin-right: .5%;
 
     font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5em;
@@ -375,8 +376,8 @@ header .mobile-call.icon {
     display: flex; /* используем flex для центрирования содержимого */
     align-items: center;  /* центрируем содержимое кнопки */
     position: fixed;
+    margin-left: 10px;
     top: 3%;
-    left: 20%; /* left - кнопка слевой стороны | right - справой стороны | + появление меню + контейнер меню */
     width: 35px;
     height: 35px;
     cursor: pointer;
@@ -514,8 +515,8 @@ header .mobile-call.icon {
 
 /* отступы для первого раздела */
 section#home {
-    height: 70%;
-    padding-top: 1%;
+    height: 640px;
+    padding-top: 125px;
 
     
     margin-bottom: 6%;
@@ -536,9 +537,10 @@ section#home h1 {
     background-position-y: 50%;
 }
 
-/* инфа */
-section#home .info {
-    padding-top: 5%;
+
+section#home h1::selection {
+    color: #F59552; /* Цвет текста */
+    background: black; /* Цвет фона */
 }
 
 section#home p {
@@ -602,10 +604,10 @@ section#home .button {
 
 
   
-    ⬇ 4. ПРОЕКТЫ - 4.1 ГАЛЕРЕЯ ⬇ */
+    ⬇ 4. Портфолио - 4.1 ГАЛЕРЕЯ ⬇ */
 
 section#porfolio {
-    padding-top: 6%;
+    padding-top: 100px;
 }
 
 /* галерея */
@@ -1248,7 +1250,7 @@ section#team .caption p {
     
 
 #faq .container {
-    width: 50%;
+    width: 800px;
 }
 
 #faq .c{

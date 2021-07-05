@@ -6,23 +6,35 @@
 
 
 /* ========== Desktop First ========== */
+
+/* Desktop 150% */
+@media only screen and (max-width: 1280px) {
+
+    .menu__btn {
+        top: 2%;
+    }
+    
+    header .mobile-call {
+        height: 25px;
+    }
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
     .container {
-        width: 90%;
+        width: 95%;
     }
 
     /* секции */
     section {
-        padding-top: 11%;
+        padding-top: 150px;
     }
 
-    section#porfolio {
-        padding-top: 11%;
+    header .mobile-call {
+        height: 50px;
     }
-
     .menu__btn {
-        left: 5%; /* left - кнопка слевой стороны | right - справой стороны | + появление меню + контейнер меню */
+        top: 3%;
     }
 
     /* элементы меню */
@@ -30,24 +42,16 @@
         padding: 12px 14%;
     }
 
-    /* звонок */
-    header .mobile-call {
-        right: 5%;
-    }
-
-    /* инфа */
-    section#home .info {
-        padding-top: 5%;
-    }
-
-    section#home h1 {
-        margin-left: 0%;
-    }
-
     /* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
+
+    section#home {
+        padding-top: 100px;
+    }
+
     section#home .button {
         margin-top: 7.5%;
     }
+
 
     .post-item {
         height: 425px;
@@ -56,7 +60,7 @@
      /* параграф */
     .item-body p {
         margin-left: 0%;
-        font-size: 1.5em;
+        font-size: 1.3em;
 
     }
 
@@ -68,14 +72,26 @@
 
     
     #faq .container {
-        width: 75%;
+        width: 800px;
     }
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 992px) {
     .container {
-        width: 95%;
+        width: 100%;
+    }
+    
+    section#home p {
+        font-size: 1.3em;
+        text-align: center;
+    
+        margin: 0 auto;
+        margin-top: 3%;
+    }
+
+    header .mobile-call {
+        
     }
 
      /* контент блока */
@@ -102,6 +118,23 @@
     .container {
         width: 100%;
     }
+
+    header .mobile-call.numbers {
+        display: none;
+    } 
+
+    header .mobile-call.icon {
+        display: block;
+
+        
+        align-items: center;  /* центрируем содержимое кнопки */
+        position: fixed;
+        top: 2.25%;
+        right: 5%;
+        width: 35px;
+        height: auto;
+        margin-right: .5%;
+    } 
 
     /* секции */
     section {
