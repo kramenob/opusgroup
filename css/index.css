@@ -117,8 +117,8 @@ body::-webkit-scrollbar-thumb {
 /* импорт шрифта Roboto Mono */
 @font-face {
     font-family: 'Roboto Mono'; /* Гарнитура шрифта */
-    src: url(fonts/Roboto-Thin.ttf); /* Путь к файлу со шрифтом */
     src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+    src: url(fonts/Roboto-Thin.ttf); /* Путь к файлу со шрифтом */
 }
 
 /* импорт шрифта Roboto Mono */
