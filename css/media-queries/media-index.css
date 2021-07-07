@@ -6,416 +6,405 @@
 
 
 /* ========== Desktop First ========== */
-
-/* Desktop 150% */
-@media only screen and (max-width: 1280px) {
-
-    .menu__btn {
-        top: 2%;
-    }
-    
-    header .mobile-call {
-        height: 25px;
-    }
-}
-
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
     .container {
-        width: 95%;
-    }
-
-    /* секции */
-    section {
-        padding-top: 150px;
+        width: 100%;
     }
 
     header .mobile-call {
-        height: 50px;
-    }
-    .menu__btn {
-        top: 3%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 365px;
     }
 
-    /* элементы меню */
+    .menu__btn {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: -440px;
+    }
+
     .menu__item {
         padding: 12px 14%;
     }
-
-    /* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
 
     section#home {
         padding-top: 100px;
     }
 
-    section#home .button {
-        margin-top: 7.5%;
+    section#home h1 {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    
+        font-size: 3.5em;
     }
 
+    section#home .button {
+        margin-top: 90px;
+    }
 
     .post-item {
         height: 425px;
     }
 
-     /* параграф */
+    .item-content {
+        padding: 20px;
+    }
+
+    .item-body h3 {
+        margin-left: 0%;
+        font-size: 1.75em;
+        height: 50px;
+    }
+
     .item-body p {
         margin-left: 0%;
         font-size: 1.3em;
 
     }
 
-    .item-body h3 {
-        margin-left: 0%;
-        font-size: 1.6em;
-        height: 50px;
+    .hww-block {
+        padding: 0 20px;
     }
 
+    section#about h2 {
+        padding: 0 20px;
+    }
+
+    .colomn-twice-wrap {
+        padding: 0 10px;
+    }
     
-    #faq .container {
-        width: 800px;
+    #faq .c {
+        width: 900px;
+    }
+
+    footer span.symb {
+        display: none;
+    }
+    
+    footer p br {
+        display: block;
     }
 }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 992px) {
-    .container {
-        width: 100%;
+
+    header .mobile-call.numbers {
+        display: none;
+    } 
+
+    header .mobile-call.icon {
+        display: block;
+
+        right: 1px;
+        margin: 0 auto;
+    } 
+
+    .menu__btn {
+        left: 40px;
+        margin-left: 0;
     }
-    
+
     section#home p {
         font-size: 1.3em;
-        text-align: center;
-    
-        margin: 0 auto;
-        margin-top: 3%;
     }
 
-    header .mobile-call {
-        
+    .item-body h3 {
+        font-size: 1.5em;
     }
-
-     /* контент блока */
     .item-content {
         padding: 20px;
     }
 
-    .item-body p {
-        font-size: 16px;    
+    .item-body p, #bio p {
+        font-size: 1em;    
     }
 
-     /* блок */
     .post-item {
         height: 50%;
     }
 
+    .hww-block {
+        height: auto;
+        display: block;
+    }
+
+    .box {
+        width: 100%;
+        height: 125px;
+        
+        box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.2) inset;
+    }
+
+    .box:hover{
+        height: 450px;
+    }
+
+    section#howwework .sec-title {
+        margin-bottom: 25px;
+    }
+
+    #faq .c {
+        width: 700px;
+    }
+
+    #faq h1{
+        font-size: 1.1em;
+    }
+
     footer a, footer .content h4, footer .copyright p {
-        font-size: 14px;
+        font-size: 0.9em;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    footer .container {
+        padding: 25px 2.5%;
+    }
+    /* колонны */
+    .colomn-four-item {
+        width: 50%;
+        height: 350px;
+        margin-top: 0;
+
+        padding: 0 10%;
+    }
+
+    .copyright {
+        margin-top: 0;
+        padding: 5% 0;
     }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-    .container {
-        width: 100%;
-    }
-
-    header .mobile-call.numbers {
-        display: none;
-    } 
-
-    header .mobile-call.icon {
-        display: block;
-
-        
-        align-items: center;  /* центрируем содержимое кнопки */
-        position: fixed;
-        top: 2.25%;
-        right: 5%;
-        width: 35px;
-        height: auto;
-        margin-right: .5%;
-    } 
-
-    /* секции */
-    section {
-        padding-top: 15%;
-    }
     
-    section#home {
-        padding-top: 5%;
-        margin-bottom: 0;
-    }
-
-    section#home h1 {
-        font-size: 4em;
-
-        padding-top: 8%;
-        padding-bottom: 8%;
-        
-        background-size: 170% auto;
-    }
-    
-    section#home p {
-        font-size: 1.3em;
-        margin-top: 0;
-    }
-
-    section#home .button {
-        margin-top: 10%;
-        padding: .5em 2em;
-    }
-
-
-    /* колонны */
-    .colomn-twice-item {
-        width: 47.5%;
-        height: auto;
-        margin-top: 2%;
-    }
-
-    .post-item {
-        flex-basis: 50%;
-        flex-shrink: 0;
-    }
-
-    .item-body h3 {
-        font-size: 1.5em;
-    }
-
     body{
         margin: 0;
     }
-    .accordion {
-        flex-direction: column;
-        height: 700px;
-        box-shadow: none;
-    }
-    .box {
-        box-shadow: none;
-    }
-    .box:hover {
-        flex: 7;
-    }
-    .hww-block {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
-    }
-
-    .text {
-        width: 95%;    
-    }
-
-    section#about {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
-    }
-
-
-    section#about p {
-        font-size: 1em;
+    section {
+        padding-top: 100px;
     }
 
     .sec-title h2 {
-        font-size: 2em;
+        font-size: 1.6em;
     }
     .sec-title p {
+        font-size: .85em;
+    }
+
+    section#home h1 {
+        font-size: 2.5em;
+    }    
+    section#home p {
+        font-size: .8em;
+    }
+    section#home .button {
+        margin-top: 60px;
+    }
+    .button {
+        padding: 1em 3em;
         font-size: 1em;
     }
 
-    #faq .container {
-        width: 100%;
+    .post-item {
+        min-height: 100%;
+        max-width: 50%;
+        
+        padding: 15px;
+        cursor: pointer;
+    }
+    .item-body h3 {
+        font-size: 1.4em;
+    }
+    .item-content {
+        padding: 10px 20px;
+    }
+    .post-item .item-icon img {
+        width: 40px;
+        height: 40px;
+    } 
+    .color-circle {
+        width: 40px;
+        height: 40px;
     }
 
-    section#contact .colomn-twice-item {
+    section#about h2, .colomn-twice-wrap, .hww-block {
+        padding: 0 10px;
+    }
+    .colomn-twice-item {
         width: 100%;
-        padding: 0 2.5%;
         height: auto;
         margin-top: 2%;
-    }
-    .content h4 {
-        margin-top: 0;
-        margin-bottom: 10px;
-    }
-    input.button {
-        position: relative;
-        left: 85%;
-        transform: translate(-50%, -50%);
-        margin-top: 5%;
-        margin-left: 0%;
+    }    
 
-        width: 200px;
+    #faq .c {
+        width: 444px;
+    }
+    #faq label {
+        
+        padding-right: 20px;
+    }
+    #faq h1{
+        font-size: .9em;
+    }
+
+    input.button {
+        float: right;
+    }
+
+    #map iframe {
+        margin-top: 7.5px;
     }
 
     footer {
-        height: auto;
+        margin-top: 50px;
     }
 
-    footer .container {
-        padding: 25px 2.5%;
-    }
-    /* колонны */
     .colomn-four-item {
-        width: 50%;
-        height: 350px;
-        margin-top: 0;
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
 
-        padding: 0 10%;
-    }
-
-    .copyright {
-        margin-top: 0;
-        padding: 5% 0;
+        padding: 0 25px;
     }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-    section {
-        padding-top: 25%;
+
+    header {
+        width: 100%;
+        height: 60px;
     }
-
-    header .mobile-call.numbers {
-        display: none;
-    } 
-
+    header #title {
+        top: 30px;
+        font-size: 1.5em;
+    }
     header .mobile-call.icon {
-        display: block;
-
-        
-        align-items: center;  /* центрируем содержимое кнопки */
-        position: fixed;
-        top: 2.25%;
-        right: 5%;
-        width: 35px;
-        height: auto;
-        margin-right: .5%;
-    } 
-
-    section#home {
-        padding-top: 15%;
-        margin-bottom: 0;
-    }
-
-    section#home h1 {
-        font-size: 3em;
-
-        padding-top: 8%;
-        padding-bottom: 8%;
-        
-        background-size: 200% auto;
+        top: 35px;
+        right: 7px;
+        width: 25px;
     }
     
+    .sec-title h2 {
+        font-size: 1.2em;
+    }
+    .sec-title p {
+        font-size: .7em;
+    }
+
+    .menu__btn {
+        top: 32px;
+        left: 10%;
+    
+        width: 35px;
+        height: 35px;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+        height: 2.5px;
+    }
+    .menu__btn > span::before {
+        top: -10px;
+    }
+    .menu__btn > span::after {
+        top: 10px;
+    }
+
+    section#home {
+        padding-top: 75px;
+        margin-bottom: 75px;
+    }    
+    section#home h1 {
+        font-size: 1em;
+    }    
     section#home p {
-        font-size: 1.3em;
-        margin-top: 0;
+        font-size: .55em;
     }
-
     section#home .button {
-        margin-top: 10%;
-        padding: .5em 2em;
+        font-size: .7em;
+        margin-top: 40px;
+        padding: .75em 2em;
     }
 
-
-    /* колонны */
-    .colomn-twice-item {
-        width: 47.5%;
-        height: auto;
-        margin-top: 2%;
-    }
-
-    .post-item {
-        flex-basis: 50%;
-        flex-shrink: 0;
+    section#porfolio {
+        padding-top: 0;
     }
 
     .item-body h3 {
+        font-size: 1em;
+        margin-bottom: 5px;
+        height: auto;
+    }
+    .item-body p {
+        font-size: .7em;
+    }
+    .item-content {
+        padding: 0;
+    }
+    .post-item .item-icon img {
+        width: 30px;
+        height: 30px;
+    } 
+    .color-circle {
+        width: 35px;
+        height: 35px;
+        
+        margin-top: -50px;
+    }
+    .post-item:hover .color-circle {
+        margin-top: -58px;
+    }
+
+    
+    .hww-block {
+        height: auto;
+        display: block;
+    }
+    .preview img {
+        width: auto;
+        height: 30px;
+    }
+    .box {
+        width: 100%;
+        height: 100px;
+    }
+
+    .box:hover{
+        height: 250px;
+        background-position: center;
+    }
+    .text {
+        width: 270px;
+    }
+    .text h2 {
         font-size: 1.5em;
     }
 
-    body{
-        margin: 0;
-    }
-    .accordion {
-        flex-direction: column;
-        height: 700px;
-        box-shadow: none;
-    }
-    .box {
-        box-shadow: none;
-    }
-    .box:hover {
-        flex: 7;
-    }
-    .hww-block {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
+    h4 {
+        font-size: 1.1em;
     }
 
-    .text {
-        width: 95%;    
+    #bio p, p {
+        font-size: .8em;
     }
 
-    section#about {
-        padding-left: 2.5%;
-        padding-right: 2.5%;
+    #faq .c {
+        width: 280px;
     }
-
-
-    section#about p {
-        font-size: 1em;
+    #faq label {        
+        padding-right: 15px;
     }
-
-    .sec-title h2 {
-        font-size: 2em;
+    #faq h1{
+        font-size: .6em;
     }
-    .sec-title p {
-        font-size: 1em;
-    }
-
-    #faq .container {
-        width: 100%;
-    }
-
-    section#contact .colomn-twice-item {
-        width: 100%;
-        padding: 0 2.5%;
-        height: auto;
-        margin-top: 2%;
-    }
-    .content h4 {
-        margin-top: 0;
-        margin-bottom: 10px;
-    }
-    input.button {
-        position: relative;
-        left: 85%;
-        transform: translate(-50%, -50%);
-        margin-top: 5%;
-        margin-left: 0%;
-
-        width: 200px;
-    }
-
-    footer {
-        height: auto;
-    }
-
-    footer .container {
-        padding: 25px 2.5%;
-    }
-    /* колонны */
-    .colomn-four-item {
-        width: 50%;
-        height: 350px;
-        margin-top: 0;
-
-        padding: 0 10%;
-    }
-
-    .copyright {
-        margin-top: 0;
-        padding: 5% 0;
-    }
+    
 }
 
 /* Custom, iPhone Retina */

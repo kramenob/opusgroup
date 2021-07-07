@@ -262,7 +262,7 @@ section p {
 
 /* секции */
 section {
-    padding-top: 150px;
+    padding-top: 100px;
 }
 
 footer {
@@ -307,7 +307,7 @@ footer {
 /* шапка */
 header {
     width: 100%;
-    height: 10%;
+    height: 75px;
 
     position: fixed;
     background: whitesmoke;
@@ -321,13 +321,11 @@ header #title {
     position: fixed;
     font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2.5em;
-    top: 4.5%;
-    
-    
+
+    top: 35px;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-
     
     user-select: none;
     -webkit-user-drag: none;
@@ -342,16 +340,34 @@ header a:hover {
 header .mobile-call {
     display: flex; /* используем flex для центрирования содержимого */
     align-items: center;  /* центрируем содержимое кнопки */
-    float: right;
-    margin-right: 10px;
+    position: fixed;
 
-    height: 50px;
+    width: 184px;
+
+    top: 37px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 475px;
+
+    height: 35px;
     cursor: pointer;
     z-index: 1;
 
     font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5em;
 }
+
+header .mobile-call.icon {
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+    
+    top: 38.5px;
+    left: auto;
+    right: 40px;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: auto;
+} 
 
 /* наведение на звонок */
 header .mobile-call:hover {
@@ -362,7 +378,6 @@ header .mobile-call:hover {
 header .mobile-call.icon {
     display: none;
 } 
-
 
 /* ⬇ МЕНЮ ⬇ */
 
@@ -376,13 +391,16 @@ header .mobile-call.icon {
     display: flex; /* используем flex для центрирования содержимого */
     align-items: center;  /* центрируем содержимое кнопки */
     position: fixed;
-    margin-left: 10px;
-    top: 3%;
+    
+    top: 37px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -550px;
+
     width: 35px;
     height: 35px;
     cursor: pointer;
     z-index: 1;
-    margin-right: .5%;
 }
 
 /* добавление "гамбургера" */
@@ -515,11 +533,10 @@ header .mobile-call.icon {
 
 /* отступы для первого раздела */
 section#home {
-    height: 640px;
+    height: auto;
     padding-top: 125px;
 
-    
-    margin-bottom: 6%;
+    margin-bottom: 100px;
 }
 
 section#home h1 {
@@ -556,7 +573,7 @@ section#home .button {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 5%;
+    margin-top: 100px;
     margin-left: 0%;
 }
 
@@ -575,7 +592,9 @@ section#home .button {
     user-select: none;
     outline: none;
     cursor: pointer;
-} 
+
+    transition-duration: .3s;
+}
 
 /* наведение на кнопку */
 .button:hover {
@@ -586,11 +605,6 @@ section#home .button {
 /* нажатие */
 .button:active {
     background: #DDB170;
-}
-
-/* скорость анимации */
-.button {
-    transition-duration: .3s;
 }
 
 /* ⬆ 3. ДОМ ⬆
@@ -605,10 +619,6 @@ section#home .button {
 
   
     ⬇ 4. Портфолио - 4.1 ГАЛЕРЕЯ ⬇ */
-
-section#porfolio {
-    padding-top: 100px;
-}
 
 /* галерея */
 .gallery {
@@ -1247,15 +1257,11 @@ section#team .caption p {
 
 
     ⬇ ВОПРОСЫ ⬇ */
-    
-
-#faq .container {
-    width: 800px;
-}
 
 #faq .c{
+    width: 800px;
     position: relative;
-    margin:2em;
+    margin: 2em auto;
 }
 
 #faq input{
@@ -1332,7 +1338,7 @@ section#team .caption p {
 }
 
 #faq input:checked ~ h1 ~ div.p{
-    max-height: 500px;
+    max-height: 1000px;
 }
 
 #faq a:hover {
@@ -1379,6 +1385,8 @@ input#lname {
 #sendform .button {
     padding: 2.5%;
     font-size: 1em;
+
+    width: 200px;
 }
 
 /* карта */
@@ -1426,7 +1434,7 @@ footer {
 .colomn-four-item {
     width: 24%;
     height: 400px;
-    margin-top: 2%;
+    margin: 0;
 
     padding: 2%;
 }
@@ -1441,8 +1449,7 @@ footer {
 .content h4 {
     font-size: 1em;
     color: whitesmoke;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin: 10px 0;
     line-height: 2;
     letter-spacing: 2px;
 }
@@ -1530,7 +1537,7 @@ footer a:hover {
     font-weight: 600;
 }
 
-.copyright p {
+.copyright p span {
     color: #AAAAAA;
     line-height: 2.2;
 
@@ -1540,4 +1547,9 @@ footer a:hover {
     
     letter-spacing: 1.5px;
     transition-duration: .3s;
+}
+
+
+footer p br {
+    display: none;
 }
