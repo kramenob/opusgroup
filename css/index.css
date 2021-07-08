@@ -53,8 +53,8 @@
 
 /* выделение элементов */
 *::selection {
-    color: black; /* Цвет текста */
-    background: #F59552; /* Цвет фона */
+    color: #F59552; /* Цвет текста */
+    background: black; /* Цвет фона */
 }
 
 /* размеры страницы */
@@ -72,7 +72,7 @@ body {
     background-position: center;
     background-size: cover;
     
-    background: whitesmoke;
+    background-color: whitesmoke;
 }
 
 /* Полоска скролла бара */
@@ -160,6 +160,7 @@ body::-webkit-scrollbar-thumb {
 /* контейнер страницы */
 .container {
     width: 1200px;
+    max-width: 1360px;
 }
 
 /* дочерний элемент */
@@ -212,6 +213,7 @@ spanС {
 
 .symb {
     margin: 0;
+    color: black;
 }
 
 /* заголовки1 секций */
@@ -263,6 +265,10 @@ section p {
 /* секции */
 section {
     padding-top: 100px;
+}
+
+section#porfolio {
+    padding-top: 150px;
 }
 
 footer {
@@ -531,12 +537,19 @@ header .mobile-call.icon {
     
     ⬇ 3. ДОМ ⬇ */
 
+/* полоса краски */
+body {
+    background: 
+        url(../img/main/home/paint-line.svg) no-repeat,
+        whitesmoke;
+    background-position-x: center;
+
+    background-size: 450px auto;
+}
+
 /* отступы для первого раздела */
 section#home {
-    height: auto;
     padding-top: 125px;
-
-    margin-bottom: 100px;
 }
 
 section#home h1 {
@@ -547,11 +560,11 @@ section#home h1 {
 
     font-size: 4em;
 
-    background: url(../img/main/home/brush-banner.svg) no-repeat;
+    /* background: url(../img/main/home/brush-banner.svg) no-repeat;
     background-position-x: center;
 
     background-size: 110% auto;
-    background-position-y: 50%;
+    background-position-y: 50%; */
 }
 
 
@@ -577,23 +590,27 @@ section#home p br.ent {
 }
 
 /* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
-section#home .button {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+section#home .button-wrap {
+    font-size: 1.7em;
+    text-align: center;
+
+    margin: 0 auto;
+    margin-top: 15px;
     margin-top: 100px;
-    margin-left: 0%;
+}
+section#home a.button {
+    font-size: 1em;
 }
 
 /* кнопка */
-.button {
+.button, input.button {
     padding: 1em 4em;
     
-    border: 1px #F59552 solid;
+    border: 1px black solid;
     border-radius: 0;
 
     color: whitesmoke;
-    background: #F59552;
+    background: black;
     font-size: 1.5em;
     font-weight: 600;
 
@@ -612,7 +629,44 @@ section#home .button {
 
 /* нажатие */
 .button:active {
-    background: #DDB170;
+    background: #F59552;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99999; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8);
+}
+ 
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+ 
+/* The Close Button */
+.closess {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+ 
+.closess:hover,
+.closess:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* ⬆ 3. ДОМ ⬆
@@ -631,32 +685,31 @@ section#home .button {
 /* галерея */
 .gallery {
     display: flex;
-    padding: 2px;
+    padding: 0 20px;
     transition: 0.3s;
 }
 
 /* анимация наведениея на пикчу */
 .gallery:hover .gallery__image {
-    filter: grayscale(1);
+    filter: grayscale(0);
 }
 
 /* колонны галереи */
 .gallery__column {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 33.33%;
 }
 
 /* бокс пикчи */
 .gallery__link {
     margin: 3%;
     overflow: hidden;
-    border-radius: 5px;
 }
 
 /* наведение на пикчу */
 .gallery__link:hover .gallery__image {
-    filter: grayscale(0);
+    filter: grayscale(1);
 }
 .gallery__link:hover .gallery__caption {
     opacity: 1;
@@ -672,11 +725,6 @@ section#home .button {
     display: block;
     width: 100%;
     transition: 0.3s;
-}
-
-/* анимация пикчи */
-.gallery__image:hover {
-    transform: scale(1.1);
 }
 
 /* подпись */

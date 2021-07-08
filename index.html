@@ -79,9 +79,33 @@
                 Работаем по договору<span class="symb"> |</span><br>
                 Поэтапная оплата<br class="ent">
                 Никаких переплат<span class="symb"> |</span> <br>
-                Выезд и смета <spanС>БЕСПЛАТНО</spanС><br>
+                Выезд и смета БЕСПЛАТНО<br>
             </p>
-            <a href="#contact" class="button">Хочу ремонт!</a>
+            <div class="button-wrap">
+                <a href="javascript:void(0)" onclick="this.nextElementSibling.style.display='block';" class="button">Хочу ремонт!</a>
+            
+                <!-- ОКНО -->
+                <div id="parent_popup_click1" class="modal" onclick="document.getElementById('parent_popup_click1').style.display='none';">
+                    <div class="modal-content">
+                    <a class="closess" title="Закрыть" onclick="document.getElementById('parent_popup_click1').style.display='none';">×</a>
+                    </div>
+                
+                    <div class="container" id="sendform">
+                        <form action="/action_page.php">
+                            <input class="name" type="text" id="fname" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
+            
+                            <input class="name" type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." minlength="1" maxlength="30">
+            
+                            <input type="text" id="phone" name="lastname" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
+
+                            <textarea id="subject" name="subject" placeholder="Введите Ваше сообщение.." style="height:200px"></textarea>
+            
+                            <input class="button" type="submit" value="Отправить">
+                        </form>
+                    </div> <!-- .sendform --> 
+
+                </div>
+            </div>
         </div> <!-- .container -->
     </section>
     <!-- END.ГЛАВНАЯ -->
@@ -162,23 +186,19 @@
                             <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
                         </figure>
                     </a>
+                    <a href="https://www.instagram.com/p/CQJ3JzIF_wc/" target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="img/main/portfolio/colomn_3/3.jpg" alt="Описание данного ремонта" class="gallery__image">
+                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://www.instagram.com/p/CQJ3JzIF_wc/" target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="img/main/portfolio/colomn_3/4.jpg" alt="Описание данного ремонта" class="gallery__image">
+                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                        </figure>
+                    </a>
                 </div> <!-- .gallery__column 3 -->
-                <!-- Колонна 4 | https://www.instagram.com/p/CQJ4LD8lKh9/-->
-                <div class="gallery__column">
-                    <a href="https://www.instagram.com/p/CQJ4LD8lKh9/" target="_blank" class="gallery__link">
-                        <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_4/1.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
-                        </figure>
-                    </a>
-
-                    <a href="https://www.instagram.com/p/CQJ4LD8lKh9/" target="_blank" class="gallery__link">
-                        <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_4/2.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
-                        </figure>
-                    </a>
-                </div> <!-- .gallery__column 4 -->
             </div> <!-- .gallery -->
         </div> <!-- .container -->
     </section>
