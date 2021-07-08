@@ -325,7 +325,14 @@
         font-size: 1em;
     }    
     section#home p {
-        font-size: .55em;
+        font-size: 1em;
+        margin-top: 0px;
+    }
+    section#home p br {
+        display: block;
+    }
+    section#home span.symb {
+        display: none;
     }
     section#home .button {
         font-size: .7em;
