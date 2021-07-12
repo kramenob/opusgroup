@@ -85,25 +85,24 @@
                 <a href="javascript:void(0)" onclick="this.nextElementSibling.style.display='block';" class="button">Хочу ремонт!</a>
             
                 <!-- ОКНО -->
-                <div id="parent_popup_click1" class="modal" onclick="document.getElementById('parent_popup_click1').style.display='none';">
+                <div id="parent_popup_click1" class="modal">
                     <div class="modal-content">
-                    <a class="closess" title="Закрыть" onclick="document.getElementById('parent_popup_click1').style.display='none';">×</a>
-                    </div>
+                        <a class="closess" title="Закрыть" onclick="document.getElementById('parent_popup_click1').style.display='none';">×</a>
+                        
+                        <div class="container" id="sendform">
+                            <form action="/action_page.php">
+                                <input class="name" type="text" id="fname" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
                 
-                    <div class="container" id="sendform">
-                        <form action="/action_page.php">
-                            <input class="name" type="text" id="fname" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
-            
-                            <input class="name" type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." minlength="1" maxlength="30">
-            
-                            <input type="text" id="phone" name="lastname" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
+                                <input class="name" type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." minlength="1" maxlength="30">
+                
+                                <input type="text" id="phone" name="lastname" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
 
-                            <textarea id="subject" name="subject" placeholder="Введите Ваше сообщение.." style="height:200px"></textarea>
-            
-                            <input class="button" type="submit" value="Отправить">
-                        </form>
-                    </div> <!-- .sendform --> 
-
+                                <textarea id="subject" name="subject" placeholder="Введите Ваше сообщение.." style="height:200px"></textarea>
+                
+                                <input class="button" type="submit" value="Отправить">
+                            </form>
+                        </div> <!-- .sendform --> 
+                    </div>
                 </div>
             </div>
         </div> <!-- .container -->

@@ -540,23 +540,15 @@ header .mobile-call.icon {
 /* полоса краски */
 body {
     background: 
-        url(../img/main/home/paint-line.svg) no-repeat,
+        url(../img/main/home/paint-line-hf.svg) no-repeat,
         whitesmoke;
-    background-position-x: center;
-
-    background-size: 450px auto;
-}
-
-/* отступы для первого раздела */
-section#home {
-    padding-top: 125px;
+    background-size: 100%;
 }
 
 section#home h1 {
     font-family: 'RussianPunk';
     text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding: 50px;
 
     font-size: 4em;
 
@@ -578,7 +570,6 @@ section#home p {
     text-align: center;
 
     margin: 0 auto;
-    margin-top: 15px;
 }
 
 section#home p br {
@@ -644,16 +635,16 @@ section#home a.button {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgba(0, 0, 0, 0.8);
 }
- 
+
 /* Modal Content */
 .modal-content {
-    background-color: #fefefe;
+    background-color: whitesmoke;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 60%;
+    width: 80%;
 }
- 
+
 /* The Close Button */
 .closess {
     color: #aaaaaa;
@@ -661,12 +652,42 @@ section#home a.button {
     font-size: 28px;
     font-weight: bold;
 }
- 
+
 .closess:hover,
 .closess:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* текстовые поля */
+.button-wrap input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 0;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    background-color: whitesmoke;
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* поле имени и фамилии */
+.button-wrap input.name {
+    /* width: 20%; */
+}
+
+/* поле фамилии */
+.button-wrap input#lname {
+    float: right;
+}
+
+/* шрифт кнопки */
+.button-wrap #sendform .button {
+    padding: 2.5%;
+    font-size: 1em;
 }
 
 /* ⬆ 3. ДОМ ⬆
@@ -681,6 +702,10 @@ section#home a.button {
 
   
     ⬇ 4. Портфолио - 4.1 ГАЛЕРЕЯ ⬇ */
+
+section#porfolio {
+    padding-top: 200px;
+}
 
 /* галерея */
 .gallery {
