@@ -560,28 +560,28 @@ section#home h1 {
 }
 
 
-section#home h1::selection {
+section#home .main h1::selection {
     color: #F59552; /* Цвет текста */
     background: black; /* Цвет фона */
 }
 
-section#home p {
+section#home .main p {
     font-size: 1.7em;
     text-align: center;
 
     margin: 0 auto;
 }
 
-section#home p br {
+section#home .main p br {
     display: none;
 }
 
-section#home p br.ent {
+section#home .main p br.ent {
     display: block;
 }
 
 /* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
-section#home .button-wrap {
+section#home .feedback-form {
     font-size: 1.7em;
     text-align: center;
 
@@ -642,7 +642,7 @@ section#home a.button {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 60%;
 }
 
 /* The Close Button */
@@ -660,8 +660,12 @@ section#home a.button {
     cursor: pointer;
 }
 
+.feedback-form #sendform {
+    width: 90%;
+}
+
 /* текстовые поля */
-.button-wrap input[type=text], select, textarea {
+.feedback-form input[type=text], .feedback-form select, .feedback-form textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
     border: 0;
@@ -671,21 +675,37 @@ section#home a.button {
     box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 6px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    font-size: 1em;
+}
+
+.feedback-form textarea {
+    min-height: 200px;
 }
 
 /* поле имени и фамилии */
-.button-wrap input.name {
-    /* width: 20%; */
+.feedback-form input.name {
+    width: 47%;
+    float: left;
 }
 
 /* поле фамилии */
-.button-wrap input#lname {
+.feedback-form input#lname {
     float: right;
 }
 
+.feedback-form .sec-title h2 {
+    font-size: 2em;
+    padding-left: 20px;
+}
+
+.feedback-form .sec-title p {
+    font-size: 1em;
+}
+
 /* шрифт кнопки */
-.button-wrap #sendform .button {
+.feedback-form #sendform .button {
+    width: 30%;
     padding: 2.5%;
     font-size: 1em;
 }

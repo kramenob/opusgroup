@@ -66,22 +66,24 @@
     <!-- ГЛАВНАЯ -->
     <section id="home">
         <div class="container info">
-            <h1>
-                РЕМОНТ КВАРТИР<br>В АСТРАХАНИ<br>
-                ОТ 3.5О0 руб./м2
-            </h1>
-            <p>
-                Привет! Мы - команда Opus.Group
-            </p>
-            <br>
-            <p>
-                Ремонт квартир и домов под ключ<span class="symb"> |</span><br>
-                Работаем по договору<span class="symb"> |</span><br>
-                Поэтапная оплата<br class="ent">
-                Никаких переплат<span class="symb"> |</span> <br>
-                Выезд и смета БЕСПЛАТНО<br>
-            </p>
-            <div class="button-wrap">
+            <div class="main">
+                <h1>
+                    РЕМОНТ КВАРТИР<br>В АСТРАХАНИ<br>
+                    ОТ 3.5О0 руб./м2
+                </h1>
+                <p>
+                    Привет! Мы - команда Opus.Group
+                </p>
+                <br>
+                <p>
+                    Ремонт квартир и домов под ключ<span class="symb"> |</span><br>
+                    Работаем по договору<span class="symb"> |</span><br>
+                    Поэтапная оплата<br class="ent">
+                    Никаких переплат<span class="symb"> |</span> <br>
+                    Выезд и смета БЕСПЛАТНО<br>
+                </p>
+            </div>
+            <div class="feedback-form">
                 <a href="javascript:void(0)" onclick="this.nextElementSibling.style.display='block';" class="button">Хочу ремонт!</a>
             
                 <!-- ОКНО -->
@@ -89,17 +91,21 @@
                     <div class="modal-content">
                         <a class="closess" title="Закрыть" onclick="document.getElementById('parent_popup_click1').style.display='none';">×</a>
                         
+                        <div class="sec-title">
+                            <h2>Обратная связь</h2>
+                            <p>Отправьте заявку на расчет стоимости</p>
+                        </div> <!-- .sec-title -->
                         <div class="container" id="sendform">
                             <form action="/action_page.php">
-                                <input class="name" type="text" id="fname" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
+                                <input class="name" type="text" id="fname" name="firstname" placeholder="Введите имя.." minlength="1" maxlength="20">
                 
-                                <input class="name" type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." minlength="1" maxlength="30">
+                                <input class="name" type="text" id="lname" name="lastname" placeholder="Введите фамилию.." minlength="1" maxlength="30">
                 
-                                <input type="text" id="phone" name="lastname" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
+                                <input type="text" id="phone" name="lastname" placeholder="Введите номер телефона.." minlength="6" maxlength="15">
 
-                                <textarea id="subject" name="subject" placeholder="Введите Ваше сообщение.." style="height:200px"></textarea>
+                                <textarea id="subject" name="subject" placeholder="Введите сообщение.." style="height:200px"></textarea>
                 
-                                <input class="button" type="submit" value="Отправить">
+                                <input class="button" type="submit" value="Отправить заявку">
                             </form>
                         </div> <!-- .sendform --> 
                     </div>
@@ -735,8 +741,66 @@
                 <p>
                     Доступны к работе. Ждем вашего клика.
                 </p>
+            </div> <!-- .sec-title -->
+
+            <div class="colomn-twice-wrap">
+                <div class="colomn-twice-item first" id="sendform">
+                    <form action="telegram.php" method="POST">
+                        <div class="form-group">
+                            <input class="name" type="text" id="fname" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
+            
+                            <input class="name" type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." minlength="1" maxlength="30">
+            
+                            <input type="text" id="phone" name="phone" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
+
+                            <textarea id="subject" name="message" placeholder="Введите Ваше сообщение.." style="height:200px"></textarea>
+            
+                            <input class="button" type="submit" value="Отправить">
+                        </div>
+                    </form>
+                </div> <!-- .sendform --> 
+                <div class="colomn-twice-item last" id="map">
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88102.22538200315!2d47.96174752666017!3d46.36552807848672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a90584a786c9ed%3A0x5a2144fabe5dcac2!2z0JDRgdGC0YDQsNGF0LDQvdGMLCDQkNGB0YLRgNCw0YXQsNC90YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1624199001484!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    
+                </div> <!-- .map --> 
+            </div>  <!-- .colomn-twice-wrap -->
+        </div>
+    </section>
+    <!-- END.КОНТАКТЫ -->
+
+    <!-- КОНТАКТЫ -->
+    <section id="contact">
+        <div class="container">
+            <div class="sec-title">
+                <h2>Контакты</h2>
+                <p>
+                    Доступны к работе. Ждем вашего клика.
+                </p>
             </div> <!-- .sec-title --> 
             
+            <form action="telegram.php" method="POST">
+                <legend>Заголовок формы</legend>
+              
+                <div class="form-group">
+                  <input type="text" class="form-control" id="" name="name" placeholder="Введите имя">
+                </div>
+              
+                <div class="form-group">
+                  <input type="text" class="form-control" id="" name="phone" placeholder="Введите телефон">
+                </div>
+              
+                <div class="form-group">
+                  <input type="text" class="form-control" id="" name="email" placeholder="Введите email">
+                </div>
+              
+                <div class="form-group">
+                  <textarea name="msg" placeholder="введите сообщение"></textarea>
+                </div>
+              
+                <button type="submit" class="btn">Отправить форму</button>
+              </form>
+
             <div class="colomn-twice-wrap">
                 <div class="colomn-twice-item first" id="sendform">
                     <form action="/action_page.php">
@@ -756,7 +820,7 @@
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88102.22538200315!2d47.96174752666017!3d46.36552807848672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a90584a786c9ed%3A0x5a2144fabe5dcac2!2z0JDRgdGC0YDQsNGF0LDQvdGMLCDQkNGB0YLRgNCw0YXQsNC90YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1624199001484!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     
                 </div> <!-- .map --> 
-            </div>  <!-- .colomn-twice-wrap --> 
+            </div>  <!-- .colomn-twice-wrap -->
         </div>
     </section>
     <!-- END.КОНТАКТЫ -->
