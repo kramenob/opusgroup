@@ -27,6 +27,12 @@
     .menu__item {
         padding: 12px 14%;
     }
+    
+    /* полоса краски */
+    body {
+        background-size: 1850px;
+        background-position-x: 50%;
+    }
 
     section#home {
         padding-top: 100px;
@@ -78,13 +84,10 @@
     #faq .c {
         width: 900px;
     }
-
-    footer span.symb {
-        display: none;
-    }
     
-    footer p br {
-        display: block;
+    /* Modal Content */
+    .modal-content {
+        width: 90%;
     }
 }
 
@@ -107,8 +110,75 @@
         margin-left: 0;
     }
 
+    /* полоса краски */
+    body {
+        background-size: 1850px;
+        background-position-x: 60%;
+    }
+
     section#home p {
         font-size: 1.3em;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    section#home p.list {
+        width: 700px;
+    }
+    
+    .symb3 {
+        display: inline-block;
+    }
+
+    .symb2 {
+        display: none;
+    }
+
+    /* текстовые поля */
+    .feedback-form input[type=text], .feedback-form select, .feedback-form textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */ 
+        border: 0;
+        border-bottom: 1px solid black;
+        border-radius: 0;
+        background-color: whitesmoke;
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+        font-size: 1em;
+    }
+
+    .feedback-form textarea {
+        min-height: 200px;
+    }
+
+    /* поле имени и фамилии */
+    .feedback-form input.name {
+        width: 47%;
+        float: left;
+    }
+
+    /* поле фамилии */
+    .feedback-form input#lname {
+        float: right;
+    }
+
+    .feedback-form .sec-title h2 {
+        font-size: 2em;
+        padding-left: 20px;
+    }
+
+    .feedback-form .sec-title p {
+        font-size: 1em;
+    }
+
+    /* шрифт кнопки */
+    .feedback-form #sendform .button {
+        width: 30%;
+        padding: 2.5%;
+        margin: 20px 0;
+        font-size: 1em;
     }
 
     .item-body h3 {

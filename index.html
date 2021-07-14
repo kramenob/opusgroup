@@ -31,7 +31,7 @@
 
     <script type="text/javascript" src="js/"></script>
 
-    <title>Opus.Group | Главная</title>    
+    <title>Opus.Group</title>    
 </head>
 <body>
     <!-- ШАПКА -->
@@ -72,15 +72,15 @@
                     ОТ 3.5О0 руб./м2
                 </h1>
                 <p>
-                    Привет! Мы - команда Opus.Group
+                    Opus.Group
                 </p>
                 <br>
-                <p>
-                    Ремонт квартир и домов под ключ<span class="symb"> |</span><br>
-                    Работаем по договору<span class="symb"> |</span><br>
-                    Поэтапная оплата<br class="ent">
-                    Никаких переплат<span class="symb"> |</span> <br>
-                    Выезд и смета БЕСПЛАТНО<br>
+                <p class="list">
+                    Ремонт квартир и домов под ключ <span class="symb symb1"> |</span>
+                    Работаем по договору <span class="symb symb2"> |</span>
+                    Поэтапная оплата <span class="symb symb3"> |</span>
+                    Никаких переплат <span class="symb symb4"> |</span>
+                    Выезд и смета БЕСПЛАТНО
                 </p>
             </div>
             <div class="feedback-form">
@@ -96,16 +96,16 @@
                             <p>Отправьте заявку на расчет стоимости</p>
                         </div> <!-- .sec-title -->
                         <div class="container" id="sendform">
-                            <form action="/action_page.php">
-                                <input class="name" type="text" id="fname" name="firstname" placeholder="Введите имя.." minlength="1" maxlength="20">
+                            <form action="telegram.php" method="POST">
+                                <input class="name" type="text" id="fname" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
                 
-                                <input class="name" type="text" id="lname" name="lastname" placeholder="Введите фамилию.." minlength="1" maxlength="30">
+                                <input class="name" type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." minlength="1" maxlength="30">
                 
-                                <input type="text" id="phone" name="lastname" placeholder="Введите номер телефона.." minlength="6" maxlength="15">
-
-                                <textarea id="subject" name="subject" placeholder="Введите сообщение.." style="height:200px"></textarea>
+                                <input type="text" id="phone" name="phone" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
+        
+                                <textarea id="subject" name="message" placeholder="Введите Ваше сообщение.." style="min-height:200px"></textarea>
                 
-                                <input class="button" type="submit" value="Отправить заявку">
+                                <input class="button" type="submit" value="Отправить">
                             </form>
                         </div> <!-- .sendform --> 
                     </div>
@@ -123,29 +123,29 @@
                 <div class="gallery__column">
                     <a href="https://www.instagram.com/p/CQJz4iGFYaw/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_1/1.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                            <img src="img/main/portfolio/colomn_1/1.jpg" alt="Подробнее в инстаграм" class="gallery__image">
+                            <figcaption class="gallery__caption">Подробнее в инстаграм</figcaption>
                         </figure>
                     </a>
             
                     <a href="https://www.instagram.com/p/CQJz4iGFYaw/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_1/2.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                            <img src="img/main/portfolio/colomn_1/2.jpg" alt="Подробнее в инстаграм" class="gallery__image">
+                            <figcaption class="gallery__caption">Подробнее в инстаграм</figcaption>
                         </figure>
                     </a>
             
                     <a href="https://www.instagram.com/p/CQJz4iGFYaw/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_1/3.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                            <img src="img/main/portfolio/colomn_1/3.jpg" alt="Подробнее в инстаграм" class="gallery__image">
+                            <figcaption class="gallery__caption">Подробнее в инстаграм</figcaption>
                         </figure>
                     </a>
                     
                     <a href="https://www.instagram.com/p/CQJz4iGFYaw/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_1/4.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                            <img src="img/main/portfolio/colomn_1/4.jpg" alt="Подробнее в инстаграм" class="gallery__image">
+                            <figcaption class="gallery__caption">Подробнее в инстаграм</figcaption>
                         </figure>
                     </a>
                 </div> <!-- .gallery__column 1 -->
@@ -153,27 +153,27 @@
                 <div class="gallery__column">
                     <a href="https://www.instagram.com/p/CQJ01YDFKAH/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_2/1.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                            <img src="img/main/portfolio/colomn_2/1.jpg" alt="Подробнее в инстаграм" class="gallery__image">
+                            <figcaption class="gallery__caption">Подробнее в инстаграм</figcaption>
                         </figure>
                     </a>
             
                     <a href="https://www.instagram.com/p/CQJ01YDFKAH/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_2/2.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                            <img src="img/main/portfolio/colomn_2/2.jpg" alt="Подробнее в инстаграм" class="gallery__image">
+                            <figcaption class="gallery__caption">Подробнее в инстаграм</figcaption>
                         </figure>
                     </a>
                     <a href="https://www.instagram.com/p/CQJ01YDFKAH/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_2/3.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                            <img src="img/main/portfolio/colomn_2/3.jpg" alt="Подробнее в инстаграм" class="gallery__image">
+                            <figcaption class="gallery__caption">Подробнее в инстаграм</figcaption>
                         </figure>
                     </a>
                     <a href="https://www.instagram.com/p/CQJ01YDFKAH/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_2/4.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                            <img src="img/main/portfolio/colomn_2/4.jpg" alt="Подробнее в инстаграм" class="gallery__image">
+                            <figcaption class="gallery__caption">Подробнее в инстаграм</figcaption>
                         </figure>
                     </a>
                 </div> <!-- .gallery__column 2 -->
@@ -181,26 +181,26 @@
                 <div class="gallery__column">
                     <a href="https://www.instagram.com/p/CQJ3JzIF_wc/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_3/1.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                            <img src="img/main/portfolio/colomn_3/1.jpg" alt="Подробнее в инстаграм" class="gallery__image">
+                            <figcaption class="gallery__caption">Подробнее в инстаграм</figcaption>
                         </figure>
                     </a>
                     <a href="https://www.instagram.com/p/CQJ3JzIF_wc/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_3/2.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                            <img src="img/main/portfolio/colomn_3/2.jpg" alt="Подробнее в инстаграм" class="gallery__image">
+                            <figcaption class="gallery__caption">Подробнее в инстаграм</figcaption>
                         </figure>
                     </a>
                     <a href="https://www.instagram.com/p/CQJ3JzIF_wc/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_3/3.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                            <img src="img/main/portfolio/colomn_3/3.jpg" alt="Подробнее в инстаграм" class="gallery__image">
+                            <figcaption class="gallery__caption">Подробнее в инстаграм</figcaption>
                         </figure>
                     </a>
                     <a href="https://www.instagram.com/p/CQJ3JzIF_wc/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_3/4.jpg" alt="Описание данного ремонта" class="gallery__image">
-                            <figcaption class="gallery__caption">Описание данного ремонта</figcaption>
+                            <img src="img/main/portfolio/colomn_3/4.jpg" alt="Подробнее в инстаграм" class="gallery__image">
+                            <figcaption class="gallery__caption">Подробнее в инстаграм</figcaption>
                         </figure>
                     </a>
                 </div> <!-- .gallery__column 3 -->
@@ -746,71 +746,13 @@
             <div class="colomn-twice-wrap">
                 <div class="colomn-twice-item first" id="sendform">
                     <form action="telegram.php" method="POST">
-                        <div class="form-group">
-                            <input class="name" type="text" id="fname" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
-            
-                            <input class="name" type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." minlength="1" maxlength="30">
-            
-                            <input type="text" id="phone" name="phone" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
-
-                            <textarea id="subject" name="message" placeholder="Введите Ваше сообщение.." style="height:200px"></textarea>
-            
-                            <input class="button" type="submit" value="Отправить">
-                        </div>
-                    </form>
-                </div> <!-- .sendform --> 
-                <div class="colomn-twice-item last" id="map">
-
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88102.22538200315!2d47.96174752666017!3d46.36552807848672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41a90584a786c9ed%3A0x5a2144fabe5dcac2!2z0JDRgdGC0YDQsNGF0LDQvdGMLCDQkNGB0YLRgNCw0YXQsNC90YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1624199001484!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    
-                </div> <!-- .map --> 
-            </div>  <!-- .colomn-twice-wrap -->
-        </div>
-    </section>
-    <!-- END.КОНТАКТЫ -->
-
-    <!-- КОНТАКТЫ -->
-    <section id="contact">
-        <div class="container">
-            <div class="sec-title">
-                <h2>Контакты</h2>
-                <p>
-                    Доступны к работе. Ждем вашего клика.
-                </p>
-            </div> <!-- .sec-title --> 
-            
-            <form action="telegram.php" method="POST">
-                <legend>Заголовок формы</legend>
-              
-                <div class="form-group">
-                  <input type="text" class="form-control" id="" name="name" placeholder="Введите имя">
-                </div>
-              
-                <div class="form-group">
-                  <input type="text" class="form-control" id="" name="phone" placeholder="Введите телефон">
-                </div>
-              
-                <div class="form-group">
-                  <input type="text" class="form-control" id="" name="email" placeholder="Введите email">
-                </div>
-              
-                <div class="form-group">
-                  <textarea name="msg" placeholder="введите сообщение"></textarea>
-                </div>
-              
-                <button type="submit" class="btn">Отправить форму</button>
-              </form>
-
-            <div class="colomn-twice-wrap">
-                <div class="colomn-twice-item first" id="sendform">
-                    <form action="/action_page.php">
                         <input class="name" type="text" id="fname" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
         
                         <input class="name" type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." minlength="1" maxlength="30">
         
-                        <input type="text" id="phone" name="lastname" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
+                        <input type="text" id="phone" name="phone" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
 
-                        <textarea id="subject" name="subject" placeholder="Введите Ваше сообщение.." style="height:200px"></textarea>
+                        <textarea id="subject" name="message" placeholder="Введите Ваше сообщение.." style="min-height:200px"></textarea>
         
                         <input class="button" type="submit" value="Отправить">
                     </form>
@@ -824,61 +766,21 @@
         </div>
     </section>
     <!-- END.КОНТАКТЫ -->
-
+    
     <!-- ПОДВАЛ -->
     <footer>
         <div class="container">
             <div class="colomn-four-wrap">
-                <!-- Главная -->
+                <!-- Локация -->
                 <div class="colomn-four-item">
                     <div class="content">
                         <h4>
-                            Главная
+                            Локация
                         </h4>
                         <ul>
-                            <li><a href="#">Opus.Group</a></li>
-                            <li><a href="#">Проекты</a></li>
-                            <li><a href="#">Услуги</a></li>
-                            <li><a href="#">Компания</a></li>
-                            <li><a href="#">Команда</a></li>
-                            <li><a href="#">Контакты</a></li>
-                            <li><a href="#">Условия</a></li>
-                            <li><a href="#">Приватность</a></li>
+                            <li><a target="_blank" href="https://goo.gl/maps/s3g5zzJs3bZ47fQZ6">Пос. Советский, Астрахань 414019</a></li>
                         </ul>
                     </div>
-                </div> <!-- .colomn-four-item --> 
-
-                <!-- Проекты -->
-                <div class="colomn-four-item">
-                    <div class="content">
-                        <h4>
-                            Проекты
-                        </h4>
-                        <ul>
-                            <li><a href="#">Минимализм</a></li>
-                            <li><a href="#">Золотой унитаз</a></li>
-                            <li><a href="#">Красная комната</a></li>
-                        </ul>
-                    </div>
-
-                </div> <!-- .colomn-four-item --> 
-
-                <!-- Услуги -->
-                <div class="colomn-four-item">
-                    <div class="content">
-                        <h4>
-                            Услуги
-                        </h4>
-                        <ul>
-                            <li><a href="#">Работы с полами</a></li>
-                            <li><a href="#">Работы со стенами</a></li>
-                            <li><a href="#">Работа с потолками</a></li>
-                            <li><a href="#">Работа с дверями</a></li>
-                            <li><a href="#">Сантехнические работы</a></li>
-                            <li><a href="#">Электромонтажные работы</a></li>
-                        </ul>
-                    </div>
-
                 </div> <!-- .colomn-four-item --> 
 
                 <!-- Контакты -->
@@ -888,26 +790,39 @@
                             Контакты
                         </h4>
                         <ul>
-                            <li><h4>Пос. Советский, Астрахань 414019</h4></li>
                             <li><a href="tel:+79678333677">+7(967)-833-36-77</a></li>
                             <li><a href="mailto:opus.group@bussy.com">opus.group@bussy.com</a></li>
-                            <li><h4>Медиа</h4></li>
+                        </ul>
+                    </div>
+
+                </div> <!-- .colomn-four-item -->
+
+                <!-- Медиа -->
+                <div class="colomn-four-item">
+                    <div class="content">
+                        <h4>
+                            Медиа
+                        </h4>
+                        <ul>
                             <li>
-                                <a href="#"><div class="item-icon instagram child"></div></a>
-                                <a href="#"><div class="item-icon whatsapp child"></div></a>
-                                <a href="#"><div class="item-icon youtube child"></div></a>
-                                <a href="#"><div class="item-icon vkontacte child"></div></a>
+                                <a target="_blank" href="https://www.instagram.com/opus.group30/"><div class="item-icon instagram child"></div></a>
+                                <a target="_blank" href="#"><div class="item-icon whatsapp child"></div></a>
+                                <a target="_blank" href="#"><div class="item-icon youtube child"></div></a>
+                                <a target="_blank" href="#"><div class="item-icon vkontacte child"></div></a>
                             </li>
                         </ul>
                     </div>
                 </div> <!-- .colomn-four-item --> 
             </div> <!-- .colomn-four-wrap --> 
             
-            <div class="copyright">
+            <div class="footer-down">
                 <p>
-                    <span class="cop-p">Copyright ©2021 Все права защищены</span><span class="symb"> |</span><br><span class="cop-p">Сайт сверстал <a href="#">Mark Roas</a> по заказу Opus.Group</span>
+                    <span class="f-p">Copyright ©2021 Все права защищены</span>
                 </p>
-            </div> <!-- .copyright --> 
+                <p>
+                    <a href="sitemap.html" class="f-p">Карта сайта</a><span class="symb"> | </span><br><a href="https://praville.ru/generator/agreement.php" class="f-p">Условия пользования</a><span class="symb"> | </span><br><a href="https://tilda.cc/ru/privacy-generator/" class="f-p">Политика конфиденциальности</a><span class="symb"> | </span><br><a target="_blank" href="https://t.me/roasdevr" class="f-p">Разработчик</a>
+                </p>
+            </div> <!-- .footer-down -->
         </div> <!-- .container --> 
     </footer>
     <!-- END.ПОДВАЛ -->

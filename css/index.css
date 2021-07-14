@@ -211,7 +211,7 @@ spanС {
     color: #F59552;
 }
 
-.symb {
+span.symb {
     margin: 0;
     color: black;
 }
@@ -572,12 +572,12 @@ section#home .main p {
     margin: 0 auto;
 }
 
-section#home .main p br {
-    display: none;
+section#home p.list {
+    width: 1000px;
 }
 
-section#home .main p br.ent {
-    display: block;
+.symb3 {
+    display: none;
 }
 
 /* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
@@ -647,7 +647,7 @@ section#home a.button {
 
 /* The Close Button */
 .closess {
-    color: #aaaaaa;
+    color: #222222;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -707,6 +707,7 @@ section#home a.button {
 .feedback-form #sendform .button {
     width: 30%;
     padding: 2.5%;
+    margin: 20px 0;
     font-size: 1em;
 }
 
@@ -832,7 +833,7 @@ section#porfolio {
 
  /* наведеине на блок */
 .post-item:hover .color-circle {
-    margin-top: -68px;
+    /* margin-top: -68px; */
 }
 
  /* параметры иконки */
@@ -850,7 +851,7 @@ section#porfolio {
 
  /* анимация поднятия элементов */
 .post-item:hover .item-icon, .post-item:hover .item-body h3, .post-item:hover .item-body p {
-    transform: translateY(-8px);
+    /* transform: translateY(-8px); */
 }
 
  /* цветной круг под иконкой */
@@ -1509,10 +1510,14 @@ input#lname {
 
     ⬇ 9. ПОДВАЛ ⬇ */
 
+footer .container {
+    width: 768px;
+}
+ 
 /* общее */
 footer {
     width: 100%;
-    height: 600px;
+    padding: 50px 0;
 
     background-color: #222222;
 }
@@ -1533,11 +1538,15 @@ footer {
 
 /* колонны */
 .colomn-four-item {
-    width: 24%;
-    height: 400px;
+    width: 33.3%;
     margin: 0;
+    
+    padding-right: 50px;
+    padding-bottom: 25px;
+}
 
-    padding: 2%;
+.colomn-four-item:last-child {
+    padding-left: 25px;
 }
 
 .content {
@@ -1630,24 +1639,30 @@ footer a:hover {
 
  */
 
-.copyright {
+.footer-down {
     width: 100%;
-    margin-top: 5em;
+    padding-top: 25px;
+
+    border-top: 1px #777777 solid;
 
     text-align: center;
     font-weight: 600;
 }
 
-.copyright p span {
+.footer-down p span {
     color: #AAAAAA;
     line-height: 2.2;
 
     
     font-family: 'SourceCodePro-Medium', 'Courier New', Courier, monospace;
-    font-size: 1em;
+    font-size: .8em;
     
     letter-spacing: 1.5px;
     transition-duration: .3s;
+}
+
+.footer-down p a {
+    font-size: .8em;
 }
 
 

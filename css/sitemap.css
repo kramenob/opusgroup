@@ -1,0 +1,558 @@
+/* 
+
+Н А В И Г А Ц И Я :
+
+1. ОСНОВНОЕ
+    > 1.1 ИМПОРТ ШРИФТОВ
+    > 1.2 ШАБЛОНЫ
+
+2. ШАПКА
+    > 2.1 ШАБЛОНЫ
+
+3. ДОМ
+    > 3.1 КНОПКА "ХОЧУ РЕМОНТ!"
+
+4. ПРОЕКТЫ
+    > 4.1 ГАЛЕРЕЯ
+
+5. УСЛУГИ
+
+6. КОМПАНИЯ
+
+7. КОМАНДА
+
+8. КОНТАКТЫ
+
+9. ПОДВАЛ
+    > 9.1 БЛОКИ
+    > 9.2 МЕДИА - ИКОНКИ
+    > 9.3 ПОДПИСЬ
+
+
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+  
+    ⬇ 1. ОСНОВНОЕ ⬇ */
+
+/* для чистоты */
+* {
+    margin: 0 auto;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Отсутствие синего выделения при клике */
+}
+
+/* выделение элементов */
+*::selection {
+    color: #F59552; /* Цвет текста */
+    background: black; /* Цвет фона */
+}
+
+/* размеры страницы */
+body, html {
+    max-width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/* тело страницы */
+body {
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-position: center;
+    background-size: cover;
+    
+    background-color: whitesmoke;
+}
+
+/* Полоска скролла бара */
+body::-webkit-scrollbar {
+    width: 5px;
+    background-color: #3A3A44;
+}
+
+  /* Полоска скролла */
+body::-webkit-scrollbar-thumb {
+    background-color: #F59552;
+}
+
+/*  
+    ⬇ 1.1 ИМПОРТ ШРИФТОВ ⬇
+*/
+
+/* импорт шрифта RussianPunk */
+@font-face {
+    font-family: 'RussianPunk'; /* Гарнитура шрифта */
+    src: url(fonts/RussianPunk.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* импорт шрифта LobsterTwo-B */
+@font-face {
+    font-family: 'LobsterTwo-B'; /* Гарнитура шрифта */
+    src: url(fonts/LobsterTwo-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* импорт шрифта LobsterTwo-R */
+@font-face {
+    font-family: 'LobsterTwo-R'; /* Гарнитура шрифта */
+    src: url(fonts/LobsterTwo-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* импорт шрифта MA-Regular */
+@font-face {
+    font-family: 'MA-Regular'; /* Гарнитура шрифта */
+    src: url(fonts/MA-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* импорт шрифта Roboto Mono */
+@font-face {
+    font-family: 'Roboto Mono'; /* Гарнитура шрифта */
+    src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+    src: url(fonts/Roboto-Thin.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* импорт шрифта Roboto Mono */
+@font-face {
+    font-family: 'RobotoMono-R'; /* Гарнитура шрифта */
+    src: url(fonts/RobotoMono-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* импорт шрифта SourceCodePro-Light */
+@font-face {
+    font-family: 'SourceCodePro-Light'; /* Гарнитура шрифта */
+    src: url(fonts/SourceCodePro-Light.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* импорт шрифта SourceCodePro-Medium */
+@font-face {
+    font-family: 'SourceCodePro-Medium'; /* Гарнитура шрифта */
+    src: url(fonts/SourceCodePro-Medium.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* импорт шрифта Forum */
+@font-face {
+    font-family: 'Forum'; /* Гарнитура шрифта */
+    src: url(fonts/Forum.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* импорт шрифта Philosopher */
+@font-face {
+    font-family: 'Philosopher'; /* Гарнитура шрифта */
+    src: url(fonts/Philosopher.otf); /* Путь к файлу со шрифтом */
+}
+
+/*  
+    ⬆ 1.1 ИМПОРТ ШРИФТОВ ⬆
+
+    ⬇ 1.2 ШАБЛОНЫ ⬇
+*/
+
+/* контейнер страницы */
+.container {
+    width: 768px;
+    max-width: 1200px;
+}
+
+/* дочерний элемент */
+.child {
+    display: inline-block;
+}
+
+/*убираем подчеркивание текста ссылок*/
+a {
+    text-decoration: none;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1em;
+    color: black;
+    
+    letter-spacing: 1.5px;
+    transition-duration: .3s;
+}
+
+/* наведение на ссылку */
+a:hover {
+    color: whitesmoke;
+}
+
+/* заголовки */
+h1:not(#title), h2, h3, h4, h5 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* текст */
+p, span, time, input, select, textarea {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    font-size: 1.1em;
+}
+
+
+/* даты */
+span {
+    color: gray;
+    font-size: 1em;
+    margin-left: 1%;
+}
+
+/* цветной текст */
+spanС {
+    color: #F59552;
+}
+
+.symb {
+    margin: 0;
+    color: #222222;
+}
+
+/* заголовки1 секций */
+section h1 {
+    font-weight: 600;
+    font-size: 1.25em;
+
+    letter-spacing: 2px;
+    color: #222222;
+}
+
+/* заголовки2 секций */
+h2 {
+    font-weight: 600;
+    font-size: 1.4em;
+
+    letter-spacing: 1.5px;
+    color: #222222;
+}
+
+/* заголовки3 секций */
+h3 {
+    font-weight: 600;
+    font-size: 1.25em;
+    color: #222222;
+}
+
+/* заголовки4 секций */
+h4 {
+    font-weight: 600;
+    font-size: 1em;
+    color: #222222;
+    margin: 0 auto;
+}
+
+/* строки списка */
+li {
+    list-style-type: none; /* Убираем маркеры у списка */
+}
+
+/* параграфы секций */
+section p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 300;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    color: #222222;
+}
+
+/* секции */
+section {
+    padding-top: 100px;
+}
+
+/* ⬆ 1. ОСНОВНОЕ ⬆
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+    
+⬇ 2. ШАПКА ⬇ */
+
+/* шапка */
+header {
+    width: 100%;
+    height: 75px;
+
+    position: fixed;
+    background: whitesmoke;
+
+    border-bottom: 1px solid #3A3A44;
+    z-index: 2;
+}
+
+/* заголовок страницы */
+header #title {
+    position: fixed;
+    font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5em;
+
+    top: 35px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* наведение на ссылки */
+header a:hover {
+    color: #F59552;
+}
+
+/* ⬆ 2. ШАПКА ⬆
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+    ⬇ 9. ПОДВАЛ ⬇ */
+
+.links {
+    margin: 20px 0;
+    padding: 25px 0;
+    border-top: 1px #AAAAAA solid;
+}
+
+.links h1 {
+    font-size: 1.75em;
+    padding-bottom: 25px;
+}
+
+section#index {
+    min-height: 100%;
+}
+
+/* обертка колонн */
+.colomn-third-wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* колонны */
+.colomn-third-item {
+    width: 33.3%;
+    height: auto;
+    margin: 0 auto;
+
+    padding-right: 50px;
+}
+
+#docs .colomn-third-item {
+    width: 100%;
+}
+
+.colomn-third-item .content {
+    width: 100%;
+    height: 100%;
+    margin-top: 0 auto;
+}
+
+.colomn-third-item .content h4 {
+    color: black;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.colomn-third-item .content a {
+    font-size: 1em;
+    color: #F59552;
+    margin: 10px 0;
+    line-height: 1.75;
+    letter-spacing: 2px;
+}
+
+/* наведение на ссылку */
+.colomn-third-item .content a:hover {
+    text-decoration: underline;
+}
+
+/* ⬆ 2. ШАПКА ⬆
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+    ⬇ 9. ПОДВАЛ ⬇ */
+
+/* общее */
+footer {
+    width: 100%;
+    padding: 50px 0;
+
+    background-color: #222222;
+}
+
+/* 
+    ⬇ 9.1 БЛОКИ ⬇
+
+ */
+
+/* обертка колонн */
+.colomn-four-wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* колонны */
+.colomn-four-item {
+    width: 33.3%;
+    margin: 0;
+    
+    padding-right: 50px;
+    padding-bottom: 25px;
+}
+
+.colomn-four-item:last-child {
+    padding-left: 25px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    margin-top: 0 auto;
+
+}
+
+.content h4 {
+    font-size: 1em;
+    color: whitesmoke;
+    margin: 10px 0;
+    line-height: 2;
+    letter-spacing: 2px;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #777777;
+    
+    font-family: 'SourceCodePro-Medium', 'Courier New', Courier, monospace;
+    font-size: 1em;
+    
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    transition-duration: .3s;
+}
+
+footer a:hover {
+    color: #F59552;
+}
+
+ /* параметры иконки */
+ footer .item-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #F59552;
+
+    text-align: center;
+    border-radius: 50%;
+
+    padding-top: 5px;
+}
+
+ /* иконка */
+ footer .item-icon:before {
+    content: "";
+    font-family: FontAwesome;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+/* 
+
+    ⬆ 9.1 БЛОКИ ⬆
+
+    ⬇ 9.2 МЕДИА - ИКОНКИ ⬇ с сайта https://fontawesome.com/v5.15/icons/ 
+
+ */
+
+ /* иконка instagram */
+ footer .item-icon.instagram:before {
+    content: "\f16d";
+}
+
+ /* иконка whatsapp */
+ footer .item-icon.whatsapp:before {
+    content: "\f232";
+}
+
+ /* иконка youtube */
+ footer .item-icon.youtube:before {
+    content: "\f167";
+}
+
+ /* иконка vkontacte */
+ footer .item-icon.vkontacte:before {
+    content: "\f189";
+}
+
+/* 
+
+    ⬆ 9.2 МЕДИА - ИКОНКИ ⬆
+    
+    ⬇ 9.3 ПОДПИСЬ ⬇
+
+ */
+
+.footer-down {
+    width: 100%;
+    padding-top: 25px;
+
+    border-top: 1px #777777 solid;
+
+    text-align: center;
+    font-weight: 600;
+}
+
+.footer-down p span {
+    color: #AAAAAA;
+    line-height: 2.2;
+
+    
+    font-family: 'SourceCodePro-Medium', 'Courier New', Courier, monospace;
+    font-size: .8em;
+    
+    letter-spacing: 1.5px;
+    transition-duration: .3s;
+}
+
+.footer-down p a {
+    font-size: .8em;
+}
+
+
+footer p br {
+    display: none;
+}

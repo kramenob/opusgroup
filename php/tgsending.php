@@ -1,16 +1,19 @@
 <?php
 
-$name = $_POST['firstname'];
-$name = $_POST['lastname'];
+// Источник - https://blog.maxgraph.ru/kak-otpravlyat-zayavku-s-sajta-v-telegram/
+// Владелец бота - Марк Роас / ruisdaeless@yahoo.com
+
+$firstname = $_POST['firstname'];
+$lastname = $_POST['lastname'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
-$token = "1666984823:AAGj0i_Z_IiYXqBvFgjfbHrb1unRbSTJhNE"; // МОЙ
+$token = "1666984823:AAGj0i_Z_IiYXqBvFgjfbHrb1unRbSTJhNE"; // Токен 
 $chat_id = "-1001377908800"; // МОЙ
 $arr = array(
-  'Имя: ' => $name,
+  'Имя: ' => $firstname,
+  'Фамилия: ' => $lastname,
   'Телефон: ' => $phone,
-  'Email' => $email,
-  'Сообщение:' => $message
+  'Сообщение:' => $message,
 );
 
 foreach($arr as $key => $value) {
