@@ -41,7 +41,7 @@
   
     ⬇ 1. ОСНОВНОЕ ⬇ */
 
-/* для чистоты */
+/* чистота всех элементов */
 * {
     margin: 0 auto;
     padding: 0;
@@ -51,7 +51,7 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Отсутствие синего выделения при клике */
 }
 
-/* выделение элементов */
+/* цвета при выделении элементов */
 *::selection {
     color: #F59552; /* Цвет текста */
     background: black; /* Цвет фона */
@@ -71,17 +71,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-position: center;
     background-size: cover;
-    
+
     background-color: whitesmoke;
 }
 
-/* Полоска скролла бара */
+/* полоска скролла бара */
 body::-webkit-scrollbar {
     width: 5px;
     background-color: #3A3A44;
 }
 
-  /* Полоска скролла */
+  /* полоска скролла */
 body::-webkit-scrollbar-thumb {
     background-color: #F59552;
 }
@@ -90,65 +90,22 @@ body::-webkit-scrollbar-thumb {
     ⬇ 1.1 ИМПОРТ ШРИФТОВ ⬇
 */
 
-/* импорт шрифта RussianPunk */
-@font-face {
-    font-family: 'RussianPunk'; /* Гарнитура шрифта */
-    src: url(fonts/RussianPunk.ttf); /* Путь к файлу со шрифтом */
-}
-
-/* импорт шрифта LobsterTwo-B */
+/* лого на шапке страницы */
 @font-face {
     font-family: 'LobsterTwo-B'; /* Гарнитура шрифта */
     src: url(fonts/LobsterTwo-Bold.ttf); /* Путь к файлу со шрифтом */
 }
 
-/* импорт шрифта LobsterTwo-R */
+/* шрифт заголовка на главной странице */
 @font-face {
-    font-family: 'LobsterTwo-R'; /* Гарнитура шрифта */
-    src: url(fonts/LobsterTwo-Regular.ttf); /* Путь к файлу со шрифтом */
+    font-family: 'RussianPunk'; /* Гарнитура шрифта */
+    src: url(fonts/RussianPunk.ttf); /* Путь к файлу со шрифтом */
 }
 
-/* импорт шрифта MA-Regular */
-@font-face {
-    font-family: 'MA-Regular'; /* Гарнитура шрифта */
-    src: url(fonts/MA-Regular.ttf); /* Путь к файлу со шрифтом */
-}
-
-/* импорт шрифта Roboto Mono */
-@font-face {
-    font-family: 'Roboto Mono'; /* Гарнитура шрифта */
-    src: url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
-    src: url(fonts/Roboto-Thin.ttf); /* Путь к файлу со шрифтом */
-}
-
-/* импорт шрифта Roboto Mono */
-@font-face {
-    font-family: 'RobotoMono-R'; /* Гарнитура шрифта */
-    src: url(fonts/RobotoMono-Regular.ttf); /* Путь к файлу со шрифтом */
-}
-
-/* импорт шрифта SourceCodePro-Light */
-@font-face {
-    font-family: 'SourceCodePro-Light'; /* Гарнитура шрифта */
-    src: url(fonts/SourceCodePro-Light.ttf); /* Путь к файлу со шрифтом */
-}
-
-/* импорт шрифта SourceCodePro-Medium */
+/* шрифт футера */
 @font-face {
     font-family: 'SourceCodePro-Medium'; /* Гарнитура шрифта */
     src: url(fonts/SourceCodePro-Medium.ttf); /* Путь к файлу со шрифтом */
-}
-
-/* импорт шрифта Forum */
-@font-face {
-    font-family: 'Forum'; /* Гарнитура шрифта */
-    src: url(fonts/Forum.ttf); /* Путь к файлу со шрифтом */
-}
-
-/* импорт шрифта Philosopher */
-@font-face {
-    font-family: 'Philosopher'; /* Гарнитура шрифта */
-    src: url(fonts/Philosopher.otf); /* Путь к файлу со шрифтом */
 }
 
 /*  
@@ -163,7 +120,7 @@ body::-webkit-scrollbar-thumb {
     max-width: 1360px;
 }
 
-/* дочерний элемент */
+/* дочерний элемент шел в линию */
 .child {
     display: inline-block;
 }
@@ -173,10 +130,9 @@ a {
     text-decoration: none;
 
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.1em;
+    font-size: 1.125em;
     color: black;
     
-    letter-spacing: 1.5px;
     transition-duration: .3s;
 }
 
@@ -185,67 +141,41 @@ a:hover {
     color: whitesmoke;
 }
 
-/* заголовки */
-h1:not(#title), h2, h3, h4, h5 {
-    font-family: 'MA-Regular', Arial, sans-serif;
+/* шрифт заголовков */
+h1, h2, h3, h4 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
-/* текст */
-p, span, time, input, select, textarea {
+/* шрифт параграфов */
+p, input, select, textarea, li {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
-    font-size: 1.1em;
+    font-size: 1.125em;
 }
 
-
-/* даты */
-span {
-    color: gray;
-    font-size: 1em;
-    margin-left: 1%;
-}
-
-/* цветной текст */
-spanС {
-    color: #F59552;
-}
-
-span.symb {
-    margin: 0;
-    color: black;
-}
-
-/* заголовки1 секций */
-section h1 {
+/* заголовки1 */
+h1 {
     font-weight: 600;
     font-size: 2.5em;
-
-    letter-spacing: 2px;
 }
 
-/* заголовки2 секций */
+/* заголовки2 */
 h2 {
     font-weight: 600;
-    font-size: 2.25em;
+    font-size: 2em;
 
     letter-spacing: 1.5px;
 }
 
-/* заголовки3 секций */
+/* заголовки3 */
 h3 {
+    font-weight: 500;
     font-size: 1.5em;
 }
 
-/* заголовки4 секций */
+/* заголовки4 */
 h4 {
-    font-size: 1.25em;
-}
-
-/* заголовки5 секций */
-h5 {
-    margin-left: .01%;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 /* строки списка */
@@ -253,46 +183,26 @@ li {
     list-style-type: none; /* Убираем маркеры у списка */
 }
 
-/* параграфы секций */
-section p {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 300;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-left: 2%;
-}
-
-/* секции */
+/* отступ сверху для секций */
 section {
     padding-top: 100px;
 }
 
-section#porfolio {
+/* особенный отступ для секции без заголовка */
+section#portfolio {
     padding-top: 150px;
 }
 
+/* отсут сверху для футера */
 footer {
     margin-top: 125px;
 }
 
-/* чтобы заголовок был во всю ширину */
+/* блок заголовка секций */
 .sec-title {
     width: 100%;
     height: auto;
-    margin-bottom: 1%;
-}
-
-/* заголовки2 секций */
-.sec-title h2 {
-    margin: 0 auto;
-    text-align: center;
-
-    letter-spacing: 1.5px;
-    line-height: 1.5;
-}
-
-/* параграфы секций */
-.sec-title p, .sec-title p a  {
+    margin-bottom: 10px;
     margin: 0 auto;
     text-align: center;
 }
@@ -322,7 +232,7 @@ header {
     z-index: 2;
 }
 
-/* заголовок страницы */
+/* заголовок главной */
 header #title {
     position: fixed;
     font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -335,6 +245,8 @@ header #title {
     
     user-select: none;
     -webkit-user-drag: none;
+    letter-spacing: 1.5px;
+    transition-duration: .3s;
 }
 
 /* наведение на ссылки */
@@ -369,9 +281,9 @@ header .mobile-call.icon {
     
     top: 38.5px;
     left: auto;
-    right: 40px;
+    padding-right: 2.5px;
     transform: translate(-50%, -50%);
-    width: 35px;
+    width: 37.5px;
     height: auto;
 } 
 
@@ -542,7 +454,11 @@ body {
     background: 
         url(../img/main/home/paint-line-hf.svg) no-repeat,
         whitesmoke;
-    background-size: 100%;
+    width: 100%;
+    background-size: 1920px;
+    background-position-x: center;
+    background-position-y: -100px;
+    
 }
 
 section#home h1 {
@@ -550,7 +466,9 @@ section#home h1 {
     text-align: center;
     padding: 50px;
 
-    font-size: 4em;
+    font-size: 3.5em;
+
+    letter-spacing: 2px;
 
     /* background: url(../img/main/home/brush-banner.svg) no-repeat;
     background-position-x: center;
@@ -566,31 +484,24 @@ section#home .main h1::selection {
 }
 
 section#home .main p {
-    font-size: 1.7em;
+    font-size: 1.5em;
     text-align: center;
+    max-width: 700px;
 
     margin: 0 auto;
-}
-
-section#home p.list {
-    width: 1000px;
-}
-
-.symb3 {
-    display: none;
 }
 
 /* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
 section#home .feedback-form {
-    font-size: 1.7em;
+    font-size: 1.5em;
     text-align: center;
 
     margin: 0 auto;
-    margin-top: 15px;
-    margin-top: 100px;
+    margin-top: 75px;
 }
 section#home a.button {
     font-size: 1em;
+    letter-spacing: 1.5px;
 }
 
 /* кнопка */
@@ -694,21 +605,11 @@ section#home a.button {
     float: right;
 }
 
-.feedback-form .sec-title h2 {
-    font-size: 2em;
-    padding-left: 20px;
-}
-
-.feedback-form .sec-title p {
-    font-size: 1em;
-}
-
 /* шрифт кнопки */
 .feedback-form #sendform .button {
     width: 30%;
     padding: 2.5%;
     margin: 20px 0;
-    font-size: 1em;
 }
 
 /* ⬆ 3. ДОМ ⬆
@@ -724,7 +625,7 @@ section#home a.button {
   
     ⬇ 4. Портфолио - 4.1 ГАЛЕРЕЯ ⬇ */
 
-section#porfolio {
+section#portfolio {
     padding-top: 200px;
 }
 
@@ -852,6 +753,7 @@ section#porfolio {
  /* анимация поднятия элементов */
 .post-item:hover .item-icon, .post-item:hover .item-body h3, .post-item:hover .item-body p {
     /* transform: translateY(-8px); */
+    cursor: text;
 }
 
  /* цветной круг под иконкой */
@@ -884,7 +786,7 @@ section#porfolio {
  /* параграф */
 .item-body p {
     transition-delay: .1s;
-
+    margin: 0;
 }
 
  /* подвал блока */
@@ -1165,7 +1067,7 @@ section#about h2 {
 }
 
 /* заголовок био */
-#bio h4 {
+#bio h3 {
     margin-top: 2px;
 }
 
@@ -1572,7 +1474,7 @@ footer a {
     color: #777777;
     
     font-family: 'SourceCodePro-Medium', 'Courier New', Courier, monospace;
-    font-size: 1em;
+    font-size: .9em;
     
     letter-spacing: 1.5px;
     line-height: 1.5;
@@ -1662,7 +1564,7 @@ footer a:hover {
 }
 
 .footer-down p a {
-    font-size: .8em;
+    font-size: .7em;
 }
 
 

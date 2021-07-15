@@ -4,13 +4,20 @@
 1. 
 
 
+*/
+
 
 /* ========== Desktop First ========== */
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+
+/* ОСНОВНОЕ */
+
     .container {
         width: 100%;
     }
+
+/* ШАПКА */
 
     header .mobile-call {
         left: 50%;
@@ -28,9 +35,11 @@
         padding: 12px 14%;
     }
     
-    /* полоса краски */
+/* ГЛАВНАЯ */
+
+    /* полоса краски на главной */
     body {
-        background-size: 1850px;
+        /* background-size: 1850px; */
         background-position-x: 50%;
     }
 
@@ -94,6 +103,8 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 992px) {
 
+/* ШАПКА */
+
     header .mobile-call.numbers {
         display: none;
     } 
@@ -116,7 +127,7 @@
         background-position-x: 60%;
     }
 
-    section#home p {
+    section#home .main p {
         font-size: 1.3em;
         margin: 0 auto;
         width: 100%;
@@ -166,7 +177,6 @@
 
     .feedback-form .sec-title h2 {
         font-size: 2em;
-        padding-left: 20px;
     }
 
     .feedback-form .sec-title p {
@@ -175,7 +185,7 @@
 
     /* шрифт кнопки */
     .feedback-form #sendform .button {
-        width: 30%;
+        width: 50%;
         padding: 2.5%;
         margin: 20px 0;
         font-size: 1em;
@@ -203,13 +213,19 @@
 
     .box {
         width: 100%;
-        height: 125px;
+        height: 300px;
+        margin-bottom: 10px;
         
         box-shadow: 0px 20px 10px 0px rgba(0, 0, 0, 0.2) inset;
     }
 
-    .box:hover{
-        height: 450px;
+    .preview img {
+        width: auto;
+        height: 50px;
+    }
+
+    .text {
+        opacity: 1;
     }
 
     section#howwework .sec-title {
@@ -228,20 +244,8 @@
         font-size: 0.9em;
     }
 
-    footer {
-        height: auto;
-    }
-
     footer .container {
-        padding: 25px 2.5%;
-    }
-    /* колонны */
-    .colomn-four-item {
-        width: 50%;
-        height: 350px;
-        margin-top: 0;
-
-        padding: 0 10%;
+        padding: 0px 20px;
     }
 
     .copyright {
@@ -253,6 +257,8 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
     
+/* ОСНОВНОЕ */
+
     body{
         margin: 0;
     }
@@ -266,21 +272,74 @@
     .sec-title p {
         font-size: .85em;
     }
-
-    section#home h1 {
-        font-size: 2.5em;
-    }    
-    section#home p {
-        font-size: .8em;
-    }
-    section#home .button {
-        margin-top: 60px;
-    }
+    
+    /* кнопки */
     .button {
         padding: 1em 3em;
         font-size: 1em;
     }
 
+/* ШАПКА */
+
+    /* контейнер меню */
+    .menu__box {
+        width: 250px;
+    }
+
+    /* элементы меню */
+    .menu__item {
+        padding: 12px 24px;
+    }
+
+/* ГЛАВНАЯ */
+    
+    /* полоса краски */
+    body {
+        background-position-x: 65%;
+        background-position-y: -50px;
+    }
+
+    /* заголовок на главной */
+    section#home h1 {
+        font-size: 3em;
+        padding: 50px 0px;
+    }    
+    /* текст на главной */
+    section#home .main p {
+        width: 80%;
+    }
+    /* кнопка на главной */
+    section#home .button {
+        margin-top: 60px;
+    }
+
+/* ФИДБЕК */
+
+    .feedback-form input[type=text], .feedback-form select, .feedback-form textarea {
+        font-size: .75em;
+    }
+
+    /* поле имени и фамилии */
+    .feedback-form input.name {
+        width: 100%;
+    }
+
+    /* поле фамилии */
+    .feedback-form input#lname {
+        float: left;
+    }
+
+    .feedback-form .sec-title h2 {
+        font-size: 1.75em;
+        text-align: center;
+    }
+
+    .feedback-form .sec-title p {
+        font-size: .75em;
+        text-align: center;
+    }
+
+    
     .post-item {
         min-height: 100%;
         max-width: 50%;
@@ -323,14 +382,6 @@
         font-size: .9em;
     }
 
-    input.button {
-        float: right;
-    }
-
-    #map iframe {
-        margin-top: 7.5px;
-    }
-
     footer {
         margin-top: 50px;
     }
@@ -347,38 +398,64 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
 
+/* ОСНОВНОЕ */
+
+    /*убираем подчеркивание текста ссылок*/
+    a {
+        font-size: .875em;
+    }
+
+    /* шрифт параграфов */
+    p, input, select, textarea, li {
+        font-size: .875em;
+    }
+
+    /* заголовки1 */
+    h1 {
+        font-size: 2em;
+    }
+
+    /* заголовки2 */
+    h2 {
+        font-size: 1.5em;
+    }
+
+    /* заголовки3 */
+    h3 {
+        font-size: 1em;
+    }
+
+    /* заголовки4 */
+    h4 {
+        font-size: .75em;
+    }
+
+/* ШАПКА */
+
     header {
         width: 100%;
         height: 60px;
     }
     header #title {
         top: 30px;
-        font-size: 1.5em;
+        font-size: 1.75em;
     }
     header .mobile-call.icon {
         top: 35px;
-        right: 7px;
-        width: 25px;
+        width: 30px;
     }
     
-    .sec-title h2 {
-        font-size: 1.2em;
-    }
-    .sec-title p {
-        font-size: .7em;
-    }
-
     .menu__btn {
         top: 32px;
         left: 10%;
     
-        width: 35px;
+        width: 30px;
         height: 35px;
     }
     .menu__btn > span,
     .menu__btn > span::before,
     .menu__btn > span::after {
-        height: 2.5px;
+        height: 2.75px;
     }
     .menu__btn > span::before {
         top: -10px;
@@ -386,31 +463,64 @@
     .menu__btn > span::after {
         top: 10px;
     }
+    
+    /* элементы меню */
+    .menu__item {
+        padding: 7px 20px;
+    }
+
+/* ГЛАВНАЯ */
+
+    /* полоса краски */
+    body {
+        background-size: 1000px;
+        background-position-x: 65%;
+        background-position-y: 20px;
+    }
 
     section#home {
         padding-top: 75px;
         margin-bottom: 75px;
     }    
     section#home h1 {
-        font-size: 1em;
+        padding: 25px 0;
+        font-size: 2em;
     }    
-    section#home p {
-        font-size: 1em;
+    section#home .main p {
+        width: 90%;
+        font-size: .875em;
         margin-top: 0px;
     }
-    section#home p br {
-        display: block;
-    }
-    section#home span.symb {
-        display: none;
-    }
-    section#home .button {
-        font-size: .7em;
-        margin-top: 40px;
-        padding: .75em 2em;
+
+    section#home .feedback-form {
+        margin-top: 50px;
     }
 
-    section#porfolio {
+    section#home a.button {
+        font-size: .7em;
+        padding: .75em 3em;
+    }
+
+    .feedback-form input[type=text], .feedback-form select, .feedback-form textarea {
+        font-size: .55em;
+    }
+
+    .feedback-form .sec-title h2 {
+        font-size: 1em;
+    }
+
+    .feedback-form .sec-title p {
+        font-size: .55em;
+    }
+
+    /* шрифт кнопки */
+    .feedback-form #sendform .button {
+        
+        font-size: .75em;
+        width: 100%;
+    }
+
+    section#portfolio {
         padding-top: 0;
     }
 
@@ -487,6 +597,8 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
     
+/* ШАПКА */
+
 }
 
 
