@@ -53,8 +53,8 @@
 
 /* цвета при выделении элементов */
 *::selection {
-    color: #F59552; /* Цвет текста */
-    background: black; /* Цвет фона */
+    color: whitesmoke; /* Цвет текста */
+    background: #F59552; /* Цвет фона */
 }
 
 /* размеры страницы */
@@ -202,9 +202,9 @@ footer {
 .sec-title {
     width: 100%;
     height: auto;
-    margin-bottom: 10px;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 25px;
 }
 
 /* ⬆ 1. ОСНОВНОЕ ⬆
@@ -478,8 +478,8 @@ section#home h1 {
 }
 
 
-section#home .main h1::selection {
-    color: #F59552; /* Цвет текста */
+section#home .main h1::selection, section#home .main p::selection {
+    color: whitesmoke; /* Цвет текста */
     background: black; /* Цвет фона */
 }
 
@@ -572,6 +572,7 @@ section#home a.button {
 }
 
 .feedback-form #sendform {
+    margin-top: 100px;
     width: 90%;
 }
 
@@ -632,7 +633,7 @@ section#portfolio {
 /* галерея */
 .gallery {
     display: flex;
-    padding: 0 20px;
+    padding: 0 10px;
     transition: 0.3s;
 }
 
@@ -713,6 +714,7 @@ section#portfolio {
 .post-item {
     min-height: 100%;
     max-width: 33.3%;
+    width: 100%;
     
     padding: 15px;
     cursor: pointer;
@@ -729,7 +731,7 @@ section#portfolio {
 
  /* контент блока */
 .item-content {
-    padding: 40px;
+    padding: 10px;
 }
 
  /* наведеине на блок */
@@ -855,14 +857,14 @@ section#portfolio {
 
     ⬇ КАК МЫ РАБОТАЕМ ⬇ */
 
-section#howwework .sec-title {
-    margin-bottom: 75px;
-}
-
 .hww-block {
-    max-width: 990px;
+    /* max-width: 990px; */
+    width: 100%;
     height: 300px;
+
     margin: 0 auto;
+    padding: 0 25px;
+
     display: flex;
     flex-direction: row;
     cursor: pointer;
@@ -890,7 +892,8 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/0YVxHbh/01.webp);
+        url(https://i.ibb.co/0YVxHbh/01.webp),
+        url(../img/main/howwework/01.webp);
     color: #fff;
 
 }
@@ -898,7 +901,8 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/3NxVnT1/02.webp);
+        url(https://i.ibb.co/3NxVnT1/02.webp),
+        url(../img/main/howwework/02.webp);
     color: #fff;
 
 }
@@ -906,7 +910,8 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/nzwQMwX/03.webp);
+        url(https://i.ibb.co/nzwQMwX/03.webp),
+        url(../img/main/howwework/03.webp);
     color: #fff;
 
 }
@@ -914,7 +919,8 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/XphvJS6/04.webp);
+        url(https://i.ibb.co/XphvJS6/04.webp),
+        url(../img/main/howwework/04.webp);
     color: #fff;
 
 }
@@ -922,7 +928,8 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/4ddhQ9Z/05.webp);
+        url(https://i.ibb.co/4ddhQ9Z/05.webp),
+        url(../img/main/howwework/05.webp);
     color: #fff;
     
 }
@@ -930,7 +937,8 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/WPmLZBM/06.webp);
+        url(https://i.ibb.co/WPmLZBM/06.webp),
+        url(../img/main/howwework/06.webp);
     color: #fff;
     
 }
@@ -938,7 +946,8 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/Rgy2CNt/07.webp);
+        url(https://i.ibb.co/Rgy2CNt/07.webp),
+        url(../img/main/howwework/07.webp);
     color: #fff;
     
 }
@@ -946,7 +955,8 @@ section#howwework .sec-title {
     background-color: #222222;
     background-image: 
         linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/SrmnW12/08.webp);
+        url(https://i.ibb.co/SrmnW12/08.webp),
+        url(../img/main/howwework/08.webp);
     color: #fff;
     
 }
@@ -993,6 +1003,7 @@ section#howwework .sec-title {
 
 
 section#about h2 {
+    padding: 0 25px;
     text-align: left;
 }
 
@@ -1009,7 +1020,8 @@ section#about h2 {
 .colomn-twice-item {
     width: 47.5%;
     height: auto;
-    margin-top: 2%;
+    margin-top: 10px;
+    padding: 0 10px;
 }
 
 .first {
@@ -1285,7 +1297,7 @@ section#team .caption p {
 
     padding:1em;
     padding-top: 0;
-    padding-left: 0;
+    padding-left: 0px;
     position: relative;
 
     border-bottom: 2px solid #222222;
@@ -1442,20 +1454,15 @@ footer {
 .colomn-four-item {
     width: 33.3%;
     margin: 0;
-    
-    padding-right: 50px;
-    padding-bottom: 25px;
-}
+    margin-bottom: 25px;
 
-.colomn-four-item:last-child {
-    padding-left: 25px;
+    padding: 0 20px;
 }
 
 .content {
     width: 100%;
     height: 100%;
     margin-top: 0 auto;
-
 }
 
 .content h4 {
@@ -1473,7 +1480,7 @@ footer li {
 footer a {
     color: #777777;
     
-    font-family: 'SourceCodePro-Medium', 'Courier New', Courier, monospace;
+    /* font-family: 'SourceCodePro-Medium', 'Courier New', Courier, monospace; */
     font-size: .9em;
     
     letter-spacing: 1.5px;
@@ -1541,11 +1548,17 @@ footer a:hover {
 
  */
 
+.footer-down hr {
+    color: #777777;
+    height: 1px;
+    margin-bottom: 25px;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+}
+
 .footer-down {
     width: 100%;
-    padding-top: 25px;
-
-    border-top: 1px #777777 solid;
 
     text-align: center;
     font-weight: 600;

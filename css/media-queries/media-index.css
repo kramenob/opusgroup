@@ -58,12 +58,27 @@
         margin-top: 90px;
     }
 
+/* ПОРТФОЛЬО */
+
+    /* колонны галереи */
+    .gallery__column {
+        display: block;
+        padding: 0 10px;
+    }
+
+    /* галерея */
+    .gallery {
+        padding: 0 10px;
+    }
+
+/* НАШИ ПРЕИМУЩЕСТВА */
+
     .post-item {
-        height: 425px;
+        height: 350px;
     }
 
     .item-content {
-        padding: 20px;
+        padding: 5px;
     }
 
     .item-body h3 {
@@ -82,12 +97,18 @@
         padding: 0 20px;
     }
 
+/* НАШИ ПРЕИМУЩЕСТВА */
+
     section#about h2 {
         padding: 0 20px;
     }
 
     .colomn-twice-wrap {
         padding: 0 10px;
+    }
+
+    .colomn-twice-item {
+        padding: 0 0px;
     }
     
     #faq .c {
@@ -120,6 +141,8 @@
         left: 40px;
         margin-left: 0;
     }
+
+/* ГЛАВНАЯ */
 
     /* полоса краски */
     body {
@@ -191,11 +214,21 @@
         font-size: 1em;
     }
 
+/* ПОРТФОЛЬО */
+
+    /* галерея */
+    .gallery {
+        padding: 0 5px;
+    }
+
+/* НАШИ ПРЕИМУЩЕСТВА */
+
     .item-body h3 {
+        width: 1%;
         font-size: 1.5em;
     }
     .item-content {
-        padding: 20px;
+        padding: 5px;
     }
 
     .item-body p, #bio p {
@@ -228,29 +261,27 @@
         opacity: 1;
     }
 
-    section#howwework .sec-title {
-        margin-bottom: 25px;
+    /* КАК МЫ РАБОТАЕМ */
+    .box:hover {
+        flex: 7;
+        height: 300px;
     }
 
-    #faq .c {
-        width: 700px;
+/* ВОПРОСЫ */
+
+    #faq .c{
+        width: 100%;
+        position: relative;
+        margin: 2em auto;
+        padding: 0 25px;
     }
 
     #faq h1{
         font-size: 1.1em;
     }
 
-    footer a, footer .content h4, footer .copyright p {
-        font-size: 0.9em;
-    }
-
     footer .container {
-        padding: 0px 20px;
-    }
-
-    .copyright {
-        margin-top: 0;
-        padding: 5% 0;
+        padding: 0 20px;
     }
 }
 
@@ -339,19 +370,23 @@
         text-align: center;
     }
 
+/* ПОРТФОЛЬО */
+
+    /* галерея */
+    .gallery {
+        padding: 0 5px;
+    }
     
+/* НАШИ ПРЕИМУЩЕСВА */
+
     .post-item {
         min-height: 100%;
-        max-width: 50%;
         
         padding: 15px;
         cursor: pointer;
     }
     .item-body h3 {
         font-size: 1.4em;
-    }
-    .item-content {
-        padding: 10px 20px;
     }
     .post-item .item-icon img {
         width: 40px;
@@ -362,36 +397,131 @@
         height: 40px;
     }
 
+/* КОМПАНИЯ */
+
     section#about h2, .colomn-twice-wrap, .hww-block {
         padding: 0 10px;
     }
-    .colomn-twice-item {
-        width: 100%;
-        height: auto;
-        margin-top: 2%;
-    }    
 
-    #faq .c {
-        width: 444px;
-    }
-    #faq label {
+    .colomn-twice-item {
         
+        margin-top: 0;
+        margin-left: 0;
+    } 
+
+    /* ВОПРОСЫ */
+    
+    #faq .c{
+        width: 100%;
+        position: relative;
+        margin: 2em auto;
+        padding: 0 10px;
+    }
+
+    #faq h1{
+        font-size: 1em;
         padding-right: 20px;
     }
-    #faq h1{
-        font-size: .9em;
+
+/* КОНТАКТ */
+
+    #contact .colomn-twice-item {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
     }
 
+    #contact .colomn-twice-item#map {
+        margin-top: 16px;
+    }
+
+    #contact .colomn-twice-item#sendform .button {
+        float: right;
+    }
+
+/* ФУТЕР */
+
+    footer .container {
+        width: 100%;
+        padding: 0 10px;
+    }
     footer {
         margin-top: 50px;
     }
-
     .colomn-four-item {
         width: 100%;
         height: auto;
         margin-top: 15px;
 
-        padding: 0 25px;
+        padding: 0;
+    }
+
+    .footer-down p .symb {
+        display: none;
+    }
+
+    .footer-down p {
+        text-align: left;
+    }
+
+    .footer-down p a {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+    }
+}
+
+/* Non standart size (only for special elements) */
+@media only screen and (max-width: 735px) {
+
+    /* колонны галереи */
+    .gallery__column {
+        padding: 0 2px;
+    }
+
+    /* галерея */
+    .gallery {
+        padding: 0 0px;
+        margin: auto -2px;
+    }
+
+    /* бокс пикчи */
+    .gallery__link {
+        margin: 0;
+    }
+
+    /* блок пикчи */
+    .gallery__thumb {
+        margin: 4px 0;
+    }
+
+    
+    .post-item {
+        max-width: 50%;
+
+        padding: 10px;
+    }
+}
+
+/* Non standart size (only for special elements) */
+@media only screen and (max-width: 600px) {
+    .colomn-twice-item {
+        width: 100%;
+        margin-top: 0;
+        margin-left: 0;
+    } 
+
+    #logo.colomn-twice-item img {
+        width: 100%;
+    }
+
+    #faq .p, #faq .p .paragraps p {
+        width: 100%;
+        margin: 0;
+    }
+
+    #faq .p .paragraps {
+        padding: 20px;
     }
 }
 
@@ -545,9 +675,6 @@
         
         margin-top: -50px;
     }
-    .post-item:hover .color-circle {
-        margin-top: -58px;
-    }
 
     
     .hww-block {
@@ -559,14 +686,14 @@
         height: 30px;
     }
     .box {
-        width: 100%;
-        height: 100px;
+        height: 200px;
     }
 
-    .box:hover{
-        height: 250px;
-        background-position: center;
+    .box:hover {
+        height: 200px;
     }
+
+    
     .text {
         width: 270px;
     }
@@ -582,23 +709,73 @@
         font-size: .8em;
     }
 
-    #faq .c {
-        width: 280px;
+    #faq h1 {
+        font-size: .7em;
+        padding-right: 25px;
     }
-    #faq label {        
-        padding-right: 15px;
+
+    #faq label::after {
+        margin-right: -30px;
     }
-    #faq h1{
-        font-size: .6em;
+
+    #faq input:checked ~ h1 label::after {
+        margin-right: -20px;
     }
-    
+
+    #faq .p, #faq .p .paragraps p {
+        width: 100%;
+        margin: 0;
+    }
+
+    #faq .p .paragraps {
+        padding: 20px;
+    }
+
+    #contact .colomn-twice-item#sendform .name, #sendform .button {   
+        width: 100%;        
+    }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
     
 /* ШАПКА */
+    .post-item {
+        max-width: 100%;
 
+        padding: 10px;
+    }
+
+    .item-body h3 {
+        width: 100%;
+        margin: 5px auto;
+    }
+
+    #bio p {
+        text-align: justify;
+    }
+
+    #faq h1 {
+        font-size: .7em;
+        padding-right: 25px;
+    }
+
+    #faq label::after {
+        margin-right: -30px;
+    }
+
+    #faq input:checked ~ h1 label::after {
+        margin-right: -20px;
+    }
+
+    #faq .p, #faq .p .paragraps p {
+        width: 100%;
+        margin: 0;
+    }
+
+    #faq .p .paragraps {
+        padding: 20px 0px;
+    }
 }
 
 
