@@ -128,9 +128,6 @@ body::-webkit-scrollbar-thumb {
 /*убираем подчеркивание текста ссылок*/
 a {
     text-decoration: none;
-
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.125em;
     color: black;
     
     transition-duration: .3s;
@@ -143,39 +140,39 @@ a:hover {
 
 /* шрифт заголовков */
 h1, h2, h3, h4 {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* шрифт параграфов */
-p, input, select, textarea, li {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 300;
+p, input, select, textarea, li, strong {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
     font-size: 1.125em;
 }
 
 /* заголовки1 */
 h1 {
-    font-weight: 600;
     font-size: 2.5em;
+    font-weight: 400;
 }
 
 /* заголовки2 */
 h2 {
-    font-weight: 600;
     font-size: 2em;
-
+    font-weight: 400;
     letter-spacing: 1.5px;
 }
 
 /* заголовки3 */
 h3 {
-    font-weight: 500;
+    font-weight: 300;
     font-size: 1.5em;
 }
 
 /* заголовки4 */
 h4 {
     font-size: 1em;
+    font-weight: 100;
 }
 
 /* строки списка */
@@ -260,42 +257,68 @@ header .mobile-call {
     align-items: center;  /* центрируем содержимое кнопки */
     position: fixed;
 
-    width: 184px;
-
     top: 37px;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-left: 475px;
+    margin-left: 550px;
 
-    height: 35px;
     cursor: pointer;
     z-index: 1;
-
-    font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5em;
 }
 
 header .mobile-call.icon {
-    align-items: center;  /* центрируем содержимое кнопки */
-    position: fixed;
-    
-    top: 38.5px;
-    left: auto;
-    padding-right: 2.5px;
-    transform: translate(-50%, -50%);
     width: 37.5px;
     height: auto;
-} 
-
-/* наведение на звонок */
-header .mobile-call:hover {
-    cursor: text;
 }
 
-/* отсутствие иконки телефона на пк версии */
-header .mobile-call.icon {
+header .mobile-call.numbers {
     display: none;
-} 
+    font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    position: absolute;
+    top: 110px;
+
+    width: 220px;
+    height: 40px;
+    left: 47%;
+
+    padding: 0 15px;
+    padding-top: 5px;
+
+
+    background: whitesmoke;
+    border: 1px #222222 solid;
+    border-radius: 10px;
+}
+
+/* треугольник */
+.mobile-call.numbers::after {
+    content: ''; 
+    position: absolute;
+    left: 160px; 
+    top: -19px; /* Положение треугольника */
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-bottom: 10px solid whitesmoke; /* Добавляем треугольник */
+}
+
+/* обводка треугольника */
+.mobile-call.numbers::before {
+    content: ''; 
+    position: absolute;
+    left: 160px; 
+    top: -20px; /* Положение треугольника */
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-bottom: 10px solid black; /* Добавляем треугольник */
+}
+
+header .mobile-call.icon:hover ~ .mobile-call.numbers {
+    display: block;
+}
+
+/* наведение на звонок */
+header .mobile-call.numbers:hover {
+    cursor: text;
+}
 
 /* ⬇ МЕНЮ ⬇ */
 
@@ -325,28 +348,21 @@ header .mobile-call.icon {
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
-    display: block;
+    display: flex;
     position: absolute;
     width: 100%;
     height: 3px;
     background-color: black;
+    border-radius: 30%;
 }
 .menu__btn > span::before {
     content: '';
-    top: -13px;
+    top: -10px;
 }
 .menu__btn > span::after {
     content: '';
-    top: 13px;
-}
-
-/* анимация при наведении на кнопку */
-.menu__btn:hover > span::before {
-    top: -10px;
-}
-.menu__btn:hover > span::after {
     top: 10px;
-}
+}   
 
 /* контейнер меню */
 .menu__box {
@@ -457,16 +473,17 @@ body {
     width: 100%;
     background-size: 1920px;
     background-position-x: center;
-    background-position-y: -100px;
+    background-position-y: -175px;
     
 }
 
 section#home h1 {
     font-family: 'RussianPunk';
     text-align: center;
-    padding: 50px;
+    padding: 25px;
+    margin-top: 25px;
 
-    font-size: 3.5em;
+    font-size: 4em;
 
     letter-spacing: 2px;
 
@@ -486,7 +503,7 @@ section#home .main h1::selection, section#home .main p::selection {
 section#home .main p {
     font-size: 1.5em;
     text-align: center;
-    max-width: 700px;
+    max-width: 600px;
 
     margin: 0 auto;
 }
@@ -521,6 +538,7 @@ section#home a.button {
     cursor: pointer;
 
     transition-duration: .3s;
+    border-radius: 15px;
 }
 
 /* наведение на кнопку */
@@ -550,10 +568,11 @@ section#home a.button {
 /* Modal Content */
 .modal-content {
     background-color: whitesmoke;
-    margin: auto;
     padding: 20px;
+    width: 1000px;
+
     border: 1px solid #888;
-    width: 60%;
+    border-radius: 15px;
 }
 
 /* The Close Button */
@@ -653,14 +672,14 @@ section#portfolio {
 .gallery__link {
     margin: 3%;
     overflow: hidden;
-}
-
-/* наведение на пикчу */
-.gallery__link:hover .gallery__image {
-    filter: grayscale(1);
+    border-radius: 15px;
 }
 .gallery__link:hover .gallery__caption {
-    opacity: 1;
+    opacity: .75;
+}
+
+.gallery__link:hover .gallery__thumb::after {
+    opacity: 0;
 }
 
 /* блок пикчи */
@@ -678,14 +697,20 @@ section#portfolio {
 /* подпись */
 .gallery__caption {
     position: absolute;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
     bottom: 0;
     left: 0;
-    padding: 25px 15px 15px;
-    width: 100%;
-    font-size: .75em;
-    color: white;
-    opacity: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
+
+    background: black;
+    background-image: url(../img/main/portfolio/instagram-icon.svg);
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position: center;
+
     transition: 0.3s;
 }
 
@@ -735,9 +760,9 @@ section#portfolio {
 }
 
  /* наведеине на блок */
-.post-item:hover .color-circle {
-    /* margin-top: -68px; */
-}
+/* .post-item:hover .color-circle {
+    margin-top: -68px;
+} */
 
  /* параметры иконки */
 .item-icon {
@@ -773,20 +798,21 @@ section#portfolio {
 
  /* текст */
 .item-body {
-    color: gray;
     font-size: .9em;
 }
 
  /* заголовок3 */
 .item-body h3 {
     color: black;
-    font-weight: 500;
     margin-bottom: 15px;
     transition-delay: .05s;
 }
 
  /* параграф */
 .item-body p {
+    color: #3A3A44;
+    letter-spacing: .75px;
+
     transition-delay: .1s;
     margin: 0;
 }
@@ -836,14 +862,14 @@ section#portfolio {
 }
 
  /* !ПОКА НЕТ СТРАНИЦ! анимация ссылки */
-.post-item:hover .link span {
-    /* transform: translateX(0%); */
-}
+/* .post-item:hover .link span {
+    transform: translateX(0%);
+} */
 
  /* !ПОКА НЕТ СТРАНИЦ! наведение на ссылку */
-.post-item:hover .link:before {
-    /* transform-origin: right center; */
-} 
+/* .post-item:hover .link:before {
+    transform-origin: right center;
+}  */
 
 /* ⬆ 5. УСЛУГИ ⬆
 
@@ -857,6 +883,104 @@ section#portfolio {
 
     ⬇ КАК МЫ РАБОТАЕМ ⬇ */
 
+#hww .hww-item {
+    min-width: 24%;
+    max-width: 50%;
+    height: 300px;
+}
+
+.hww-text {
+    width: 100%;
+    height: 75px;
+
+    padding: 25px;
+}
+
+.hww-item h3, h4 {
+    width: 100%;
+    text-align: center;
+}
+
+.hww-item h3 {
+    font-size: 1em;
+}
+
+.hww-item h4.num {
+    font-weight: bold;
+}
+
+.hww-item hr.hww-point {
+    width: 100%;
+
+    margin: 50px 0;
+    margin-top: 30px;
+    margin-left: 50%;
+
+    border: 0;
+    border-bottom: 2px dashed black;
+}
+
+.hww-item hr.hww-point::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    margin-top: -10px;
+    margin-left: -10px;
+
+    background: #F59552;
+    border-radius: 50%;
+}
+
+.hww-item hr.hww-point::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+
+    margin-top: -25px;
+    margin-left: -25px;
+
+    background: hsla(25, 89%, 64%, 0.5);
+    border-radius: 50%;
+}
+
+.hww-item .hww-content {
+    width: 250px;
+    height: 175px;
+
+    background: #fff;
+    box-shadow:  0 5px 5px 1px rgba(0,0,0,0.5);
+    border-radius: 15px;
+}
+
+.hww-content .hww-icon {
+    width: 100%;
+    height: 75px;
+    padding: 30px 0;
+
+    color: #F59552;
+
+    display: flex;
+}
+
+.hww-content .hww-icon img {
+    width: 50px;
+    height: 100%;
+}
+
+/* ⬆ 5. УСЛУГИ ⬆
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+    ⬇ КАК МЫ РАБОТАЕМ ⬇ */
 .hww-block {
     /* max-width: 990px; */
     width: 100%;
