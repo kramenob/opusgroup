@@ -888,6 +888,8 @@ section#portfolio {
     min-width: 24%;
     max-width: 50%;
     height: 300px;
+
+    margin-bottom: 50px;
 }
 
 .hww-item h3, h4 {
@@ -901,17 +903,35 @@ section#portfolio {
 
 .hww-item h4.num {
     font-weight: bold;
+    margin: auto;
+    margin-bottom: 82px;
 }
 
 .hww-item hr.hww-point {
+    border: 0;
+    position: absolute;
+    margin: auto;
+    margin-top: -52px;
+    margin-left: 145px;
+}
+
+.hww-item:nth-child(2) hr.hww-point {
+    display: block;
     width: 100%;
 
-    margin: 50px 0;
-    margin-top: 30px;
-    margin-left: 50%;
-
-    border: 0;
     border-bottom: 2px dashed black;
+}
+
+.hww-item:nth-child(9) hr.hww-point {
+    display: block;
+    width: 100%;
+    transform: scale(-1, 1);
+    position: absolute;
+
+    right: 532.5px;
+
+    border-bottom: 2px dashed black;
+    float: left;
 }
 
 .hww-item hr.hww-point::after {
@@ -925,6 +945,7 @@ section#portfolio {
 
     background: #F59552;
     border-radius: 50%;
+    z-index: 1;
 }
 
 .hww-item hr.hww-point::before {
@@ -938,42 +959,97 @@ section#portfolio {
 
     background: hsla(25, 89%, 64%, 0.5);
     border-radius: 50%;
+    z-index: 1;
 }
 
 .hww-item .hww-content {
     width: 250px;
     height: 175px;
 
-    background: #fff;
     box-shadow:  0 5px 5px 1px rgba(0,0,0,0.5);
     border-radius: 15px;
 }
 
-.hww-content .hww-icon {
+.hww-content#a {
+    background: 
+        url(../img/main/howwework/icons/01.svg) no-repeat
+        #fff;
+    background-size: 50px;
+    background-position-x: center;
+    background-position-y: 25px;
+}
+
+.hww-content#b {
+    background: 
+        url(../img/main/howwework/icons/02.svg) no-repeat
+        #fff;
+    background-size: 50px;
+    background-position-x: center;
+    background-position-y: 25px;
+}
+
+.hww-content#c {
+    background: 
+        url(../img/main/howwework/icons/03.svg) no-repeat
+        #fff;
+    background-size: 50px;
+    background-position-x: center;
+    background-position-y: 25px;
+}
+
+.hww-content#d {
+    background: 
+        url(../img/main/howwework/icons/04.svg) no-repeat
+        #fff;
+    background-size: 50px;
+    background-position-x: center;
+    background-position-y: 25px;
+}
+
+.hww-content#e {
+    background: 
+        url(../img/main/howwework/icons/05.svg) no-repeat
+        #fff;
+    background-size: 50px;
+    background-position-x: center;
+    background-position-y: 25px;
+}
+
+.hww-content#f {
+    background: 
+        url(../img/main/howwework/icons/06.svg) no-repeat
+        #fff;
+    background-size: 50px;
+    background-position-x: center;
+    background-position-y: 25px;
+}
+
+.hww-content#g {
+    background: 
+        url(../img/main/howwework/icons/07.svg) no-repeat
+        #fff;
+    background-size: 50px;
+    background-position-x: center;
+    background-position-y: 25px;
+}
+
+.hww-content#h {
+    background: 
+        url(../img/main/howwework/icons/08.svg) no-repeat
+        #fff;
+    background-size: 50px;
+    background-position-x: center;
+    background-position-y: 25px;
+}
+
+.hww-content h3 {
     width: 100%;
-    height: 100px;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
 
-    text-align: center;
-    vertical-align: middle;
-    background: hotpink;
-}
-
-.hww-icon .img {
-    width: 50px;
-    height: 50px;
-
-    display: inline-flex;
-}
-
-.hww-a {
-    background: url(../img/main/howwework/icons/01.svg);
-}
-
-.hww-content .hww-caption {
-    width: 100%;
-    height: 75px;
-
-    background: goldenrod;
+    padding-top: 115px;
 }
 
 /* ⬆ 5. УСЛУГИ ⬆
