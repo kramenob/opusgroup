@@ -924,14 +924,14 @@ section#portfolio {
 
 .hww-item:nth-child(9) hr.hww-point {
     display: block;
-    width: 100%;
+    width: 72.15%;
     transform: scale(-1, 1);
     position: absolute;
 
-    right: 532.5px;
+    margin-left: 0;
+    left: 0;
 
     border-bottom: 2px dashed black;
-    float: left;
 }
 
 .hww-item hr.hww-point::after {
@@ -1052,7 +1052,7 @@ section#portfolio {
     padding-top: 115px;
 }
 
-/* ⬆ 5. УСЛУГИ ⬆
+/* ⬆ 5. Как мы работаем ⬆
 
 
 
@@ -1062,140 +1062,99 @@ section#portfolio {
 
 
 
-    ⬇ КАК МЫ РАБОТАЕМ ⬇ */
-.hww-block {
-    /* max-width: 990px; */
+    ⬇ 6. О КОМПАНИИ ⬇ */
+
+#about {
     width: 100%;
-    height: 300px;
+    height: auto;
 
-    margin: 0 auto;
-    padding: 0 25px;
+    padding: 50px 0;
 
-    display: flex;
-    flex-direction: row;
-    cursor: pointer;
-    user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-}
-.box {
-    position: relative;
-    height: 100%;
-    flex: 1;
-    background-position: left;
-    background-size: cover;
-    transition: .7s;
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
-    overflow-x:hidden;
-    cursor: default;
-}
-.box:hover{
-    flex: 7;
-    height: 400px;
+    background: #3a3a43;
 }
 
-.a1 {
-    background-color: #222222;
-    background-image: 
-        linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/0YVxHbh/01.webp),
-        url(../img/main/howwework/01.webp);
-    color: #fff;
-
-}
-.a2 {
-    background-color: #222222;
-    background-image: 
-        linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/3NxVnT1/02.webp),
-        url(../img/main/howwework/02.webp);
-    color: #fff;
-
-}
-.a3 {
-    background-color: #222222;
-    background-image: 
-        linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/nzwQMwX/03.webp),
-        url(../img/main/howwework/03.webp);
-    color: #fff;
-
-}
-.a4 {
-    background-color: #222222;
-    background-image: 
-        linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/XphvJS6/04.webp),
-        url(../img/main/howwework/04.webp);
-    color: #fff;
-
-}
-.a5 {
-    background-color: #222222;
-    background-image: 
-        linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/4ddhQ9Z/05.webp),
-        url(../img/main/howwework/05.webp);
-    color: #fff;
-    
-}
-.a6 {
-    background-color: #222222;
-    background-image: 
-        linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/WPmLZBM/06.webp),
-        url(../img/main/howwework/06.webp);
-    color: #fff;
-    
-}
-.a7 {
-    background-color: #222222;
-    background-image: 
-        linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/Rgy2CNt/07.webp),
-        url(../img/main/howwework/07.webp);
-    color: #fff;
-    
-}
-.a8 {
-    background-color: #222222;
-    background-image: 
-        linear-gradient(to top, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)),
-        url(https://i.ibb.co/SrmnW12/08.webp),
-        url(../img/main/howwework/08.webp);
-    color: #fff;
-    
+#about h2, #about p {
+    color: whitesmoke;
 }
 
-.preview {
-    padding: 1em;
+#about .sec-title h2 {
+    text-align: center;
 }
 
-.preview img {
-    width: auto;
-    height: 40px;
-    user-select: none;
-    -webkit-user-drag: none;
-    -webkit-user-select: none;
-}
-
-.text {
+#about .sec-title h2::before {
+    content: '';
     position: absolute;
-    bottom: 0;
-    opacity: 0;
-    padding: 1em;
+    width: 25px;
+    height: 10px;
+    margin-top: 20px;
+    margin-left: -45px;
+    border-top: whitesmoke 1px solid;
+}
+
+#about .sec-title h2::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-top: whitesmoke 1px solid;
+}
+
+#about .about-content .paragraph {
+    width: 350px;
+    font-size: .8em;
+
+    text-align: justify;
+}
+
+.paragraph.f {
+    float: left;
+
+    margin-top: 25px;
+}
+
+.paragraph.l {
+    float: right;
+
+    margin-top: -150px;
+}
+
+.about-logo {
     width: 400px;
-    transition: .3s;
-    transition-delay: .2s;
+    height: auto;
 
+    padding: 50px;
+
+    border: 1px whitesmoke solid;
+    border-radius: 50%;
 }
 
-.box:hover .text{
-    opacity:1;
+.about-logo::before {
+    content: '';
+    position: absolute;
+
+    left: 0;
+    margin-top: -51px;
+
+    width: 50%;
+    height: 1px;
+    background: whitesmoke;
 }
 
+.about-logo::after {
+    content: '';
+    position: absolute;
 
-/* ⬆ КАК МЫ РАБОТАЕМ ⬆
+    right: 0;
+    margin-top: 352px;
+
+    width: 50%;
+    height: 1px;
+    background: whitesmoke;
+}
+
+/* ⬆ 5. Как мы работаем ⬆
 
 
 
@@ -1205,7 +1164,7 @@ section#portfolio {
 
 
 
-    ⬇ 6. КОМПАНИЯ ⬇ */
+    ⬇ 6. О КОМПАНИИ ⬇ */
 
 
 section#about h2 {
