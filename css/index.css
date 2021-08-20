@@ -919,7 +919,7 @@ section#portfolio {
     display: block;
     width: 100%;
 
-    border-bottom: 2px dashed black;
+    border-bottom: 1.5px dashed black;
 }
 
 .hww-item:nth-child(9) hr.hww-point {
@@ -931,7 +931,7 @@ section#portfolio {
     margin-left: 0;
     left: 0;
 
-    border-bottom: 2px dashed black;
+    border-bottom: 1.5px dashed black;
 }
 
 .hww-item hr.hww-point::after {
@@ -964,7 +964,7 @@ section#portfolio {
 
 .hww-item .hww-content {
     width: 250px;
-    height: 175px;
+    height: 150px;
 
     box-shadow:  0 5px 5px 1px rgba(0,0,0,0.5);
     border-radius: 15px;
@@ -976,7 +976,7 @@ section#portfolio {
         #fff;
     background-size: 50px;
     background-position-x: center;
-    background-position-y: 25px;
+    background-position-y: 20px;
 }
 
 .hww-content#b {
@@ -985,7 +985,7 @@ section#portfolio {
         #fff;
     background-size: 50px;
     background-position-x: center;
-    background-position-y: 25px;
+    background-position-y: 20px;
 }
 
 .hww-content#c {
@@ -994,7 +994,7 @@ section#portfolio {
         #fff;
     background-size: 50px;
     background-position-x: center;
-    background-position-y: 25px;
+    background-position-y: 20px;
 }
 
 .hww-content#d {
@@ -1003,7 +1003,7 @@ section#portfolio {
         #fff;
     background-size: 50px;
     background-position-x: center;
-    background-position-y: 25px;
+    background-position-y: 20px;
 }
 
 .hww-content#e {
@@ -1012,7 +1012,7 @@ section#portfolio {
         #fff;
     background-size: 50px;
     background-position-x: center;
-    background-position-y: 25px;
+    background-position-y: 20px;
 }
 
 .hww-content#f {
@@ -1021,7 +1021,7 @@ section#portfolio {
         #fff;
     background-size: 50px;
     background-position-x: center;
-    background-position-y: 25px;
+    background-position-y: 20px;
 }
 
 .hww-content#g {
@@ -1030,7 +1030,7 @@ section#portfolio {
         #fff;
     background-size: 50px;
     background-position-x: center;
-    background-position-y: 25px;
+    background-position-y: 20px;
 }
 
 .hww-content#h {
@@ -1039,7 +1039,7 @@ section#portfolio {
         #fff;
     background-size: 50px;
     background-position-x: center;
-    background-position-y: 25px;
+    background-position-y: 20px;
 }
 
 .hww-content h3 {
@@ -1049,7 +1049,7 @@ section#portfolio {
     display: flex;
     justify-content: center;
 
-    padding-top: 115px;
+    padding-top: 90px;
 }
 
 /* ⬆ 5. Как мы работаем ⬆
@@ -1536,48 +1536,87 @@ section#team .caption p {
 
 
 
-    ⬇ КОНТАКТЫ ⬇ */
+    ⬇ ЦЕНЫ ⬇ */
+  
+section#prices .gallery__thumb {
+    width: 350px;
+    height: 450px;
 
-/* текстовые поля */
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 0;
-    border-bottom: 1px solid black;
-    border-radius: 0;
-    background-color: whitesmoke;
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    border: 1px black solid;
+    border-radius: 15px;
 }
 
-/* поле имени и фамилии */
-input.name {
-    width: 47.5%;
+section#prices .gallery__thumb#price-icon-a {
+    background: 
+        url(../img/index/prices/1-standart.svg) no-repeat;
+    background-size: auto 50px;
+    background-position-x: center;
+    background-position-y: 50px;
 }
 
-/* поле фамилии */
-input#lname {
-    float: right;
+section#prices .gallery__thumb#price-icon-b {
+    background: 
+        url(../img/index/prices/2-comfort.svg) no-repeat;
+    background-size: auto 50px;
+    background-position-x: center;
+    background-position-y: 50px;
 }
 
-/* шрифт кнопки */
-#sendform .button {
-    padding: 2.5%;
-    font-size: 1em;
-
-    width: 200px;
+section#prices .gallery__thumb#price-icon-c {
+    background: 
+        url(../img/index/prices/3-premium.svg) no-repeat;
+    background-size: auto 50px;
+    background-position-x: center;
+    background-position-y: 50px;
 }
 
-/* карта */
-#map iframe {
-    min-width: 100%;
-    max-width: 100%;
-    max-height: 500px;
+section#prices .gallery__thumb {
+    color: black;
+    cursor: default;
+    text-align: center;
 }
 
-/* ⬆ 8. КОНТАКТЫ ⬆
+section#prices .gallery__thumb h3:hover, section#prices .gallery__thumb p:hover  {
+    cursor: text;
+}
+
+section#prices .gallery__thumb h3 {
+    margin-top: 125px;
+
+    font-weight: bold;
+}
+
+section#prices .gallery__thumb p#colored-price {
+    color: #F59552;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+section#prices .gallery__thumb p#colored-price::before {
+    content: '₽';
+    position: absolute;
+    margin-top: 3px;
+    margin-left: -12.5px;
+    font-size: .5em;
+}
+
+section#prices .gallery__thumb p#colored-price::after {
+    content: '/м²';
+    position: absolute;
+    color: #777777;
+    margin-top: 13px;
+    margin-left: 2.5px;
+    font-size: .5em;
+}
+
+section#prices .gallery__thumb p:not(p#colored-price) {
+    width: 300px;
+    margin-top: 25px;
+    font-weight: 300;
+}
+
+/* ⬆ ЦЕНЫ ⬆
 
 
 
@@ -1587,7 +1626,182 @@ input#lname {
 
 
 
-    ⬇ 9. ПОДВАЛ ⬇ */
+    ⬇ ОТЗЫВЫ ⬇ */
+   
+      
+    input[type=radio] {
+        display: none;
+      }
+      
+      .card {
+        position: absolute;
+        width: 60%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transition: transform 0.4s ease;
+        cursor: pointer;
+      }
+      
+      .container {
+        width: 100%;
+        max-width: 800px;
+        max-height: 600px;
+        height: 100%;
+        transform-style: preserve-3d;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cards {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+      }
+      
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        -o-object-fit: cover;
+           object-fit: cover;
+      }
+      
+      #item-1:checked ~ .cards #song-3,
+      #item-2:checked ~ .cards #song-1,
+      #item-3:checked ~ .cards #song-2 {
+        transform: translatex(-40%) scale(0.8);
+        opacity: 0.4;
+        z-index: 0;
+      }
+      
+      #item-1:checked ~ .cards #song-2,
+      #item-2:checked ~ .cards #song-3,
+      #item-3:checked ~ .cards #song-1 {
+        transform: translatex(40%) scale(0.8);
+        opacity: 0.4;
+        z-index: 0;
+      }
+      
+      #item-1:checked ~ .cards #song-1,
+      #item-2:checked ~ .cards #song-2,
+      #item-3:checked ~ .cards #song-3 {
+        transform: translatex(0) scale(1);
+        opacity: 1;
+        z-index: 1;
+      }
+      #item-1:checked ~ .cards #song-1 img,
+      #item-2:checked ~ .cards #song-2 img,
+      #item-3:checked ~ .cards #song-3 img {
+        box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+      }
+      
+      .player {
+        background-color: #fff;
+        border-radius: 8px;
+        min-width: 320px;
+        padding: 16px 10px;
+      }
+      
+      .upper-part {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        height: 36px;
+        overflow: hidden;
+      }
+      
+      .play-icon {
+        margin-right: 10px;
+      }
+      
+      .song-info {
+        width: calc(100% - 32px);
+        display: block;
+      }
+      
+      .song-info .title {
+        color: #403d40;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      
+      .sub-line {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+      
+      .subtitle,
+      .time {
+        font-size: 12px;
+        line-height: 16px;
+        color: #c6c5c6;
+      }
+      
+      .time {
+        font-size: 12px;
+        line-height: 16px;
+        color: #a5a5a5;
+        font-weight: 500;
+        margin-left: auto;
+      }
+      
+      .progress-bar {
+        height: 3px;
+        width: 100%;
+        background-color: #e9efff;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      
+      .progress {
+        display: block;
+        position: relative;
+        width: 60%;
+        height: 100%;
+        background-color: #2992dc;
+        border-radius: 6px;
+      }
+      
+      .info-area {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 30px;
+        transition: transform 0.4s ease-in;
+      }
+      
+      #item-2:checked ~ .player #test {
+        transform: translateY(0);
+      }
+      
+      #item-2:checked ~ .player #test {
+        transform: translateY(-40px);
+      }
+      
+      #item-3:checked ~ .player #test {
+        transform: translateY(-80px);
+      }
+    
+
+/* ⬆ ОТЗЫВЫ ⬆
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+    ⬇ ПОДВАЛ ⬇ */
+
 
 footer .container {
     width: 768px;
