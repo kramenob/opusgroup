@@ -354,7 +354,7 @@ header .mobile-call.numbers:hover {
     width: 100%;
     height: 3px;
     background-color: black;
-    border-radius: 30%;
+    border-radius: 3px;
 }
 .menu__btn > span::before {
     content: '';
@@ -591,7 +591,7 @@ section#home a.button {
     cursor: pointer;
 }
 
-.feedback-form #sendform {
+.feedback-form .sendform {
     margin-top: 100px;
     width: 90%;
 }
@@ -627,7 +627,7 @@ section#home a.button {
 }
 
 /* шрифт кнопки */
-.feedback-form #sendform .button {
+.feedback-form .sendform .button {
     width: 30%;
     padding: 2.5%;
     margin: 20px 0;
@@ -1457,7 +1457,7 @@ section#team .caption p {
 
 #faq h1{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.15em;
 
     padding:1em;
@@ -1629,7 +1629,7 @@ section#prices .gallery__thumb p:not(p#colored-price) {
     ⬇ ОТЗЫВЫ ⬇ */
 
 section#feedback {
-    height: 500px;
+    height: 600px;
 }
       
 input[type=radio] {
@@ -1714,6 +1714,26 @@ iframe {
 
     ⬇ ПОДВАЛ ⬇ */
 
+section#button .feedback-form a.button {
+    padding: 25px 200px;
+}
+
+section#button .feedback-form {
+    text-align: center;
+}
+
+/* ⬆ ОТЗЫВЫ ⬆
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+    ⬇ ПОДВАЛ ⬇ */
+
 
 footer .container {
     width: 768px;
@@ -1746,8 +1766,8 @@ footer {
     width: 33.3%;
     margin: 0;
     margin-bottom: 25px;
-
-    padding: 0 20px;
+    text-align: center;
+    padding: 0 25px;
 }
 
 .content {
