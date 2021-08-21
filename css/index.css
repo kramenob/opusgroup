@@ -146,14 +146,14 @@ h1, h2, h3, h4 {
 /* шрифт параграфов */
 p, input, select, textarea, li, strong {
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 1.125em;
 }
 
 /* заголовки1 */
 h1 {
     font-size: 2.5em;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* заголовки2 */
@@ -165,14 +165,14 @@ h2 {
 
 /* заголовки3 */
 h3 {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.5em;
 }
 
 /* заголовки4 */
 h4 {
     font-size: 1em;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 /* строки списка */
@@ -388,7 +388,8 @@ header .mobile-call.numbers:hover {
     padding: 12px 24px;
     color: black;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: .9em;
+    font-weight: 300;
     text-decoration: none;
 }
 
@@ -469,7 +470,7 @@ header .mobile-call.numbers:hover {
 /* полоса краски */
 body {
     background: 
-        url(../img/main/home/paint-line-hf.svg) no-repeat,
+        url(../img/index/home/paint-line-hf.svg) no-repeat,
         whitesmoke;
     width: 100%;
     background-size: 1920px;
@@ -488,7 +489,7 @@ section#home h1 {
 
     letter-spacing: 2px;
 
-    /* background: url(../img/main/home/brush-banner.svg) no-repeat;
+    /* background: url(../img/index/home/brush-banner.svg) no-repeat;
     background-position-x: center;
 
     background-size: 110% auto;
@@ -553,6 +554,7 @@ section#home a.button {
     background: #F59552;
 }
 
+/* окно формы обратной связи */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -566,7 +568,7 @@ section#home a.button {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Modal Content */
+/* контент формы обратной связи */
 .modal-content {
     background-color: whitesmoke;
     padding: 20px;
@@ -576,7 +578,7 @@ section#home a.button {
     border-radius: 15px;
 }
 
-/* The Close Button */
+/* кнопка закрытия */
 .closess {
     color: #222222;
     float: right;
@@ -596,6 +598,10 @@ section#home a.button {
     width: 90%;
 }
 
+.feedback-form .sec-title {
+    font-size: .8em;
+}   
+
 /* текстовые поля */
 .feedback-form input[type=text], .feedback-form select, .feedback-form textarea {
     width: 100%; /* Full width */
@@ -608,7 +614,7 @@ section#home a.button {
     margin-top: 6px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
     resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-    font-size: 1em;
+    font-size: .8em;
 }
 
 .feedback-form textarea {
@@ -631,6 +637,7 @@ section#home a.button {
     width: 30%;
     padding: 2.5%;
     margin: 20px 0;
+    font-size: 1em;
 }
 
 /* ⬆ 3. ДОМ ⬆
@@ -707,7 +714,7 @@ section#portfolio {
     left: 0;
 
     background: black;
-    background-image: url(../img/main/portfolio/instagram-icon.svg);
+    background-image: url(../img/index/portfolio/instagram-icon.svg);
     background-repeat: no-repeat;
     background-size: 25%;
     background-position: center;
@@ -884,7 +891,7 @@ section#portfolio {
 
     ⬇ КАК МЫ РАБОТАЕМ ⬇ */
 
-#hww .hww-item {
+#howwework .howwework-item {
     min-width: 24%;
     max-width: 50%;
     height: 300px;
@@ -892,22 +899,22 @@ section#portfolio {
     margin-bottom: 50px;
 }
 
-.hww-item h3, h4 {
+.howwework-item h3, h4 {
     width: 100%;
     text-align: center;
 }
 
-.hww-item h3 {
+.howwework-item h3 {
     font-size: 1em;
 }
 
-.hww-item h4.num {
+.howwework-item h4.num {
     font-weight: bold;
     margin: auto;
     margin-bottom: 82px;
 }
 
-.hww-item hr.hww-point {
+.howwework-item hr.howwework-point {
     border: 0;
     position: absolute;
     margin: auto;
@@ -915,14 +922,14 @@ section#portfolio {
     margin-left: 145px;
 }
 
-.hww-item:nth-child(2) hr.hww-point {
+.howwework-item:nth-child(2) hr.howwework-point {
     display: block;
     width: 100%;
 
     border-bottom: 1.5px dashed black;
 }
 
-.hww-item:nth-child(9) hr.hww-point {
+.howwework-item:nth-child(9) hr.howwework-point {
     display: block;
     width: 72.15%;
     transform: scale(-1, 1);
@@ -934,7 +941,7 @@ section#portfolio {
     border-bottom: 1.5px dashed black;
 }
 
-.hww-item hr.hww-point::after {
+.howwework-item hr.howwework-point::after {
     content: '';
     position: absolute;
     width: 20px;
@@ -948,7 +955,7 @@ section#portfolio {
     z-index: 1;
 }
 
-.hww-item hr.hww-point::before {
+.howwework-item hr.howwework-point::before {
     content: '';
     position: absolute;
     width: 50px;
@@ -962,7 +969,7 @@ section#portfolio {
     z-index: 1;
 }
 
-.hww-item .hww-content {
+.howwework-item .howwework-content {
     width: 250px;
     height: 150px;
 
@@ -970,79 +977,79 @@ section#portfolio {
     border-radius: 15px;
 }
 
-.hww-content#a {
+.howwework-content#a {
     background: 
-        url(../img/main/howwework/icons/01.svg) no-repeat
+        url(../img/index/howwework/icons/01.svg) no-repeat
         #fff;
     background-size: 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
 
-.hww-content#b {
+.howwework-content#b {
     background: 
-        url(../img/main/howwework/icons/02.svg) no-repeat
+        url(../img/index/howwework/icons/02.svg) no-repeat
         #fff;
     background-size: 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
 
-.hww-content#c {
+.howwework-content#c {
     background: 
-        url(../img/main/howwework/icons/03.svg) no-repeat
+        url(../img/index/howwework/icons/03.svg) no-repeat
         #fff;
     background-size: 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
 
-.hww-content#d {
+.howwework-content#d {
     background: 
-        url(../img/main/howwework/icons/04.svg) no-repeat
+        url(../img/index/howwework/icons/04.svg) no-repeat
         #fff;
     background-size: 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
 
-.hww-content#e {
+.howwework-content#e {
     background: 
-        url(../img/main/howwework/icons/05.svg) no-repeat
+        url(../img/index/howwework/icons/05.svg) no-repeat
         #fff;
     background-size: 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
 
-.hww-content#f {
+.howwework-content#f {
     background: 
-        url(../img/main/howwework/icons/06.svg) no-repeat
+        url(../img/index/howwework/icons/06.svg) no-repeat
         #fff;
     background-size: 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
 
-.hww-content#g {
+.howwework-content#g {
     background: 
-        url(../img/main/howwework/icons/07.svg) no-repeat
+        url(../img/index/howwework/icons/07.svg) no-repeat
         #fff;
     background-size: 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
 
-.hww-content#h {
+.howwework-content#h {
     background: 
-        url(../img/main/howwework/icons/08.svg) no-repeat
+        url(../img/index/howwework/icons/08.svg) no-repeat
         #fff;
     background-size: 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
 
-.hww-content h3 {
+.howwework-content h3 {
     width: 100%;
     height: 100%;
     
@@ -1538,7 +1545,7 @@ section#team .caption p {
 
     ⬇ ЦЕНЫ ⬇ */
   
-section#prices .gallery__thumb {
+section#price .gallery__thumb {
     width: 350px;
     height: 450px;
 
@@ -1546,54 +1553,54 @@ section#prices .gallery__thumb {
     border-radius: 15px;
 }
 
-section#prices .gallery__thumb#price-icon-a {
+section#price .gallery__thumb#price-icon-a {
     background: 
-        url(../img/index/prices/1-standart.svg) no-repeat;
+        url(../img/index/price/1-standart.svg) no-repeat;
     background-size: auto 50px;
     background-position-x: center;
     background-position-y: 50px;
 }
 
-section#prices .gallery__thumb#price-icon-b {
+section#price .gallery__thumb#price-icon-b {
     background: 
-        url(../img/index/prices/2-comfort.svg) no-repeat;
+        url(../img/index/price/2-comfort.svg) no-repeat;
     background-size: auto 50px;
     background-position-x: center;
     background-position-y: 50px;
 }
 
-section#prices .gallery__thumb#price-icon-c {
+section#price .gallery__thumb#price-icon-c {
     background: 
-        url(../img/index/prices/3-premium.svg) no-repeat;
+        url(../img/index/price/3-premium.svg) no-repeat;
     background-size: auto 50px;
     background-position-x: center;
     background-position-y: 50px;
 }
 
-section#prices .gallery__thumb {
+section#price .gallery__thumb {
     color: black;
     cursor: default;
     text-align: center;
 }
 
-section#prices .gallery__thumb h3:hover, section#prices .gallery__thumb p:hover  {
+section#price .gallery__thumb h3:hover, section#price .gallery__thumb p:hover  {
     cursor: text;
 }
 
-section#prices .gallery__thumb h3 {
+section#price .gallery__thumb h3 {
     margin-top: 125px;
 
     font-weight: bold;
 }
 
-section#prices .gallery__thumb p#colored-price {
+section#price .gallery__thumb p#colored-price {
     color: #F59552;
     font-size: 2em;
     font-weight: bold;
     margin-top: 25px;
 }
 
-section#prices .gallery__thumb p#colored-price::before {
+section#price .gallery__thumb p#colored-price::before {
     content: '₽';
     position: absolute;
     margin-top: 3px;
@@ -1601,7 +1608,7 @@ section#prices .gallery__thumb p#colored-price::before {
     font-size: .5em;
 }
 
-section#prices .gallery__thumb p#colored-price::after {
+section#price .gallery__thumb p#colored-price::after {
     content: '/м²';
     position: absolute;
     color: #777777;
@@ -1610,7 +1617,7 @@ section#prices .gallery__thumb p#colored-price::after {
     font-size: .5em;
 }
 
-section#prices .gallery__thumb p:not(p#colored-price) {
+section#price .gallery__thumb p:not(p#colored-price) {
     width: 300px;
     margin-top: 25px;
     font-weight: 300;
@@ -1712,17 +1719,25 @@ iframe {
 
 
 
-    ⬇ ПОДВАЛ ⬇ */
+    ⬇ КНОПКА ⬇ */
 
 section#button .feedback-form a.button {
     padding: 25px 200px;
+    background: #F59552;
+    border:1px #F59552 solid;
+    color: whitesmoke;
+}
+
+section#button .feedback-form a.button:hover {
+    background: whitesmoke;
+    color: #F59552;
 }
 
 section#button .feedback-form {
     text-align: center;
 }
 
-/* ⬆ ОТЗЫВЫ ⬆
+/* ⬆ КНОПКА ⬆
 
 
 

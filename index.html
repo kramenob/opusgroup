@@ -87,20 +87,28 @@
                         <a class="closess" title="Закрыть" onclick="document.getElementById('parent_popup_click1').style.display='none';">×</a>
                         
                         <div class="sec-title">
-                            <h2>Обратная связь</h2>
-                            <p>Отправьте заявку на расчет стоимости</p>
+                            <h2>Отправка заявки</h2>
+                            <p>на расчет стоимости</p>
                         </div> <!-- .sec-title -->
                         <div class="container sendform">
-                            <form action="telegram.php" method="POST">
-                                <input class="name" type="text" id="fname" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
+                            <form>
                 
-                                <input class="name" type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." minlength="1" maxlength="30">
+                                <!-- Hidden Required Fields -->
+                                <input type="hidden" name="project_name" value="OpusGroup">
+                                <input type="hidden" name="admin_email" value="zarzuhamli@biyac.com">
+                                <input type="hidden" name="form_subject" value="Заявка Тест 1">
+                                <!-- END Hidden Required Fields -->
+
+                                <input class="name" type="text" id="Name" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
                 
-                                <input type="text" id="phone" name="phone" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
+                                <input class="name" type="text" id="E-mail" name="lastname" placeholder="Ваша почта.." minlength="1" maxlength="30">
+                
+                                <input type="text" id="phone" name="Phone" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
         
-                                <textarea id="subject" name="message" placeholder="Введите Ваше сообщение.." style="min-height:200px"></textarea>
+                                <!-- <textarea id="subject" name="message" placeholder="Комментарий.." style="min-height:200px"></textarea> -->
                 
                                 <input class="button" type="submit" value="Отправить">
+                                
                             </form>
                         </div> <!-- .sendform --> 
                     </div>
@@ -118,28 +126,28 @@
                 <div class="gallery__column">
                     <a href="https://www.instagram.com/p/CQJz4iGFYaw/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_1/1.jpg" alt="" class="gallery__image">
+                            <img src="img/index/portfolio/colomn_1/1.jpg" alt="" class="gallery__image">
                             <figcaption class="gallery__caption"></figcaption>
                         </figure>
                     </a>
             
                     <a href="https://www.instagram.com/p/CQJz4iGFYaw/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_1/2.jpg" alt="" class="gallery__image">
+                            <img src="img/index/portfolio/colomn_1/2.jpg" alt="" class="gallery__image">
                             <figcaption class="gallery__caption"></figcaption>
                         </figure>
                     </a>
             
                     <a href="https://www.instagram.com/p/CQJz4iGFYaw/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_1/3.jpg" alt="" class="gallery__image">
+                            <img src="img/index/portfolio/colomn_1/3.jpg" alt="" class="gallery__image">
                             <figcaption class="gallery__caption"></figcaption>
                         </figure>
                     </a>
                     
                     <a href="https://www.instagram.com/p/CQJz4iGFYaw/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_1/4.jpg" alt="" class="gallery__image">
+                            <img src="img/index/portfolio/colomn_1/4.jpg" alt="" class="gallery__image">
                             <figcaption class="gallery__caption"></figcaption>
                         </figure>
                     </a>
@@ -148,26 +156,26 @@
                 <div class="gallery__column">
                     <a href="https://www.instagram.com/p/CQJ01YDFKAH/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_2/1.jpg" alt="" class="gallery__image">
+                            <img src="img/index/portfolio/colomn_2/1.jpg" alt="" class="gallery__image">
                             <figcaption class="gallery__caption"></figcaption>
                         </figure>
                     </a>
             
                     <a href="https://www.instagram.com/p/CQJ01YDFKAH/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_2/2.jpg" alt="" class="gallery__image">
+                            <img src="img/index/portfolio/colomn_2/2.jpg" alt="" class="gallery__image">
                             <figcaption class="gallery__caption"></figcaption>
                         </figure>
                     </a>
                     <a href="https://www.instagram.com/p/CQJ01YDFKAH/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_2/3.jpg" alt="" class="gallery__image">
+                            <img src="img/index/portfolio/colomn_2/3.jpg" alt="" class="gallery__image">
                             <figcaption class="gallery__caption"></figcaption>
                         </figure>
                     </a>
                     <a href="https://www.instagram.com/p/CQJ01YDFKAH/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_2/4.jpg" alt="" class="gallery__image">
+                            <img src="img/index/portfolio/colomn_2/4.jpg" alt="" class="gallery__image">
                             <figcaption class="gallery__caption"></figcaption>
                         </figure>
                     </a>
@@ -176,25 +184,25 @@
                 <div class="gallery__column">
                     <a href="https://www.instagram.com/p/CQJ3JzIF_wc/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_3/1.jpg" alt="" class="gallery__image">
+                            <img src="img/index/portfolio/colomn_3/1.jpg" alt="" class="gallery__image">
                             <figcaption class="gallery__caption"></figcaption>
                         </figure>
                     </a>
                     <a href="https://www.instagram.com/p/CQJ3JzIF_wc/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_3/2.jpg" alt="" class="gallery__image">
+                            <img src="img/index/portfolio/colomn_3/2.jpg" alt="" class="gallery__image">
                             <figcaption class="gallery__caption"></figcaption>
                         </figure>
                     </a>
                     <a href="https://www.instagram.com/p/CQJ3JzIF_wc/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_3/3.jpg" alt="" class="gallery__image">
+                            <img src="img/index/portfolio/colomn_3/3.jpg" alt="" class="gallery__image">
                             <figcaption class="gallery__caption"></figcaption>
                         </figure>
                     </a>
                     <a href="https://www.instagram.com/p/CQJ3JzIF_wc/" target="_blank" class="gallery__link">
                         <figure class="gallery__thumb">
-                            <img src="img/main/portfolio/colomn_3/4.jpg" alt="" class="gallery__image">
+                            <img src="img/index/portfolio/colomn_3/4.jpg" alt="" class="gallery__image">
                             <figcaption class="gallery__caption"></figcaption>
                         </figure>
                     </a>
@@ -217,7 +225,7 @@
                 <div class="post-item">
                     <div class="item-content">
                         <div class="item-icon">
-                            <img src="img/main/advantage/ruler2.svg"  alt="Бесплатный замер">
+                            <img src="img/index/advantage/ruler2.svg"  alt="Бесплатный замер">
                         </div>
                         <div class="color-circle"></div>
                         <div class="item-body">
@@ -236,7 +244,7 @@
                 <div class="post-item">
                     <div class="item-content">
                         <div class="item-icon">
-                            <img src="img/main/advantage/master.svg"  alt="Наши гарантии"></div>
+                            <img src="img/index/advantage/master.svg"  alt="Наши гарантии"></div>
                         <div class="color-circle"></div>
                         <div class="item-body">
                             <h3>Наши гарантии</h3>
@@ -254,7 +262,7 @@
                 <div class="post-item">
                     <div class="item-content">
                         <div class="item-icon">
-                            <img src="img/main/advantage/fix-price.svg"  alt="Фиксированная цена">
+                            <img src="img/index/advantage/fix-price.svg"  alt="Фиксированная цена">
                         </div>
                         <div class="color-circle"></div>
                         <div class="item-body">
@@ -273,7 +281,7 @@
                 <div class="post-item">
                     <div class="item-content">
                         <div class="item-icon">
-                            <img src="img/main/advantage/payment.svg"  alt="Поэтапная оплата"></div>
+                            <img src="img/index/advantage/payment.svg"  alt="Поэтапная оплата"></div>
                         <div class="color-circle"></div>
                         <div class="item-body">
                                 <h3>Поэтапная оплата</h3>
@@ -291,7 +299,7 @@
                 <div class="post-item">
                     <div class="item-content">
                         <div class="item-icon">
-                        <img src="img/main/advantage/camera.svg"  alt="Регулярный фотоотчет"></div>
+                        <img src="img/index/advantage/camera.svg"  alt="Регулярный фотоотчет"></div>
                         <div class="color-circle"></div>
                         <div class="item-body">
                             <h3>Регулярный фотоотчет</h3>
@@ -309,7 +317,7 @@
                 <div class="post-item">
                     <div class="item-content">
                         <div class="item-icon">
-                            <img src="img/main/advantage/speed.svg"  alt="Скорость работы"></div>
+                            <img src="img/index/advantage/speed.svg"  alt="Скорость работы"></div>
                         <div class="color-circle"></div>
                         <div class="item-body">
                         <h3>Скорость работы</h3>
@@ -327,47 +335,47 @@
     </section>
     <!-- END.УСЛУГИ -->
 
-    <section id="hww">
+    <section id="howwework">
         <div class="container">
             <div class="sec-title">
                 <h2>Как мы работаем</h2>
                 <p>Процесс осуществления ремонта.</p>
             </div> <!-- .sec-title -->
 
-            <div class="hww-item child">
+            <div class="howwework-item child">
                 <h4 class="num">01</h4>
-                <hr class="hww-point">
-                <div class="hww-content" id="a">
+                <hr class="howwework-point">
+                <div class="howwework-content" id="a">
                     <h3>
                         Получаем заявку
                     </h3>
                 </div>
             </div>
 
-            <div class="hww-item child">
+            <div class="howwework-item child">
                 <h4 class="num">02</h4>
-                <hr class="hww-point">
-                <div class="hww-content" id="b">
+                <hr class="howwework-point">
+                <div class="howwework-content" id="b">
                     <h3>
                         Отправляем специалиста на бесплатный замер
                     </h3>
                 </div>
             </div>
 
-            <div class="hww-item child">
+            <div class="howwework-item child">
                 <h4 class="num">03</h4>
-                <hr class="hww-point">
-                <div class="hww-content" id="c">
+                <hr class="howwework-point">
+                <div class="howwework-content" id="c">
                     <h3>
                         Составляем смету
                     </h3>
                 </div>
             </div>
 
-            <div class="hww-item child">
+            <div class="howwework-item child">
                 <h4 class="num">04</h4>
-                <hr class="hww-point">
-                <div class="hww-content" id="d">
+                <hr class="howwework-point">
+                <div class="howwework-content" id="d">
                     <h3>
                         Заключаем договор
                     </h3>
@@ -376,40 +384,40 @@
 
             <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
-            <div class="hww-item child">
+            <div class="howwework-item child">
                 <h4 class="num">05</h4>
-                <hr class="hww-point">
-                <div class="hww-content" id="e">
+                <hr class="howwework-point">
+                <div class="howwework-content" id="e">
                     <h3>
                         Закупаем и доставляем материалы
                     </h3>
                 </div>
             </div>
 
-            <div class="hww-item child">
+            <div class="howwework-item child">
                 <h4 class="num">06</h4>
-                <hr class="hww-point">
-                <div class="hww-content" id="f">
+                <hr class="howwework-point">
+                <div class="howwework-content" id="f">
                     <h3>
                         Проводим ремонтные работы
                     </h3>
                 </div>
             </div>
 
-            <div class="hww-item child">
+            <div class="howwework-item child">
                 <h4 class="num">07</h4>
-                <hr class="hww-point">
-                <div class="hww-content" id="g">
+                <hr class="howwework-point">
+                <div class="howwework-content" id="g">
                     <h3>
                         Регулярно отправляем фотоотчет
                     </h3>
                 </div>
             </div>
 
-            <div class="hww-item child">
+            <div class="howwework-item child">
                 <h4 class="num">08</h4>
-                <hr class="hww-point">
-                <div class="hww-content" id="h">
+                <hr class="howwework-point">
+                <div class="howwework-content" id="h">
                     <h3>
                         Сдача работы и оплата
                     </h3>
@@ -432,7 +440,7 @@
                     </p>
                 </div>
                 <div class="about-logo">
-                    <img src="img/main/about/logowobg.svg" alt="">
+                    <img src="img/index/about/logowobg.svg" alt="">
                 </div>
                 <div class="paragraph l">
                     <p>
@@ -443,90 +451,70 @@
         </div> <!-- .container -->
     </section>
     <!-- END.КОМПАНИЯ -->
-    
-    <!-- КОМАНДА -->
-    <section id="team">
+
+    <!-- ЦЕНЫ -->
+    <section id="price">
         <div class="container">
             <div class="sec-title">
-                <h2>Команда</h2>
+                <h2>Тарифы</h2>
                 <p>
-                    Работать вместе есть успех.
+                    Реальные цены - доступные для каждого!
                 </p>
             </div> <!-- .sec-title --> 
 
             <div class="gallery">
-
-                <!-- Колонна 1 -->
                 <div class="gallery__column">
-                    <a href="#" target="_blank" class="gallery__link">
-                        <figure class="gallery__thumb">
-                            <img class="avatar" src="img/main/team/teammate_1.jpg" alt="">
-                            <div class="caption">
-                                <h5>
-                                    Орхан Гусейнов
-                                </h5>
-                                <p>
-                                    <span>
-                                        Основатель
-                                    </span>
-                                </p>
-                                <p>
-                                    
-                                </p>
-                            </div>
-                        </figure>
-                    </a>
+                    <figure class="gallery__thumb" id="price-icon-a">
+                        <h3>Стандарт</h3>
+                        <p id="colored-price">
+                            4.000
+                        </p>
+                        <p>
+                            Пакетное предложение “Стандарт” без учета материала (расчитывается только за работу)
+                        </p>
+                        <p>
+                            <br>
+                            С учетом материала 7500₽/м²
+                        </p>
+                    </figure>
                 </div> <!-- .gallery__column 1 -->
 
-                <!-- Колонна 2 -->
                 <div class="gallery__column">
-                    <a href="#" target="_blank" class="gallery__link">
-                        <figure class="gallery__thumb">
-                            <img class="avatar" src="img/main/team/teammate_2.jpg" alt="">
-                            <div class="caption">
-                                <h5>
-                                    Руслан Гусейнов
-                                </h5>
-                                <p>
-                                    <span>
-                                        Бухгалтер
-                                    </span>
-                                </p>
-                                <p>
-                                    
-                                </p>
-                            </div>
-                        </figure>
-                    </a>
+                    <figure class="gallery__thumb" id="price-icon-b">
+                        <h3>Комфорт</h3>
+                        <p id="colored-price">
+                            5.500
+                        </p>
+                        <p>
+                            Пакетное предложение “Комфорт” без учета материала (расчитывается только за работу)
+                        </p>
+                        <p>
+                            <br>
+                            С учетом материала 9500₽/м²
+                        </p>
+                    </figure>
                 </div> <!-- .gallery__column 2 -->
-
-                <!-- Колонна 3 -->
+                
                 <div class="gallery__column">
-                    <a href="#" target="_blank" class="gallery__link">
-                        <figure class="gallery__thumb">
-                            <img class="avatar" src="img/main/team/teammate_3.jpg" alt="">
-                            <div class="caption">
-                                <h5>
-                                    Марк Роас
-                                </h5>
-                                <p>
-                                    <span>
-                                        Веб Разработчик
-                                    </span>
-                                </p>
-                                <p>
-                                    Сверствал этот сайт
-                                    ruisdaeless@yahoo.com
-                                </p>
-                            </div>
-                        </figure>
-                    </a>
+                    <figure class="gallery__thumb" id="price-icon-c">
+                        <h3>Премиум</h3>
+                        <p id="colored-price">
+                            8.000
+                        </p>
+                        <p>
+                            Пакетное предложение “Премиум” без учета материала (расчитывается только за работу)
+                        </p>
+                        <p>
+                            В пакете “Премиум” всё расчитывается исходя из вашего дизайн-проекта
+                        </p>
+                    </figure>
                 </div> <!-- .gallery__column 3 -->
             </div> <!-- .gallery -->
-        </div> <!-- .container -->
+        </div> <!-- .container --> 
     </section>
-    <!-- END.КОМАНДА -->
+    <!-- END.ЦЕНЫ -->
 
+    <!-- ЧЗВ -->
     <section id="faq">
         <div class="container">
             <div class="sec-title">
@@ -647,68 +635,7 @@
             </div>
         </div>
     </section>
-
-    <!-- ЦЕНЫ -->
-    <section id="prices">
-        <div class="container">
-            <div class="sec-title">
-                <h2>Тарифы</h2>
-                <p>
-                    Реальные цены - доступные для каждого!
-                </p>
-            </div> <!-- .sec-title --> 
-
-            <div class="gallery">
-                <div class="gallery__column">
-                    <figure class="gallery__thumb" id="price-icon-a">
-                        <h3>Стандарт</h3>
-                        <p id="colored-price">
-                            4.000
-                        </p>
-                        <p>
-                            Пакетное предложение “Стандарт” без учета материала (расчитывается только за работу)
-                        </p>
-                        <p>
-                            <br>
-                            С учетом материала 7500₽/м²
-                        </p>
-                    </figure>
-                </div> <!-- .gallery__column 1 -->
-
-                <div class="gallery__column">
-                    <figure class="gallery__thumb" id="price-icon-b">
-                        <h3>Комфорт</h3>
-                        <p id="colored-price">
-                            5.500
-                        </p>
-                        <p>
-                            Пакетное предложение “Комфорт” без учета материала (расчитывается только за работу)
-                        </p>
-                        <p>
-                            <br>
-                            С учетом материала 9500₽/м²
-                        </p>
-                    </figure>
-                </div> <!-- .gallery__column 2 -->
-                
-                <div class="gallery__column">
-                    <figure class="gallery__thumb" id="price-icon-c">
-                        <h3>Премиум</h3>
-                        <p id="colored-price">
-                            8.000
-                        </p>
-                        <p>
-                            Пакетное предложение “Премиум” без учета материала (расчитывается только за работу)
-                        </p>
-                        <p>
-                            В пакете “Премиум” всё расчитывается исходя из вашего дизайн-проекта
-                        </p>
-                    </figure>
-                </div> <!-- .gallery__column 3 -->
-            </div> <!-- .gallery -->
-        </div> <!-- .container --> 
-    </section>
-    <!-- END.ЦЕНЫ -->
+    <!-- END.ЧЗВ -->
 
     <!-- ОТЗЫВЫ -->
     <section id="feedback">
@@ -834,5 +761,9 @@
         </div> <!-- .container --> 
     </footer>
     <!-- END.ПОДВАЛ -->
+
+	<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="mail.js"></script>
 </body>
 </html>
