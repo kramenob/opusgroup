@@ -91,23 +91,25 @@
                             <p>на расчет стоимости</p>
                         </div> <!-- .sec-title -->
                         <div class="container sendform">
-                            <form>
-                
-                                <!-- Hidden Required Fields -->
-                                <input type="hidden" name="project_name" value="OpusGroup">
-                                <input type="hidden" name="admin_email" value="zarzuhamli@biyac.com">
-                                <input type="hidden" name="form_subject" value="Заявка Тест 1">
-                                <!-- END Hidden Required Fields -->
+                            <form action="#" >
 
-                                <input class="name" type="text" id="Name" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
+                                <!-- <input class="name" type="text" id="Name" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
                 
                                 <input class="name" type="text" id="E-mail" name="lastname" placeholder="Ваша почта.." minlength="1" maxlength="30">
                 
-                                <input type="text" id="phone" name="Phone" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
+                                <input type="text" id="phone" name="Phone" placeholder="Ваш номер телефона.." minlength="6" maxlength="15"> -->
         
                                 <!-- <textarea id="subject" name="message" placeholder="Комментарий.." style="min-height:200px"></textarea> -->
                 
-                                <input class="button" type="submit" value="Отправить">
+                                <!-- <input class="button" type="submit" value="Отправить"> -->
+
+
+                                <label for="formName" class="form__label">Имя*:</label>
+                                <label for="formEmail" class="form__label">Почта*:</label>
+
+
+                                <input type="text" name="name" id="formName" class="form__input">
+                                <input type="text" name="email" id="formEmail" class="form__input">
                                 
                             </form>
                         </div> <!-- .sendform --> 
@@ -761,9 +763,5 @@
         </div> <!-- .container --> 
     </footer>
     <!-- END.ПОДВАЛ -->
-
-	<!-- <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="mail.js"></script>
 </body>
 </html>
