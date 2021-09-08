@@ -1,0 +1,78 @@
+ 
+section#price .gallery__thumb {
+    width: 350px;
+    height: 450px;
+
+    border: 1px black solid;
+    border-radius: 15px;
+}
+
+section#price .gallery__thumb#price-icon-a {
+    background: 
+        url(../img/index/price/1-standart.svg) no-repeat;
+    background-size: auto 50px;
+    background-position-x: center;
+    background-position-y: 50px;
+}
+
+section#price .gallery__thumb#price-icon-b {
+    background: 
+        url(../img/index/price/2-comfort.svg) no-repeat;
+    background-size: auto 50px;
+    background-position-x: center;
+    background-position-y: 50px;
+}
+
+section#price .gallery__thumb#price-icon-c {
+    background: 
+        url(../img/index/price/3-premium.svg) no-repeat;
+    background-size: auto 50px;
+    background-position-x: center;
+    background-position-y: 50px;
+}
+
+section#price .gallery__thumb {
+    color: black;
+    cursor: default;
+    text-align: center;
+}
+
+section#price .gallery__thumb h3:hover, section#price .gallery__thumb p:hover  {
+    cursor: text;
+}
+
+section#price .gallery__thumb h3 {
+    margin-top: 125px;
+
+    font-weight: bold;
+}
+
+section#price .gallery__thumb p#colored-price {
+    color: #F59552;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+section#price .gallery__thumb p#colored-price::before {
+    content: '₽';
+    position: absolute;
+    margin-top: 3px;
+    margin-left: -12.5px;
+    font-size: .5em;
+}
+
+section#price .gallery__thumb p#colored-price::after {
+    content: '/м²';
+    position: absolute;
+    color: #777777;
+    margin-top: 13px;
+    margin-left: 2.5px;
+    font-size: .5em;
+}
+
+section#price .gallery__thumb p:not(p#colored-price) {
+    width: 300px;
+    margin-top: 25px;
+    font-weight: 300;
+}
