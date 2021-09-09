@@ -75,15 +75,24 @@ body {
     background-color: whitesmoke;
 }
 
-/* полоска скролла бара */
-body::-webkit-scrollbar {
-    width: 5px;
-    background-color: #3A3A44;
+/* W3C standard
+сейчас только для Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #F59552 whitesmoke;
 }
 
-  /* полоска скролла */
-body::-webkit-scrollbar-thumb {
+/* для Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    width: 10%;
+}
+*::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+*::-webkit-scrollbar-thumb {
     background-color: #F59552;
+    /* border-radius: 10px; */
+    /* border: 3px solid orange; */
 }
 
 /*  
@@ -185,6 +194,11 @@ section {
     padding-top: 100px;
 }
 
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
 /* особенный отступ для секции без заголовка */
 section#portfolio {
     padding-top: 150px;
@@ -220,7 +234,7 @@ footer {
 /* шапка */
 header {
     width: 100%;
-    height: 75px;
+    height: 50px;
 
     position: fixed;
     background: whitesmoke;
@@ -233,9 +247,9 @@ header {
 header #title {
     position: fixed;
     font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2.5em;
+    font-size: 2em;
 
-    top: 35px;
+    top: 22.5px;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -257,7 +271,7 @@ header .mobile-call {
     align-items: center;  /* центрируем содержимое кнопки */
     position: fixed;
 
-    top: 37px;
+    top: 25px;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-left: 550px;
@@ -267,16 +281,17 @@ header .mobile-call {
 }
 
 header .mobile-call.icon {
-    width: 37.5px;
+    width: 25px;
     height: auto;
 }
 
 header .mobile-call.numbers {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
     font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5em;
     position: absolute;
-    top: 110px;
+    top: 85px;
 
     width: 220px;
     height: 40px;
@@ -284,12 +299,13 @@ header .mobile-call.numbers {
     margin-left: 495px;
 
     padding: 0 15px;
-    padding-top: 5px;
 
 
     background: whitesmoke;
     border: 1px #222222 solid;
     border-radius: 10px;
+    
+    transition-duration: .3s;
 }
 
 /* треугольник */
@@ -313,12 +329,15 @@ header .mobile-call.numbers {
 }
 
 header .mobile-call.icon:hover ~ .mobile-call.numbers {
-    display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 /* наведение на звонок */
 header .mobile-call.numbers:hover {
     cursor: text;
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ⬇ МЕНЮ ⬇ */
@@ -334,35 +353,35 @@ header .mobile-call.numbers:hover {
     align-items: center;  /* центрируем содержимое кнопки */
     position: fixed;
     
-    top: 37px;
+    top: 20px;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-left: -550px;
 
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
     z-index: 1;
 }
 
 /* добавление "гамбургера" */
 .menu__btn > span,
-.menu__btn > span::before,
+/* .menu__btn > span::before, */
 .menu__btn > span::after {
     display: flex;
     position: absolute;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: black;
-    border-radius: 3px;
+    border-radius: 10px;
 }
-.menu__btn > span::before {
+/* .menu__btn > span::before {
     content: '';
-    top: -10px;
-}
+    top: -7.5px;
+} */
 .menu__btn > span::after {
     content: '';
-    top: 10px;
+    top: 7.5px;
 }   
 
 /* контейнер меню */
@@ -395,7 +414,7 @@ header .mobile-call.numbers:hover {
 
 /* наведение на текст */
 .menu__item:hover {
-    color: #d49e4b;
+    color: #F59552;
 }
 
 /* затемнение */
@@ -413,6 +432,7 @@ header .mobile-call.numbers:hover {
 
 /* поворот элемента "гамбургера" */
 #menu__toggle:checked ~ .menu__btn > span {
+    margin-top: 5px;
     transform: rotate(45deg);
 }
 #menu__toggle:checked ~ .menu__btn > span::before {
@@ -429,7 +449,7 @@ header .mobile-call.numbers:hover {
 /* поворот элемента "гамбургера" обратно */
 #menu__toggle:checked ~ .menu__btn > span::after {
     top: 0;
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 }
 
 /* появление меню */
@@ -476,7 +496,10 @@ body {
     background-size: 1920px;
     background-position-x: center;
     background-position-y: -200px;
-    
+}
+
+#home {
+    padding-bottom: 155px;
 }
 
 section#home h1 {
@@ -485,7 +508,7 @@ section#home h1 {
     padding: 25px;
     margin-top: 25px;
 
-    font-size: 4em;
+    font-size: 3.5em;
 
     letter-spacing: 2px;
 
@@ -503,7 +526,7 @@ section#home .main h1::selection, section#home .main p::selection {
 }
 
 section#home .main p {
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-align: center;
     max-width: 600px;
 
@@ -512,7 +535,7 @@ section#home .main p {
 
 /* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
 section#home .feedback-form {
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-align: center;
 
     margin: 0 auto;
@@ -654,7 +677,7 @@ section#home a.button {
     ⬇ 4. Портфолио - 4.1 ГАЛЕРЕЯ ⬇ */
 
 section#portfolio {
-    padding-top: 200px;
+    padding-top: 75px;
 }
 
 /* галерея */
@@ -811,6 +834,7 @@ section#portfolio {
 
  /* заголовок3 */
 .item-body h3 {
+    font-weight: 300;
     color: black;
     margin-bottom: 15px;
     transition-delay: .05s;
@@ -819,7 +843,9 @@ section#portfolio {
  /* параграф */
 .item-body p {
     color: #3A3A44;
-    letter-spacing: .75px;
+    font-size: 1.15em;
+    font-weight: 100;
+    letter-spacing: 1px;
 
     transition-delay: .1s;
     margin: 0;
@@ -906,12 +932,35 @@ section#portfolio {
 
 .howwework-item h3 {
     font-size: 1em;
+    font-weight: 300;
 }
 
 .howwework-item h4.num {
-    font-weight: bold;
+    font-weight: 500;
     margin: auto;
     margin-bottom: 82px;
+}
+
+hr.hww-hatch {
+    position: absolute;
+    width: 100%;
+
+    margin-top: 49px;
+
+	border: none;
+	border-top: 1px dashed #3A3A44;
+}
+
+hr.hww-hatch#top {
+    margin-top: 49px;
+    margin-left: 150px;
+}
+
+hr.hww-hatch#bottom {
+    width: 5000px;
+
+    margin-top: 49px;
+    margin-left: -3970px;
 }
 
 .howwework-item hr.howwework-point {
@@ -920,25 +969,6 @@ section#portfolio {
     margin: auto;
     margin-top: -52px;
     margin-left: 145px;
-}
-
-.howwework-item:nth-child(2) hr.howwework-point {
-    display: block;
-    width: 100%;
-
-    border-bottom: 1.5px dashed black;
-}
-
-.howwework-item:nth-child(9) hr.howwework-point {
-    display: block;
-    width: 72.15%;
-    transform: scale(-1, 1);
-    position: absolute;
-
-    margin-left: 0;
-    left: 0;
-
-    border-bottom: 1.5px dashed black;
 }
 
 .howwework-item hr.howwework-point::after {
@@ -973,7 +1003,7 @@ section#portfolio {
     width: 250px;
     height: 150px;
 
-    box-shadow:  0 5px 5px 1px rgba(0,0,0,0.5);
+    box-shadow:  2px 2px 2px 0 rgba(0,0,0,0.5);
     border-radius: 15px;
 }
 
@@ -981,7 +1011,7 @@ section#portfolio {
     background: 
         url(../img/index/howwework/icons/01.svg) no-repeat
         #fff;
-    background-size: 50px;
+        background-size: auto 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
@@ -990,7 +1020,7 @@ section#portfolio {
     background: 
         url(../img/index/howwework/icons/02.svg) no-repeat
         #fff;
-    background-size: 50px;
+        background-size: auto 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
@@ -999,7 +1029,7 @@ section#portfolio {
     background: 
         url(../img/index/howwework/icons/03.svg) no-repeat
         #fff;
-    background-size: 50px;
+    background-size: auto 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
@@ -1008,7 +1038,7 @@ section#portfolio {
     background: 
         url(../img/index/howwework/icons/04.svg) no-repeat
         #fff;
-    background-size: 50px;
+    background-size: auto 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
@@ -1017,7 +1047,7 @@ section#portfolio {
     background: 
         url(../img/index/howwework/icons/05.svg) no-repeat
         #fff;
-    background-size: 50px;
+    background-size: auto 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
@@ -1026,7 +1056,7 @@ section#portfolio {
     background: 
         url(../img/index/howwework/icons/06.svg) no-repeat
         #fff;
-    background-size: 50px;
+    background-size: auto 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
@@ -1035,7 +1065,7 @@ section#portfolio {
     background: 
         url(../img/index/howwework/icons/07.svg) no-repeat
         #fff;
-    background-size: 50px;
+    background-size: auto 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
@@ -1044,7 +1074,7 @@ section#portfolio {
     background: 
         url(../img/index/howwework/icons/08.svg) no-repeat
         #fff;
-    background-size: 50px;
+    background-size: auto 50px;
     background-position-x: center;
     background-position-y: 20px;
 }
@@ -1072,12 +1102,20 @@ section#portfolio {
     ⬇ 6. О КОМПАНИИ ⬇ */
 
 #about {
+    padding-top: 50px;
+}
+
+.wrapper {
     width: 100%;
     height: auto;
 
     padding: 50px 0;
 
     background: #3a3a43;
+}
+
+#about .container {
+    padding: 0 20px;
 }
 
 #about h2, #about p {
@@ -1091,17 +1129,17 @@ section#portfolio {
 #about .sec-title h2::before {
     content: '';
     position: absolute;
-    width: 25px;
+    width: 15px;
     height: 10px;
     margin-top: 20px;
-    margin-left: -45px;
+    margin-left: -35px;
     border-top: whitesmoke 1px solid;
 }
 
 #about .sec-title h2::after {
     content: '';
     position: absolute;
-    width: 25px;
+    width: 15px;
     height: 10px;
     margin-top: 20px;
     margin-left: 20px;
@@ -1447,9 +1485,10 @@ section#team .caption p {
     ⬇ ВОПРОСЫ ⬇ */
 
 #faq .c{
-    width: 800px;
+    width: 750px;
     position: relative;
-    margin: 2em auto;
+    margin: auto;
+    margin-top: 25px;
 }
 
 #faq input{
@@ -1463,27 +1502,30 @@ section#team .caption p {
 }
 
 #faq h1{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 300;
-    font-size: 1.15em;
-
-    padding:1em;
-    padding-top: 0;
-    padding-left: 0px;
     position: relative;
 
-    border-bottom: 2px solid #222222;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 350;
+    font-size: 1.125em;
     text-transform: uppercase;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid #222222;
 }
 
 #faq label::after{
     content:"";
-    display: inline-block;
-    border: 15px solid transparent;
-    border-left:20px solid #222222;
-
     position: absolute;
-    right: -10%;
+
+    width: 25px;
+    height: 25px;
+    right: 15px;
+
+
+    background: url(../img/index/faq/arrow-icon.svg);
+    background-repeat: no-repeat;
+
     transition-duration: .3s;
 }
 
@@ -1495,34 +1537,41 @@ section#team .caption p {
     margin-left: 0;
     outline: none;
     
-    width: 90%;
+    width: 100%;
 }
 
 #faq .p{
-    width: 99%;
+    width: 100%;
     max-height: 0px;
-    margin-left: 1%;
     overflow: hidden;
     transition: max-height 0.5s;
 }
 
-#faq .p .paragraps p {
-    text-indent: 1.5em; /* Отступ первой строки */
-    text-align: justify;
-    width: 95.5%;
+#faq .p .paragraps {
+    padding: 25px;
 }
 
-#faq .p .paragraps {
-    padding:2em;
-    padding-left: 0em;
+#faq .p .paragraps p {
+    width: 100%;
+
+    font-size: 1em;
+    font-weight: 200;
+    text-indent: 25px; /* Отступ первой строки */
+    text-align: justify;
+
+    padding: 2.5px 0;
+}
+/* убираем отступ сверху для первого абзаца */
+#faq .p .paragraps p:first-child {
+    padding-top: 0;
+}
+/* убираем отступ снизу для последнего абзаца */
+#faq .p .paragraps p:last-child {
+    padding-bottom: 0;
 }
 
 #faq input:checked ~ h1 label::after{
-    border-left:15px solid transparent;
-    border-top:20px solid #222222;
-    margin-top:12px;
-    margin-right:10px;
-    transition-duration: .3s;
+    transform: rotate(90deg);
 }
 
 #faq input:checked ~ h1 ~ div.p{
@@ -1538,6 +1587,7 @@ section#team .caption p {
 
 
 
+<<<<<<< HEAD
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -1825,6 +1875,8 @@ section#price .gallery__thumb p:not(p#colored-price) {
 
 
 
+=======
+>>>>>>> 2c9fef43180c1dfc36e0c1ce39aed3ddb1c8c983
 
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
@@ -1832,15 +1884,20 @@ section#price .gallery__thumb p:not(p#colored-price) {
 
 
     ⬇ ОТЗЫВЫ ⬇ */
-
+/* задаем длину блока, т.к. элементы безформенные */
 section#feedback {
     height: 600px;
 }
+<<<<<<< HEAD
       
 #feedback input[type=radio] {
+=======
+/* прячем кнопки */
+input[type=radio] {
+>>>>>>> 2c9fef43180c1dfc36e0c1ce39aed3ddb1c8c983
     display: none;
 }
-      
+/* блок с элментами */
 .card {
     position: absolute;
     width: 60%;
@@ -1863,6 +1920,7 @@ iframe {
     border-radius: 15px;
     -o-object-fit: cover;
         object-fit: cover;
+
 }
 
 .overlay {
@@ -1871,40 +1929,40 @@ iframe {
     height: 405px;
 }
 
-#item-1:checked ~ .cards #song-1 .overlay,
-#item-2:checked ~ .cards #song-2 .overlay,
-#item-3:checked ~ .cards #song-3 .overlay {
+#item-1:checked ~ .cards #video-1 .overlay,
+#item-2:checked ~ .cards #video-2 .overlay,
+#item-3:checked ~ .cards #video-3 .overlay {
     display: none;
 }
 
-#item-1:checked ~ .cards #song-3,
-#item-2:checked ~ .cards #song-1,
-#item-3:checked ~ .cards #song-2 {
+#item-1:checked ~ .cards #video-3,
+#item-2:checked ~ .cards #video-1,
+#item-3:checked ~ .cards #video-2 {
     transform: translatex(-40%) scale(0.8);
     opacity: 0.75;
     z-index: 0;
 }
 
-#item-1:checked ~ .cards #song-2,
-#item-2:checked ~ .cards #song-3,
-#item-3:checked ~ .cards #song-1 {
+#item-1:checked ~ .cards #video-2,
+#item-2:checked ~ .cards #video-3,
+#item-3:checked ~ .cards #video-1 {
     transform: translatex(40%) scale(0.8);
     opacity: 0.75;
     z-index: 0;
 }
 
-#item-1:checked ~ .cards #song-1,
-#item-2:checked ~ .cards #song-2,
-#item-3:checked ~ .cards #song-3 {
+#item-1:checked ~ .cards #video-1,
+#item-2:checked ~ .cards #video-2,
+#item-3:checked ~ .cards #video-3 {
     transform: translatex(0) scale(1);
     opacity: 1;
     margin-top: 0;
     z-index: 1;
 }
-#item-1:checked ~ .cards #song-1 iframe,
-#item-2:checked ~ .cards #song-2 iframe,
-#item-3:checked ~ .cards #song-3 iframe {
-    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+#item-1 ~ .cards #video-1 iframe,
+#item-2 ~ .cards #video-2 iframe,
+#item-3 ~ .cards #video-3 iframe {
+    box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.47);
 }
 
 /* ⬆ ОТЗЫВЫ ⬆
