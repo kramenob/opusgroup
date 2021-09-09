@@ -1543,6 +1543,204 @@ section#team .caption p {
 
 
 
+    ⬇ КАЛЬКУЛЯТОР ⬇ */
+
+#calc .container {
+    width: 750px;
+}
+    
+/* файлы договора и прайса */
+.files {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+}
+/* иконка скрепки */
+.paperclip {
+    width: 14px;
+}
+/* текст файлов */
+.file-word {
+    cursor: pointer;
+    font-size: 1em;
+    color: #c4c4c4;
+}
+/* текст файлов */
+.file-word:hover, .file-word:hover .paperclip {
+    /* cursor: pointer; */
+    color: #F59552;
+}
+/* перегородка меж файлами */
+.file-wall {
+    font-size: 1.2em;
+    color: #c4c4c4;
+}
+/* секции калькулятора */
+.calc-item:nth-child(2) {
+    margin-top: 25px;
+}
+/* секции калькулятора */
+.calc-item {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+/* заголовок секции */
+.calc-item-heading, .size-area-m {
+    color: #3A3A44;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+/* блок типов недвижимости */
+.estate-type-block {
+    width: 100%;
+    height: 50px;
+
+    align-items: center;
+
+    background: white;
+    border: 1px #F59552 solid;
+    border-radius: 15px;
+    box-shadow:  2px 2px 2px 0px rgba(81, 81, 81, 0.47);
+}
+/* элементы блока типов недвижимости */
+.estate-type-block-elem {
+    text-align: center;
+    position: relative;
+    width: 33.5%;
+    height: 150%;
+    max-height: 50px;
+    margin: 0 -2.5px;
+    max-width: 250px;
+}
+/* стенки внутри блока */
+.estate-type-block-elem:not(:last-child) {
+    border-right: 1px #F59552 solid;
+}
+.calc-label {
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    height: 50px;
+    color: #c4c4c4;
+    
+    transition-duration: .3s;
+}
+.calc-label:hover {
+    color: black;
+}
+.calc-label h4 {
+    font-size: 1em;
+    line-height: .9;
+}
+.calc-label p {
+    font-size: .7em;
+}
+/* прячем чекбоксы */
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked){
+  position: absolute;
+  left: -9999px;
+}
+/* заголовки типов недвижимости */
+.estate-type-block-heading {
+
+}
+/* подпись заголовков */
+.estate-type-block-caption {
+
+}
+.size-area {
+    float: right;
+}
+/* поле площади */
+#size-area-number {
+    -moz-appearance: textfield;
+    border: none;
+    background: none;
+    width: auto;
+    max-width: 50px;
+}
+/* единица площади */
+.size-area-m {
+    
+}
+/* блок ползунка площади */
+.calc-range {
+
+}
+/* ползунок площади */
+.styled-slider.slider-progress {
+
+}
+input[type='range'] {        
+    overflow: hidden;    
+    -webkit-appearance: none;        
+    background-color: #9a905d;    
+}        
+input[type='range']::-webkit-slider-runnable-track {        
+    height: 10px;        
+    -webkit-appearance: none;        
+    color: #13bba4;        
+    margin-top: -1px;    
+}        
+input[type='range']::-webkit-slider-thumb {        
+    width: 10px;        
+    -webkit-appearance: none;        
+    height: 10px;        
+    cursor: ew-resize;        
+    background: #434343;        
+    box-shadow: -80px 0 0 80px #43e5f7;    
+}        
+input[type="range"]::-moz-range-progress {        
+    background-color: #43e5f7;     
+}    
+input[type="range"]::-moz-range-track {          
+    background-color: #9a905d;    
+}    
+input[type="range"]::-ms-fill-lower {        
+    background-color: #43e5f7;     
+}    
+input[type="range"]::-ms-fill-upper {          
+    background-color: #9a905d;    
+}
+/* штрихи шага площади */
+.step-hatches {
+
+}
+/* штрих */
+.step-hatch {
+
+}
+/* тип работ */
+.work-type {
+
+}
+/* блок отправки */
+#send {
+
+}
+/* текст пользовательского соглашения */
+#policy {
+
+}
+/* кнопка отправки */
+#calc-item-send-button {
+
+}
+    
+/* ⬆ КАЛЬКУЛЯТОР ⬆
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
     ⬇ ЦЕНЫ ⬇ */
   
 section#price .gallery__thumb {
@@ -1639,7 +1837,7 @@ section#feedback {
     height: 600px;
 }
       
-input[type=radio] {
+#feedback input[type=radio] {
     display: none;
 }
       
