@@ -1587,7 +1587,7 @@ section#team .caption p {
 
 
 
-<<<<<<< HEAD
+
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -1875,9 +1875,6 @@ section#price .gallery__thumb p:not(p#colored-price) {
 
 
 
-=======
->>>>>>> 2c9fef43180c1dfc36e0c1ce39aed3ddb1c8c983
-
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -1888,13 +1885,8 @@ section#price .gallery__thumb p:not(p#colored-price) {
 section#feedback {
     height: 600px;
 }
-<<<<<<< HEAD
       
-#feedback input[type=radio] {
-=======
-/* прячем кнопки */
-input[type=radio] {
->>>>>>> 2c9fef43180c1dfc36e0c1ce39aed3ddb1c8c983
+#feedback input[type=radio] {   
     display: none;
 }
 /* блок с элментами */
