@@ -1,0 +1,768 @@
+/* 
+
+Н А В И Г А Ц И Я :
+
+1. ОСНОВНОЕ
+    > 1.1 ИМПОРТ ШРИФТОВ
+    > 1.2 ШАБЛОНЫ
+
+2. ШАПКА
+    > 2.1 ШАБЛОНЫ
+
+3. ДОМ
+    > 3.1 КНОПКА "ХОЧУ РЕМОНТ!"
+
+4. ПРОЕКТЫ
+    > 4.1 ГАЛЕРЕЯ
+
+5. УСЛУГИ
+
+6. КОМПАНИЯ
+
+7. КОМАНДА
+
+8. КОНТАКТЫ
+
+9. ПОДВАЛ
+    > 9.1 БЛОКИ
+    > 9.2 МЕДИА - ИКОНКИ
+    > 9.3 ПОДПИСЬ
+
+
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+  
+    ⬇ 1. ОСНОВНОЕ ⬇ */
+
+/* чистота всех элементов */
+* {
+    margin: 0 auto;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Отсутствие синего выделения при клике */
+}
+
+/* цвета при выделении элементов */
+*::selection {
+    color: whitesmoke; /* Цвет текста */
+    background: #F59552; /* Цвет фона */
+}
+
+/* размеры страницы */
+body, html {
+    max-width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/* тело страницы */
+body {
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-position: center;
+    background-size: cover;
+
+    background-color: whitesmoke;
+}
+
+/* W3C standard
+сейчас только для Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #F59552 whitesmoke;
+}
+
+/* для Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    width: 10%;
+}
+*::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #F59552;
+    /* border-radius: 10px; */
+    /* border: 3px solid orange; */
+}
+
+/*  
+    ⬇ 1.1 ИМПОРТ ШРИФТОВ ⬇
+*/
+
+/* лого на шапке страницы */
+@font-face {
+    font-family: 'LobsterTwo-B'; /* Гарнитура шрифта */
+    src: url(fonts/LobsterTwo-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* шрифт заголовка на главной странице */
+@font-face {
+    font-family: 'RussianPunk'; /* Гарнитура шрифта */
+    src: url(fonts/RussianPunk.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* шрифт футера */
+@font-face {
+    font-family: 'SourceCodePro-Medium'; /* Гарнитура шрифта */
+    src: url(fonts/SourceCodePro-Medium.ttf); /* Путь к файлу со шрифтом */
+}
+
+/*  
+    ⬆ 1.1 ИМПОРТ ШРИФТОВ ⬆
+
+    ⬇ 1.2 ШАБЛОНЫ ⬇
+*/
+
+/* контейнер страницы */
+.container {
+    width: 1200px;
+    max-width: 1360px;
+}
+
+/* дочерний элемент шел в линию */
+.child {
+    display: inline-block;
+}
+
+/*убираем подчеркивание текста ссылок*/
+a {
+    text-decoration: none;
+    color: black;
+    
+    transition-duration: .3s;
+}
+
+/* наведение на ссылку */
+a:hover {
+    color: whitesmoke;
+}
+
+/* шрифт заголовков */
+h1, h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* шрифт параграфов */
+p, input, select, textarea, li, strong {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.125em;
+}
+
+/* заголовки1 */
+h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+/* заголовки2 */
+h2 {
+    font-size: 2em;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+/* заголовки3 */
+h3 {
+    font-weight: 400;
+    font-size: 1.5em;
+}
+
+/* заголовки4 */
+h4 {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+/* строки списка */
+li {
+    list-style-type: none; /* Убираем маркеры у списка */
+}
+
+/* отступ сверху для секций */
+section {
+    padding-top: 100px;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+/* особенный отступ для секции без заголовка */
+section#portfolio {
+    padding-top: 150px;
+}
+
+/* отсут сверху для футера */
+footer {
+    margin-top: 125px;
+}
+
+/* блок заголовка секций */
+.sec-title {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* ⬆ 1. ОСНОВНОЕ ⬆
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+    
+⬇ 2. ШАПКА ⬇ */
+
+/* шапка */
+header {
+    width: 100%;
+    height: 50px;
+
+    position: fixed;
+    background: whitesmoke;
+
+    border-bottom: 1px solid #3A3A44;
+    z-index: 2;
+}
+
+/* заголовок главной */
+header #title {
+    position: fixed;
+    font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+
+    top: 22.5px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    user-select: none;
+    -webkit-user-drag: none;
+    letter-spacing: 1.5px;
+    transition-duration: .3s;
+}
+
+/* наведение на ссылки */
+header a:hover {
+    color: #F59552;
+}
+
+/* звонок */
+header .mobile-call {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 550px;
+
+    cursor: pointer;
+    z-index: 1;
+}
+
+header .mobile-call.icon {
+    width: 25px;
+    height: auto;
+}
+
+header .mobile-call.numbers {
+    opacity: 0;
+    visibility: hidden;
+    font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    position: absolute;
+    top: 85px;
+
+    width: 220px;
+    height: 40px;
+    left: 50%;
+    margin-left: 495px;
+
+    padding: 0 15px;
+
+
+    background: whitesmoke;
+    border: 1px #222222 solid;
+    border-radius: 10px;
+    
+    transition-duration: .3s;
+}
+
+/* треугольник */
+.mobile-call.numbers::after {
+    content: ''; 
+    position: absolute;
+    left: 160px; 
+    top: -19px; /* Положение треугольника */
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-bottom: 10px solid whitesmoke; /* Добавляем треугольник */
+}
+
+/* обводка треугольника */
+.mobile-call.numbers::before {
+    content: ''; 
+    position: absolute;
+    left: 160px; 
+    top: -20px; /* Положение треугольника */
+    border: 10px solid transparent; /* Прозрачные границы */
+    border-bottom: 10px solid black; /* Добавляем треугольник */
+}
+
+header .mobile-call.icon:hover ~ .mobile-call.numbers {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* наведение на звонок */
+header .mobile-call.numbers:hover {
+    cursor: text;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ⬇ МЕНЮ ⬇ */
+
+/* скрываем чекбокс */
+.hamburger-menu #menu__toggle {
+    opacity: 0;
+}
+
+/* стиль кнопки */
+.menu__btn {
+    display: flex; /* используем flex для центрирования содержимого */
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
+    
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -550px;
+
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* добавление "гамбургера" */
+.menu__btn > span,
+/* .menu__btn > span::before, */
+.menu__btn > span::after {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    border-radius: 10px;
+}
+/* .menu__btn > span::before {
+    content: '';
+    top: -7.5px;
+} */
+.menu__btn > span::after {
+    content: '';
+    top: 7.5px;
+}   
+
+/* контейнер меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%; /* left - меню слевой стороны | right - справой стороны | + появление меню */
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: left;
+    background-color: whitesmoke;
+    box-shadow: 2.5px 0px 10px rgba(0, 0, 0, .75);
+}
+
+/* элементы меню */
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: .9em;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+/* наведение на текст */
+.menu__item:hover {
+    color: #F59552;
+}
+
+/* затемнение */
+#background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background: hsla(0, 0%, 0%, 0.25);
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* поворот элемента "гамбургера" */
+#menu__toggle:checked ~ .menu__btn > span {
+    margin-top: 5px;
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+/* затемнение страницы */
+#menu__toggle:checked ~ #background {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* поворот элемента "гамбургера" обратно */
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(-90deg);
+}
+
+/* появление меню */
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0; /* left - меню слевой стороны | right - справой стороны | + контейнер меню */
+}
+
+/* скорость анимации */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    transition-duration: .3s;
+}
+.menu__box {
+    transition-duration: .3s;
+}
+.menu__item {
+    transition-duration: .3s;
+}
+#background {
+    transition-duration: .3s;
+}
+
+/* ⬆ 2. ШАПКА ⬆
+
+
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+    ⬇ КАЛЬКУЛЯТОР ⬇ */
+
+/* обертка ползунка */
+input[type=range] {
+    -webkit-appearance: none;
+
+    width: 100%;
+    height: 34px;
+
+    margin: 10px 0;
+
+    background: whitesmoke;
+}
+/* отсутствие выделения при нажатии */
+input[type=range]:focus {
+    outline: none;
+}
+/* параметры трека полузнка в Хром браузерах */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 11px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 1px 1px 1px #000000;
+    background: #74A9D8;
+    border-radius: 1px;
+    border: 0px solid #010101;
+}
+/* кнопка полузнка в Хром браузерах */
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000031;
+    border: 1px solid #00001E;
+    height: 26px;
+    width: 26px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+}
+/* изменения трека ползунка при нажатии на кнопку в Хром браузерах */
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #74A9D8;
+}
+
+/* трек в Мозиле */
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000;
+    background: #F59552;
+    border-radius: 5px;
+    border: 0px solid #010101;
+}
+/* кнопка в Мозиле */
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000031;
+    border: 1px solid #00001E;
+    height: 26px;
+    width: 26px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+
+/* трек в МикроСофт браузерах */
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 11px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #74A9D8;
+    border: 0px solid #010101;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #000000;
+}
+input[type=range]::-ms-fill-upper {
+    background: #74A9D8;
+    border: 0px solid #010101;
+    border-radius: 2px;
+    box-shadow: 1px 1px 1px #000000;
+}
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 1px 1px 1px #000031;
+    border: 1px solid #00001E;
+    height: 26px;
+    width: 26px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #74A9D8;
+}
+    input[type=range]:focus::-ms-fill-upper {
+    background: #74A9D8;
+}
+      
+    
+/* ⬆ КАЛЬКУЛЯТОР ⬆
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+
+
+    ⬇ ПОДВАЛ ⬇ */
+
+
+footer .container {
+    width: 768px;
+}
+ 
+/* общее */
+footer {
+    width: 100%;
+    padding: 50px 0;
+
+    background-color: #222222;
+}
+
+/* 
+    ⬇ 9.1 БЛОКИ ⬇
+
+ */
+
+/* обертка колонн */
+.colomn-four-wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* колонны */
+.colomn-four-item {
+    width: 33.3%;
+    margin: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 0 25px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    margin-top: 0 auto;
+}
+
+.content h4 {
+    font-size: 1em;
+    color: whitesmoke;
+    margin: 10px 0;
+    line-height: 2;
+    letter-spacing: 2px;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #777777;
+    
+    /* font-family: 'SourceCodePro-Medium', 'Courier New', Courier, monospace; */
+    font-size: .9em;
+    
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    transition-duration: .3s;
+}
+
+footer a:hover {
+    color: #F59552;
+}
+
+ /* параметры иконки */
+ footer .item-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #F59552;
+
+    text-align: center;
+    border-radius: 50%;
+
+    padding-top: 5px;
+}
+
+ /* иконка */
+ footer .item-icon:before {
+    content: "";
+    font-family: FontAwesome;
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+/* 
+
+    ⬆ 9.1 БЛОКИ ⬆
+
+    ⬇ 9.2 МЕДИА - ИКОНКИ ⬇ с сайта https://fontawesome.com/v5.15/icons/ 
+
+ */
+
+ /* иконка instagram */
+ footer .item-icon.instagram:before {
+    content: "\f16d";
+}
+
+ /* иконка whatsapp */
+ footer .item-icon.whatsapp:before {
+    content: "\f232";
+}
+
+ /* иконка youtube */
+ footer .item-icon.youtube:before {
+    content: "\f167";
+}
+
+ /* иконка vkontacte */
+ footer .item-icon.vkontacte:before {
+    content: "\f189";
+}
+
+/* 
+
+    ⬆ 9.2 МЕДИА - ИКОНКИ ⬆
+    
+    ⬇ 9.3 ПОДПИСЬ ⬇
+
+ */
+
+.footer-down hr {
+    color: #777777;
+    height: 1px;
+    margin-bottom: 25px;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+}
+
+.footer-down {
+    width: 100%;
+
+    text-align: center;
+    font-weight: 600;
+}
+
+.footer-down p span {
+    color: #AAAAAA;
+    line-height: 2.2;
+
+    
+    font-family: 'SourceCodePro-Medium', 'Courier New', Courier, monospace;
+    font-size: .8em;
+    
+    letter-spacing: 1.5px;
+    transition-duration: .3s;
+}
+
+.footer-down p a {
+    font-size: .7em;
+}
+
+
+footer p br {
+    display: none;
+}
