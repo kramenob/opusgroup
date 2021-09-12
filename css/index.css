@@ -917,10 +917,17 @@ section#portfolio {
 
     ⬇ КАК МЫ РАБОТАЕМ ⬇ */
 
+.hww-wrapper {
+    margin: 0 5px;
+}
+
 #howwework .howwework-item {
-    min-width: 24%;
+    min-width: 25%;
     max-width: 50%;
     height: 300px;
+    position: relative;
+    
+    margin: 0 -2px;
 
     margin-bottom: 50px;
 }
@@ -939,6 +946,7 @@ section#portfolio {
     font-weight: 500;
     margin: auto;
     margin-bottom: 82px;
+    padding-right: 7.5px;
 }
 
 hr.hww-hatch {
@@ -1595,6 +1603,20 @@ section#team .caption p {
 
     ⬇ КАЛЬКУЛЯТОР ⬇ */
 
+/* иконка калькулятор слева для широких экранов */
+#calc::before {
+    content: '';
+    position: absolute;
+    
+    width: 600px;
+    height: 750px;
+    margin-top: -100px;
+
+    background: url(../img/index/calc/calc-background.svg);
+    background-repeat: no-repeat;
+    background-size: auto 750;
+}
+
 #calc .container {
     width: 750px;
 }
@@ -1675,11 +1697,33 @@ section#team .caption p {
     width: 100%;
     height: 50px;
     color: #c4c4c4;
+    border-radius: 15px;
     
     transition-duration: .3s;
 }
+/* индивидуальная рамка для левой кнопки */
+.calc-label.c-label-left {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+/* индивидуальная рамка для центральной кнопки */
+.calc-label.c-label-mid {
+    border-radius: 0;
+}
+/* индивидуальная рамка для правой кнопки */
+.calc-label.c-label-right {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-right: -2px;
+    width: 101%;
+    padding-left: 2px;
+}
 .calc-label:hover {
     color: black;
+}
+.calc-label:active {
+    background: #FAB17D;
+    box-shadow: inset 1px 1px 1px rgba(0,0,0,0.5);
 }
 .calc-label h4 {
     font-size: 1em;
@@ -1694,14 +1738,12 @@ section#team .caption p {
   position: absolute;
   left: -9999px;
 }
-/* заголовки типов недвижимости */
-.estate-type-block-heading {
-
+/*  */
+.calc-input:checked ~ .calc-label {
+    background: #F59552;
+    color: black;
 }
-/* подпись заголовков */
-.estate-type-block-caption {
-
-}
+/* положение ползунка размера площади */
 .size-area {
     float: right;
 }
@@ -1719,43 +1761,47 @@ section#team .caption p {
 }
 /* блок ползунка площади */
 .calc-range {
-
+    
 }
-/* ползунок площади */
-.styled-slider.slider-progress {
-
-}
+/* ползунок */
 input[type='range'] {        
     overflow: hidden;    
     -webkit-appearance: none;        
-    background-color: #9a905d;    
-}        
+    background-color: whitesmoke;
+}
+/* элементы ползунка для Chrome, Yandex, Edge, Safary */
 input[type='range']::-webkit-slider-runnable-track {        
+    width: 10px;
     height: 10px;        
     -webkit-appearance: none;        
-    color: #13bba4;        
+    color: #F59552;        
     margin-top: -1px;    
+    border-radius: 5px;
 }        
+/* элементы ползунка для Chrome, Yandex, Edge, Safary */
 input[type='range']::-webkit-slider-thumb {        
-    width: 10px;        
+    width: 100%;        
     -webkit-appearance: none;        
     height: 10px;        
     cursor: ew-resize;        
-    background: #434343;        
-    box-shadow: -80px 0 0 80px #43e5f7;    
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.25);
+    border-radius: 5px; 
+    color: #F59552;   
 }        
+/* элементы ползунка для Mozila */
 input[type="range"]::-moz-range-progress {        
-    background-color: #43e5f7;     
+    background-color: #F59552;
+    border-radius: 5px;
+    height: 5px;
 }    
+элементы ползунка для Mozila
 input[type="range"]::-moz-range-track {          
-    background-color: #9a905d;    
-}    
-input[type="range"]::-ms-fill-lower {        
-    background-color: #43e5f7;     
-}    
-input[type="range"]::-ms-fill-upper {          
-    background-color: #9a905d;    
+    background-color: whitesmoke;
+    height: 5px;
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.25);
+    border-radius: 5px;
 }
+
 /* штрихи шага площади */
 .step-hatches {
 
