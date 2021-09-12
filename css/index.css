@@ -1760,46 +1760,35 @@ section#team .caption p {
     
 }
 /* блок ползунка площади */
-.calc-range {
-    
+.calc-range input[type=range] {
+    background: whitesmoke;
 }
-/* ползунок */
-input[type='range'] {        
-    overflow: hidden;    
-    -webkit-appearance: none;        
-    background-color: whitesmoke;
+
+/* Mozila: кнопка */
+.calc-range input[type=range]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+
+    cursor: pointer;
+
+    background: #F59552;
+    box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.5);
+    border: 5px solid whitesmoke;
+    border-radius: 50%;
 }
-/* элементы ползунка для Chrome, Yandex, Edge, Safary */
-input[type='range']::-webkit-slider-runnable-track {        
-    width: 10px;
-    height: 10px;        
-    -webkit-appearance: none;        
-    color: #F59552;        
-    margin-top: -1px;    
+/* Mozila: трек  */
+.calc-range input[type="range"]::-moz-range-track, input[type="range"]::-moz-range-progress {
     border-radius: 5px;
-}        
-/* элементы ползунка для Chrome, Yandex, Edge, Safary */
-input[type='range']::-webkit-slider-thumb {        
-    width: 100%;        
-    -webkit-appearance: none;        
-    height: 10px;        
-    cursor: ew-resize;        
-    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.25);
-    border-radius: 5px; 
-    color: #F59552;   
-}        
-/* элементы ползунка для Mozila */
-input[type="range"]::-moz-range-progress {        
+    height: 6px;
+}
+/* Mozila: заполненая часть трека */
+.calc-range input[type="range"]::-moz-range-progress {        
     background-color: #F59552;
-    border-radius: 5px;
-    height: 5px;
 }    
-элементы ползунка для Mozila
-input[type="range"]::-moz-range-track {          
+/* Mozila: пустая часть трека */
+.calc-range input[type="range"]::-moz-range-track {          
     background-color: whitesmoke;
-    height: 5px;
     box-shadow: inset 0px 1px 2px rgba(0,0,0,0.25);
-    border-radius: 5px;
 }
 
 /* штрихи шага площади */
