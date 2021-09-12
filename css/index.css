@@ -498,11 +498,11 @@ body {
     background-position-y: -200px;
 }
 
-#home {
+#start {
     padding-bottom: 155px;
 }
 
-section#home h1 {
+section#start h1 {
     font-family: 'RussianPunk';
     text-align: center;
     padding: 25px;
@@ -520,12 +520,12 @@ section#home h1 {
 }
 
 
-section#home .main h1::selection, section#home .main p::selection {
+section#start .afisha h1::selection, section#start .afisha p::selection {
     color: whitesmoke; /* Цвет текста */
     background: black; /* Цвет фона */
 }
 
-section#home .main p {
+section#start .afisha p {
     font-size: 1.25em;
     text-align: center;
     max-width: 600px;
@@ -534,14 +534,14 @@ section#home .main p {
 }
 
 /* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
-section#home .feedback-form {
+section#start .feedback-form {
     font-size: 1.25em;
     text-align: center;
 
     margin: 0 auto;
     margin-top: 75px;
 }
-section#home a.button {
+section#start a.button {
     font-size: 1em;
     letter-spacing: 1.5px;
 }
