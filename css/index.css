@@ -132,6 +132,8 @@ body {
 /* дочерний элемент шел в линию */
 .child {
     display: inline-block;
+    
+    margin-left: -.36em; /* убираем лишние пробелы */
 }
 
 /*убираем подчеркивание текста ссылок*/
@@ -1616,12 +1618,11 @@ section#team .caption p {
     background-repeat: no-repeat;
     background-size: auto 750;
 }
-
+/* узкий контейнер для элементов контейнера */
 #calc .container {
     width: 750px;
 }
-    
-/* файлы договора и прайса */
+/* файл договора */
 .files {
     width: 100%;
     height: auto;
@@ -1633,23 +1634,18 @@ section#team .caption p {
 .paperclip {
     width: 14px;
 }
-/* текст файлов */
+/* текст файла */
 .file-word {
     cursor: pointer;
     font-size: 1em;
     color: #c4c4c4;
 }
-/* текст файлов */
+/* наведение на текст файла */
 .file-word:hover, .file-word:hover .paperclip {
     /* cursor: pointer; */
     color: #F59552;
 }
-/* перегородка меж файлами */
-.file-wall {
-    font-size: 1.2em;
-    color: #c4c4c4;
-}
-/* секции калькулятора */
+/* отступ для секций калькулятора */
 .calc-item:nth-child(2) {
     margin-top: 25px;
 }
@@ -1657,10 +1653,20 @@ section#team .caption p {
 .calc-item {
     width: 100%;
     height: auto;
-    margin-top: 50px;
+    margin-top: 30px;
+
+    position: relative;
+}
+/* секции калькулятора */
+.calc-item:nth-child(3) {
+    width: 100%;
+    height: 100px;
+    margin-top: 5px;
+    padding-top: 25px;
+    background: whitesmoke;
 }
 /* заголовок секции */
-.calc-item-heading, .size-area-m {
+.calc-item-heading, .size-area-m, .work-type h3 {
     color: #3A3A44;
     font-size: 1.1em;
     margin-bottom: 10px;
@@ -1676,6 +1682,8 @@ section#team .caption p {
     border: 1px #F59552 solid;
     border-radius: 15px;
     box-shadow:  2px 2px 2px 0px rgba(81, 81, 81, 0.47);
+    
+    transition-duration: .3s;
 }
 /* элементы блока типов недвижимости */
 .estate-type-block-elem {
@@ -1691,6 +1699,7 @@ section#team .caption p {
 .estate-type-block-elem:not(:last-child) {
     border-right: 1px #F59552 solid;
 }
+/* текст типов недвиги */
 .calc-label {
     padding: 10px 0;
     display: block;
@@ -1718,17 +1727,21 @@ section#team .caption p {
     width: 101%;
     padding-left: 2px;
 }
+/* наведение на текст типов недвиги */
 .calc-label:hover {
     color: black;
 }
+/* анимация нажатия на типы недвиги */
 .calc-label:active {
     background: #FAB17D;
     box-shadow: inset 1px 1px 1px rgba(0,0,0,0.5);
 }
+/* заголовок недвиги */
 .calc-label h4 {
     font-size: 1em;
     line-height: .9;
 }
+/* подпись недвиги */
 .calc-label p {
     font-size: .7em;
 }
@@ -1738,10 +1751,79 @@ section#team .caption p {
   position: absolute;
   left: -9999px;
 }
-/*  */
-.calc-input:checked ~ .calc-label {
+/* выделение выбранного типа недвиги */
+.calc-input#newbuild:checked ~ .estate-type-block .estate-type-block-elem .calc-label#from-newbuild,
+.calc-input#secondarywr:checked ~ .estate-type-block .estate-type-block-elem .calc-label#from-secondarywr,
+.calc-input#secondarywor:checked ~ .estate-type-block .estate-type-block-elem .calc-label#from-secondarywor {
     background: #F59552;
     color: black;
+}
+/* блок видов услуг */
+.work-types {
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+/* виды недвижимости */
+.work-types .work-type {
+    width: 200px;
+    height: 30px;
+    padding-top: 4px;
+    padding-left: 10px;
+
+    margin-bottom: 15px;
+    margin-right: 15px;
+
+    background: white;
+    border-radius: 10px;
+    box-shadow:  2px 2px 2px 0px rgba(81, 81, 81, 0.47);
+}
+/* иконка галочки перед заголовком вида */
+.work-types .work-type h3::before {
+    content: '';
+
+    width: 20px;
+    height: 20px;
+
+    margin-top: 5px;
+    padding-right: 22.5px;
+
+    background: url(../img/index/calc/check-icon.svg) no-repeat;
+    background-size: 16px auto;
+    background-position-y: 3px;
+}
+/* положение второй строки у правой стенке */
+.second-line {
+    float: right;
+}
+/* выравнивание слева для заголовка видов услуг */
+.self-work-types-block h3 {
+    text-align: left;
+}
+/* прячем по умолчанию блок видов услуг для каждого типа недвиги */
+.self-work-types-block {
+    position: absolute;
+    width: 750px;
+
+    top: 75px;
+
+    margin-top: 30px;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition-duration: .3s;
+}
+/* появление видов услуг для новостройки */
+#newbuild:checked ~ #for-newbuild,
+#secondarywr:checked ~ #for-secondarywr,
+#secondarywor:checked ~ #for-secondarywor {
+    visibility: visible;
+    opacity: 1;
+}
+/* отступ места для появившихся видов услуг */
+.calc-input:checked ~ .estate-type-block {
+    margin-bottom: 150px;
 }
 /* положение ползунка размера площади */
 .size-area {
@@ -1757,7 +1839,7 @@ section#team .caption p {
 }
 /* единица площади */
 .size-area-m {
-    
+    padding-right: 10px;
 }
 /* блок ползунка площади */
 .calc-range input[type=range] {
@@ -1876,30 +1958,87 @@ input[type=range]::-ms-track {
     box-shadow: inset 0px 1px 2px rgba(0,0,0,0.25);
 }
 
-/* штрихи шага площади */
-.step-hatches {
-
-}
-/* штрих */
+/* штрихи */
 .step-hatch {
+    margin: 5px 0;
+    margin-left: 67.5px;
+	padding: 0;
 
-}
-/* тип работ */
-.work-type {
+	height: 12.5px;
 
+	border: none;
+
+	background-image: linear-gradient(90deg, #c4c4c4 0, whitesmoke 1.75px);
+
+	background-size: 15% 100%;
 }
 /* блок отправки */
 #send {
+    width: 100%;
+    height: 100px;
 
+    padding: 25px;
+
+    background: #F59552;
+    box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.5);
+
+    border-radius: 15px;
+}
+/* изменение стиля при выделении */
+#policy::selection, #policy a::selection {
+    color: #F59552;
+    background: whitesmoke;
 }
 /* текст пользовательского соглашения */
 #policy {
+    float: left;
+    
+    padding: 17.5px 0;
 
+    font-size: .85em;
+    color: whitesmoke;
+}
+/* стиль ссылки */
+#policy a {
+    color: whitesmoke;
+    text-decoration: underline;
+}
+/* наведение на ссылку */
+#policy a:hover {
+    color: #c4c4c4;
 }
 /* кнопка отправки */
 #calc-item-send-button {
+    float: right;
 
+    width: 250px;
+    height: 50px;
+
+    border: none;
+    border-radius: 15px;
+
+    box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.5);
+
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #F59552;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition-duration: .1s;
 }
+/* наведение на кнопку */
+#calc-item-send-button:hover {
+    background: white;
+}
+/* изменения кнопки по нажатию  */
+#calc-item-send-button:active {    
+    background: whitesmoke;
+    padding-top: 2px;
+    padding-left: 2px;
+    box-shadow: inset 2px 2px 2px 0px rgba(81, 81, 81, 0.5);
+}
+
     
 /* ⬆ КАЛЬКУЛЯТОР ⬆
 

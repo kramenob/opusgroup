@@ -607,84 +607,135 @@
                 <div class="files">
                     <img src="img/index/calc/paperclip.svg" alt="Иконка скрепка" class="paperclip child">
                     <a class="file-word child">Договор</a>
-                    <h3 class="file-wall child">|</h3>
-                    <img src="img/index/calc/paperclip.svg" alt="Иконка скрепка" class="paperclip child">
-                    <a class="file-word child">Прайс</a>
                 </div> <!-- .files -->
             </div> <!-- .sec-title -->
 
             <div class="calc-item">
                 <h3 class="calc-item-heading">Тип недвижимости</h3>
+
+                <input class="calc-input" type="checkbox" id="newbuild" name="pricing"/>
+                <input class="calc-input" type="checkbox" id="secondarywr" name="pricing"/>
+                <input class="calc-input" type="checkbox" id="secondarywor" name="pricing"/>
+
                 <div class="estate-type-block">
                     <div class="estate-type-block-elem child">
-                        <input class="calc-input" type="checkbox" id="newbuild" name="pricing"/>
-                        <label class="calc-label c-label-left" for="newbuild">
+                        <label class="calc-label c-label-left" id="from-newbuild" for="newbuild">
                             <h4>Новостройка</h4>
                             <p>с нуля</p>
                         </label>
                     </div> <!-- .estate-type-block-elem child -->
+
                     <div class="estate-type-block-elem child">
-                        <input class="calc-input" type="checkbox" id="secondarywr" name="pricing"/>
-                        <label class="calc-label c-label-mid" for="secondarywr">
+                        <label class="calc-label c-label-mid" id="from-secondarywr" for="secondarywr">
                             <h4>Вторичка</h4>
                             <p>с перепланировкой</p>
                         </label>
                     </div> <!-- .estate-type-block-elem child -->
+
                     <div class="estate-type-block-elem child">
-                        <input class="calc-input" type="checkbox" id="secondarywor" name="pricing"/>
-                        <label class="calc-label c-label-right" for="secondarywor">
+                        <label class="calc-label c-label-right" id="from-secondarywor" for="secondarywor">
                             <h4>Вторичка</h4>
                             <p>без перепланировкой</p>
                         </label>
                     </div> <!-- .estate-type-block-elem child -->
                 </div> <!-- .estate-type-block -->
+
+                <div class="self-work-types-block" id="for-newbuild">
+                    <h3 class="calc-item-heading">Виды работ для данного типа недвижимости</h3>
+                    <div class="work-types"  id="for-secondarywor">
+                        <div class="first-line">
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                        </div> <!-- .first-line -->
+                        <div class="second-line">
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                        </div> <!-- .second-line -->
+                    </div> <!-- .work-types -->
+                </div> <!-- .self-work-types-block -->
+
+                <div class="self-work-types-block" id="for-secondarywr">
+                    <h3 class="calc-item-heading">Виды работ для данного типа недвижимости</h3>
+                    <div class="work-types"  id="for-secondarywor">
+                        <div class="first-line">
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                        </div> <!-- .first-line -->
+                        <div class="second-line">
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                        </div> <!-- .second-line -->
+                    </div> <!-- .work-types -->
+                </div> <!-- .self-work-types-block -->
+
+                <div class="self-work-types-block" id="for-secondarywor">
+                    <h3 class="calc-item-heading">Виды работ для данного типа недвижимости</h3>
+                    <div class="work-types"  id="for-secondarywor">
+                        <div class="first-line">
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                        </div> <!-- .first-line -->
+                        <div class="second-line">
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                            <div class="work-type child">
+                                <h3>Перегородки</h3>
+                            </div> <!-- .work-type -->
+                        </div> <!-- .second-line -->
+                    </div> <!-- .work-types -->
+                </div> <!-- .self-work-types-block -->
+                
             </div> <!-- .calc-item -->
 
             <div class="calc-item">
                 <h3 class="calc-item-heading child">Площадь</h3>
                 <div class="size-area">
                     <h3 class="size-area-m child">м²</h3>
-                    <input id="size-area-number" class="child" name="size-area" type="number" min="0" max="100" step="5" value="54,6">
+                    <input id="size-area-number" class="child" name="size-area" type="number" min="30" max="250" value="54,6">
                 </div>
                 <div class="calc-range">
-                    <input class="styled-slider slider-progress" type="range" step="5" style="width: 100%; --value: 54,6; --min: 0; --max: 100;">
-                    <div class="step-hatches">
-                        <hr class="step-hatch">
-                        <hr class="step-hatch">
-                        <hr class="step-hatch">
-                        <hr class="step-hatch">
-                        <hr class="step-hatch">
-                        <hr class="step-hatch">
-                        <hr class="step-hatch">
-                    </div>
+                    <input class="styled-slider slider-progress" type="range" style="width: 100%; --value: 55; --min: 30; --max: 250;">
+                    <hr class="step-hatch">
                 </div>
-            </div> <!-- .calc-item -->
-
-            <div class="calc-item">
-                <label for="radio-1" class="work-type child">
-                    <input class="child" id="radio-1" name="radio-1" type="radio" value="1" checked="checked">
-                    <p class="child">Перегородки</p>
-                </label>
-                <label for="radio-2" class="work-type child">
-                    <input class="child" id="radio-2" name="radio-2" type="radio" value="1">
-                    <p class="child">Сантехника</p>
-                </label>
-                <label for="radio-3" class="work-type child">
-                    <input class="child" id="radio-3" name="radio-3" type="radio" value="1">
-                    <p class="child">Укладка плитки</p>
-                </label>
-                <label for="radio-4" class="work-type child">
-                    <input class="child" id="radio-4" name="radio-4" type="radio" value="1" checked="checked">
-                    <p class="child">Малярные работы</p>
-                </label>
-                <label for="radio-5" class="work-type child">
-                    <input class="child" id="radio-5" name="radio-5" type="radio" value="1">
-                    <p class="child">Электрика</p>
-                </label>
-                <label for="radio-6" class="work-type child">
-                    <input class="child" id="radio-6" name="radio-6" type="radio" value="1" checked="checked">
-                    <p class="child">Штукатурка</p>
-                </label>
             </div> <!-- .calc-item -->
 
             <div class="calc-item" id="send">
