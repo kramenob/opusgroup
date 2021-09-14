@@ -1,2 +1,1 @@
-# opus.group
-Opus.Group Project
+# Официальный сайт Opus.Group
