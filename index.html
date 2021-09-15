@@ -597,9 +597,7 @@
         <div class="container">
             <div class="sec-title">
                 <h2>Калькулятор</h2>
-                <p>
-                    Расчитайте стоимость ремонта под ключ
-                </p>
+                <p>Расчитайте стоимость ремонта под ключ</p>
 
                 <div class="files">
                     <a class="file-word child" href="#">Договор</a>
@@ -735,11 +733,57 @@
             </div> <!-- .calc-item -->
 
             <div class="calc-item" id="send">
-                <p id="policy">
-                    Отправляя данную форму, вы принимаете <a href="#">политику сайта</a>
-                </p>
-                <button id="calc-item-send-button">Отправить</button>
 
+                <input id="popup-open-close" type="checkbox" name="pricing" checked/>
+
+                <p id="policy">Отправляя данную форму, вы принимаете <a href="#">политику сайта</a></p>
+
+                <label class="or-button" for="popup-open-close" id="calc-item-send-button">Отправить</label>
+
+                <div id="popup">
+                    <div class="popup-content">
+
+                        <div class="sec-title">
+                            <h2>Отправка заявки</h2>
+                            <p>После отправки мы с вами свяжемся</p>
+                        </div> <!-- .sec-title -->
+                        
+                        <label for="popup-open-close" class="popup-close"></label>
+
+                        <div class="popup-line-element" id="name-block">
+
+                            <label class="popup-label" id="for-first-name">
+                                <input class="popup-input" id="first-name" name="first-name" type="text" placeholder="Имя" minlength="1" maxlength="20"><span class="necessary">*</span>
+                            </label>
+
+                            <label class="popup-label" id="for-last-name">
+                                <input class="popup-input" id="last-name" name="last-name" type="text" placeholder="Фамилия" minlength="1" maxlength="30"><span class="necessary">*</span>
+                            </label>
+
+                        </div> <!-- .popup-line-element#name -->
+
+                        <div class="popup-line-element" id="phone-block">
+                            <label class="popup-label" id="for-phone">
+                                <input class="popup-input" id="phone" name="phone" type="tel" placeholder="Телефон" minlength="6" maxlength="15"><span class="necessary">*</span>
+                            </label>
+                        </div> <!-- .popup-line-element#phone -->
+
+                        <div class="popup-line-element" id="comment-block">
+
+                            <textarea class="popup-input popup-textarea" id="comment" name="comment" placeholder="Комментарий" style="min-height:20px"></textarea>
+
+                        </div> <!-- .popup-line-element#comment -->
+
+                        <div class="popup-line-element" id="send-block">
+
+                            <button class="or-button" id="sender-button" type="submit">Отправить</button>
+
+                            <p>Отправляя данную форму, вы принимаете <a href="#">политику сайта</a></p>
+
+                        </div> <!-- .popup-line-element#comment -->
+                        
+                    </div> <!-- .popup-content -->
+                </div> <!-- .popup -->
             </div> <!-- .calc-item -->
         </div> <!-- .container -->
     </section>
@@ -871,6 +915,7 @@
 
 
     <script src="js/feedback-carousel.js"></script>
+    <script src="js/popup.js"></script>
     <script src="js/secure/key.js"></script>
     <script src="js/senderbot.js"></script>
 </body>

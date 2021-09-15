@@ -170,7 +170,7 @@ h1 {
 /* заголовки2 */
 h2 {
     font-size: 2em;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 1.5px;
 }
 
@@ -2053,13 +2053,18 @@ input[type=range]::-ms-track {
 #policy a:hover {
     color: #c4c4c4;
 }
+.or-button::selection {
+    background: none;
+    color: inherit;
+}
 /* кнопка отправки */
-#calc-item-send-button {
+.or-button {
     float: right;
 
     width: 250px;
     height: 50px;
 
+    background: whitesmoke;
     border: 1px whitesmoke solid;
     border-radius: 15px;
 
@@ -2070,13 +2075,162 @@ input[type=range]::-ms-track {
     color: #F59552;
     letter-spacing: 1px;
     text-transform: uppercase;
+    text-align: center;
 
+    padding: 12.5px 0;
+
+    cursor: pointer;
     transition-duration: .3s;
 }
 /* наведение на кнопку */
-#calc-item-send-button:hover {
+.or-button:hover {
     color: whitesmoke;
     background: #F59552;
+}
+/*  */
+#popup-open-close:checked ~ #popup {
+    visibility: visible;
+    opacity: 1;
+}
+/* общие парамаетры popup'а */
+#popup {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99999;
+
+    width: 100%;
+    height: 100%;
+    
+    top: 0;
+    left: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+    transition-duration: .3s;
+}
+/* "контейнер" popup'а */
+.popup-content {
+    width: 1000px;
+    height: 500px;
+
+    padding: 25px 0;
+
+    transform: translate(0%, 50%);
+
+    background: whitesmoke;
+    border-radius: 15px;
+}
+/* кнопка закрытия */
+.popup-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+
+    background: url(../img/index/calc/close-icon.svg);
+
+    cursor: pointer;
+    transition-duration: .3s;
+}
+/* наведение кнопки закрытия */
+.popup-close:hover {
+    transform: rotate(90deg);
+}
+.popup-label {
+    position: relative;
+}
+/* введение значений */
+.popup-input {
+    width: 100%;
+    position: relative;
+
+    padding-bottom: 5px;
+
+    border: none;
+    border-bottom: 1px #3A3A44 solid;
+    
+    background: whitesmoke;
+}
+.necessary {
+    position: absolute;
+    top: -2.5px;
+    left: 40px;
+    color: #F59552;
+}
+#for-last-name .necessary {
+    left: 145px;
+}
+#for-phone .necessary {
+    left: 75px;
+}
+#name-block .popup-input {
+    width: 45%;
+}
+/* строки */
+.popup-line-element {
+    width: 650px;
+    height: 20px;
+
+    margin: 50px auto;
+    
+    align-items: center;
+}
+/* блок имени */
+#name-block {
+
+}
+/* поле для ввода */
+.input-field {
+
+}
+/* имя */
+#first-name {
+
+}
+/* фамилия */
+#last-name {
+    float: right;
+}
+/* телефон */
+#phone-block {
+
+}
+/* коммет */
+#comment-block {
+
+}
+/*  */
+.popup-textarea {
+
+}
+#send-block {
+    text-align: center;
+}
+.or-button#sender-button {
+    margin: 25px 0;
+    float: none;
+    color: whitesmoke;
+    background: #F59552;
+    border: 1px #F59552 solid;
+}
+.or-button#sender-button:hover {
+    color: #F59552;
+    background: whitesmoke;
+}
+#send-block p {
+    font-size: 1em;
+    color: #c4c4c4;
+}
+#send-block p a {
+    color: #c4c4c4;
+    text-decoration: underline;
+
+    transition-duration: .3s;
+}
+#send-block p a:hover {
+    color: #F59552;
 }
 
     
