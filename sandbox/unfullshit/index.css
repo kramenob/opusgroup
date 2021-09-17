@@ -45,7 +45,7 @@ body {
 .form_body {
     position: relative;
 }
-.form_body::after {
+/* .form_body::after {
     content: '';
     position: absolute;
     top: 0;
@@ -56,7 +56,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: all .5s ease 0s;
-}
+} */
 .form_body._sending::after {
     opacity: 1;
     visibility: visible;

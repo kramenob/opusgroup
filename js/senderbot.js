@@ -6,13 +6,40 @@
 
 "use strict"
 
-document.querySelector('#button').onclick = function () { // #button = id вашей кнопки отправки
 
-    const url = 'https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?chat_id=-'+CHAT_ID+'&text=';
 
-    let message = document.querySelector('#message').value; // #message = id input'а из которого необходимо извлечь текст
-    let xhttp = new XMLHttpRequest();
+document.querySelector('#sender-button').onclick = function () { // Указание нажимаемой кнопки
 
-    xhttp.open("GET", url+message, true);
-    xhttp.send();
+    // Ссылка отправки сообщения в ТГ чат
+    const url = 'https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?chat_id=-'+CHAT_ID+'&parse_mode=Markdown&text=';
+    
+    // Извлечение введенных данных
+    let first_name = document.querySelector('#first-name').value; // имя
+    let last_name = document.querySelector('#last-name').value; // фамилия
+    let phone = document.querySelector('#phone').value; // телефон
+    let comment = document.querySelector('#comment').value; // коммент
+
+    // Контейнер сообщение (табы отражаются и в сообщении)
+    let message_container =
+`*Новая заявка с сайта!* %0A%0A
+*Имя:* ${first_name} ${last_name} %0A
+*Телефон:* ${phone} %0A%0A
+_Комментарий: ${comment}_`;
+
+    let _req = document.querySelector('._req').value; // Проверка полей
+    
+    let xhttp = new XMLHttpRequest(); // Команда отправки
+
+    // Проверка пустых/заполненых полей
+    if ( _req === '' ) {
+        alert('Пожалуйста, укажите ваше имя и номер телефона'); // Уведомление о не заполненых полях
+    } else {
+        xhttp.open("GET", url+message_container, true); // Подготовка данных к отпрвке
+        xhttp.send(); // Отправка подготовленных данных
+
+        alert('Спасибо за заявку. В ближайшее время мы с вами свяжемся!'); // Уведомление об успешной 
+
+        $('#popup-open-close').trigger('click'); // Закрытие ПопАпа по отправке
+    }
+
 }

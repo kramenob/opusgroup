@@ -41,6 +41,9 @@
   
     ⬇ 1. ОСНОВНОЕ ⬇ */
 
+    
+/* @import 'range-slider.css'; */
+
 /* чистота всех элементов */
 * {
     margin: 0 auto;
@@ -1808,11 +1811,14 @@ section#team .caption p {
 .work-types {
     width: 100%;
     position: relative;
+    padding: 0;
+    margin: 0;
     margin-bottom: 50px;
+    position: relative;
 }
 /* виды недвижимости */
 .work-types .work-type {
-    width: 200px;
+    width: 230px;
     height: 30px;
     padding-top: 4px;
     padding-left: 10px;
@@ -1839,8 +1845,14 @@ section#team .caption p {
     background-position-y: 3px;
 }
 /* положение второй строки у правой стенке */
-.second-line {
-    float: right;
+.left-line {
+    float: left;
+    margin-left: 5px;
+}
+/* положение второй строки у правой стенке */
+.right-line {
+    margin-left: 35px;
+    margin-right: -15px;
 }
 /* выравнивание слева для заголовка видов услуг */
 .self-work-types-block h3 {
@@ -1869,7 +1881,7 @@ section#team .caption p {
 }
 /* отступ места для появившихся видов услуг */
 .calc-input:checked ~ .estate-type-block {
-    margin-bottom: 150px;
+    margin-bottom: 225px;
 }
 /* положение ползунка размера площади */
 .size-area {
@@ -2004,9 +2016,54 @@ input[type=range]::-ms-track {
     box-shadow: inset 0px 1px 2px rgba(0,0,0,0.25);
 }
 
+.noUi-connect {
+	background-color: whitesmoke;
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.25);
+}
+
+.noUi-target {
+	background-color: #F59552;
+    box-shadow: none;
+	border: none;
+	border-radius: 100px;
+	height: 5px;
+    margin: 5px 0;
+}
+
+.noUi-handle::after,
+.noUi-handle::before {
+	display: none;
+}
+
+.noUi-handle {
+    display: block;
+}
+
+.noUi-handle-upper {
+    /* display: none; */
+}
+
+
+.noUi-handle {
+	border-radius: 100%;
+	background-color: #F59552;
+	border: 5px solid whitesmoke;
+    box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.5);
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 25px;
+    height: 25px;
+	top: -10px;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+	right: 0;
+}
+
 /* штрихи */
 .step-hatch {
-    margin: 5px 0;
+    margin: 15px 0;
     margin-left: 67.5px;
 	padding: 0;
 
@@ -2153,8 +2210,17 @@ input[type=range]::-ms-track {
     
     background: whitesmoke;
 }
+.popup-input._error {
+    border: 2px #F59552 solid;
+    background: red;
+    width: 100px;
+    height: 100px;
+}
 .necessary {
     position: absolute;
+
+    opacity: 0;
+
     top: -2.5px;
     left: 40px;
     color: #F59552;
