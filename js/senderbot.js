@@ -33,7 +33,7 @@ document.querySelector('#sender-button').onclick = function () { // Указан
     let type_container = 
 ` %0A%0A
 *Тип недвижимости:* ${type} %0A
-*Площадь:*  ${area} %0A%0A
+*Площадь:*  ${area} м²%0A%0A
 
 `;
 

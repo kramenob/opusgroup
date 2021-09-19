@@ -1628,7 +1628,7 @@ section#team .caption p {
     ⬇ КАЛЬКУЛЯТОР ⬇ */
 
 /* иконка калькулятор слева для широких экранов */
-#calc::before {
+/* #calc::before {
     content: '';
     position: absolute;
     
@@ -1639,7 +1639,7 @@ section#team .caption p {
     background: url(../img/index/calc/calc-background.svg);
     background-repeat: no-repeat;
     background-size: auto 600px;
-}
+} */
 /* узкий контейнер для элементов контейнера */
 #calc .container {
     width: 750px;
@@ -2040,7 +2040,7 @@ input[type=range]::-ms-track {
 }
 
 .noUi-handle-upper {
-    /* display: none; */
+    display: none;
 }
 
 
@@ -2055,6 +2055,7 @@ input[type=range]::-ms-track {
     width: 25px;
     height: 25px;
 	top: -10px;
+    margin-right: 7.5px;
 }
 
 .noUi-horizontal .noUi-handle-upper {
@@ -2071,9 +2072,10 @@ input[type=range]::-ms-track {
 
 	border: none;
 
-	background-image: linear-gradient(90deg, #c4c4c4 0, whitesmoke 1.75px);
+	background-image: linear-gradient(90deg, #c4c4c4 0, whitesmoke 2px);
 
-	background-size: 15% 100%;
+	background-size: 14.90% 100%;
+    
 }
 /* блок отправки */
 #send {

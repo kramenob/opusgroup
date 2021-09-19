@@ -56,7 +56,6 @@
                     <li><a class="menu__item" href="#about">О компании</a></li>
                     <li><a class="menu__item" href="#faq">Часто задаваемые вопросы</a></li>
                     <li><a class="menu__item" href="#calc">Калькулятор</a></li>
-                    <li><a class="menu__item" href="#feedback">Отзывы</a></li>
                 </ul>
             </div> <!-- .hamburger-menu -->
             <a class="mobile-call icon" href="tel:+79678333677">
@@ -76,42 +75,7 @@
                 <p>Ремонт квартир и домов под ключ, работаем по договору, поэтапная оплата, никаких переплат, выезд и смета БЕСПЛАТНО</p>
             </div>
             <div class="feedback-form">
-                <a href="javascript:void(0)" onclick="this.nextElementSibling.style.display='block';" class="button">Хочу ремонт!</a>
-            
-                <!-- ОКНО -->
-                <div id="parent_popup_click1" class="modal">
-                    <div class="modal-content">
-                        <a class="closess" title="Закрыть" onclick="document.getElementById('parent_popup_click1').style.display='none';">×</a>
-                        
-                        <div class="sec-title">
-                            <h2>Отправка заявки</h2>
-                            <p>на расчет стоимости</p>
-                        </div> <!-- .sec-title -->
-                        <div class="container sendform">
-                            <form action="#" >
-
-                                <!-- <input class="name" type="text" id="Name" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
-                
-                                <input class="name" type="text" id="E-mail" name="lastname" placeholder="Ваша почта.." minlength="1" maxlength="30">
-                
-                                <input type="text" id="phone" name="Phone" placeholder="Ваш номер телефона.." minlength="6" maxlength="15"> -->
-        
-                                <!-- <textarea id="subject" name="message" placeholder="Комментарий.." style="min-height:200px"></textarea> -->
-                
-                                <!-- <input class="button" type="submit" value="Отправить"> -->
-
-
-                                <label for="formName" class="form__label">Имя*:</label>
-                                <label for="formEmail" class="form__label">Почта*:</label>
-
-
-                                <input type="text" name="name" id="formName" class="form__input">
-                                <input type="text" name="email" id="formEmail" class="form__input">
-                                
-                            </form>
-                        </div> <!-- .sendform --> 
-                    </div>
-                </div>
+                <a href="#calc" class="button">Хочу ремонт!</a>
             </div>
         </div> <!-- .container -->
     </section>
@@ -780,6 +744,7 @@
                     <label class="input-area">
                         <input id="size-area-number" class="child" name="size-area" type="number" min="30" max="250">
                     </label>
+                    <label id="inputInvisible"></label>
                 </div>
                 <div class="calc-range">
                     <div id="range-slider"></div>
@@ -789,7 +754,7 @@
 
             <div class="calc-item" id="send">
 
-                <input class="pop-check" id="popup-open-close" type="checkbox" name="pricing" checked/>
+                <input class="pop-check" id="popup-open-close" type="checkbox" name="pricing"/>
 
                 <p id="policy">Отправляя данную форму, вы принимаете <a href="#">политику сайта</a></p>
 
@@ -843,72 +808,6 @@
         </div> <!-- .container -->
     </section>
     <!-- END.КАЛЬКУЛЯТОР -->
-
-    
-
-    <!-- ОТЗЫВЫ -->
-    <section id="feedback">
-        <div class="container">
-            <div class="sec-title">
-                <h2>Отзывы</h2>
-                <p>
-                    Вот что думают о нас клиенты
-                </p>
-            </div> <!-- .sec-title -->
-    
-            <input type="radio" name="slider" id="item-1" checked>
-            <input type="radio" name="slider" id="item-2">
-            <input type="radio" name="slider" id="item-3">
-            <div class="cards">
-                <label class="card" for="item-1" id="video-1">
-                    <div class="overlay"></div>
-                    <iframe width="720" height="405" src="https://www.youtube.com/embed/aRgqQe-8zYk" frameborder="0"></iframe>
-                </label>
-                <label class="card" for="item-2" id="video-2">
-                    <div class="overlay"></div>
-                    <iframe width="720" height="405" src="https://www.youtube.com/embed/h8wX2SFSDDY" frameborder="0"></iframe>
-                </label>
-                <label class="card" for="item-3" id="video-3">
-                    <div class="overlay"></div>
-                    <iframe width="720" height="405" src="https://www.youtube.com/embed/GeP31f9jtpk" frameborder="0"></iframe>
-                </label>
-            </div>
-        </div>
-    </section>
-    <!-- END.ОТЗЫВЫ -->
-    
-    <section id="button">
-        <div class="container">
-            <div class="feedback-form">
-                <a href="javascript:void(0)" onclick="this.nextElementSibling.style.display='block';" class="button">Теперь я хочу ремонт!</a>
-            
-                <!-- ОКНО -->
-                <div id="bottom-page-button" class="modal">
-                    <div class="modal-content">
-                        <a class="closess" title="Закрыть" onclick="document.getElementById('bottom-page-button').style.display='none';">×</a>
-                        
-                        <div class="sec-title">
-                            <h2>Отправка заявки</h2>
-                            <p>На расчет стоимости</p>
-                        </div> <!-- .sec-title -->
-                        <div class="container sendform">
-                            <form action="telegram.php" method="POST">
-                                <input class="name" type="text" id="fname" name="firstname" placeholder="Ваше имя.." minlength="1" maxlength="20">
-                
-                                <input class="name" type="text" id="lname" name="lastname" placeholder="Ваша фамилия.." minlength="1" maxlength="30">
-                
-                                <input type="text" id="phone" name="phone" placeholder="Ваш номер телефона.." minlength="6" maxlength="15">
-        
-                                <textarea id="subject" name="message" placeholder="Добавьте комментарий.." style="min-height:200px"></textarea>
-                
-                                <input class="button" type="submit" value="Отправить">
-                            </form>
-                        </div> <!-- .sendform --> 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ПОДВАЛ -->
     <footer>
@@ -970,12 +869,10 @@
         </div> <!-- .container --> 
     </footer>
 
-    <!-- <script type="text/javascript" src=" https://code.jquery.com/jquery-1.11.2.js "></script> -->
     <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
     <script src="libs/nouislider/nouislider.min.js"></script>
 
     <script src="js/feedback-carousel.js"></script>
-    <!-- <script src="js/popup.js"></script> -->
     <script src="js/calcexport.js"></script>
     <script src="js/range-slider.js"></script>
     <script src="js/secure/key.js"></script>
