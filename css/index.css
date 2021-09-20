@@ -242,7 +242,7 @@ header {
     height: 50px;
 
     position: fixed;
-    background: whitesmoke;
+    background-color: whitesmoke;
 
     border-bottom: 1px solid #3A3A44;
     z-index: 2;
@@ -541,6 +541,10 @@ section#start h1 {
 
     background-size: 110% auto;
     background-position-y: 50%; */
+}
+
+br.phone {
+    display: none;
 }
 
 

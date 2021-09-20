@@ -12,7 +12,6 @@
 @media only screen and (max-width: 1200px) {
 
 /* ОСНОВНОЕ */
-
     .container {
         width: 100%;
     }
@@ -290,6 +289,7 @@
     
 /* ОСНОВНОЕ */
 
+
     body{
         margin: 0;
     }
@@ -561,99 +561,149 @@
     }
 
 /* ШАПКА */
-
-    header {
-        width: 100%;
-        height: 60px;
-    }
-    header #title {
-        top: 30px;
-        font-size: 1.75em;
-    }
-    header .mobile-call.icon {
-        top: 35px;
-        width: 30px;
-    }
-    
+    /* выравниваем кнопку меню */
     .menu__btn {
-        top: 32px;
-        left: 10%;
-    
-        width: 30px;
+        top: 20px;
+        left: 30px;
         height: 35px;
     }
-    .menu__btn > span,
-    .menu__btn > span::before,
-    .menu__btn > span::after {
-        height: 2.75px;
+    /* выравниваем контейнер меню */
+    .menu__box {
+        width: 250px;
+        opacity: .95;
     }
-    .menu__btn > span::before {
-        top: -10px;
-    }
-    .menu__btn > span::after {
-        top: 10px;
-    }
-    
-    /* элементы меню */
+    /* адаптируем элементы меню */
     .menu__item {
-        padding: 7px 20px;
+        font-size: 1.5em;
+        padding: 10px 20px;
+    }
+    /* убираем наведение */
+    .menu__item:hover {
+        color: inherit;
+    }
+    /* добавляем подсветку по нажатию */
+    .menu__item:active {
+        color: #F59552;
+        animation-delay: .5s;
+    }
+
+    /* уменьшаем и выравниваем имя сайта */
+    header #title {
+        width: 100%;
+        text-align: center;
+        top: 22.5px;
+        font-size: 2em;
+
+        margin: 0;
+    }
+    /* убираем наведение */
+    header a:hover {
+        color: inherit;
+    }
+    /* добавляем подсветку по нажатию */
+    header a:active {
+        color: #F59552;
+    }
+
+    /* выравниваем иконку звонка */
+    header .mobile-call.icon {
+        top: 25px;
+        width: 20px;
+        margin-right: 10px;
     }
 
 /* ГЛАВНАЯ */
 
-    /* полоса краски */
+    /* поправляем полоску краски */
     body {
-        background-size: 1000px;
+        background-size: 1200px;
         background-position-x: 65%;
-        background-position-y: 20px;
+        background-position-y: 0px;
     }
-
-    section#home {
-        padding-top: 75px;
-        margin-bottom: 75px;
-    }    
-    section#home h1 {
-        padding: 25px 0;
-        font-size: 2em;
-    }    
-    section#home .main p {
-        width: 90%;
-        font-size: .875em;
+    /* поправляем секцию */
+    section {
+        padding-top: 50px;
+    }
+    section#start {
+        padding-bottom: 125px;
+    }
+    /* афиша */
+    section#start h1 {
+        font-size: 3.25em;
+        padding: 0 7px;
+        margin: 50px 0;
+    }
+    /* убираем перевод строки */
+    section#start h1 br {
+        display: none;
+    }
+    /* добавляем перевод строки */
+    section#start h1 br.phone {
+        display: block;
+    }
+    /* убираем лишний пробел */
+    section#start .afisha br {
+        display: none;
+    }
+    /* стилизируем текст */
+    section#start .afisha p {
+        width: 100%;
+        font-size: 1.25em;
         margin-top: 0px;
+        padding: 0 10px;
     }
-
-    section#home .feedback-form {
+    /* выравниваем кнопку */
+    section#start .feedback-form {
+        padding: 0;
         margin-top: 50px;
     }
-
-    section#home a.button {
-        font-size: .7em;
-        padding: .75em 3em;
+    /* адаптируем кнопку */
+    section#start .feedback-form a {
+        font-size: 1.25em;
+        padding: 15px 111px;
     }
 
-    .feedback-form input[type=text], .feedback-form select, .feedback-form textarea {
-        font-size: .55em;
-    }
-
-    .feedback-form .sec-title h2 {
-        font-size: 1em;
-    }
-
-    .feedback-form .sec-title p {
-        font-size: .55em;
-    }
-
-    /* шрифт кнопки */
-    .feedback-form #sendform .button {
-        
-        font-size: .75em;
-        width: 100%;
-    }
-
+/* ГАЛЕРЕЯ */
+    
+    /* двигаем секцию портфолио */
     section#portfolio {
-        padding-top: 0;
+        padding-top: 25px;
+    }
+    /* адаптируем отступы колон */
+    .gallery__column {
+        padding: 2.5px;
+    }
+    /* убраем пробел слева */
+    .gallery__column:first-child {
+        margin-left: -2.5px;
+    }
+    /* убраем пробел справа */
+    .gallery__column:last-child {
+        margin-right: -2.5px;
+    }
+    /* адаптируем пробелы линий */
+    .gallery__thumb {
+        margin: 10px 0;
+    }
+    /* сглаживаем углы галереи */
+    .gallery__column .gallery__image, .gallery__column .gallery__caption {
+        border-radius: 15px;
+    }
+    /* сглаживаем правые углы галереи */
+    .gallery__column:first-child .gallery__image, .gallery__column:first-child .gallery__caption {
+        border-radius: 0px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    /* сглаживаем левые углы галереи */
+    .gallery__column:last-child .gallery__image, .gallery__column:last-child .gallery__caption {
+        border-radius: 0px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
     }
 
+/* НАШИ ПРЕИМУЩЕСТВА */
+        
     .item-body h3 {
         font-size: 1em;
         margin-bottom: 5px;
