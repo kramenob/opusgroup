@@ -57,7 +57,7 @@
 /* цвета при выделении элементов */
 *::selection {
     color: whitesmoke; /* Цвет текста */
-    background: #F59552; /* Цвет фона */
+    background: #F69E60; /* Цвет фона */
 }
 
 /* размеры страницы */
@@ -82,7 +82,7 @@ body {
 сейчас только для Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #F59552 whitesmoke;
+    scrollbar-color: #F69E60 whitesmoke;
 }
 
 /* для Chrome/Edge/Safari */
@@ -93,7 +93,7 @@ body {
     background: whitesmoke;
 }
 *::-webkit-scrollbar-thumb {
-    background-color: #F59552;
+    background-color: #F69E60;
     /* border-radius: 10px; */
     /* border: 3px solid orange; */
 }
@@ -267,7 +267,7 @@ header #title {
 
 /* наведение на ссылки */
 header a:hover {
-    color: #F59552;
+    color: #F69E60;
 }
 
 /* звонок */
@@ -435,7 +435,7 @@ header .mobile-call.numbers:hover {
 
 /* наведение на текст */
 .menu__item:hover {
-    color: #F59552;
+    color: #F69E60;
 }
 
 /* затемнение */
@@ -602,7 +602,7 @@ section#start a.button {
 
 /* нажатие */
 .button:active {
-    background: #F59552;
+    background: #F69E60;
 }
 
 /* окно формы обратной связи */
@@ -851,7 +851,7 @@ section#portfolio {
     margin-bottom: 15px;
     margin-left: 11px;
 
-    background: #F59552;
+    background: #F69E60;
     border-radius: 50%;
 }
 
@@ -908,7 +908,7 @@ section#portfolio {
     bottom: 0;
     height: .125rem;
     margin: auto;
-    background: #F59552;
+    background: #F69E60;
     transform: scaleX(.2);
     transform-origin: left center;
     z-index: 0;
@@ -1016,7 +1016,7 @@ hr.hww-hatch#bottom {
     margin-top: -10px;
     margin-left: -10px;
 
-    background: #F59552;
+    background: #F69E60;
     border-radius: 50%;
     z-index: 1;
 }
@@ -1299,7 +1299,7 @@ section#about h2 {
 
     padding: .5% 0% 1% 1%;
 
-    background: #F59552;
+    background: #F69E60;
 }
 
 /* заголовок подписи */
@@ -1364,7 +1364,7 @@ section#about h2 {
 
  /* анимация иконки */
 .experience-in:hover .item-icon:before {
-    color: #F59552;
+    color: #F69E60;
 }
 
 /* цветной круг под иконкой */
@@ -1375,7 +1375,7 @@ section#about h2 {
     margin-top: -65px;
     margin-left: 17px;
 
-    background: #F59552;
+    background: #F69E60;
     border-radius: 50%;
 } */
 
@@ -1452,7 +1452,7 @@ section#team .gallery__link {
 }
 
 section#team .gallery__link:hover {
-    border: 1px solid #F59552;
+    border: 1px solid #F69E60;
 }
 
 /* отсутствие рамки слева */
@@ -1615,7 +1615,7 @@ section#team .caption p {
 }
 
 #faq a:hover {
-    color: #F59552;
+    color: #F69E60;
 }
     
 /* ⬆ ВОПРОСЫ ⬆
@@ -1669,7 +1669,7 @@ section#team .caption p {
 .file-word {
     cursor: pointer;
     font-size: 1em;
-    color: #F59552;
+    color: #F69E60;
 
     transition-duration: 0s;
 }
@@ -1732,7 +1732,7 @@ section#team .caption p {
     align-items: center;
 
     background: white;
-    border: 1px #F59552 solid;
+    border: 1px #F69E60 solid;
     border-radius: 15px;
     box-shadow:  2px 2px 2px 0px rgba(81, 81, 81, 0.47);
     
@@ -1750,7 +1750,7 @@ section#team .caption p {
 }
 /* стенки внутри блока */
 .estate-type-block-elem:not(:last-child) {
-    border-right: 1px #F59552 solid;
+    border-right: 1px #F69E60 solid;
 }
 /* текст типов недвиги */
 .calc-label {
@@ -1808,7 +1808,7 @@ section#team .caption p {
 .calc-input#newbuild:checked ~ .estate-type-block .estate-type-block-elem .calc-label#from-newbuild,
 .calc-input#secondarywr:checked ~ .estate-type-block .estate-type-block-elem .calc-label#from-secondarywr,
 .calc-input#secondarywor:checked ~ .estate-type-block .estate-type-block-elem .calc-label#from-secondarywor {
-    background: #F59552;
+    background: #F69E60;
     color: black;
 }
 /* блок видов услуг */
@@ -1923,7 +1923,7 @@ input[type=range]::-webkit-slider-thumb {
 
     margin-top: -10px; /* specify margin in Chrome, but in Firefox and IE it is automatic */
 
-    background: #F59552;
+    background: #F69E60;
     box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.5);
 
     border: 5px solid whitesmoke;
@@ -1936,10 +1936,10 @@ input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
     height: 6px;
     
-    /* background: #F59552;
+    /* background: #F69E60;
     box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.5); */
     
-    background-color: #F59552;
+    background-color: #F69E60;
     box-shadow: inset 0px 1px 2px rgba(0,0,0,0.25);
     border-radius: 5px;
 
@@ -1957,7 +1957,7 @@ input[type=range]::-ms-thumb {
     height: 25px;
     width: 25px;
 
-    background: #F59552;
+    background: #F69E60;
     box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.5);
 
     border: 5px solid whitesmoke;
@@ -2000,7 +2000,7 @@ input[type=range]::-ms-track {
 
     cursor: pointer;
 
-    background: #F59552;
+    background: #F69E60;
     box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.5);
     border: 5px solid whitesmoke;
     border-radius: 50%;
@@ -2012,7 +2012,7 @@ input[type=range]::-ms-track {
 }
 /* Mozila: заполненая часть трека */
 .calc-range input[type="range"]::-moz-range-progress {        
-    background-color: #F59552; 
+    background-color: #F69E60; 
 }    
 /* Mozila: пустая часть трека */
 .calc-range input[type="range"]::-moz-range-track {          
@@ -2026,7 +2026,7 @@ input[type=range]::-ms-track {
 }
 
 .noUi-target {
-	background-color: #F59552;
+	background-color: #F69E60;
     box-shadow: none;
 	border: none;
 	border-radius: 100px;
@@ -2050,7 +2050,7 @@ input[type=range]::-ms-track {
 
 .noUi-handle {
 	border-radius: 100%;
-	background-color: #F59552;
+	background-color: #F69E60;
 	border: 5px solid whitesmoke;
     box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.5);
 }
@@ -2088,14 +2088,14 @@ input[type=range]::-ms-track {
 
     padding: 25px;
 
-    background: #F59552;
+    background: #F69E60;
     box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.5);
 
     border-radius: 15px;
 }
 /* изменение стиля при выделении */
 #policy::selection, #policy a::selection {
-    color: #F59552;
+    color: #F69E60;
     background: whitesmoke;
 }
 /* текст пользовательского соглашения */
@@ -2135,7 +2135,7 @@ input[type=range]::-ms-track {
 
     font-size: 1.2em;
     font-weight: 600;
-    color: #F59552;
+    color: #F69E60;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
@@ -2148,7 +2148,7 @@ input[type=range]::-ms-track {
 /* наведение на кнопку */
 .or-button:hover {
     color: whitesmoke;
-    background: #F59552;
+    background: #F69E60;
 }
 /*  */
 #popup-open-close:checked ~ #popup {
@@ -2217,7 +2217,7 @@ input[type=range]::-ms-track {
     background: whitesmoke;
 }
 .popup-input._error {
-    border: 2px #F59552 solid;
+    border: 2px #F69E60 solid;
     background: red;
     width: 100px;
     height: 100px;
@@ -2229,7 +2229,7 @@ input[type=range]::-ms-track {
 
     top: -2.5px;
     left: 40px;
-    color: #F59552;
+    color: #F69E60;
 }
 #for-last-name .necessary {
     left: 145px;
@@ -2284,11 +2284,11 @@ input[type=range]::-ms-track {
     margin: 25px 0;
     float: none;
     color: whitesmoke;
-    background: #F59552;
-    border: 1px #F59552 solid;
+    background: #F69E60;
+    border: 1px #F69E60 solid;
 }
 .or-button#sender-button:hover {
-    color: #F59552;
+    color: #F69E60;
     background: whitesmoke;
 }
 #send-block p {
@@ -2302,7 +2302,7 @@ input[type=range]::-ms-track {
     transition-duration: .3s;
 }
 #send-block p a:hover {
-    color: #F59552;
+    color: #F69E60;
 }
 
     
@@ -2367,7 +2367,7 @@ section#price .gallery__thumb h3 {
 }
 
 section#price .gallery__thumb p#colored-price {
-    color: #F59552;
+    color: #F69E60;
     font-size: 2em;
     font-weight: bold;
     margin-top: 25px;
@@ -2496,14 +2496,14 @@ iframe {
 
 section#button .feedback-form a.button {
     padding: 25px 200px;
-    background: #F59552;
-    border:1px #F59552 solid;
+    background: #F69E60;
+    border:1px #F69E60 solid;
     color: whitesmoke;
 }
 
 section#button .feedback-form a.button:hover {
     background: whitesmoke;
-    color: #F59552;
+    color: #F69E60;
 }
 
 section#button .feedback-form {
@@ -2592,14 +2592,14 @@ footer a {
 }
 
 footer a:hover {
-    color: #F59552;
+    color: #F69E60;
 }
 
  /* параметры иконки */
  footer .item-icon {
     width: 35px;
     height: 35px;
-    background-color: #F59552;
+    background-color: #F69E60;
 
     text-align: center;
     border-radius: 50%;

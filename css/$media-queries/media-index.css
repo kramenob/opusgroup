@@ -566,16 +566,24 @@
         top: 20px;
         left: 30px;
         height: 35px;
+
+        position: fixed;
+        z-index: 9999;
+    }
+    .menu__btn > span::before {
+        display: none;
     }
     /* выравниваем контейнер меню */
     .menu__box {
-        width: 250px;
+        width: 100%;
+        height: 100%;
         opacity: .95;
+        z-index: 9990;
     }
     /* адаптируем элементы меню */
     .menu__item {
         font-size: 1.5em;
-        padding: 10px 20px;
+        padding: 15px 20px;
     }
     /* убираем наведение */
     .menu__item:hover {
@@ -629,7 +637,7 @@
     }
     /* афиша */
     section#start h1 {
-        font-size: 3.25em;
+        font-size: 2.5em;
         padding: 0 7px;
         margin: 50px 0;
     }
@@ -659,8 +667,8 @@
     }
     /* адаптируем кнопку */
     section#start .feedback-form a {
-        font-size: 1.25em;
-        padding: 15px 111px;
+        font-size: 1.1em;
+        padding: 15px 100px;
     }
 
 /* ГАЛЕРЕЯ */
@@ -703,73 +711,165 @@
     }
 
 /* НАШИ ПРЕИМУЩЕСТВА */
-        
+
+    .post-item {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .item-content {
+        position: relative;
+    }  
     .item-body h3 {
-        font-size: 1em;
+        position: absolute;
+        top: 12.5px;
+        left: 55px;
+        width: auto;
+        font-size: 1.35em;
         margin-bottom: 5px;
         height: auto;
     }
     .item-body p {
-        font-size: .7em;
+        text-align: justify;
+        width: 100%;
+        font-size: 1.1em;
     }
     .item-content {
         padding: 0;
     }
     .post-item .item-icon img {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
     } 
     .color-circle {
         width: 35px;
         height: 35px;
         
         margin-top: -50px;
+        margin-left: 10px;
     }
 
+/* КАК МЫ РАБОТАЕМ */
     
-    .hww-block {
-        height: auto;
-        display: block;
-    }
-    .preview img {
-        width: auto;
-        height: 30px;
-    }
-    .box {
-        height: 200px;
+    #howwework .howwework-item {
+        width: 50%;
+        padding: 0 10px;
+        height: 175px;
     }
 
-    .box:hover {
-        height: 200px;
+    .howwework-item .howwework-content {
+        width: 100%;
+        height: 125px;
+        
+    }
+    .howwework-content#a,.howwework-content#b, .howwework-content#c, .howwework-content#d, .howwework-content#e, .howwework-content#f, .howwework-content#g, .howwework-content#h {
+        background-size: auto 35px;
     }
 
-    
-    .text {
-        width: 270px;
-    }
-    .text h2 {
-        font-size: 1.5em;
-    }
-
-    h4 {
-        font-size: 1.1em;
-    }
-
-    #bio p, p {
+    .howwework-content h3 {
         font-size: .8em;
+        padding-top: 80px;
     }
+    hr.hww-hatch#top {
+        margin-top: 36px;
+        margin-left: 100px;
+    }
+    hr.hww-hatch.phone {
+        margin-top: 36px;
+    }
+    hr.hww-hatch#bottom {
+        margin-top: 36px;
+        margin-left: -110px;
+        width: 100%;
+    }
+    .howwework-item hr.howwework-point {
+        display: none;
+    }
+    .howwework-item h4.num {
+        margin-bottom: 50px;
+        padding-right: 0px;
+    }
+    .num::before {
+        content: '';
+        position: absolute;
+
+        margin-top: 20px;
+        margin-left: -10.5px;
+
+        width: 35px;
+        height: 35px;
+
+        border-radius: 50%;
+        background: #F59552;
+        opacity: .5;
+    }
+    .num::after {
+        content: '';
+        position: absolute;
+
+        margin-top: 29px;
+        margin-left: -14px;
+
+        width: 15px;
+        height: 15px;
+
+        border-radius: 50%;
+        background: #F59552;
+    }
+    .wrapper {
+        padding: 25px 0;
+        height: 750px;
+    }
+    .about-content {
+        position: relative;
+    }
+    #about .about-content .paragraph {
+        width: 100%;
+        font-size: 1em;
+    }
+    .paragraph.f {
+        margin-top: -150px;
+    }
+    .paragraph.l {
+        margin-top: 25px;
+    }
+    .about-logo {
+        position: relative;
+        width: 350px;
+        height: 350px;
+
+        margin-top: 175px;
+        padding: 35px;
+
+        border-radius: 50%;
+    }
+    .about-logo::before {
+        margin-top: -1px;
+        left: -15%;
+        width: 65%;
+
+        top: 0;
+    }
+    .about-logo::after {
+        right: -15%;
+        width: 65%;
+        bottom: -1px;
+    }
+
+    .about-logo img {
+        margin-top: -10px;
+    }
+    
 
     #faq h1 {
-        font-size: .7em;
+        font-size: 1em;
         padding-right: 25px;
+    }
+    #faq label {
+        padding-right: 20px;
     }
 
     #faq label::after {
         margin-right: -30px;
-    }
-
-    #faq input:checked ~ h1 label::after {
-        margin-right: -20px;
     }
 
     #faq .p, #faq .p .paragraps p {
@@ -778,7 +878,11 @@
     }
 
     #faq .p .paragraps {
-        padding: 20px;
+        font-size: 1em;
+    }
+
+    #calc .container {
+        width: 100%;
     }
 
     #contact .colomn-twice-item#sendform .name, #sendform .button {   
