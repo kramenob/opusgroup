@@ -2045,6 +2045,7 @@ input[type=range]::-ms-track {
 
 .noUi-handle-upper {
     display: none;
+    visibility: hidden;
 }
 
 

@@ -883,7 +883,104 @@
 
     #calc .container {
         width: 100%;
+        padding: 0 10px;
     }
+    .work-types {
+        width: 51%;
+    }
+    .calc-input:checked#secondarywor ~ .estate-type-block {
+        margin-bottom: 540px;
+    }
+    .calc-input:checked ~ .estate-type-block {
+        margin-bottom: 500px;
+    }
+    .right-line, .left-line {
+        margin-left: 5px;
+        width: 100%;
+    }
+    .calc-item-heading {
+        margin-left: 0px;
+    }
+    .work-types .work-type {
+        width: 250px;
+    }
+
+    .step-hatch {
+        margin-left: 35px;
+    }
+    #send {
+        position: relative;
+        padding: 0px;
+        align-items: center;
+        height: 125px;
+    }
+    #policy {
+        width: 100%;
+        text-align: center;
+        font-size: .75em;
+        margin-top: 70px;
+    }
+    .or-button {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 90%;
+        margin: 5%;
+    }
+    .popup-content {
+        width: 90%;
+        margin: 5%;
+        padding: 25px;
+        transform: unset;
+        margin-top: 30%;
+        position: relative;
+        height: 450px;
+    }
+    .popup-line-element {
+        width: 100%;
+        margin: 35px 0;
+        padding-bottom: 5px;
+    }
+    #comment {
+        min-height: 5px;
+        height: 25px;
+    }
+    #name-block {
+        margin: 0;
+        height: 80px;
+    }
+    #name-block .popup-input {
+        width: 100%;
+        margin: 15px 0;
+    }
+    .or-button#sender-button {
+        top: unset;
+        bottom: 50px;
+        left: 20px;
+    }
+    #send-block p {
+        position: absolute;
+        bottom: 30px;
+        margin-right: 20px;
+        font-size: .9em;
+    }
+    footer {
+        padding: 15px 0;
+    }
+    .colomn-four-wrap {
+        height: auto;
+    }
+    .colomn-four-item {
+        margin: 5px 0;
+    }
+    .footer-down p {
+        text-align: center;
+    }
+    .footer-down p a {
+        margin: 10px 0;
+    }
+
+    
 
     #contact .colomn-twice-item#sendform .name, #sendform .button {   
         width: 100%;        
