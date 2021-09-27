@@ -774,6 +774,7 @@
         margin-left: 100px;
     }
     hr.hww-hatch.phone {
+        display: block;
         margin-top: 36px;
     }
     hr.hww-hatch#bottom {

@@ -976,7 +976,7 @@ section#portfolio {
     margin-bottom: 82px;
     padding-right: 7.5px;
 }
-
+/* общие параметры штрихов */
 hr.hww-hatch {
     position: absolute;
     width: 100%;
@@ -986,16 +986,20 @@ hr.hww-hatch {
 	border: none;
 	border-top: 1px dashed #3A3A44;
 }
-
+/* убираем штрихи для телефона */
+hr.hww-hatch.phone {
+    display: none;
+}
+/* штрихи верхней строки */
 hr.hww-hatch#top {
     margin-top: 49px;
     margin-left: 150px;
 }
-
+/* штрихи нижней строки */
 hr.hww-hatch#bottom {
     width: 5000px;
 
-    margin-top: 49px;
+    margin-top: -301px;
     margin-left: -3970px;
 }
 
