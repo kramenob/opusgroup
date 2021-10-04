@@ -645,7 +645,7 @@ section#start a.button {
 }
 
 .feedback-form .sendform {
-    margin-top: 100px;
+    margin-top: 10px;
     width: 90%;
 }
 
@@ -2178,12 +2178,14 @@ input[type=range]::-ms-track {
 }
 /* "контейнер" popup'а */
 .popup-content {
+    /* position: absolute; */
     width: 1000px;
     height: 500px;
 
     padding: 25px 0;
 
-    transform: translate(0%, 50%);
+    /* top: 25%; */
+    transform: translate(0%, 20%);
 
     background: whitesmoke;
     border-radius: 15px;

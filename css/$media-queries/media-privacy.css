@@ -1,0 +1,15 @@
+/* 
+
+НАВИГАЦИЯ:
+1. 
+
+
+
+/* ========== Desktop First ========== */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}
+
