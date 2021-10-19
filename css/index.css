@@ -773,6 +773,87 @@ section#portfolio {
     transition: 0.3s;
 }
 
+/* ⬇ ОТЗЫВЫ ⬇ */
+
+/* задаем длину блока, т.к. элементы безформенные */
+section#feedback {
+    padding-top: 0;
+    height: 400px;
+}
+      
+#feedback input[type=radio] {   
+    display: none;
+}
+/* блок с элментами */
+.card {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    margin-top: 40px;
+    transition-duration: .3s;
+}
+
+.cards {
+    position: relative;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+iframe {
+    border-radius: 15px;
+    -o-object-fit: cover;
+        object-fit: cover;
+
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 405px;
+}
+
+#item-1:checked ~ .cards #video-1 .overlay,
+#item-2:checked ~ .cards #video-2 .overlay,
+#item-3:checked ~ .cards #video-3 .overlay {
+    display: none;
+}
+
+#item-1:checked ~ .cards #video-3,
+#item-2:checked ~ .cards #video-1,
+#item-3:checked ~ .cards #video-2 {
+    transform: translatex(-40%) scale(0.8);
+    opacity: 0.75;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #video-2,
+#item-2:checked ~ .cards #video-3,
+#item-3:checked ~ .cards #video-1 {
+    transform: translatex(40%) scale(0.8);
+    opacity: 0.75;
+    z-index: 0;
+}
+
+#item-1:checked ~ .cards #video-1,
+#item-2:checked ~ .cards #video-2,
+#item-3:checked ~ .cards #video-3 {
+    transform: translatex(0) scale(1);
+    opacity: 1;
+    margin-top: 0;
+    z-index: 1;
+}
+#item-1 ~ .cards #video-1 iframe,
+#item-2 ~ .cards #video-2 iframe,
+#item-3 ~ .cards #video-3 iframe {
+    box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.47);
+}
+
+/* ⬆ ОТЗЫВЫ ⬆ */
+
 /* ⬆ 4. ПРОЕКТЫ ⬆
 
 
@@ -2404,93 +2485,6 @@ section#price .gallery__thumb p:not(p#colored-price) {
 }
 
 /* ⬆ ЦЕНЫ ⬆
-
-
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-
-
-
-    ⬇ ОТЗЫВЫ ⬇ */
-/* задаем длину блока, т.к. элементы безформенные */
-section#feedback {
-    height: 600px;
-}
-      
-#feedback input[type=radio] {   
-    display: none;
-}
-/* блок с элментами */
-.card {
-    position: absolute;
-    width: 60%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    cursor: pointer;
-    margin-top: 40px;
-    transition-duration: .3s;
-}
-
-.cards {
-    position: relative;
-    height: 100%;
-    margin-bottom: 20px;
-}
-
-iframe {
-    border-radius: 15px;
-    -o-object-fit: cover;
-        object-fit: cover;
-
-}
-
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 405px;
-}
-
-#item-1:checked ~ .cards #video-1 .overlay,
-#item-2:checked ~ .cards #video-2 .overlay,
-#item-3:checked ~ .cards #video-3 .overlay {
-    display: none;
-}
-
-#item-1:checked ~ .cards #video-3,
-#item-2:checked ~ .cards #video-1,
-#item-3:checked ~ .cards #video-2 {
-    transform: translatex(-40%) scale(0.8);
-    opacity: 0.75;
-    z-index: 0;
-}
-
-#item-1:checked ~ .cards #video-2,
-#item-2:checked ~ .cards #video-3,
-#item-3:checked ~ .cards #video-1 {
-    transform: translatex(40%) scale(0.8);
-    opacity: 0.75;
-    z-index: 0;
-}
-
-#item-1:checked ~ .cards #video-1,
-#item-2:checked ~ .cards #video-2,
-#item-3:checked ~ .cards #video-3 {
-    transform: translatex(0) scale(1);
-    opacity: 1;
-    margin-top: 0;
-    z-index: 1;
-}
-#item-1 ~ .cards #video-1 iframe,
-#item-2 ~ .cards #video-2 iframe,
-#item-3 ~ .cards #video-3 iframe {
-    box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.47);
-}
-
-/* ⬆ ОТЗЫВЫ ⬆
-
 
 
 

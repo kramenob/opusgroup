@@ -42,7 +42,7 @@ document.querySelector('#sender-button').onclick = function () { // Указан
     // Извлечение введенных данных
     let first_name = document.querySelector('#first-name').value; // имя
     let last_name = document.querySelector('#last-name').value; // фамилия
-    let phone = document.querySelector('#phone').value; // телефон
+    let phone = document.querySelector('#phone').value.slice(1); // телефон
     let comment = document.querySelector('#comment').value; // коммент
 
     
@@ -53,7 +53,7 @@ document.querySelector('#sender-button').onclick = function () { // Указан
 *НОВАЯ ЗАЯВКА С САЙТА!* %0A%0A
 
 *Имя:* ${first_name} ${last_name} %0A
-*Телефон:* ${phone}
+*Телефон:* ${'%2B' + phone}
 
 `;
 
@@ -62,13 +62,20 @@ document.querySelector('#sender-button').onclick = function () { // Указан
         commentAdd = ``;
     };
 
-    let _req = document.querySelector('._req').value; // Проверка полей
+    let _name = document.querySelector('._name').value; // Проверка полей
 
     let xhttp = new XMLHttpRequest(); // Команда отправки
 
     // Проверка пустых/заполненых полей
-    if ( _req === '' ) {
-        alert('Пожалуйста, укажите ваше имя и номер телефона'); // Уведомление о не заполненых полях
+    if ( _name === '' ) {
+        alert('Пожалуйста, введите ваше имя'); // Уведомление о не заполненых полях
+        return false;
+    } if( phone === '' ) {
+        alert('Пожалуйста, введите ваш номер телефона'); // Уведомление о не заполненых полях
+        return false;
+    } if( phone.length != 17 ) {
+        alert('Пожалуйста, проверьте правильность введенного номера'); // Уведомление о не заполненых полях
+        return false;
     } else {
         xhttp.open("GET", url+message_container+type_container+commentAdd, true); // Подготовка данных к отпрвке
         xhttp.send(); // Отправка подготовленных данных
@@ -77,4 +84,7 @@ document.querySelector('#sender-button').onclick = function () { // Указан
 
         $('#popup-open-close').trigger('click'); // Закрытие ПопАпа по отправке
     }
+
+
+    
 };
