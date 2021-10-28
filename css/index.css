@@ -270,80 +270,48 @@ header a:hover {
     color: #F69E60;
 }
 
-/* звонок */
+/* номер телефона */
 header .mobile-call {
     display: flex; /* используем flex для центрирования содержимого */
     align-items: center;  /* центрируем содержимое кнопки */
     position: fixed;
 
-    top: 25px;
+    width: 184px;
+
+    top: 22.5px;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-left: 550px;
+    margin-left: 475px;
 
+    height: 35px;
     cursor: pointer;
     z-index: 1;
-}
 
-header .mobile-call.icon {
-    width: 25px;
-    height: auto;
-}
-
-header .mobile-call.numbers {
-    opacity: 0;
-    visibility: hidden;
     font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5em;
-    position: absolute;
-    top: 85px;
-
-    width: 220px;
-    height: 40px;
-    left: 50%;
-    margin-left: 495px;
-
-    padding: 0 15px;
-
-
-    background: whitesmoke;
-    border: 1px #222222 solid;
-    border-radius: 10px;
+}
+/* иконка телефона (для узких экранов) */
+header .mobile-call.icon {
+    align-items: center;  /* центрируем содержимое кнопки */
+    position: fixed;
     
-    transition-duration: .3s;
-}
-
-/* треугольник */
-.mobile-call.numbers::after {
-    content: ''; 
-    position: absolute;
-    left: 160px; 
-    top: -19px; /* Положение треугольника */
-    border: 10px solid transparent; /* Прозрачные границы */
-    border-bottom: 10px solid whitesmoke; /* Добавляем треугольник */
-}
-
-/* обводка треугольника */
-.mobile-call.numbers::before {
-    content: ''; 
-    position: absolute;
-    left: 160px; 
-    top: -20px; /* Положение треугольника */
-    border: 10px solid transparent; /* Прозрачные границы */
-    border-bottom: 10px solid black; /* Добавляем треугольник */
-}
-
-header .mobile-call.icon:hover ~ .mobile-call.numbers {
-    opacity: 1;
-    visibility: visible;
-}
+    top: 38.5px;
+    left: auto;
+    right: 40px;
+    transform: translate(-50%, -50%);
+    width: 35px;
+    height: auto;
+} 
 
 /* наведение на звонок */
-header .mobile-call.numbers:hover {
+header .mobile-call:hover {
     cursor: text;
-    opacity: 1;
-    visibility: visible;
 }
+
+/* отсутствие иконки телефона на пк версии */
+header .mobile-call.icon {
+    display: none;
+} 
 
 /* ⬇ МЕНЮ ⬇ */
 
