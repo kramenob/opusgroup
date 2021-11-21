@@ -619,8 +619,144 @@
     }
 
     /* КАК МЫ РАБОТАЕМ */
-
     
+    .howwework-content#a, .howwework-content#b, .howwework-content#c, .howwework-content#d, .howwework-content#e, .howwework-content#f, .howwework-content#g, .howwework-content#h {
+        background-size: auto 30px;
+    }
+    .howwework-item .howwework-content {
+        width: 140px;
+    }
+    .howwework-content h3 {
+        padding-top: 55px;
+    }
+    .howwework-item hr.howwework-point::before {
+        margin-left: -100px;    
+    }
+    .howwework-item hr.howwework-point::after {
+        margin-left: -85px;    
+    }
+    #howwework .howwework-item {
+        height: 250px;
+    }
+    hr.hww-hatch#top {
+        margin-left: 60px;
+    }
+    hr.hww-hatch#bottom {
+        margin-top: -212px;
+        margin-left: -4480px;
+    }
+
+    #about .sec-title h2::before, #about .sec-title h2::after {
+        margin-top: 15px;
+    }
+    .about-content {
+        padding-bottom: 100px;
+    }
+    .about-logo {
+        width: 400px;
+        padding: 30px;
+
+        margin-top: 125px;
+    }
+    .about-logo::before {
+        margin-top: -31px;
+    }
+    .about-logo::after {
+        margin-top: 372px;
+    }
+    #about .about-content .paragraph {
+        width: 100%;
+    }
+    .paragraph.f {
+        margin-top: -100px;
+    }
+    .paragraph.l {
+        margin-top: 20px;
+    }
+
+    #calc .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .work-types {
+        width: 51%;
+    }
+    .calc-input:checked#secondarywor ~ .estate-type-block {
+        margin-bottom: 540px;
+    }
+    .calc-input:checked ~ .estate-type-block {
+        margin-bottom: 500px;
+    }
+    .right-line, .left-line {
+        margin-left: 5px;
+        width: 100%;
+    }
+    .calc-item-heading {
+        margin-left: 0px;
+    }
+    .work-types .work-type {
+        width: 250px;
+    }
+
+    .step-hatch {
+        margin-left: 35px;
+    }
+    #send {
+        position: relative;
+        padding: 0px;
+        align-items: center;
+        height: 125px;
+    }
+    #policy {
+        width: 100%;
+        text-align: center;
+        font-size: .75em;
+        margin-top: 70px;
+    }
+    .or-button {
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 90%;
+        margin: 5%;
+    }
+    .popup-content {
+        width: 90%;
+        margin: 5%;
+        padding: 25px;
+        transform: unset;
+        margin-top: 30%;
+        position: relative;
+        height: 450px;
+    }
+    .popup-line-element {
+        width: 100%;
+        margin: 35px 0;
+        padding-bottom: 5px;
+    }
+    #comment {
+        min-height: 5px;
+        height: 25px;
+    }
+    #name-block {
+        margin: 0;
+        height: 80px;
+    }
+    #name-block .popup-input {
+        width: 100%;
+        margin: 15px 0;
+    }
+    .or-button#sender-button {
+        top: unset;
+        bottom: 50px;
+        left: 20px;
+    }
+    #send-block p {
+        position: absolute;
+        bottom: 30px;
+        margin-right: 20px;
+        font-size: .9em;
+    }
 }
 
 /* Non standart size (only for special elements) */
