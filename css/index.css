@@ -41,10 +41,7 @@
   
     ⬇ 1. ОСНОВНОЕ ⬇ */
 
-    
-/* @import 'range-slider.css'; */
-
-/* чистота всех элементов */
+/* чистим все элементы от стандартных стилей */
 * {
     margin: 0 auto;
     padding: 0;
@@ -54,13 +51,13 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* Отсутствие синего выделения при клике */
 }
 
-/* цвета при выделении элементов */
+/* задаем цвета при выделении элементов */
 *::selection {
     color: whitesmoke; /* Цвет текста */
     background: #F69E60; /* Цвет фона */
 }
 
-/* размеры страницы */
+/* задаем станадартный размер страницы */
 body, html {
     max-width: 100%;
     height: 100%;
@@ -68,7 +65,7 @@ body, html {
     box-sizing: border-box;
 }
 
-/* тело страницы */
+/* настраиваем тело страницы */
 body {
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
@@ -78,24 +75,22 @@ body {
     background-color: whitesmoke;
 }
 
-/* W3C standard
-сейчас только для Firefox */
+/* настраиваем скроллбар Firefox */
 * {
     scrollbar-width: thin;
     scrollbar-color: #F69E60 whitesmoke;
 }
-
-/* для Chrome/Edge/Safari */
+/* настраиваем скроллбар Chrome/Edge/Safari */
 *::-webkit-scrollbar {
     width: 10%;
 }
+/* задаем фон скроллбару */
 *::-webkit-scrollbar-track {
     background: whitesmoke;
 }
+/* задаем цвет ползунку скроллбара */
 *::-webkit-scrollbar-thumb {
     background-color: #F69E60;
-    /* border-radius: 10px; */
-    /* border: 3px solid orange; */
 }
 
 /*  
@@ -107,14 +102,12 @@ body {
     font-family: 'LobsterTwo-B'; /* Гарнитура шрифта */
     src: url(fonts/LobsterTwo-Bold.ttf); /* Путь к файлу со шрифтом */
 }
-
-/* шрифт заголовка на главной странице */
+/* шрифт заголовка на старте странице */
 @font-face {
     font-family: 'RussianPunk'; /* Гарнитура шрифта */
     src: url(fonts/RussianPunk.ttf); /* Путь к файлу со шрифтом */
 }
-
-/* шрифт футера */
+/* шрифт для текста футера */
 @font-face {
     font-family: 'SourceCodePro-Medium'; /* Гарнитура шрифта */
     src: url(fonts/SourceCodePro-Medium.ttf); /* Путь к файлу со шрифтом */
@@ -126,94 +119,79 @@ body {
     ⬇ 1.2 ШАБЛОНЫ ⬇
 */
 
-/* контейнер страницы */
+/* задаем контейнер страницы */
 .container {
     width: 1200px;
     max-width: 1360px;
 }
-
-/* дочерний элемент шел в линию */
+/* класс, чтобы дочерний элемент шел в одну строку */
 .child {
     display: inline-block;
-    
     margin-left: -.36em; /* убираем лишние пробелы */
 }
-
-/*убираем подчеркивание текста ссылок*/
+/* убираем подчеркивание текста ссылок */
 a {
     text-decoration: none;
     color: black;
     
     transition-duration: .3s;
 }
-
-/* наведение на ссылку */
+/* изменяем цвет наведения на ссылку */
 a:hover {
     color: whitesmoke;
 }
-
 /* шрифт заголовков */
 h1, h2, h3, h4 {
     font-family: 'Roboto', sans-serif;
 }
-
 /* шрифт параграфов */
 p, input, select, textarea, li, strong {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 1.125em;
 }
-
 /* заголовки1 */
 h1 {
     font-size: 2.5em;
     font-weight: 500;
 }
-
 /* заголовки2 */
 h2 {
     font-size: 2em;
     font-weight: 300;
     letter-spacing: 1.5px;
 }
-
 /* заголовки3 */
 h3 {
     font-weight: 400;
     font-size: 1.5em;
 }
-
 /* заголовки4 */
 h4 {
     font-size: 1em;
     font-weight: 300;
 }
-
 /* строки списка */
 li {
     list-style-type: none; /* Убираем маркеры у списка */
 }
-
 /* отступ сверху для секций */
 section {
     padding-top: 100px;
 }
-
+/* убираем лишние стили для изображений */
 img {
     pointer-events: none;
     user-select: none;
 }
-
 /* особенный отступ для секции без заголовка */
 section#portfolio {
     padding-top: 150px;
 }
-
-/* отсут сверху для футера */
+/* отступ сверху для футера */
 footer {
     margin-top: 125px;
 }
-
 /* блок заголовка секций */
 .sec-title {
     width: 100%;
@@ -236,7 +214,7 @@ footer {
     
 ⬇ 2. ШАПКА ⬇ */
 
-/* шапка */
+/* задаем форму шапки */
 header {
     width: 100%;
     height: 50px;
@@ -247,8 +225,7 @@ header {
     border-bottom: 1px solid #3A3A44;
     z-index: 2;
 }
-
-/* заголовок главной */
+/* лого компании на шапке */
 header #title {
     position: fixed;
     font-family: 'LobsterTwo-B', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -264,12 +241,10 @@ header #title {
     letter-spacing: 1.5px;
     transition-duration: .3s;
 }
-
-/* наведение на ссылки */
+/* наведение на ссылки шапки */
 header a:hover {
     color: #F69E60;
 }
-
 /* номер телефона */
 header .mobile-call {
     display: flex; /* используем flex для центрирования содержимого */
@@ -302,24 +277,25 @@ header .mobile-call.icon {
     width: 35px;
     height: auto;
 } 
-
-/* наведение на звонок */
+/* наведение на иконку звонока */
 header .mobile-call:hover {
     cursor: text;
 }
-
 /* отсутствие иконки телефона на пк версии */
 header .mobile-call.icon {
     display: none;
 } 
 
-/* ⬇ МЕНЮ ⬇ */
+/* 
+
+    ⬇ МЕНЮ ⬇ 
+
+*/
 
 /* скрываем чекбокс */
 .hamburger-menu #menu__toggle {
     opacity: 0;
 }
-
 /* стиль кнопки */
 .menu__btn {
     display: flex; /* используем flex для центрирования содержимого */
@@ -336,10 +312,8 @@ header .mobile-call.icon {
     cursor: pointer;
     z-index: 1;
 }
-
-/* добавление "гамбургера" */
+/* добавление кнопки меню "гамбургера" */
 .menu__btn > span,
-/* .menu__btn > span::before, */
 .menu__btn > span::after {
     display: flex;
     position: absolute;
@@ -348,6 +322,7 @@ header .mobile-call.icon {
     background-color: black;
     border-radius: 10px;
 }
+/* первая линия кнопки */
 .menu__btn > span::before {
     content: '';
     position: fixed;
@@ -366,11 +341,11 @@ header .mobile-call.icon {
 
     cursor: default;
 }
+/* вторая линия кнопки */
 .menu__btn > span::after {
     content: '';
     top: 7.5px;
 }   
-
 /* контейнер меню */
 .menu__box {
     display: block;
@@ -389,7 +364,6 @@ header .mobile-call.icon {
     
     z-index: 1;
 }
-
 /* элементы меню */
 .menu__item {
     display: block;
@@ -400,13 +374,11 @@ header .mobile-call.icon {
     font-weight: 300;
     text-decoration: none;
 }
-
-/* наведение на текст */
+/* наведение на текст меню */
 .menu__item:hover {
     color: #F69E60;
 }
-
-/* затемнение */
+/* затемнение страницы при открытии меню */
 #background {
     position: fixed;
     width: 100%;
@@ -418,8 +390,7 @@ header .mobile-call.icon {
     visibility: hidden;
     opacity: 0;
 }
-
-/* поворот элемента "гамбургера" */
+/* поворот элемента "гамбургера" при нажатии */
 #menu__toggle:checked ~ .menu__btn > span {
     margin-top: 5px;
     transform: rotate(45deg);
@@ -431,26 +402,22 @@ header .mobile-call.icon {
     visibility: visible;
     opacity: .25;
 }
-
 /* затемнение страницы */
 #menu__toggle:checked ~ #background {
     visibility: visible;
     opacity: 1;
 }
-
 /* поворот элемента "гамбургера" обратно */
 #menu__toggle:checked ~ .menu__btn > span::after {
     top: 0;
     transform: rotate(-90deg);
 }
-
 /* появление меню */
 #menu__toggle:checked ~ .menu__box {
     visibility: visible;
     left: 0; /* left - меню слевой стороны | right - справой стороны | + контейнер меню */
 }
-
-/* скорость анимации */
+/* скорость анимаций */
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -489,11 +456,11 @@ body {
     background-position-x: center;
     background-position-y: -200px;
 }
-
+/* особенный отступ снизу стартового блока */
 #start {
     padding-bottom: 155px;
 }
-
+/* настройка текста на старте */
 section#start h1 {
     font-family: 'RussianPunk';
     text-align: center;
@@ -503,24 +470,17 @@ section#start h1 {
     font-size: 3.5em;
 
     letter-spacing: 2px;
-
-    /* background: url(../img/index/home/brush-banner.svg) no-repeat;
-    background-position-x: center;
-
-    background-size: 110% auto;
-    background-position-y: 50%; */
 }
-
+/* убираем лишние переводы строк для телефона */
 br.phone {
     display: none;
 }
-
-
+/* особенное выделение текста на старте */
 section#start .afisha h1::selection, section#start .afisha p::selection {
     color: whitesmoke; /* Цвет текста */
     background: black; /* Цвет фона */
 }
-
+/* настройка описания на старте */
 section#start .afisha p {
     font-size: 1.25em;
     text-align: center;
@@ -529,7 +489,13 @@ section#start .afisha p {
     margin: 0 auto;
 }
 
-/* ⬇ 3.1 КНОПКА "ХОЧУ РЕМОНТ!" ⬇ */
+/* 
+
+    ⬇  КНОПКА "ХОЧУ РЕМОНТ!" ⬇ 
+
+*/
+
+/* положене кнопки */
 section#start .feedback-form {
     font-size: 1.25em;
     text-align: center;
@@ -537,12 +503,12 @@ section#start .feedback-form {
     margin: 0 auto;
     margin-top: 75px;
 }
+/* настройка стиля ссылки кнопки */
 section#start a.button {
     font-size: 1em;
     letter-spacing: 1.5px;
 }
-
-/* кнопка */
+/* настройка стиля самой кнопки */
 .button, input.button {
     padding: 1em 4em;
     
@@ -561,102 +527,14 @@ section#start a.button {
     transition-duration: .3s;
     border-radius: 15px;
 }
-
 /* наведение на кнопку */
 .button:hover {
     background: #f5965200;
     color: black;
 }
-
 /* нажатие */
 .button:active {
     background: #F69E60;
-}
-
-/* окно формы обратной связи */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 99999; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* контент формы обратной связи */
-.modal-content {
-    background-color: whitesmoke;
-    padding: 20px;
-    width: 1000px;
-
-    border: 1px solid #888;
-    border-radius: 15px;
-}
-
-/* кнопка закрытия */
-.closess {
-    color: #222222;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.closess:hover,
-.closess:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.feedback-form .sendform {
-    margin-top: 10px;
-    width: 90%;
-}
-
-.feedback-form .sec-title {
-    font-size: .8em;
-}   
-
-/* текстовые поля */
-.feedback-form input[type=text], .feedback-form select, .feedback-form textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 0;
-    border-bottom: 1px solid black;
-    border-radius: 0;
-    background-color: whitesmoke;
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
-    font-size: .8em;
-}
-
-.feedback-form textarea {
-    min-height: 200px;
-}
-
-/* поле имени и фамилии */
-.feedback-form input.name {
-    width: 47%;
-    float: left;
-}
-
-/* поле фамилии */
-.feedback-form input#lname {
-    float: right;
-}
-
-/* шрифт кнопки */
-.feedback-form .sendform .button {
-    width: 30%;
-    padding: 2.5%;
-    margin: 20px 0;
-    font-size: 1em;
 }
 
 /* ⬆ 3. ДОМ ⬆
@@ -672,55 +550,50 @@ section#start a.button {
   
     ⬇ 4. Портфолио - 4.1 ГАЛЕРЕЯ ⬇ */
 
+/* секция портфолио */
 section#portfolio {
     padding-top: 75px;
 }
-
 /* галерея */
 .gallery {
     display: flex;
     padding: 0 10px;
     transition: 0.3s;
 }
-
 /* анимация наведениея на пикчу */
 .gallery:hover .gallery__image {
     filter: grayscale(0);
 }
-
 /* колонны галереи */
 .gallery__column {
     display: flex;
     flex-direction: column;
     width: 33.33%;
 }
-
 /* бокс пикчи */
 .gallery__link {
     margin: 3%;
     overflow: hidden;
     border-radius: 15px;
 }
+/* изменение непрозрачности */
 .gallery__link:hover .gallery__caption {
     opacity: .75;
 }
-
+/* непрозрачность иконки при наведении */
 .gallery__link:hover .gallery__thumb::after {
     opacity: 0;
 }
-
 /* блок пикчи */
 .gallery__thumb {
     position: relative;
 }
-
 /* пикча блока */
 .gallery__image {
     display: block;
     width: 100%;
     transition: 0.3s;
 }
-
 /* подпись */
 .gallery__caption {
     position: absolute;
@@ -741,86 +614,25 @@ section#portfolio {
     transition: 0.3s;
 }
 
-/* ⬇ ОТЗЫВЫ ⬇ */
+/* 
 
-/* задаем длину блока, т.к. элементы безформенные */
-section#feedback {
-    padding-top: 0;
-    height: 400px;
-}
-      
-#feedback input[type=radio] {   
-    display: none;
-}
-/* блок с элментами */
-.card {
-    position: absolute;
-    width: 60%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    cursor: pointer;
-    margin-top: 40px;
-    transition-duration: .3s;
-}
+    ⬇ ВИДЕО ⬇ 
 
-.cards {
-    position: relative;
-    height: 100%;
-    margin-bottom: 20px;
-}
+*/
 
-iframe {
+/* задаем отступ для контейнера видео */
+.videos {
+    padding: 0 20px;
+}
+/* настраиваем фрейм видео */
+.videos iframe {
+    width: 100%;
+    height: 480px;
+
     border-radius: 15px;
     -o-object-fit: cover;
         object-fit: cover;
-
 }
-
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 405px;
-}
-
-#item-1:checked ~ .cards #video-1 .overlay,
-#item-2:checked ~ .cards #video-2 .overlay,
-#item-3:checked ~ .cards #video-3 .overlay {
-    display: none;
-}
-
-#item-1:checked ~ .cards #video-3,
-#item-2:checked ~ .cards #video-1,
-#item-3:checked ~ .cards #video-2 {
-    transform: translatex(-40%) scale(0.8);
-    opacity: 0.75;
-    z-index: 0;
-}
-
-#item-1:checked ~ .cards #video-2,
-#item-2:checked ~ .cards #video-3,
-#item-3:checked ~ .cards #video-1 {
-    transform: translatex(40%) scale(0.8);
-    opacity: 0.75;
-    z-index: 0;
-}
-
-#item-1:checked ~ .cards #video-1,
-#item-2:checked ~ .cards #video-2,
-#item-3:checked ~ .cards #video-3 {
-    transform: translatex(0) scale(1);
-    opacity: 1;
-    margin-top: 0;
-    z-index: 1;
-}
-#item-1 ~ .cards #video-1 iframe,
-#item-2 ~ .cards #video-2 iframe,
-#item-3 ~ .cards #video-3 iframe {
-    box-shadow: 2px 2px 2px 0px rgba(81, 81, 81, 0.47);
-}
-
-/* ⬆ ОТЗЫВЫ ⬆ */
 
 /* ⬆ 4. ПРОЕКТЫ ⬆
 
@@ -842,7 +654,6 @@ iframe {
     justify-content: center;
     flex-wrap: wrap;
 }
-
  /* блок */
 .post-item {
     min-height: 100%;
@@ -852,31 +663,22 @@ iframe {
     padding: 15px;
     cursor: pointer;
 }
-
+/* оставляем стандартный курсор при наведении на блок */
 .post-item:hover, .post-item a:hover {    
     cursor: default;
 }
-
  /* скорость анимации всех элементов блока */
 .post-item * {
     transition: .25s linear;
 }
-
  /* контент блока */
 .item-content {
     padding: 10px;
 }
-
- /* наведеине на блок */
-/* .post-item:hover .color-circle {
-    margin-top: -68px;
-} */
-
  /* параметры иконки */
 .item-icon {
     margin-bottom: 20px;
 }
-
  /* иконка блока 1 */
  .post-item .item-icon img {
     width: 50px;
@@ -884,13 +686,11 @@ iframe {
     user-select: none;
     -webkit-user-drag: none;
 } 
-
  /* анимация поднятия элементов */
 .post-item:hover .item-icon, .post-item:hover .item-body h3, .post-item:hover .item-body p {
     /* transform: translateY(-8px); */
     cursor: text;
 }
-
  /* цветной круг под иконкой */
 .color-circle {
     width: 45px;
@@ -903,12 +703,10 @@ iframe {
     background: #F69E60;
     border-radius: 50%;
 }
-
  /* текст */
 .item-body {
     font-size: .9em;
 }
-
  /* заголовок3 */
 .item-body h3 {
     font-weight: 300;
@@ -916,7 +714,6 @@ iframe {
     margin-bottom: 15px;
     transition-delay: .05s;
 }
-
  /* параграф */
 .item-body p {
     color: #3A3A44;
@@ -927,12 +724,10 @@ iframe {
     transition-delay: .1s;
     margin: 0;
 }
-
  /* подвал блока */
 .item-footer {
     padding-top: 15px;
 }
-
  /* ссылка блока */
 .link {
     text-decoration: none;
@@ -946,7 +741,6 @@ iframe {
     color: black;
     cursor: default;
 }
-
  /* полоска */
 .link:before {
     content: "";
@@ -963,7 +757,6 @@ iframe {
     z-index: 0;
     transition: .6s cubic-bezier(.6, .01, 0, 1);
 }
-
  /* ссылка */
 .link span {
     display: inline-block;
@@ -971,16 +764,6 @@ iframe {
     transform: translateX(-200%);
     transition: .6s cubic-bezier(.6, .01, 0, 1);
 }
-
- /* !ПОКА НЕТ СТРАНИЦ! анимация ссылки */
-/* .post-item:hover .link span {
-    transform: translateX(0%);
-} */
-
- /* !ПОКА НЕТ СТРАНИЦ! наведение на ссылку */
-/* .post-item:hover .link:before {
-    transform-origin: right center;
-}  */
 
 /* ⬆ 5. УСЛУГИ ⬆
 
@@ -994,10 +777,11 @@ iframe {
 
     ⬇ КАК МЫ РАБОТАЕМ ⬇ */
 
+/* отступ блока */
 .hww-wrapper {
     margin: 0 5px;
 }
-
+/* настройка элементов */
 #howwework .howwework-item {
     min-width: 25%;
     max-width: 50%;
@@ -1008,17 +792,17 @@ iframe {
 
     margin-bottom: 50px;
 }
-
+/* настройка заголовков */
 .howwework-item h3, h4 {
     width: 100%;
     text-align: center;
 }
-
+/* настройка шрифта заголовков3 */
 .howwework-item h3 {
     font-size: 1em;
     font-weight: 300;
 }
-
+/* настройка шрифта заголовков4 цифр */
 .howwework-item h4.num {
     font-weight: 500;
     margin: auto;
@@ -1051,7 +835,7 @@ hr.hww-hatch#bottom {
     margin-top: -301px;
     margin-left: -3970px;
 }
-
+/* положение поинтов */
 .howwework-item hr.howwework-point {
     border: 0;
     position: absolute;
@@ -1059,7 +843,7 @@ hr.hww-hatch#bottom {
     margin-top: -52px;
     margin-left: 145px;
 }
-
+/* стиль маленьког поинта */
 .howwework-item hr.howwework-point::after {
     content: '';
     position: absolute;
@@ -1073,7 +857,7 @@ hr.hww-hatch#bottom {
     border-radius: 50%;
     z-index: 1;
 }
-
+/* стиль большого поинта */
 .howwework-item hr.howwework-point::before {
     content: '';
     position: absolute;
@@ -1087,7 +871,7 @@ hr.hww-hatch#bottom {
     border-radius: 50%;
     z-index: 1;
 }
-
+/* настройки контента блоков */
 .howwework-item .howwework-content {
     width: 250px;
     height: 150px;
@@ -1095,7 +879,7 @@ hr.hww-hatch#bottom {
     box-shadow:  2px 2px 2px 0 rgba(0,0,0,0.5);
     border-radius: 15px;
 }
-
+/* иконка 1 элемента */
 .howwework-content#a {
     background: 
         url(../img/index/howwework/icons/01.svg) no-repeat
@@ -1104,7 +888,7 @@ hr.hww-hatch#bottom {
     background-position-x: center;
     background-position-y: 20px;
 }
-
+/* иконка 2 элемента */
 .howwework-content#b {
     background: 
         url(../img/index/howwework/icons/02.svg) no-repeat
@@ -1113,7 +897,7 @@ hr.hww-hatch#bottom {
     background-position-x: center;
     background-position-y: 20px;
 }
-
+/* иконка 3 элемента */
 .howwework-content#c {
     background: 
         url(../img/index/howwework/icons/03.svg) no-repeat
@@ -1122,7 +906,7 @@ hr.hww-hatch#bottom {
     background-position-x: center;
     background-position-y: 20px;
 }
-
+/* иконка 4 элемента */
 .howwework-content#d {
     background: 
         url(../img/index/howwework/icons/04.svg) no-repeat
@@ -1131,7 +915,7 @@ hr.hww-hatch#bottom {
     background-position-x: center;
     background-position-y: 20px;
 }
-
+/* иконка 5 элемента */
 .howwework-content#e {
     background: 
         url(../img/index/howwework/icons/05.svg) no-repeat
@@ -1140,7 +924,7 @@ hr.hww-hatch#bottom {
     background-position-x: center;
     background-position-y: 20px;
 }
-
+/* иконка 6 элемента */
 .howwework-content#f {
     background: 
         url(../img/index/howwework/icons/06.svg) no-repeat
@@ -1149,7 +933,7 @@ hr.hww-hatch#bottom {
     background-position-x: center;
     background-position-y: 20px;
 }
-
+/* иконка 7 элемента */
 .howwework-content#g {
     background: 
         url(../img/index/howwework/icons/07.svg) no-repeat
@@ -1158,7 +942,7 @@ hr.hww-hatch#bottom {
     background-position-x: center;
     background-position-y: 20px;
 }
-
+/* иконка 8 элемента */
 .howwework-content#h {
     background: 
         url(../img/index/howwework/icons/08.svg) no-repeat
@@ -1167,7 +951,7 @@ hr.hww-hatch#bottom {
     background-position-x: center;
     background-position-y: 20px;
 }
-
+/* положение заголовков */
 .howwework-content h3 {
     width: 100%;
     height: 100%;
@@ -1190,10 +974,11 @@ hr.hww-hatch#bottom {
 
     ⬇ 6. О КОМПАНИИ ⬇ */
 
+/* отступ блока */
 #about {
     padding-top: 50px;
 }
-
+/* обертка блока */
 .wrapper {
     width: 100%;
     height: auto;
@@ -1202,19 +987,19 @@ hr.hww-hatch#bottom {
 
     background: #3a3a43;
 }
-
+/* особенный контейнер */
 #about .container {
     padding: 0 20px;
 }
-
+/* цвет текста */
 #about h2, #about p {
     color: whitesmoke;
 }
-
+/* положене заголовка */
 #about .sec-title h2 {
     text-align: center;
 }
-
+/* стиль штриха слева */
 #about .sec-title h2::before {
     content: '';
     position: absolute;
@@ -1224,7 +1009,7 @@ hr.hww-hatch#bottom {
     margin-left: -35px;
     border-top: whitesmoke 1px solid;
 }
-
+/* стиль штриха справа */
 #about .sec-title h2::after {
     content: '';
     position: absolute;
@@ -1234,26 +1019,26 @@ hr.hww-hatch#bottom {
     margin-left: 20px;
     border-top: whitesmoke 1px solid;
 }
-
+/* формат текста */
 #about .about-content .paragraph {
     width: 350px;
     font-size: .8em;
 
     text-align: justify;
 }
-
+/* положение первого абзаца */
 .paragraph.f {
     float: left;
 
     margin-top: 25px;
 }
-
+/* положение послднего абзаца */
 .paragraph.l {
     float: right;
 
     margin-top: -150px;
 }
-
+/* параметры лого */
 .about-logo {
     width: 400px;
     height: auto;
@@ -1263,7 +1048,7 @@ hr.hww-hatch#bottom {
     border: 1px whitesmoke solid;
     border-radius: 50%;
 }
-
+/* стиль полосы сверху */
 .about-logo::before {
     content: '';
     position: absolute;
@@ -1275,7 +1060,7 @@ hr.hww-hatch#bottom {
     height: 1px;
     background: whitesmoke;
 }
-
+/* стиль полосы снизу */
 .about-logo::after {
     content: '';
     position: absolute;
@@ -1288,280 +1073,8 @@ hr.hww-hatch#bottom {
     background: whitesmoke;
 }
 
-/* ⬆ 5. Как мы работаем ⬆
+/* ⬆ 5.О компании ⬆
 
-
-
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-
-
-
-    ⬇ 6. О КОМПАНИИ ⬇ */
-
-
-section#about h2 {
-    padding: 0 25px;
-    text-align: left;
-}
-
-/* обертка колонн */
-.colomn-twice-wrap {
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* колонны */
-.colomn-twice-item {
-    width: 47.5%;
-    height: auto;
-    margin-top: 10px;
-    padding: 0 10px;
-}
-
-.first {
-    float: left;
-}
-
-.last {
-    float: right;
-}
-
-/* фото автора */
-#logo img {
-    -webkit-user-drag: none;
-    user-select: none;
-    width: auto;
-    max-height: 600px;
-}
-
-/* подпись фото */
-#caption {
-    display: none;
-
-    position: absolute;
-    margin-top: -300px;
-    margin-left: 200px;
-
-    width: 350px;
-    height: auto;
-
-    padding: .5% 0% 1% 1%;
-
-    background: #F69E60;
-}
-
-/* заголовок подписи */
-#caption h3 {
-    margin-left: 10px;
-    margin-bottom: 10px;
-    font-size: 1em;
-
-    letter-spacing: 1;
-}
-
-#caption a {
-    font-size: 1em;
-}
-
-/* изменение маркера списка */
-#caption li:before {
-    content: "🠖 "; /* Добавляем в качестве маркера символ */
-}
-
-#caption p {
-    width: 50px;
-}
-
-/* заголовок био */
-#bio h3 {
-    margin-top: 2px;
-}
-
-/* отступы истории автора */
-#auth-history p:not(.experience-in p) {
-    margin-top: 15px;
-}
-
-#exp {
-    display: none;
-}
-
-/* блок опыта */
-.experience-in {
-    float: left;
-    display: flex;
-    margin-right: 50px;
-    margin-bottom: 10px;
-}
-
-/* иконка опыта */
-.experience-in .item-icon {
-    float: left;
-
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 20px;
-}
-
-/* иконка */
-.experience-in .item-icon:before {
-    font-size: 25px;
-    color: rgba(128, 128, 128, 0.5);
-    transition-duration: .3s;
-}
-
- /* анимация иконки */
-.experience-in:hover .item-icon:before {
-    color: #F69E60;
-}
-
-/* цветной круг под иконкой */
-/* .experience-in .color-circle {
-    width: 24px;
-    height: 24px;
-
-    margin-top: -65px;
-    margin-left: 17px;
-
-    background: #F69E60;
-    border-radius: 50%;
-} */
-
-/* отступ заголовка опыта */
-#exp h4 {
-    margin-top: 66px;
-    margin-bottom: 20px;
-}
-
-/* заголово опыта */
-.text h5 {
-    font-size: 1em;
-    margin-top: 12.5px;
-}
-
-/* текст опыта */
-.text p {
-    font-size: 1em;
-    margin-top: 5px;
-    width: 100%;
-}
-
-/* ⬆ 6. КОМПАНИЯ ⬆
-
-
-
-
-||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-
-
-
-    ⬇ 7. КОМАНДА ⬇ */
-
-section#team {
-    display: none;
-}
-
-/* галерея */
-section#team .gallery {
-    display: flex;
-    padding: 2px;
-    transition: 0.3s;
-
-    margin-top: 50px;
-}
-
-/* шоб текст не пропадал при наведении */
-section#team .gallery a:hover {
-    color: black;
-}
-
-/* анимация наведениея на пикчу */
-section#team .gallery:hover .gallery__image {
-    filter: none;
-}
-
-/* колонны галереи */
-section#team .gallery__column {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-}
-
-/* бокс пикчи */
-section#team .gallery__link {
-    margin: 3%;
-    overflow: hidden;
-    border-radius: 5px;
-    height: 400px;
-
-    border: .5px solid rgba(128, 128, 128, 0.15);
-    border-radius: 1px;
-}
-
-section#team .gallery__link:hover {
-    border: 1px solid #F69E60;
-}
-
-/* отсутствие рамки слева */
-section#team .gallery__column:first-child .gallery__link {
-    border-left: 0;
-}
-
-/* отсутствие рамки справа */
-section#team .gallery__column:last-child .gallery__link {
-    border-right: 0;
-}
-
-/* аватар */
-section#team .avatar {
-    display: block;
-    width: 100px;
-    height: 100px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-
-    border-radius: 50%;
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    filter: grayscale(100%);
-}
-
-/* блок пикчи */
-section#team .gallery__thumb {
-    position: relative;
-}
-
-/* расположение текста */
-section#team .caption {
-    text-align: center;
-}
-
-/* имя */
-section#team .caption h5 {
-    font-size: .9em;
-    margin-bottom: 10px;
-}
-
-/* текст для должности */
-section#team .caption p:nth-child(2) {
-    padding-bottom: 20px;
-
-}
-
-/* текст */
-section#team .caption p {
-    font-size: .8em;
-    width: 85%;
-
-    margin: 0 auto;
-}
-
-/* ⬆ КОМАНДА ⬆
 
 
 
@@ -1573,13 +1086,14 @@ section#team .caption p {
 
     ⬇ ВОПРОСЫ ⬇ */
 
+/*  */
 #faq .c{
     width: 750px;
     position: relative;
     margin: auto;
     margin-top: 25px;
 }
-
+/*  */
 #faq input{
     position: absolute;
     left: 0;
