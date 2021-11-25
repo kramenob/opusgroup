@@ -57,6 +57,15 @@
     background: #F69E60; /* Цвет фона */
 }
 
+.unselectable {  
+    -webkit-touch-callout: none; /* iOS Safari */  
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */  
+    -khtml-user-select: none;    /* Konqueror */  
+    -moz-user-select: none;      /* Firefox */  
+    -ms-user-select: none;       /* Internet Explorer/Edge */  
+    user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+}
+
 /* задаем станадартный размер страницы */
 body, html {
     max-width: 100%;
@@ -780,6 +789,7 @@ section#portfolio {
 /* отступ блока */
 .hww-wrapper {
     margin: 0 5px;
+    position: relative;
 }
 /* настройка элементов */
 #howwework .howwework-item {
@@ -806,8 +816,43 @@ section#portfolio {
 .howwework-item h4.num {
     font-weight: 500;
     margin: auto;
+    margin-top: -55px;
     margin-bottom: 82px;
     padding-right: 7.5px;
+}
+/* стиль маленьког поинта */
+.howwework-item h4.num::after {
+    position: relative;
+    display: block;
+    z-index: 1;
+
+    content: "";
+    width: 20px;
+    height: 20px;
+
+    top: 25px;
+    left: 50%;
+    margin-left: -11px;
+
+    background: #F69E60;
+    border-radius: 50%;
+}
+/* стиль большого поинта */
+.howwework-item h4.num::before {
+    position: relative;
+    display: block;
+    z-index: 1;
+
+    content: "";
+    width: 50px;
+    height: 50px;
+
+    top: 80px;
+    left: 50%;
+    margin-left: -26px;
+
+    background: hsla(25, 89%, 64%, 0.5);
+    border-radius: 50%;
 }
 /* общие параметры штрихов */
 hr.hww-hatch {
@@ -825,51 +870,28 @@ hr.hww-hatch.phone {
 }
 /* штрихи верхней строки */
 hr.hww-hatch#top {
+    width: 5000px;
+
     margin-top: 49px;
-    margin-left: 150px;
+    
+    left: 12.5%;
 }
 /* штрихи нижней строки */
 hr.hww-hatch#bottom {
     width: 5000px;
 
     margin-top: -301px;
-    margin-left: -3970px;
+    
+    right: 12.5%;
 }
 /* положение поинтов */
 .howwework-item hr.howwework-point {
+    content: "";
     border: 0;
     position: absolute;
     margin: auto;
     margin-top: -52px;
     margin-left: 145px;
-}
-/* стиль маленьког поинта */
-.howwework-item hr.howwework-point::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-
-    margin-top: -10px;
-    margin-left: -10px;
-
-    background: #F69E60;
-    border-radius: 50%;
-    z-index: 1;
-}
-/* стиль большого поинта */
-.howwework-item hr.howwework-point::before {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 50px;
-
-    margin-top: -25px;
-    margin-left: -25px;
-
-    background: hsla(25, 89%, 64%, 0.5);
-    border-radius: 50%;
-    z-index: 1;
 }
 /* настройки контента блоков */
 .howwework-item .howwework-content {
