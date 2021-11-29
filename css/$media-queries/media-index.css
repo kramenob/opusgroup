@@ -994,7 +994,7 @@
     body {
         background-size: 1200px;
         background-position-x: 65%;
-        background-position-y: 0px;
+        background-position-y: -50%;
     }
     /* поправляем секцию */
     section {
@@ -1007,7 +1007,7 @@
     section#start h1 {
         font-size: 2.5em;
         padding: 0 7px;
-        margin: 50px 0;
+        margin: 25px 0;
     }
     /* убираем перевод строки */
     section#start h1 br {
@@ -1024,7 +1024,7 @@
     /* стилизируем текст */
     section#start .afisha p {
         width: 100%;
-        font-size: 1.25em;
+        font-size: .9em;
         margin-top: 0px;
         padding: 0 10px;
     }
@@ -1035,15 +1035,15 @@
     }
     /* адаптируем кнопку */
     section#start .feedback-form a {
-        font-size: 1.1em;
-        padding: 15px 100px;
+        font-size: .9em;
+        padding: 15px 20%;
     }
 
 /* ГАЛЕРЕЯ */
     
     /* двигаем секцию портфолио */
     section#portfolio {
-        padding-top: 25px;
+        padding-top: 0px;
     }
     /* адаптируем отступы колон */
     .gallery__column {
@@ -1096,16 +1096,26 @@
 
 /* КАК МЫ РАБОТАЕМ */
     .howwework-item h4.num::after {
-        top: 28px;
-        margin-left: -10px;
+        width: 15px;
+        height: 15px;
+
+        top: 15px;
+        margin-left: -7.5px;
     }
     .howwework-item h4.num::before {
-        top: 77.5px;
-        margin-left: -25.25px;
+        width: 35px;
+        height: 35px;
+            
+        top: 55.5px;
+        margin-left: -17.5px;
     }
     .howwework-item h4.num {
-        margin-bottom: 70px;
+        margin-bottom: 40px;
     }
+    hr.hww-hatch#top, hr.hww-hatch, hr.hww-hatch#bottom {
+        margin-top: 17px;
+    }
+
     
     .about-content {
         position: relative;
@@ -1122,8 +1132,8 @@
     }
     .about-logo {
         position: relative;
-        width: 350px;
-        height: 350px;
+        width: 100%;
+        height: 100%;
 
         margin-top: 175px;
         padding: 35px;
@@ -1272,6 +1282,55 @@
 
     #contact .colomn-twice-item#sendform .name, #sendform .button {   
         width: 100%;        
+    }
+}
+
+/* 
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+*/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 475px) {
+    .howwework-item .howwework-content {
+        height: 150px;
+    }
+}
+
+/* 
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+*/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 375px) {
+    body {
+        background-size: 1200px;
+        background-position-x: 65%;
+        background-position-y: -50%;
+    }
+    .howwework-item .howwework-content {
+        height: 150px;
+    }
+}
+
+/* 
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+*/
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 355px) {
+    body {
+        background-size: 1200px;
+        background-position-x: 65%;
+        background-position-y: 0%;
     }
 }
 
