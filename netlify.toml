@@ -1,0 +1,3 @@
+[[plugins]]
+  package = "@netlify/plugin-inline-functions"
+  inputs = { files = ["index.html"] }

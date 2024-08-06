@@ -6,12 +6,24 @@
 
 "use strict"
 
+document.addEventListener("DOMContentLoaded", async function() {
+	try {
+		const response = await fetch('/.netlify/functions/env');
+		const data = await response.json();
+		const chat = data.TELEGRAM_CHAT_ID;
+		console.log('My Variable:', chat);
+		// Use myVariable as needed
+	} catch (error) {
+		console.error('Error fetching environment variable:', error);
+	}
+});
+
 document.querySelector('#sender-button').onclick = function () { // Указание нажимаемой кнопки
 
     // Ссылка отправки сообщения в ТГ чат
-    const url = 'https://api.telegram.org/bot'+process.env.TELEGRAM_BOT_TOKEN+'/sendMessage?chat_id=-'+process.env.TELEGRAM_CHAT_ID+'&parse_mode=Markdown&text=';
+    const url = 'https://api.telegram.org/bot' + TELEGRAM_BOT_TOKEN + '/sendMessage?chat_id=-' + TELEGRAM_CHAT_ID + '&parse_mode=Markdown&text=';
 
-	console.log(process.env.TELEGRAM_CHAT_ID);
+	console.log(TELEGRAM_CHAT_ID);
 	
 
     // Извлечение введенных данных
