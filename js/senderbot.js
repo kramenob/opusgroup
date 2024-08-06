@@ -11,6 +11,9 @@ document.querySelector('#sender-button').onclick = function () { // Указан
     // Ссылка отправки сообщения в ТГ чат
     const url = 'https://api.telegram.org/bot'+TELEGRAM_BOT_TOKEN+'/sendMessage?chat_id=-'+TELEGRAM_CHAT_ID+'&parse_mode=Markdown&text=';
 
+	console.log(TELEGRAM_CHAT_ID);
+	
+
     // Извлечение введенных данных
     let area = document.querySelector('#size-area-number').value; // площадь
 
