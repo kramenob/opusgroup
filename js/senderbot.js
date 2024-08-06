@@ -9,7 +9,7 @@
 document.querySelector('#sender-button').onclick = function () { // Указание нажимаемой кнопки
 
     // Ссылка отправки сообщения в ТГ чат
-    const url = 'https://api.telegram.org/bot'+BOT_TOKEN+'/sendMessage?chat_id=-'+CHAT_ID+'&parse_mode=Markdown&text=';
+    const url = 'https://api.telegram.org/bot'+TELEGRAM_BOT_TOKEN+'/sendMessage?chat_id=-'+TELEGRAM_CHAT_ID+'&parse_mode=Markdown&text=';
 
     // Извлечение введенных данных
     let area = document.querySelector('#size-area-number').value; // площадь
@@ -45,7 +45,6 @@ document.querySelector('#sender-button').onclick = function () { // Указан
     let phone = document.querySelector('#phone').value.slice(1); // телефон
     let comment = document.querySelector('#comment').value; // коммент
 
-    
 
     // Контейнер сообщение (табы отражаются и в сообщении)
     let message_container =
