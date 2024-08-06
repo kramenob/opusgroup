@@ -260,7 +260,7 @@ header .mobile-call {
     align-items: center;  /* центрируем содержимое кнопки */
     position: fixed;
 
-    width: 184px;
+    width: fit-content;
 
     top: 22.5px;
     left: 50%;
